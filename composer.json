@@ -1,0 +1,14 @@
+{
+    "name": "bellshade/php",
+    "description": "Referensi materi dasar dan implementasi algoritma untuk developer PHP",
+    "type": "project",
+    "license": "MIT",
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.6",
+        "phpunit/phpunit": "^9.5"
+    },
+    "scripts": {
+        "phpcs": "phpcs . --ignore=*/vendor/*,*/tests/* --standard=PSR12 --warning-severity=0 --colors",
+        "phpcbf": "phpcbf . --ignore=*/vendor/*,*/tests/* --standard=PSR12"
+    }
+}
