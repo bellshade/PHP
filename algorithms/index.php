@@ -11,6 +11,7 @@
  */
 
 use BackTracking\PathFinding;
+use Sorting\BubbleSort;
 
 // Melakukan autoload pada kelas yang digunakan di halaman ini
 require_once 'autoload.php';
@@ -27,3 +28,25 @@ $pathFinding->setMap([
     [0, 0, 1, 1],
 ]);
 $pathFinding->pathFind();
+
+/**
+ * Bubble Sort (Sorting)
+ * --------------------------
+ */
+$inputTest = [];
+
+foreach (range(1, 10) as $key) {
+    $inputTest[] = rand(-100, 100);
+}
+
+$bubbleSort = (new BubbleSort())->bubbleSort($inputTest);
+
+echo '<pre>';
+echo 'Input array sebelum di jalankan BubbleSort' . PHP_EOL;
+print_r($inputTest);
+echo '</pre>';
+
+echo '<pre>';
+echo 'Input array setelah di jalankan BubbleSort' . PHP_EOL;
+print_r($bubbleSort);
+echo '</pre>';
