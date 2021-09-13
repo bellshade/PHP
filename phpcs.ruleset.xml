@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <ruleset name="Bellshade PHP Standard">
-    <description>Zend, but without linelength check.</description>
+    <description>PSR12, tapi tanpa check lineEnding untuk kenyamanan antar platform (CRLF Issue).</description>
+    <exclude-pattern>*/tests/*</exclude-pattern>
     <rule ref="PSR12">
         <exclude name="Generic.Files.LineEndings"/>
     </rule>

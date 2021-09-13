@@ -8,7 +8,8 @@
         "phpunit/phpunit": "^9.5"
     },
     "scripts": {
-        "phpcs": "phpcs . --ignore=*/vendor/*,*/tests/* --standard=PSR12 --warning-severity=0 --colors --standard=phpcs.ruleset.xml",
-        "phpcbf": "phpcbf . --ignore=*/vendor/*,*/tests/* --standard=PSR12"
+        "phpcs": "phpcs . --ignore=*/vendor/*,*/tests/* --warning-severity=0 --colors --standard=phpcs.ruleset.xml",
+        "phpcbf": "phpcbf . --ignore=*/vendor/*,*/tests/* --standard=phpcs.ruleset.xml",
+        "phpunit": "phpunit tests/"
     }
 }
