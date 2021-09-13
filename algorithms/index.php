@@ -33,13 +33,14 @@ $pathFinding->getMapVisual();
 $pathFinding->pathFind(0, 0);
 $pathFinding->getMapVisitedVisual();
 $pathFinding->getLog();
-print_r($pathFinding->getMapVisited());
 
 
 /**
  * Bubble Sort (Sorting)
  * --------------------------
  */
+echo '<h1>Bubble Sort (Sorting)</h1><hr>';
+
 $inputTest = [];
 
 foreach (range(1, 10) as $key) {
