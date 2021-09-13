@@ -20,14 +20,21 @@ require_once 'autoload.php';
  * Pathfinding (Backtracking)
  * --------------------------
  */
+echo '<h1>PathFinding (Backtracking)</h1><hr>';
 $pathFinding = new PathFinding();
 $pathFinding->setMap([
-    [1, 1, 0, 1],
-    [1, 0, 1, 0],
-    [1, 1, 1, 0],
-    [0, 0, 1, 1],
+    [0, 0, 1, 0, 1],
+    [0, 1, 0, 0, 1],
+    [0, 0, 0, 1, 0],
+    [0, 0, 1, 0, 0],
+    [1, 0, 0, 0, 0],
 ]);
-$pathFinding->pathFind();
+$pathFinding->getMapVisual();
+$pathFinding->pathFind(0, 0);
+$pathFinding->getMapVisitedVisual();
+$pathFinding->getLog();
+print_r($pathFinding->getMapVisited());
+
 
 /**
  * Bubble Sort (Sorting)

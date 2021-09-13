@@ -44,8 +44,7 @@ Algoritma harus memiliki:
 
 ### Gaya penulisan PSR-12
 
-Kami menggunakan standar penulisan PSR-12 untuk seluruh implementasi kode Basics & Algorithms. PSR-12 adalah rekomendasi standar PHP untuk gaya dan konvensi penulisan kode 
-[lihat dokumentasi resmi PSR-12](https://www.php-fig.org/psr/psr-12/)
+Kami menggunakan standar penulisan PSR-12 untuk seluruh implementasi kode Basics & Algorithms. PSR-12 adalah rekomendasi standar PHP untuk gaya dan konvensi penulisan kode. [lihat dokumentasi resmi PSR-12](https://www.php-fig.org/psr/psr-12/)
 
 Untuk _integration_ nya, kami menggunakan [CodeSniffer](https://packagist.org/packages/squizlabs/php_codesniffer) untuk mengecek apakah seluruh kode sudah mengikuti standar gaya penulisan PSR-12. 
 Package CodeSniffer ini sudah termasuk dalam _composer.json_ untuk anda gunakan di lokal 
@@ -62,9 +61,9 @@ Untuk memanfaatkan CodeSniffer agar bisa memperbaiki kode yang tidak memenuhi st
 ```bash
 composer phpcbf
 ```
-Jika menggunakan `phpcbf` masih belum memperbaiki seluruh kesalahan yang ada, anda harus memperbaikinya secara manual. <br/>Kami sangat sarankan untuk anda menggunakan ekstensi bernama [PHPCS](https://marketplace.visualstudio.com/items?itemName=ikappas.phpcs). Dengan ekstensi itu, visual studio code akan menunjukkan letak kesalahannya jika anda melakukan kesalahan penulisannya
+Jika menggunakan `phpcbf` masih belum memperbaiki seluruh kesalahan yang ada, anda harus memperbaikinya secara manual. <br/>Kami sangat sarankan untuk anda jika menggunakan software text editor Visual Studio Code, anda dapat menggunakan ekstensi bernama [PHPCS](https://marketplace.visualstudio.com/items?itemName=ikappas.phpcs). Dengan ekstensi itu, Visual Studio Code akan menunjukkan letak kesalahannya jika anda melakukan kesalahan penulisan.
 
-Pastikan anda sudah melakukan pengecekan ini sebelum mengajukan _Pull Request_ karena ini termasuk salah satu workflow yang dijalankan secara otomatis oleh Github Action saat anda mengajukan _Pull Request_
+Pastikan anda sudah melakukan pengecekan ini sebelum mengajukan _Pull Request_ karena ini termasuk salah satu workflow yang dijalankan secara otomatis oleh kami saat anda mengajukan _Pull Request_
 
 ### Pedoman penulisan lainnya untuk Basic Learning
 
@@ -81,10 +80,17 @@ Salah satu perbedaan yang mencolok untuk penulisan pada Algorithm adalah selain 
 - Setiap _class_ Algoritma berada didalam folder kategori yang berkaitan. <br/>Contoh: _PathFinding.php_ berada didalam folder _BackTracking_ dst.
 - Penggunaan namespace berlabuh pada direktori `/algorithms/` <br/>
 Contoh: file `algorithms/BackTracking/PathFinding.php` memiliki `namespace BackTracking;`
-- Setiap output Algoritma harus dikembalikan nilainya dari sebuah method daripada langsung ditampilkan di halaman.
+- Setiap output Algoritma harus dikembalikan nilainya dari sebuah method daripada langsung ditampilkan di halaman. Kecuali method untuk menampilkan visualisasi data, log aktifitas atau hal informatif lainnya.
 - Harus disertai keterangan penjelasan kode yang mudah dimengerti
 
-Untuk menjalankan _class_ algoritma yang sudah dibuat, lakukan instantiasi _class_ pada `algorithms/index.php`. Seluruh algoritma dijalankan pada file itu, jadi pastikan anda juga memberikan keterangan kode yang cukup jelas.
+Untuk menjalankan _class_ algoritma yang sudah dibuat, lakukan instantiasi _class_ pada `algorithms/index.php`. Seluruh algoritma dijalankan pada file itu, jadi pastikan anda juga memberikan keterangan kode yang cukup jelas. 
+
+Gunakan markup berikut sebagai pemisah antar algoritma 
+```html
+<h1>Nama Algoritma anda</h1>
+<hr>
+<!-- Instantiasi algoritma anda disini.. -->
+```
 
 Secara default, `index.php` ini menggunakan file `autoload.php` yang disediakan untuk melakukan pemanggilan `class` terinstatiasi secara otomatis berdasarkan namespacenya. 
 
@@ -102,7 +108,6 @@ Berikut template unit testing yang dapat anda gunakan
 require_once 'algorithms/autoload.php';
 
 use PHPUnit\Framework\TestCase;
-use Sorting\BubbleSort;
 
 class KelasTestAnda extends TestCase
 {
