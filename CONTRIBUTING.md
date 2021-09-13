@@ -93,10 +93,31 @@ Secara default, `index.php` ini menggunakan file `autoload.php` yang disediakan 
 
 Testing hanya dilakukan untuk Algorithm dan tidak diperlukan untuk Basic Learning. Testing diperlukan agar suatu algoritma berjalan sesuai dengan yang di harapkan. Kami juga menerapkan unit testing ini pada GitHub Actions agar selalu dijaga keandalan kodenya.
 
+Kami menggunakan PHPUnit sebagai Unit Testing untuk setiap algoritma yang anda buat. Seluruh file testing berada dalam folder `/tests`. 
 
-**Implementasi Unit Testing coming soon**
+Untuk membuat unit testing, anda perlu membuat kelas turunan `TestCase`. Awali penamaan sebuah method dengan _prefix_ `testXxx()`.
+Berikut template unit testing yang dapat anda gunakan
 
-Anda dapat melewati langkah ini sampai workflow Unit Testing berjalan
+```php
+require_once 'algorithms/autoload.php';
+
+use PHPUnit\Framework\TestCase;
+use Sorting\BubbleSort;
+
+class KelasTestAnda extends TestCase
+{
+    public function testMethodAnda()
+    {
+      # Lakukan Test anda disini
+    }
+}
+```
+
+Untuk menjalankan seluruh tests, gunakan command:
+```bash
+composer phpunit
+```
+Testing ini juga kami lakukan secara _Continuous Integration_ di github action. Untuk memaksimalkan kelancaran workflow, pastikan anda melakukan testing setiap kali anda membuat algoritma sebelum mengajukan _Pull Request_.
 
 
 ## Pull Request
