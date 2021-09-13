@@ -38,4 +38,6 @@ jobs:
       
     - name: Check PHP syntax errors
       uses: overtrue/phplint@3.0.3
-
+      
+    - name: PHPUnit Tests
+      run: composer phpunit
