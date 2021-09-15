@@ -5,9 +5,9 @@
  * TYPE DATA - ARRAY
  * ---------------------
  *
- * Daftar isi
+ * Daftar Isi
  * --------------------
- * Pada materi ini kita akan berajar:
+ * Pada materi ini kita akan belajar:
  * - Apa itu Array?
  * - Jenis-jenis Array
  * - Membuat
@@ -20,43 +20,57 @@
  * Apa itu Array?
  * --------------------
  * Array merupakan salah satu tipe data dalam bahasa pemrograman PHP.
- * Array bisa di jadikan sebuah tempat penyimpanan setementara, atau bahkan seterusnya.
+ * Array bisa di jadikan sebuah tempat penyimpanan sementara, atau bahkan seterusnya.
  *
- * Ini sangat berguna jika kita ingin menampuang banyak data dengan kategori yang sama
+ * Ini sangat berguna jika kita ingin menampung banyak data dengan kategori yang sama
  *
  * Misalnya data buah, dari pada kita menulisnya seperti berikut :
- * $buah1 = 'apel';
- * $buah2 = 'mangga';
- * $buah3 = 'jeruk';
+ * $buah1 = 'Apel';
+ * $buah2 = 'Mangga';
+ * $buah3 = 'Jeruk';
  *
- * Kita bisa menuliskannya seperti berikut :
- * $daftar_buah = ['apel', 'mangga', 'jeruk'];
+ * Lebih baik kita bisa menuliskannya seperti berikut :
+ * $daftar_buah = ['Apel', 'Mangga', 'Jeruk'];
  *
  * Kiat:
  * --------------------
- * Tipe data array dapat berisi bebarapa tipe data seperti string, integer, boolean, atau bahkan array.
- *
+ * Tipe data array dapat berisi beberapa tipe data seperti string, integer, boolean, atau bahkan array (bersarang).
+ * Berikut contoh sederhananya :
  */
 
-
+$data = [
+  1,               // integer
+  2,               // integer
+  'Hello',         // string
+  'World!',        // string
+  true,            // boolean
+  false,           // boolean
+  [                // array (bersarang)
+    'Hello world!' // string
+  ],
+];
 
 /**
  * Jenis-jenis Array
  * --------------------
  * Dalam PHP terdapat dua tipe data array, yaitu :
- * 1. Array biasa
- * 2. Array asosiatif
+ * 1. Array Numerik
+ * 2. Array Asosiatif
  *
- * Array Biasa
+ * Array Numerik
  * --------------------
- * Array biasa adalah array yang tipe datanya hanya memiliki index, contohnya:
+ * Array Numerik adalah array yang tiap tiap datanya hanya memiliki index,
+ * Index dalam array selalu di mulai dari angka 0,1,2,3 dan seterusnya.
+ *
+ * Berikut contoh penulisan array numerik :
  */
 
 $daftar_buah = [
-  'apel',
-  'jeruk',
-  'mangga',
+  'Apel',    // index: 0
+  'Jeruk',   // index: 1
+  'Mangga',  // index: 2
 ];
+
 
 /**
  * Array Asosiatif
@@ -66,14 +80,16 @@ $daftar_buah = [
  *
  * key => value
  *
- * Contoh :
+ * Berikut contoh penulisan array asosiatif:
  */
 
-$pengguna = [
+$data_pengguna = [
   "nama"   => 'Feri Irawan',
   "umur"   => 17,
   "github" => 'https://github.com/feri-irawan',
   "tim"    => 'PHP'
+  // ^^^        ^^^
+  // Key        value
 ];
 
 
@@ -81,52 +97,57 @@ $pengguna = [
 /**
  * Membuat
  * ---------------------
- * Untuk membuat tipe data array Anda hanya perlu menggunakan tanda berikut:
- * - [ (sebagai pembuka)
- * - ] (sebagai penutup)
- * atau
- * - array( (sebagai pembuka)
- * - ) (sebagai penutup)
+ * Pada contoh-contoh sebelumnya kita telah membuat beberapa array.
+ * Dan pada bagian ini, kita akan membahas lebih lengkap tentang membuat tipe data array.
+ *
+ * Nah, untuk membuat tipe data array kita hanya perlu menggunakan tanda berikut:
+ * - `[` (sebagai pembuka)
+ * - `]` (sebagai penutup)
+ *
+ * Atau menggunakan function berikut :
+ * - `array()`
  */
 
 
 /**
  * Contoh 1 :
  * --------------------
+ * Membuat array numerik menggunakan tanda kurung siku (`[` dan `]`)
  */
 
 $daftar_buah = [
-  'aple',
-  'mangga',
-  'jeruk',
-  'stroberi'
+  'Apel',
+  'Mangga',
+  'Jeruk',
+  'Stroberi'
 ];
 
-print_r("Menampilkan semua daftar buah : \n");
+print_r("Membuat array numerik menggunakan tanda kurung siku (`[` dan `]`) : \n");
 print_r($daftar_buah);
 
 // Hasilnya:
 // Array
 // (
-//     [0] => aple
-//     [1] => mangga
-//     [2] => jeruk
-//     [3] => stroberi
+//     [0] => Apel
+//     [1] => Mangga
+//     [2] => Jeruk
+//     [3] => Stroberi
 // )
 
 
 /**
  * Contoh 2 :
  * --------------------
+ * Membuat array numerik dengan menggunakan function `array()`
  */
 
 $daftar_nama = array(
   'Sandhika Galih',
   'Feri Irawan',
-  'Badar Wildani'
+  'Badar Wildanie'
 );
 
-print_r("\nMenampilkan semua daftar nama : \n");
+print_r("\nMembuat array numerik dengan menggunakan function `array()` : \n");
 print_r($daftar_nama);
 
 // Hasilnya:
@@ -134,7 +155,89 @@ print_r($daftar_nama);
 // (
 //     [0] => Sandhika Galih
 //     [1] => Feri Irawan
-//     [2] => Badar Wildani
+//     [2] => Badar Wildanie
+// )
+
+
+/**
+ * Contoh 3 :
+ * --------------------
+ * Membuat array asosiatif menggunakan tanda kurung siku (`[` dan `]`)
+ */
+
+$daftar_buah = [
+  "manis" => [
+    "Apel",
+    "Mangga",
+    "Durian"
+  ],
+  "masam" => [
+    "Jeruk",
+    "Mangga",
+    "Belimbing"
+  ],
+];
+
+print_r("\nMembuat array asosiatif menggunakan tanda kurung siku (`[` dan `]`) : \n");
+print_r($daftar_buah);
+
+// Hasilnya :
+// Array
+// (
+//     [manis] => Array
+//         (
+//             [0] => Apel
+//             [1] => Mangga
+//             [2] => Durian
+//         )
+
+//     [masam] => Array
+//         (
+//             [0] => Jeruk
+//             [1] => Mangga
+//             [2] => Belimbing
+//         )
+// )
+
+
+/**
+ * Contoh 4 :
+ * --------------------
+ * Membuat array asosiatif menggunakan function `array()`
+ */
+
+$daftar_buah = array(
+  "manis" => array(
+    "Apel",
+    "Mangga",
+    "Durian"
+  ),
+  "masam" => array(
+    "Jeruk",
+    "Mangga",
+    "Belimbing"
+  ),
+);
+
+print_r("\nMembuat array asosiatif menggunakan function `array()` : \n");
+print_r($daftar_buah);
+
+// Hasilnya:
+// Array
+// (
+//     [manis] => Array
+//         (
+//             [0] => Apel
+//             [1] => Mangga
+//             [2] => Durian
+//         )
+
+//     [masam] => Array
+//         (
+//             [0] => Jeruk
+//             [1] => Mangga
+//             [2] => Belimbing
+//         )
 // )
 
 
@@ -154,46 +257,7 @@ print_r($daftar_nama);
  * Dalam tipe data array, kita dapat mengambil data dengan 2 cara, yaitu :
  * - Menggunakan index data, dan
  * - Menggunakan key data
- *
- * Tiap-tiap data memiliki `index` yang di mulai dari 0,1,2,3 dan seterusnya.
- * Ada pun data yang menggunakan index khusus yang disebut `key`.
- * Key biasanya digunakan pada tipe data array asosiatif
- * Coba perhatikan dua contoh berikut :
  */
-
-
-
-/**
- * Contoh Array dengan Index (Array Biasa) :
- * --------------------
- */
-
-$daftar_buah = [
-  'apel',   // index: 0
-  'mangga', // index: 1
-  'jeruk'   // index: 2
-];
-
-
-/**
- * Contoh Array dengan Key (Array Asosiatif) :
- * --------------------
- */
-
-$pengguna = [
-  "nama" => "Feri Irawan",   // key: nama
-  "umur" => 17,              // key: umur
-  "tim"  => "PHP",           // key: tim
-];
-
-
-
-/**
- * Jadi, bagaimana cara mengambil datanya?
- * Nah, caranya cukup mudah, kita hanya perlu menggunakan `INDEX` atau `KEY` dari masing-masing data yang ada dalam array.
- * Coba perhatikan dua contoh berikut :
- */
-
 
 
 /**
@@ -202,9 +266,9 @@ $pengguna = [
  */
 
 $daftar_buah = [
-  'apel',
-  'jeruk',
-  'mangga',
+  'Apel',
+  'Jeruk',
+  'Mangga',
 ];
 
 // Mengambil data dengan index ke-0
@@ -214,7 +278,7 @@ print_r("\nMengambil data dengan index ke-0 : \n");
 var_dump($buah);
 
 // Hasilnya :
-// string(4) "apel"
+// string(4) "Apel"
 
 
 /**
@@ -299,7 +363,7 @@ print_r($daftar_merek_mobil);
 /**
  * Kesimpulan
  * --------------------
- * Dengan menambah data tanpa key akan menghasilkan array dengan index (array biasa),
+ * Dengan menambah data tanpa key akan menghasilkan array dengan index (array Numerik),
  * sedangkan menambah data dengan key akan menghasilkan array dengan key (array sosiatif)
  */
 
