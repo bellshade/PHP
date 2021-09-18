@@ -16,42 +16,40 @@
  * @param {Integer} num
  * @returns
  */
-function loop($num) {
+function loop($num)
+{
     // Ini kondisi untuk membatasi pengulangan rekursif
     if ($num > 0) {
-      echo $num;
-      // function loop() akan memanggil dirinya sendiri dengan pengurangan value parameternya
-      loop($num - 1);
+        echo $num;
+        // function loop() akan memanggil dirinya sendiri dengan pengurangan value parameternya
+        loop($num - 1);
     }
-    return;
-  };
-  
+  return;
+}
+
 /**
  * Perlu dicatat bahwa untuk pengulangan rekursif ini selain kodenya berbeda dengan for, while, foreach
- * juga berbeda dalam penggunaan memorinya.
- * 
+ * juga berbeda dalam penggunaan memorinya. 
  * Jika for, while, dan foreach untuk setiap pengulangan akan membuat 1 buah tumpukan pada memori
  * lalu dijalankan,
- * 
  * pengulangan secara rekursif akan terus menambah tumpukan sampai sejumlah yang diinputkan
  * baru tumpukan fungsi tsb. dijalankan.
  */
-  
-  // Contoh 1
-  loop(10);
-  
-  // Contoh 2
-  // loop(100);
-  
-  // Contoh 3
-  // loop(100000);
-  
-  /**
-   * Contoh dengan pengulangan for biasa
-   * bandingkan dengan contoh ke 3 di atas!
-   */
 
-  // for (let index = 0; index < 100000; index++) {
-  //     console.log(index);
-  // }
-  
+// Contoh 1
+loop(10);
+
+// Contoh 2
+// loop(100);
+
+// Contoh 3
+// loop(100000);
+
+/**
+ * Contoh dengan pengulangan for biasa
+ * bandingkan dengan contoh ke 3 di atas!
+ */
+
+// for (let index = 0; index < 100000; index++) {
+//    console.log(index);
+// }
