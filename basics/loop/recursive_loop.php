@@ -24,12 +24,12 @@ function loop($num)
         // function loop() akan memanggil dirinya sendiri dengan pengurangan value parameternya
         loop($num - 1);
     }
-  return;
+    return;
 }
 
 /**
  * Perlu dicatat bahwa untuk pengulangan rekursif ini selain kodenya berbeda dengan for, while, foreach
- * juga berbeda dalam penggunaan memorinya. 
+ * juga berbeda dalam penggunaan memorinya.
  * Jika for, while, dan foreach untuk setiap pengulangan akan membuat 1 buah tumpukan pada memori
  * lalu dijalankan,
  * pengulangan secara rekursif akan terus menambah tumpukan sampai sejumlah yang diinputkan
