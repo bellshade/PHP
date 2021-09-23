@@ -1,0 +1,14 @@
+# Dasar - dasar PHP
+- Hello world
+- Variabel data types
+- Operator
+- String
+- Logika
+- Perulangan
+- Operasi matematika
+- Fungsi
+- Rekayasa string
+- Folder berisi contoh program sederhana dengan menggunakan fungsi, rekayasa string, logika
+- Array
+- Manipulasi array
+- Kelas
