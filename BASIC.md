@@ -1,14 +1,14 @@
-# Dasar - dasar PHP
+# Dasar - Dasar PHP
 - Hello world
 - Variabel data types
 - Operator
 - String
 - Logika
-- Perulangan
+- [Perulangan](https://github.com/bellshade/PHP/tree/main/basics/loop)
 - Operasi matematika
 - Fungsi
 - Rekayasa string
 - Folder berisi contoh program sederhana dengan menggunakan fungsi, rekayasa string, logika
-- Array
+- [Array](https://github.com/bellshade/PHP/tree/main/basics/array)
 - Manipulasi array
 - Kelas
