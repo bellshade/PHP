@@ -1,5 +1,6 @@
 # PHP
 
+![build](https://img.shields.io/github/workflow/status/bellshade/PHP/CI%20PHP%20PSR-12%20Linting?style=for-the-badge)
 ![license](https://img.shields.io/github/license/bellshade/PHPAlgorithm?style=for-the-badge)
 
 Repositori ini berisi kumpulan dari berbagai macam contoh struktur data, algoritma dan komputasi matematika yang diimplementasikan dengan menggunakan bahasa pemrograman PHP.
