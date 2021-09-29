@@ -35,7 +35,7 @@ saya menggunakan (im used):
 ## Maintainer
 <!-- request maintainer untuk mereiview kode kamu
 usahakan kamu memilih sesuai apa yang telah kamu ubah
-**maintainer javascript**
+**maintainer PHP**
 @bellshade/php-team
 
 **maintainer dokumentasi**
