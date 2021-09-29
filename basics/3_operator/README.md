@@ -17,8 +17,8 @@ Operator | Nama | Contoh | Keterangan
 != | Tidak sama | $a != $b | Akan bernilai `true` apabila nilai $a tidak sama dengan $b
 <> | Tidak sama | $a <> $b | Sama seperti di atas
 !== | Tidak identik | $a !== $b | Akan bernilai `true` apabila $a dan $b nilai **atau** tipe datanya itu tidak sama
-> | Lebih besar dari | $a > $b | Akan bernilai `true` apabila nilai $a lebih besar dari $b
-< | Lebih kecil dari | $a < $b | Akan bernilai `true` apabila nilai $a lebih kecil dari $b
->= | Lebih besar dari | $a > $b | Akan bernilai `true` apabila nilai $a lebih besar dari atau sama dengan $b
-<= | Lebih kecil dari | $a < $b | Akan bernilai `true` apabila nilai $a lebih kecil dari atau sama dengan $b
-<=> | Spaceship | $a <=> $b | Akan bernilai -1 apabila $a < $b, bernilai 0 apabila $a == $b, bernilai 1 apabila $a > $b
+\> | Lebih besar dari | $a > $b | Akan bernilai `true` apabila nilai $a lebih besar dari $b
+\< | Lebih kecil dari | $a < $b | Akan bernilai `true` apabila nilai $a lebih kecil dari $b
+\>= | Lebih besar dari | $a > $b | Akan bernilai `true` apabila nilai $a lebih besar dari atau sama dengan $b
+\<= | Lebih kecil dari | $a < $b | Akan bernilai `true` apabila nilai $a lebih kecil dari atau sama dengan $b
+\<=> | Spaceship | $a <=> $b | Akan bernilai -1 apabila $a < $b, bernilai 0 apabila $a == $b, bernilai 1 apabila $a > $b
