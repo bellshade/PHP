@@ -22,6 +22,7 @@ Operator | Nama | Contoh | Keterangan
 \>= | Lebih besar dari | $a > $b | Akan bernilai `true` apabila nilai $a lebih besar dari atau sama dengan $b
 \<= | Lebih kecil dari | $a < $b | Akan bernilai `true` apabila nilai $a lebih kecil dari atau sama dengan $b
 \<=> | Spaceship | $a <=> $b | Akan bernilai -1 apabila $a < $b, bernilai 0 apabila $a == $b, bernilai 1 apabila $a > $b
+
 Contoh kodenya dapat dilihat [di sini](./3_comparison_operator.php).
 
 ### Referensi
