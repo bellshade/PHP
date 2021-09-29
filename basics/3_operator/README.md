@@ -22,3 +22,6 @@ Operator | Nama | Contoh | Keterangan
 \>= | Lebih besar dari | $a > $b | Akan bernilai `true` apabila nilai $a lebih besar dari atau sama dengan $b
 \<= | Lebih kecil dari | $a < $b | Akan bernilai `true` apabila nilai $a lebih kecil dari atau sama dengan $b
 \<=> | Spaceship | $a <=> $b | Akan bernilai -1 apabila $a < $b, bernilai 0 apabila $a == $b, bernilai 1 apabila $a > $b
+
+### Referensi
+- [W3School - PHP Operator](https://www.w3schools.com/php/php_operators.asp)
