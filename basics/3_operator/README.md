@@ -26,6 +26,15 @@ Operator | Nama | Contoh | Keterangan
 Contoh kodenya dapat dilihat [di sini](./3_comparison_operator.php).
 
 ## Operator Logika
+Operator logika ini digunakan untuk menggabungkan pernyataan yang bersifat kondisional.
+Operator | Nama | Contoh | Keterangan
+:-------:|------|:------:|-----------
+and / && | And | $x && $y | Akan bernilai `true` apabila $x **dan** $y bernilai `true`
+or / \|\| | Or | $x \|\| $y | Akan bernilai `true` apabila $x **atau** $y bernilai `true`
+xor | Xor | $x xor $y | Akan bernilai `true` apabila **hanya di antara** $x **atau** $y yang bernilai `true`, sebaliknya akan bernilai `false`
+\! | Not | !$x | Akan bernilai `true` apabila $x bernilai `false` dan sebaliknya.
+
+Contoh kodenya dapat dilihat [di sini](./4_logical_operator.php).
 
 ### Referensi
 - [W3School - PHP Operator](https://www.w3schools.com/php/php_operators.asp)
