@@ -53,11 +53,11 @@
                             $directories = scandir(realpath('./'));
                         ?>
                         <div class="list-group">
-                            <?php foreach ($directories as $directory) : ?>
-                                <?php if (is_dir(realpath($directory)) && array_search($directory, $exception) == '') : ?>
-                                    <a href="./<?=$directory?>" class="list-group-item list-group-item-action">
+                            <?php foreach ($directories as $dir) : ?>
+                                <?php if (is_dir(realpath($dir)) && array_search($dir, $exception) == '') : ?>
+                                    <a href="./<?=$dir?>" class="list-group-item list-group-item-action">
                                         <i class="fas fa-folder me-2"></i>
-                                        <?=$directory?>
+                                        <?=$dir?>
                                     </a>
                                 <?php endif;?>
                             <?php endforeach; ?>
@@ -73,28 +73,6 @@
                             ?>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="materi-wrapper materi-hidden">
-        <div class="card shadow">
-            <div class="card-header text-white d-flex justify-content-between align-items-center">
-                <strong>File materi</strong>
-                <button class="btn btn-link text-white rotated">
-                    <i class="fas fa-angle-down"></i>
-                </button>
-            </div>
-            <div class="card-body">
-                <div class="list-group" style="max-height: 80vh; overflow-y: scroll">
-                    <?php foreach ($directories as $directory) : ?>
-                        <?php if (is_dir(realpath($directory)) && array_search($directory, $exception) == '') : ?>
-                            <a href="#" class="list-group-item list-group-item-action">
-                                <i class="fas fa-folder me-2"></i>
-                                <?=$directory?>
-                            </a>
-                        <?php endif;?>
-                    <?php endforeach; ?>
                 </div>
             </div>
         </div>

@@ -54,11 +54,11 @@
                             $files = scandir(realpath('./'));
                         ?>
                         <div class="list-group">
-                            <?php foreach ($files as $file) : ?>
-                                <?php if (is_file(realpath($file)) && array_search($file, $exception) == '') : ?>
-                                    <a href="./<?=$file?>" target="_blank" class="list-group-item list-group-item-action">
+                            <?php foreach ($files as $fl) : ?>
+                                <?php if (is_file(realpath($fl)) && array_search($fl, $exception) == '') : ?>
+                                    <a href="./<?=$fl?>" target="_blank" class="list-group-item list-group-item-action">
                                         <i class="fab fa-php me-2"></i>
-                                        <?=$file?>
+                                        <?=$fl?>
                                     </a>
                                 <?php endif;?>
                             <?php endforeach; ?>
@@ -88,11 +88,11 @@
             </div>
             <div class="card-body">
                 <div class="list-group" style="max-height: 80vh; overflow-y: auto">
-                    <?php foreach ($files as $file) : ?>
-                        <?php if (is_file(realpath($file)) && array_search($file, $exception) == '') : ?>
-                            <a href="<?=$file?>" target="_blank" class="list-group-item list-group-item-action">
+                    <?php foreach ($files as $fl) : ?>
+                        <?php if (is_file(realpath($fl)) && array_search($fl, $exception) == '') : ?>
+                            <a href="<?=$fl?>" target="_blank" class="list-group-item list-group-item-action">
                                 <i class="fab fa-php me-2"></i>
-                                <?=$file?>
+                                <?=$fl?>
                             </a>
                         <?php endif;?>
                     <?php endforeach; ?>

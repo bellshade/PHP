@@ -11,7 +11,7 @@
     <link rel="icon" href="../assets/images/icon.png">
 
 </head>
-<body style="background: #ddd; background-image: url('./basics/assets/images/background-pattern.jpg')" class="w-100 h-100 d-flex align-items-center">
+<body class="w-100 h-100 d-flex align-items-center">
     <div class="container">
         <div class="row mb-4 justify-content-center">
             <div class="col-auto text-center">
@@ -31,7 +31,9 @@
                                 </div>
                                 <div>
                                     <h4 class="mb-0">Bellshade PHP</h4>
-                                    <span class="text-muted fst-italic">Gunakan navigasi berikut untuk berpindah direktori</span>
+                                    <span class="text-muted fst-italic">
+                                        Gunakan navigasi berikut untuk berpindah direktori
+                                    </span>
                                 </div>
                             </div>
                             <nav>
@@ -55,11 +57,11 @@
                             $directories = scandir(realpath('./'));
                         ?>
                         <div class="list-group">
-                            <?php foreach ($directories as $directory) : ?>
-                                <?php if (is_dir(realpath($directory)) && array_search($directory, $exception) == '') : ?>
-                                    <a href="./<?=$directory?>" class="list-group-item list-group-item-action">
+                            <?php foreach ($directories as $dir) : ?>
+                                <?php if (is_dir(realpath($dir)) && array_search($dir, $exception) == '') : ?>
+                                    <a href="./<?=$dir?>" class="list-group-item list-group-item-action">
                                         <i class="fas fa-folder me-2"></i>
-                                        <?=$directory?>
+                                        <?=$dir?>
                                     </a>
                                 <?php endif;?>
                             <?php endforeach; ?>
