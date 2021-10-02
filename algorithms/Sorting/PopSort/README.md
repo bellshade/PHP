@@ -67,10 +67,48 @@ Sabar-sabar, untuk penerapan kodenya kita akan bahas di section berikutnya
 
 ## Implementasi Kode
 
-Seperti di awal, kita akan menggunakan `while` loop dan `3 array` untuk penerapan kodenya. Tanpa basa-basi langsung kita hantam saja.
+Seperti di awal, kita akan menggunakan `while` loop dan `3 array` untuk penerapan kodenya. Tanpa basa-basi langsung kita hantam saja. Untuk filenya, kalian bisa langsung lihat penerapan beserta loggingnya [di sini](./PopSort.php).
 
 ```php
+public function start(): array
+{
+    // Registrasi semua arraynya
+    $a = $this->array;
+    $b = [];
+    $c = [];
 
+    // Kita loop hingga data di $a kosong
+    while (count($a) != 0) {
+        // Keluarkan nilai paling atas dari array $a
+        $atasA = array_pop($a);
+
+        // Apabila array B ada isinya dan isi paling atas dari array B
+        // lebih kecil dari array A, kita pindahkan semua nilai-nilai yang
+        // cocok dengan kondisi tersebut ke array C
+        //
+        // Pada bagian statement kedua, anda dapat mengganti "<" menjadi ">"
+        // sesuai keinginan anda.
+        //
+        // Catatan:
+        // Kita harus menghitung isi array terlebih dahulu sebelum mengambil
+        // data array lebih utama agar menghindari error "Undefined index"
+        while (count($b) > 0 && $b[count($b) - 1] < $atasA) {
+            // Pindahkan data dari $b ke $c
+            array_push($c, array_pop($b));
+        }
+
+        // Setelah aman, kita masukkan data dari $a ke $b
+        array_push($b, $atasA);
+
+        // Apabila isi $c ada, kita balikkan lagi ke $b secara berurutan.
+        while (count($c) > 0) {
+            array_push($b, array_pop($c));
+        }
+    }
+
+    // Kembaliin datanya deh
+    return $b;
+}
 ```
 
 ### Referensi

@@ -27,7 +27,7 @@ class PopSort
      */
     public function start(bool $verbose = false): array
     {
-        echo !$verbose ? '' : '<h1>Pop Sort (Sorting)</h1>';
+        echo !$verbose ? '' : '<h1>Pop Sort (Sorting)</h1><hr>';
 
         // Registrasi semua arraynya
         $a = $this->array;
@@ -80,7 +80,3 @@ class PopSort
         return $b;
     }
 }
-
-$data = [83, 10, 54, 92, 62, 47, 15, 72];
-$popsort = new PopSort($data);
-$popsort->start(true);
