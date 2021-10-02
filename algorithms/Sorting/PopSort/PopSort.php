@@ -55,7 +55,7 @@ class PopSort
             // Catatan:
             // Kita harus menghitung isi array terlebih dahulu sebelum mengambil
             // data array lebih utama agar menghindari error "Undefined index"
-            while (count($b) > 0 && $b[count($b) - 1] < $atasA) {
+            while (count($b) > 0 && $atasA > $b[count($b) - 1]) {
                 // Pindahkan data dari $b ke $c
                 array_push($c, array_pop($b));
             }
