@@ -11,7 +11,8 @@
  */
 
 use BackTracking\PathFinding;
-use Sorting\BubbleSort;
+use Sorting\BubbleSort\BubbleSort;
+use Sorting\PopSort\PopSort;
 
 // Melakukan autoload pada kelas yang digunakan di halaman ini
 require_once 'autoload.php';
@@ -58,3 +59,10 @@ echo '<pre>';
 echo 'Input array setelah di jalankan BubbleSort' . PHP_EOL;
 print_r($bubbleSort);
 echo '</pre>';
+
+/**
+ * Pop Sort (Sorting)
+ * ---------------------------
+ */
+$popSort = new PopSort([83, 10, 54, 92, 62, 47, 15, 72]);
+$popSort->start(true);

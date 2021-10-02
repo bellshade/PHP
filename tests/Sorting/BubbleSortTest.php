@@ -1,8 +1,8 @@
 <?php
-require_once 'algorithms/Sorting/BubbleSort.php';
+require_once 'algorithms/Sorting/BubbleSort/BubbleSort.php';
 
 use PHPUnit\Framework\TestCase;
-use Sorting\BubbleSort;
+use Sorting\BubbleSort\BubbleSort;
 
 class BubbleSortTest extends TestCase
 {
