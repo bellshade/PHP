@@ -295,8 +295,8 @@ Berikut beberapa variabel *superglobals* dalam bahasa pemrogramana PHP:
 
 > Jika kamu masih bingung tentang Predefined Variables, kamu jangan khawatir, karna materi tentang variabel-variabel yang telah ditetepkan akan berlajut pada materi berikutnya.
 
-|                  Sebelumnya                   |                      Berikutnya                       |
-| :-------------------------------------------: | :---------------------------------------------------: |
-| [1. Hello World!](../1_hello_world/README.md) | [3. Operator](../2_variable_datatype/1_data_type.php) |
+|                  Sebelumnya                   |               Berikutnya               |
+| :-------------------------------------------: | :------------------------------------: |
+| [1. Hello World!](../1_hello_world/README.md) | [3. Operator](../3_operator/README.md) |
 
 Tetap semangat!
