@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <?php
+        $currentDirArray = explode('\\', dirname(__FILE__));
+    ?>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bellshade PHP</title>
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/css/all.min.css">
     <link rel="stylesheet" href="../assets/css/markdown-style.css">
+    <link rel="icon" href="../assets/images/icon.png">
+    <title><?=$currentDirArray[count($currentDirArray) - 1]?> - Bellshade PHP Basic</title>
+
 </head>
 <body class="w-100 h-100 d-flex align-items-center">
     <div class="container">
@@ -29,16 +34,13 @@
                                 </div>
                                 <div>
                                     <h4 class="mb-0">PHP - Basic</h4>
-                                    <span class="text-muted fst-italic">Daftar materi bisa kamu akses dari disini</span>
+                                    <span class="text-muted fst-italic">Demo materi bisa kamu akses dari disini</span>
                                 </div>
                             </div>
                             <nav>
                                 <ul class="breadcrumb mb-0">
                                     <li class="breadcrumb-item"><a href="../../index.php">root</a></li>
                                     <li class="breadcrumb-item"><a href="../index.php">basic</a></li>
-                                    <?php
-                                        $currentDirArray = explode('\\', dirname(__FILE__));
-                                    ?>
                                     <li class="breadcrumb-item active">
                                         <?=$currentDirArray[count($currentDirArray) - 1]?>
                                     </li>
@@ -52,16 +54,18 @@
                             $files = scandir(realpath('./'));
                         ?>
                         <div class="list-group">
-                            <?php foreach ($files as $file) : ?>
-                                <?php if (is_file(realpath($file)) && array_search($file, $exception) == '') : ?>
-                                    <a href="./<?=$file?>" target="_blank" class="list-group-item list-group-item-action">
+                            <?php foreach ($files as $fl) : ?>
+                                <?php if (is_file(realpath($fl)) && array_search($fl, $exception) == '') : ?>
+                                    <a href="./<?=$fl?>" target="_blank" class="list-group-item list-group-item-action">
                                         <i class="fab fa-php me-2"></i>
-                                        <?=$file?>
+                                        <?=$fl?>
                                     </a>
                                 <?php endif;?>
                             <?php endforeach; ?>
                         </div>
+                        
                         <hr class="mt-5 mb-3">
+                        
                         <div class="readme-content p-5">
                             <?php
                                 require_once './../../vendor/autoload.php';
@@ -76,7 +80,7 @@
     </div>
     <div class="materi-wrapper materi-hidden">
         <div class="card shadow">
-            <div class="card-header text-white d-flex justify-content-between align-items-center" style="background-color: #4f5b93;">
+            <div class="card-header text-white d-flex justify-content-between align-items-center">
                 <strong>Demo materi</strong>
                 <button class="btn btn-link text-white rotated">
                     <i class="fas fa-angle-down"></i>
@@ -84,11 +88,11 @@
             </div>
             <div class="card-body">
                 <div class="list-group" style="max-height: 80vh; overflow-y: auto">
-                    <?php foreach ($files as $file) : ?>
-                        <?php if (is_file(realpath($file)) && array_search($file, $exception) == '') : ?>
-                            <a href="<?=$file?>" target="_blank" class="list-group-item list-group-item-action">
+                    <?php foreach ($files as $fl) : ?>
+                        <?php if (is_file(realpath($fl)) && array_search($fl, $exception) == '') : ?>
+                            <a href="<?=$fl?>" target="_blank" class="list-group-item list-group-item-action">
                                 <i class="fab fa-php me-2"></i>
-                                <?=$file?>
+                                <?=$fl?>
                             </a>
                         <?php endif;?>
                     <?php endforeach; ?>

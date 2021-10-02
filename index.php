@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./basics/assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="./basics/assets/css/all.min.css">
     <link rel="stylesheet" href="./basics/assets/css/markdown-style.css">
-    <link rel="icon" href="../assets/images/icon.png">
+    <link rel="icon" href="./basics/assets/images/icon.png">
 
 </head>
 <body class="w-100 h-100 d-flex align-items-center">
