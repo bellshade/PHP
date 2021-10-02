@@ -2,7 +2,7 @@
 
 Pop Sort merupakan sebuah strategi untuk melakukan penyortiran nilai-nilai dalam array dengan menggunakan strategi Popping Array atau mengeluarkan nilai terakhir satu persatu hingga nilai-nilai dalam array dapat tersusun sesuai dengan keinginan.
 
-Biasanya, pop sort ini disebut dengan **Tower of Hanoi** karena pendekatan Pop Sort ini mendekati dengan salah satu puzzle buatan Edouard Lucas pada tahun 1883.
+Biasanya, pop sort ini disebut dengan **[Tower of Hanoi](https://id.wikipedia.org/wiki/Menara_Hanoi)** karena pendekatan Pop Sort ini mendekati dengan salah satu puzzle buatan Edouard Lucas pada tahun 1883.
 
 ![tower_of_hanoi](./assets/tower_of_hanoi.jpeg)
 
@@ -47,11 +47,13 @@ Semisalnya, data sudah seperti ini:
 
 ![popsort](./assets/popsort3.png)
 
-Logikanya, angka `62` pasti lebih besar daripada `47` dan `15`, berarti kita harus memindahkan angka `15` dan `47` ke Array C sebagai tempat penampungan sementara untuk memasukkan 62 ke B.
+Logikanya, angka `62` pasti lebih besar daripada `47` dan `15`, berarti:
+1. Kita harus menyimpan `15` dan `47` ke Array C
+2. Bawa angka `62` dari Array A ke Array B agar dapat masuk ke Array B
 
 ![popsort](./assets/popsort4.png)
 
-Kemudian, kita susun balik dari array C ke Array B yang kira-kira bentuknya seperti ini:
+3. Kita susun balik dari array C ke Array B yang kira-kira bentuknya seperti ini:
 
 ![popsort](./assets/popsort5.png)
 
@@ -65,4 +67,13 @@ Sabar-sabar, untuk penerapan kodenya kita akan bahas di section berikutnya
 
 ## Implementasi Kode
 
-*To be continued*
+Seperti di awal, kita akan menggunakan `while` loop dan `3 array` untuk penerapan kodenya. Tanpa basa-basi langsung kita hantam saja.
+
+```php
+
+```
+
+### Referensi
+- GeeksForGeeks. *Python Program for Tower of Hanoi*. [Pranala Luar](https://www.geeksforgeeks.org/python-program-for-tower-of-hanoi/).
+- Salman, Nur. Rev. 2020. *Struktur Data: Pengurutan Data di Python*. Makassar: Universitas Dipa Makassar.
+- Sedegewick, Robert. dkk. 2015. *Stacks and Queues*. Princeton: Princeton University. [Pranala Luar](https://introcs.cs.princeton.edu/python/43stack/).

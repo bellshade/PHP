@@ -11,7 +11,7 @@
  */
 
 use BackTracking\PathFinding;
-use Sorting\BubbleSort;
+use Sorting\BubbleSort\BubbleSort;
 
 // Melakukan autoload pada kelas yang digunakan di halaman ini
 require_once 'autoload.php';

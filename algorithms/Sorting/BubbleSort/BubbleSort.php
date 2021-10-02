@@ -14,7 +14,7 @@
  * 4. Lakukan langkah nomer 2 hingga selesai.
  */
 
-namespace Sorting;
+namespace Sorting\BubbleSort;
 
 class BubbleSort
 {
