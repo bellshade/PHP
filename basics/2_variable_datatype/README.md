@@ -124,19 +124,19 @@ Sesuai dengan deskripsi yang ada pada tabel diatas, **integer adalah** tipe data
 
 Tipe data ini sering digunakan untuk perhitungan.
 
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](1_tipe_data_dasar.php#L91-L100)
+[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](1_data_type.php#L91-L100)
 
 ### Float
 Float adalah tipe data yang berupa bilangan dengan titik (desimal).
 
 > Dalam bahasa pemrograman, titik digunakan sebagai pengganti dari koma untuk bilangan desimal.
 
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](1_tipe_data_dasar.php#L14-L113)
+[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](1_data_type.php#L14-L113)
 
 ### Boolean
 Boolean merupakan tipe data yang isinya ada dua pilihan yaitu `true` dan `false`, ini seperti **YA** dan **TIDAK** atau **BENAR** dan **SALAH**.
 
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](1_tipe_data_dasar.php#L117-L128)
+[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](1_data_type.php#L117-L128)
 
 Boolean biasa digunakan pada suatu pengondisian, yang mana boolean digunakan untuk menyatakan apakah kondisi yang dimaksud telah terpenuhi/benar.
 
@@ -170,11 +170,11 @@ NULL adalah tipe data khusus yang hanya memiliki satu nilai yaitu: `NULL`
 
 Jika ada variabel yang dibuat tanpa nilai, maka otomatis akan di isi `NULL`
 
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](1_tipe_data_dasar.php#L132-L141)
+[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](1_data_type.php#L132-L141)
 
 Variabel yang sebelumnya telah memiliki nilai juga dapat dikososngkan dengan menggunakan NULL.
 
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](1_tipe_data_dasar.php#L144-L149)
+[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](1_data_type.php#L144-L149)
 
 > **CATATAN:**
 >
@@ -185,7 +185,7 @@ Resouce (sumber daya) bukanlah tipe data yang sebenarnya. Ini adalah penyimpanan
 
 Klik tombol berikut untuk melihat contoh sederhana penggunaan resource.
 
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](1_tipe_data_dasar.php#L153-L167)
+[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](1_data_type.php#L153-L167)
 
 ## 3. Variabel dalam String *([2_variable_in_string.php](2_variable_in_string.php))*
 Nah, di PHP, sebuah variabel dapat digunakan kembali di dalam sebuah tipe data string, dengan betujuan untuk membuat string tersebut menjadi dinamis.
