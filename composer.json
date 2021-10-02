@@ -8,8 +8,11 @@
         "phpunit/phpunit": "^9.5"
     },
     "scripts": {
-        "phpcs": "phpcs . --ignore=*/vendor/*,*/tests/* --warning-severity=0 --colors --standard=phpcs.ruleset.xml",
-        "phpcbf": "phpcbf . --ignore=*/vendor/*,*/tests/* --standard=phpcs.ruleset.xml",
+        "phpcs": "phpcs . --warning-severity=0 -s --colors --standard=phpcs.ruleset.xml",
+        "phpcbf": "phpcbf . --standard=phpcs.ruleset.xml",
         "phpunit": "phpunit tests/"
+    },
+    "require": {
+        "erusev/parsedown": "^1.7"
     }
 }

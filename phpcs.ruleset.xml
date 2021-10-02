@@ -2,7 +2,10 @@
 <ruleset name="Bellshade PHP Standard">
     <description>PSR12, tapi tanpa check lineEnding untuk kenyamanan antar platform (CRLF Issue).</description>
     <exclude-pattern>*/tests/*</exclude-pattern>
+    <exclude-pattern>*/vendor/*</exclude-pattern>
+    <exclude-pattern>*.js</exclude-pattern>
     <rule ref="PSR12">
         <exclude name="Generic.Files.LineEndings"/>
+        <exclude name="Generic.WhiteSpace.ScopeIndent.IncorrectExact"/>
     </rule>
 </ruleset>
