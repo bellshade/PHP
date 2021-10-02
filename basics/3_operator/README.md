@@ -10,6 +10,7 @@ Dalam bahasa pemrograman, operator digunakan untuk melakukan operasi terhadap va
 
 ## Operator Pembanding
 Operator pembanding ini digunakan untuk membandingkan dua variabel yang nilainya sama atau berbeda.
+
 Operator | Nama | Contoh | Keterangan
 :-------:|------|:------:|-----------
 == | Sama/Setara | $a == $b | Akan bernilai `true` apabila nilai $a sama dengan $b

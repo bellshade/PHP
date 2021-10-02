@@ -13,7 +13,7 @@ Kami sangat senang Anda telah ikut berkontribusi dalam implementasi algoritma, s
 
 ### Pembelajaran Dasar (_Basic Learning_)
 
-Basic learning adalah kumpulan implementasi kode materi untuk pemrograman PHP. Dikemas dengan keterangan kode yang mudah di mengerti sehingga bisa dijadikan referensi untuk kalian yang belajar pemrograman PHP.
+Basic learning adalah kumpulan implementasi kode materi untuk pemrograman PHP. Dikemas dengan keterangan kode dan artikel penjelasan yang mudah di mengerti sehingga bisa dijadikan referensi untuk kalian yang belajar pemrograman PHP.
 
 > Semua implementasi kode untuk Basic Learning bisa ditemukan di `/basics`
 
@@ -70,35 +70,31 @@ Pastikan Anda sudah melakukan pengecekan ini sebelum mengajukan _*Pull Request*_
 
 ### Pedoman Penulisan Lainnya untuk Pembelajaran Dasar (_Basic Learning_)
 
-Selain menggunakan gaya penulisan PSR-12 untuk implementasi kode pada Basic Learning. Ada ketentuan standardisasi yang harus Anda terapkan yaitu:
+Selain menggunakan gaya penulisan PSR-12 untuk implementasi kode pada Basic Learning. Ada ketentuan konsistensi yang harus Anda terapkan yaitu:
 
-- Setiap file harus berada pada folder kategori sesuai dengan materi yang di implementasikan.<br/>Contoh: file _array_basic.php_ harus berada pada folder _array_
-- Setiap materi harus memiliki penjelasan yang mudah dimengerti
+- Setiap materi pembelajaran berada pada folder tersendiri yang dinamai dengan materi yang berkaitan
+- Folder materi memiliki penomoran diawal sebagai _prefix_
+- Artikel penjelasan ditulis di `README.md` pada setiap folder materi. jadi kamu perlu membuat `README.md`nya
+- Agar mempunyai navigasi, cukup copy saja file `index.php` dari folder materi lain ke folder materi kamu
 - Penamaan variabel dan fungsi menggunakan `snake_case`
+
+### Pedoman Penulisan Lainnya untuk fungsi kegunaan _(Utilities)_
+
+Pedoman penulisan untuk utilities sama persis seperti materi pembelajaran dasar _(basic)_ dengan pengecualian, penamaan variabel bebas asalkan tetap konsisten diseluruh satu _utility_.
 
 ### Pedoman Penulisan Lainnya untuk Algoritma (_Algorithm_)
 
 Salah satu perbedaan yang mencolok untuk penulisan pada Algorithm adalah selain harus mengikuti standard PSR-12, penulisannya juga menggunakan teknik paradigma pemrograman berorientasi objek (OOP) dengan ketentuan sebagai berikut:
 
-- Penamaan variabel dan method menggunakan _camelCase_
+<!-- - Penamaan variabel dan method menggunakan _camelCase_
 - Setiap Algoritma harus berupa _class_ dan menggunakan method
 - Setiap _class_ Algoritma berada didalam folder kategori yang berkaitan. <br/>Contoh: _PathFinding.php_ berada didalam folder _BackTracking_ dst.
 - Penggunaan namespace berlabuh pada direktori `/algorithms/` <br/>
   Contoh: file `algorithms/BackTracking/PathFinding.php` memiliki `namespace BackTracking;`
 - Setiap output Algoritma harus dikembalikan nilainya dari sebuah method daripada langsung ditampilkan di halaman. Kecuali method untuk menampilkan visualisasi data, log aktifitas atau hal informatif lainnya.
-- Harus disertai keterangan penjelasan kode yang mudah dimengerti
+- Harus disertai keterangan penjelasan kode yang mudah dimengerti -->
 
-Untuk menjalankan _class_ algoritma yang sudah dibuat, lakukan instantiasi _class_ pada `algorithms/index.php`. Seluruh algoritma dijalankan pada file itu, jadi pastikan Anda juga memberikan keterangan kode yang cukup jelas.
-
-Gunakan markup berikut sebagai pemisah antar algoritma
-
-```html
-<h1>Nama Algoritma Anda</h1>
-<hr />
-<!-- Instantiasi algoritma Anda disini.. -->
-```
-
-Secara default, `index.php` ini menggunakan file `autoload.php` yang disediakan untuk melakukan pemanggilan `class` terinstatiasi secara otomatis berdasarkan namespacenya.
+[Pedoman kontribusi Algoritma Coming Soon]
 
 ## Percobaan (_Testing_)
 
