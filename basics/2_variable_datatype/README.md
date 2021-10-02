@@ -20,7 +20,7 @@ Variabel bisa digunakan untuk menyimpan  berbagai jenis tipe data, seperti *inte
     - [Object](#object)
     - [NULL](#null)
     - [Resource](#resource)
-  - [3. Variabel dalam String *(2_variable_in_string)*](#3-variabel-dalam-string-2_variable_in_string)
+  - [3. Variabel dalam String *(2_variable_in_string.php)*](#3-variabel-dalam-string-2_variable_in_stringphp)
     - [Variabel Dalam String Petik Satu](#variabel-dalam-string-petik-satu)
     - [Variabel Dalam Sting Petik Dua](#variabel-dalam-sting-petik-dua)
     - [Variabel Dalam String Sintaks *Heredoc*](#variabel-dalam-string-sintaks-heredoc)
@@ -187,7 +187,7 @@ Klik tombol berikut untuk melihat contoh sederhana penggunaan resource.
 
 [![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](1_tipe_data_dasar.php#L153-L167)
 
-## 3. Variabel dalam String *([2_variable_in_string](2_variable_in_string.php))*
+## 3. Variabel dalam String *([2_variable_in_string.php](2_variable_in_string.php))*
 Nah, di PHP, sebuah variabel dapat digunakan kembali di dalam sebuah tipe data string, dengan betujuan untuk membuat string tersebut menjadi dinamis.
 
 Berikut ini aturan untuk menulis variabel dalam string
