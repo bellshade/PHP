@@ -4,34 +4,33 @@ Sama seperti bahasa pemrograman lainnya, variabel digunakan sebagai tempat untuk
 Variabel bisa digunakan untuk menyimpan  berbagai jenis tipe data, seperti *integer*, *string*, *boolean* dan lainnya. 
 
 ## Daftar Isi
-- [Variabel dan Tipe Data](#variabel-dan-tipe-data)
-  - [Daftar Isi](#daftar-isi)
-  - [1. Penulisan Variabel](#1-penulisan-variabel)
-  - [2. Tipe Data  *(1_data_type.php)*](#2-tipe-data--1_data_typephp)
-    - [String](#string)
-      - [1. Petik Satu](#1-petik-satu)
-      - [2. Petik Dua](#2-petik-dua)
-      - [3. Sintaks *Heredoc*](#3-sintaks-heredoc)
-      - [4. Sintaks *Nowdoc*](#4-sintaks-nowdoc)
-    - [Integer](#integer)
-    - [Float](#float)
-    - [Boolean](#boolean)
-    - [Array](#array)
-    - [Object](#object)
-    - [NULL](#null)
-    - [Resource](#resource)
-  - [3. Variabel dalam String *(2_variable_in_string.php)*](#3-variabel-dalam-string-2_variable_in_stringphp)
-    - [Variabel Dalam String Petik Satu](#variabel-dalam-string-petik-satu)
-    - [Variabel Dalam Sting Petik Dua](#variabel-dalam-sting-petik-dua)
-    - [Variabel Dalam String Sintaks *Heredoc*](#variabel-dalam-string-sintaks-heredoc)
-  - [4. Array *(3_array.php)*](#4-array-3_arrayphp)
-    - [Membuat Array](#membuat-array)
-    - [Jenis-Jenis Array](#jenis-jenis-array)
-    - [Menambah Data ke Dalam Array](#menambah-data-ke-dalam-array)
-    - [Mengubah Data Array](#mengubah-data-array)
-    - [Menghapus Data Array](#menghapus-data-array)
-  - [5. Konstanta *(4_constant_variable.php)*](#5-konstanta-4_constant_variablephp)
-  - [6. Variabel telah Ditetapkan](#6-variabel-telah-ditetapkan)
+- [Daftar Isi](#daftar-isi)
+- [1. Penulisan Variabel](#1-penulisan-variabel)
+- [2. Tipe Data  *(1_data_type.php)*](#2-tipe-data--1_data_typephp)
+  - [String](#string)
+    - [1. Petik Satu](#1-petik-satu)
+    - [2. Petik Dua](#2-petik-dua)
+    - [3. Sintaks *Heredoc*](#3-sintaks-heredoc)
+    - [4. Sintaks *Nowdoc*](#4-sintaks-nowdoc)
+  - [Integer](#integer)
+  - [Float](#float)
+  - [Boolean](#boolean)
+  - [Array](#array)
+  - [Object](#object)
+  - [NULL](#null)
+  - [Resource](#resource)
+- [3. Variabel dalam String *(2_variable_in_string.php)*](#3-variabel-dalam-string-2_variable_in_stringphp)
+  - [Variabel Dalam String Petik Satu](#variabel-dalam-string-petik-satu)
+  - [Variabel Dalam Sting Petik Dua](#variabel-dalam-sting-petik-dua)
+  - [Variabel Dalam String Sintaks *Heredoc*](#variabel-dalam-string-sintaks-heredoc)
+- [4. Array *(3_array.php)*](#4-array-3_arrayphp)
+  - [Membuat Array](#membuat-array)
+  - [Jenis-Jenis Array](#jenis-jenis-array)
+  - [Menambah Data ke Dalam Array](#menambah-data-ke-dalam-array)
+  - [Mengubah Data Array](#mengubah-data-array)
+  - [Menghapus Data Array](#menghapus-data-array)
+- [5. Konstanta *(4_constant_variable.php)*](#5-konstanta-4_constant_variablephp)
+- [6. Variabel telah Ditetapkan](#6-variabel-telah-ditetapkan)
 
 ## 1. Penulisan Variabel
 Berikut aturan penulisan yang baik dan benar variabel pada PHP:
@@ -297,6 +296,6 @@ Berikut beberapa variabel *superglobals* dalam bahasa pemrogramana PHP:
 
 |                  Sebelumnya                   |               Berikutnya               |
 | :-------------------------------------------: | :------------------------------------: |
-| [1. Hello World!](../1_hello_world/README.md) | [3. Operator](../3_operator/README.md) |
+| [1. Hello World!](../1_hello_world/) | [3. Operator](../3_operator/) |
 
 Tetap semangat!

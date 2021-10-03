@@ -11,10 +11,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="<?= $base_url ?>/../assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="<?= $base_url ?>/../assets/css/all.min.css">
-    <link rel="stylesheet" href="<?= $base_url ?>/../assets/css/markdown-style.css">
-    <link rel="icon" href="<?= $base_url ?>/../assets/images/icon.png">
+    <link rel="stylesheet" href="<?= $base_url ?>/../../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?= $base_url ?>/../../assets/css/all.min.css">
+    <link rel="stylesheet" href="<?= $base_url ?>/../../assets/css/markdown-style.css">
+    <link rel="icon" href="<?= $base_url ?>/../../assets/images/icon.png">
     <title><?= $currentDirArray[count($currentDirArray) - 1] ?> - Bellshade PHP Basic</title>
 
 </head>
@@ -24,7 +24,7 @@
         <div class="row mb-4 justify-content-center">
             <div class="col-auto text-center">
                 <div class="mt-4 logo-wrapper">
-                    <img class="h-100" src="<?= $base_url ?>/../assets/images/bellshade-inline.png" alt="Bellshade PHP Logo">
+                    <img class="h-100" src="<?= $base_url ?>/../../assets/images/bellshade-inline.png" alt="Bellshade PHP Logo">
                 </div>
             </div>
         </div>
@@ -35,7 +35,7 @@
                         <div class="d-flex align-items-center justify-content-between">
                             <div class="d-flex align-items-center">
                                 <div class="me-4" style="width: 64px; height: 64px;">
-                                    <img src="<?= $base_url ?>/../assets/images/phplogo.png" class="img-fluid">
+                                    <img src="<?= $base_url ?>/../../assets/images/phplogo.png" class="img-fluid">
                                 </div>
                                 <div>
                                     <h4 class="mb-0">PHP - Basic</h4>
@@ -60,9 +60,9 @@
                         ?>
                         <div class="list-group">
                             <?php foreach ($files as $fl) : ?>
-                                <?php if (is_file(realpath($fl)) && array_search($fl, $exception) == '') : ?>
-                                    <a href="<?= $base_url . '/' . $fl ?>" target="_blank" class="list-group-item list-group-item-action">
-                                        <i class="fab fa-php me-2"></i>
+                                <?php if ((($fl != '..') ? is_file(realpath($fl)) : true) && array_search($fl, $exception) == '') : ?>
+                                    <a href="<?= $base_url . '/' . $fl ?>" <?=($fl != '..') ? 'target="_blank"' : ''?> class="list-group-item list-group-item-action">
+                                        <i class="<?=(($fl == '..') ? 'fas fa-folder' : 'fab fa-php')?> me-2"></i>
                                         <?= $fl ?>
                                     </a>
                                 <?php endif; ?>
@@ -106,9 +106,9 @@
         </div>
     </div>
 
-    <script src="<?= $base_url ?>/../assets/js/bootstrap.bundle.min.js"></script>
-    <script src="<?= $base_url ?>/../assets/js/all.min.js"></script>
-    <script src="<?= $base_url ?>/../assets/js/markdown.js"></script>
+    <script src="<?= $base_url ?>/../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="<?= $base_url ?>/../../assets/js/all.min.js"></script>
+    <script src="<?= $base_url ?>/../../assets/js/markdown.js"></script>
 </body>
 
 </html>

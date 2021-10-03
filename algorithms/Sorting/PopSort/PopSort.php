@@ -80,3 +80,6 @@ class PopSort
         return $b;
     }
 }
+
+$popSort = new PopSort([83, 10, 54, 92, 62, 47, 15, 72]);
+$popSort->start(true);

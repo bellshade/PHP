@@ -1,6 +1,6 @@
 <?php
 
-use BackTracking\PathFinding;
+use BackTracking\PathFinding\PathFinding;
 use PHPUnit\Framework\TestCase;
 
 require_once 'algorithms/autoload.php';

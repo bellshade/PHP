@@ -51,3 +51,28 @@ class BubbleSort
         return $array;
     }
 }
+
+
+/**
+ * Bubble Sort (Sorting)
+ * --------------------------
+ */
+echo '<h1>Bubble Sort (Sorting)</h1><hr>';
+
+$inputTest = [];
+
+foreach (range(1, 10) as $key) {
+    $inputTest[] = rand(-100, 100);
+}
+
+$bubbleSort = (new BubbleSort())->bubbleSort($inputTest);
+
+echo '<pre>';
+echo 'Input array sebelum di jalankan BubbleSort' . PHP_EOL;
+print_r($inputTest);
+echo '</pre>';
+
+echo '<pre>';
+echo 'Input array setelah di jalankan BubbleSort' . PHP_EOL;
+print_r($bubbleSort);
+echo '</pre>';

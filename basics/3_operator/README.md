@@ -28,6 +28,7 @@ Contoh kodenya dapat dilihat [di sini](./3_comparison_operator.php).
 
 ## Operator Logika
 Operator logika ini digunakan untuk menggabungkan pernyataan yang bersifat kondisional.
+
 Operator | Nama | Contoh | Keterangan
 :-------:|------|:------:|-----------
 and / && | And | $x && $y | Akan bernilai `true` apabila $x **dan** $y bernilai `true`

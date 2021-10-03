@@ -38,7 +38,7 @@ fungsi `strpos()` akan mengembalikan nilai index posisi dari string yang akan di
 > _Catatan:_ Index posisi ini mulai dari 0
 
 <p align="center">
-    <img src="../assets/content/basic/4_string_manipulation/strpos.gif">
+    <img src="../../assets/content/basics/5_string_manipulation/strpos.gif">
 </p>
 contoh: 
 
@@ -56,7 +56,7 @@ Jika kamu ingin menemukan kata tertentu dalam sebuah string,
 <br/>kamu dapat gunakan `substr_count($string, "yangmaudicari")`
 
 <p align="center">
-    <img src="../assets/content/basic/4_string_manipulation/substr_count.gif">
+    <img src="../../assets/content/basics/5_string_manipulation/substr_count.gif">
 </p>
 
 
@@ -77,19 +77,19 @@ Pemotongan string bakal sangat sering sekali digunakan untuk pengembangan web. M
 anda dapat menggunakan `ltrim($string, 'karakternya')` untuk memotong dari kiri berdasarkan karakter<br/>
 
 <p align="center">
-    <img src="../assets/content/basic/4_string_manipulation/ltrim.gif">
+    <img src="../../assets/content/basics/5_string_manipulation/ltrim.gif">
 </p>
 
 `rtrim($string, 'karakternya')` untuk memotong dari kanan berdasarkan karakter, dan<br/>
 
 <p align="center">
-    <img src="../assets/content/basic/4_string_manipulation/rtrim.gif">
+    <img src="../../assets/content/basics/5_string_manipulation/rtrim.gif">
 </p>
 
 `trim($string, 'karakternya')` untuk memotong dari kedua sisi berdasarkan karakter tertentu<br/>
 
 <p align="center">
-    <img src="../assets/content/basic/4_string_manipulation/trim.gif">
+    <img src="../../assets/content/basics/5_string_manipulation/trim.gif">
 </p>
 
 ```php
