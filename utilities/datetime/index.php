@@ -3,7 +3,6 @@
 
 <head>
     <?php
-    $currentDirArray = explode('\\', dirname(__FILE__));
     $url = explode('/', $_SERVER['PHP_SELF']);
     array_pop($url);
     $base_url = 'http://' . $_SERVER['HTTP_HOST'] . implode('/', $url);
@@ -11,19 +10,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bellshade PHP - Utility</title>
     <link rel="stylesheet" href="<?= $base_url ?>/../../assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?= $base_url ?>/../../assets/css/all.min.css">
     <link rel="stylesheet" href="<?= $base_url ?>/../../assets/css/markdown-style.css">
     <link rel="icon" href="<?= $base_url ?>/../../assets/images/icon.png">
-    <title><?= $currentDirArray[count($currentDirArray) - 1] ?> - Bellshade PHP Utilities</title>
-
 </head>
 
 <body class="w-100 h-100 d-flex align-items-center">
     <div class="container">
         <div class="row mb-4 justify-content-center">
             <div class="col-auto text-center">
-                <div class="mt-4 logo-wrapper">
+                <div class="mt-4" style="height: 64px; mix-blend-mode: darken">
                     <img class="h-100" src="<?= $base_url ?>/../../assets/images/bellshade-inline.png" alt="Bellshade PHP Logo">
                 </div>
             </div>
@@ -39,31 +37,34 @@
                                 </div>
                                 <div>
                                     <h4 class="mb-0">PHP - Utilities</h4>
-                                    <span class="text-muted fst-italic">Demo materi bisa kamu akses dari disini</span>
+                                    <span class="text-muted fst-italic">Daftar utility bisa kamu akses dari disini</span>
                                 </div>
                             </div>
                             <nav>
                                 <ul class="breadcrumb mb-0">
-                                    <li class="breadcrumb-item"><a href="../../index.php">root</a></li>
-                                    <li class="breadcrumb-item"><a href="../index.php">utilities</a></li>
-                                    <li class="breadcrumb-item active">
-                                        <?= $currentDirArray[count($currentDirArray) - 1] ?>
-                                    </li>
+                                    <li class="breadcrumb-item"><a href="./../../index.php">root</a></li>
+                                    <li class="breadcrumb-item active">utilities</li>
                                 </ul>
                             </nav>
                         </div>
                     </div>
                     <div class="card-body">
                         <?php
-                        $exception = ['', 'README.md', 'index.php'];
-                        $files = scandir(realpath('./'));
+                        $exception = [
+                            '',
+                            '.',
+                            // '..',
+                            'assets',
+                            'backup'
+                        ];
+                        $directories = scandir(realpath('./'));
                         ?>
                         <div class="list-group">
-                            <?php foreach ($files as $fl) : ?>
-                                <?php if ((($fl != '..') ? is_file(realpath($fl)) : true) && array_search($fl, $exception) == '') : ?>
-                                    <a href="<?= $base_url . '/' . $fl ?>" <?=($fl != '..') ? 'target="_blank"' : ''?> class="list-group-item list-group-item-action">
-                                        <i class="<?=(($fl == '..') ? 'fas fa-folder' : 'fab fa-php')?> me-2"></i>
-                                        <?= $fl ?>
+                            <?php foreach ($directories as $dir) : ?>
+                                <?php if (is_dir(realpath($dir)) && array_search($dir, $exception) == '') : ?>
+                                    <a href="<?= $base_url . '/' . $dir . '/index.php'?>" class="list-group-item list-group-item-action">
+                                        <i class="fas fa-folder me-2"></i>
+                                        <?= $dir ?>
                                     </a>
                                 <?php endif; ?>
                             <?php endforeach; ?>
@@ -79,28 +80,6 @@
                             ?>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="materi-wrapper materi-hidden">
-        <div class="card shadow">
-            <div class="card-header text-white d-flex justify-content-between align-items-center">
-                <strong>Demo materi</strong>
-                <button class="btn btn-link text-white rotated">
-                    <i class="fas fa-angle-down"></i>
-                </button>
-            </div>
-            <div class="card-body">
-                <div class="list-group" style="max-height: 80vh; overflow-y: auto">
-                    <?php foreach ($files as $fl) : ?>
-                        <?php if (is_file(realpath($fl)) && array_search($fl, $exception) == '') : ?>
-                            <a href="<?= $base_url . '/' . $fl ?>" target="_blank" class="list-group-item list-group-item-action">
-                                <i class="fab fa-php me-2"></i>
-                                <?= $fl ?>
-                            </a>
-                        <?php endif; ?>
-                    <?php endforeach; ?>
                 </div>
             </div>
         </div>

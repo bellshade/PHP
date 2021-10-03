@@ -37,7 +37,7 @@
                                 </div>
                                 <div>
                                     <h4 class="mb-0">PHP - Utilities</h4>
-                                    <span class="text-muted fst-italic">Daftar materi bisa kamu akses dari disini</span>
+                                    <span class="text-muted fst-italic">Daftar utility bisa kamu akses dari disini</span>
                                 </div>
                             </div>
                             <nav>
