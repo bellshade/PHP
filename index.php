@@ -81,7 +81,7 @@
                             <?php
                             require_once './vendor/autoload.php';
                             $parsedown = new Parsedown();
-                            echo $parsedown->text(file_get_contents('./CONTRIBUTING.md'));
+                            echo $parsedown->text(file_get_contents('./README.md'));
                             ?>
                         </div>
                     </div>
