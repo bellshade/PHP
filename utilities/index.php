@@ -62,7 +62,7 @@
                         <div class="list-group">
                             <?php foreach ($directories as $dir) : ?>
                                 <?php if (is_dir(realpath($dir)) && array_search($dir, $exception) == '') : ?>
-                                    <a href="<?= $base_url . '/' . $dir ?>" class="list-group-item list-group-item-action">
+                                    <a href="<?= $base_url . '/' . $dir . '/index.php'?>" class="list-group-item list-group-item-action">
                                         <i class="fas fa-folder me-2"></i>
                                         <?= $dir ?>
                                     </a>
