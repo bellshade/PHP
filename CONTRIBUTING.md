@@ -1,21 +1,54 @@
 # Contributing
 
+## Daftar Isi
+- [Contributor](#contributor)
+- [Kategori yang tersedia](#kategori-yang-tersedia)
+  - [Basic](#pembelajaran-dasar-basic-learning)
+  - [Algoritma](#algoritma-algorithm)
+  - [Utility](#komponen-fungsi-kegunaan-utilities)
+- [Standar Penulisan](#standar-penulisan)
+  - [Tentang gaya PSR-12](#gaya-penulisan-psr12)
+  - [Pedoman penulisan untuk basic](#pedoman-penulisan-lainnya-untuk-pembelajaran-dasar-basic-learning)
+  - [Pedoman penulisan untuk utility](#pedoman-penulisan-lainnya-untuk-fungsi-kegunaan-utilities)
+  - [Pedoman penulisan untuk algorithm](#pedoman-penulisan-lainnya-untuk-algoritma-algorithm)
+- [Unit Testing](#testing)
+- [Pull Request](#pull-request)
+
 ## Contributor
 
-Kami sangat senang Anda telah ikut berkontribusi dalam implementasi algoritma, struktur data atau memperbaiki error serta merilis implementasi materi basic learning PHP. Semua boleh ikut berkontribusi walaupun hal kecil dengan ketentuan sebagai berikut:
+Kami sangat senang Anda dapat ikut berkontribusi dalam implementasi algoritma, struktur data atau memperbaiki error serta merilis implementasi materi basic learning PHP. Semua boleh ikut berkontribusi walaupun hal kecil dengan ketentuan sebagai berikut:
 
 - Hasil pekerjaan Anda adalah buatan Anda sendiri dan tidak ada hak cipta dari orang lain, jika kami menemukan kesamaan maka kami tidak `merged`.
 - Hasil kerja Anda akan berlisensi [MIT](LICENSE) ketika permintaan pull Anda sudah di merged
 - Hasil kerja Anda wajib mengikuti standar dan style koding dari kami (lihat bagian [Standar penulisan](#standar-penulisan))
 - Jika dibutuhkan, hanya gunakan library package dari composer, sebelumnya silahkan diskusi di [issue](https://github.com/bellshade/PHP/issues)
 
-## Kategori
+## Kategori yang tersedia
 
 ### Pembelajaran Dasar (_Basic Learning_)
 
-Basic learning adalah kumpulan implementasi kode materi untuk pemrograman PHP. Dikemas dengan keterangan kode dan artikel penjelasan yang mudah di mengerti sehingga bisa dijadikan referensi untuk kalian yang belajar pemrograman PHP.
+Basic learning adalah kumpulan demonstrasi kode materi pemrograman PHP beserta artikel penjelasan yang lengkap, mudah di mengerti dan menarik secara visual. Dirangkai dengan alur yang runtut mulai dasar sehingga bisa dijadikan referensi untuk kalian yang belajar pemrograman PHP.
 
-> Semua implementasi kode untuk Basic Learning bisa ditemukan di `/basics`
+Untuk berkontribusi di repositori bellshade PHP bagian Basic ini kamu harus mengikuti urutan materi yang telah ditentukan. Daftar materi yang tersedia bisa kamu jelajahi di [Issues tag materi](https://github.com/bellshade/PHP/issues?q=is%3Aopen+is%3Aissue+label%3Abasic). Didalam issue itu kami juga menuliskan rekomendasi tentang konten yang ada dalam materi tersebut, namun kamu masih dapat menambah materi konten jika dirasa perlu. 
+
+Semua implementasi kode untuk Basic Learning bisa ditemukan di `/basics`  <br/>
+dengan struktur direktori sebagai berikut <br/>
+
+```
+📦 /
+ ┣📦basics
+ ┃ ┣ 📂x_nama_materi
+ ┃ ┃ ┣ 📜1_sub_materi.php
+ ┃ ┃ ┣ 📜2_sub_materi.php
+ ┃ ┃ ┣ 📜3_sub_materi.php
+ ┃ ┃ ┣  ....
+ ┃ ┃ ┣ 📜index.php
+ ┃ ┃ ┗ 📜README.md
+```
+
+> Artikel materi ditulis pada `README.md` <br/>
+> `index.php` adalah halaman navigasi dan yang menampilkan `README.md` di lokal webserver, kamu dapat mencopy dari folder materi lain
+
 
 ### Algoritma (_Algorithm_)
 
@@ -27,15 +60,45 @@ Algoritma adalah langkah-langkah untuk menyelesaikan suatu pekerjaan dimana terd
 
 Algoritma harus dikemas sedemikian rupa sehingga memudahkan pembaca untuk memasukkannya ke dalam program yang lebih besar.
 
-Algoritma harus memiliki:
+Semua implementasi kode untuk Algorithm bisa ditemukan di `/algorithms` dengan bentuk struktur seperti berikut
 
-- Memiliki nama _class_ dan fungsi intuitif yang memperjelas tujuannya bagi pembaca
-- fleksibel untuk mengambil nilai input yang berbeda
-- Memiliki docstrings dengan penjelasan yang jelas dan/atau URL ke materi sumber
-- Memiliki unit testing yang terdapat pada direktori `/algorithms/tests`
-- Gunakan hasil kembalian / _return_ daripada langsung mencetak ke layar
+```
+📦/
+ ┣📦algorithms
+ ┃ ┣ 📂NamaKategoriAlgoritma
+ ┃ ┃ ┣ 📂NamaKasusAlgoritma
+ ┃ ┃ ┃ ┣ 📜index.php
+ ┃ ┃ ┃ ┣ 📜FileAlgoritmanya.php
+ ┃ ┃ ┃ ┗ 📜README.md
+ ┃ ┃ ┣ 📜index.php
+ ┃ ┃ ┗ 📜README.md
+```
+> Artikel penjelasan algoritma ditulis pada `README.md` <br/>
+> `index.php` adalah halaman navigasi dan yang menampilkan `README.md` di lokal webserver, kamu dapat mencopy dari folder algoritma / kategori algoritma lain
 
-> Semua implementasi kode untuk Algorithm bisa ditemukan di `/algorithms`
+### Komponen / Fungsi kegunaan _(Utilities)_
+Kategori utilities adalah kumpulan referensi dan contoh penggunaan komponen-komponen / fitur-fitur umum yang mungkin diperlukan oleh para web developer untuk diterapkan pada project aplikasi webnya. Didalam kategori ini, kalian dapat menjelajahi berbagai macam kebutuhan umum untuk pengembangan web umum dan mempelajari bagaimana cara mengimplementasikannya.
+
+Utility ini adalah sesuatu yang bukan esensial dalam pengembangan web namun terkadang dibutuhkan. Bisa juga dibilang Utility ini adalah peralatan / komponen yang bisa melengkapi sebuah fitur dalam aplikasi berbasis web. Contohnya adalah seperti: Manipulasi Gambar, DateTime, Mencetak ke printer dot matrix dan sebagainya. 
+
+Semua tentang Utility dapat ditemukan pada direktori `/utilities`<br/>
+dengan bentuk struktur yang mirip dengan `algorithm`
+
+```
+📦/
+ ┣📦utilities
+ ┃ ┣ 📂NamaKategoriUtility
+ ┃ ┃ ┣ 📂NamaUtility
+ ┃ ┃ ┃ ┣ 📜index.php
+ ┃ ┃ ┃ ┣ 📜demo_utility_1.php
+ ┃ ┃ ┃ ┣ 📜demo_utility_2.php
+ ┃ ┃ ┃ ┣ 📜 .....
+ ┃ ┃ ┃ ┗ 📜README.md
+ ┃ ┃ ┣ 📜index.php
+ ┃ ┃ ┗ 📜README.md
+ ```
+> Artikel penjelasan utility ditulis pada `README.md` <br/>
+> `index.php` adalah halaman navigasi dan yang menampilkan `README.md` di lokal webserver, kamu dapat mencopynya dari folder utility / kategori utility lain
 
 ## Standar Penulisan
 
@@ -86,21 +149,20 @@ Pedoman penulisan untuk utilities sama persis seperti materi pembelajaran dasar 
 
 Salah satu perbedaan yang mencolok untuk penulisan pada Algorithm adalah selain harus mengikuti standard PSR-12, penulisannya juga menggunakan teknik paradigma pemrograman berorientasi objek (OOP) dengan ketentuan sebagai berikut:
 
-<!-- - Penamaan variabel dan method menggunakan _camelCase_
+- Penamaan variabel dan method menggunakan _camelCase_
 - Setiap Algoritma harus berupa _class_ dan menggunakan method
-- Setiap _class_ Algoritma berada didalam folder kategori yang berkaitan. <br/>Contoh: _PathFinding.php_ berada didalam folder _BackTracking_ dst.
 - Penggunaan namespace berlabuh pada direktori `/algorithms/` <br/>
-  Contoh: file `algorithms/BackTracking/PathFinding.php` memiliki `namespace BackTracking;`
+  Contoh: file `algorithms/BackTracking/PathFinding/PathFinding.php` memiliki `namespace BackTracking/PathFinding;`
 - Setiap output Algoritma harus dikembalikan nilainya dari sebuah method daripada langsung ditampilkan di halaman. Kecuali method untuk menampilkan visualisasi data, log aktifitas atau hal informatif lainnya.
-- Harus disertai keterangan penjelasan kode yang mudah dimengerti -->
+- Harus disertai keterangan penjelasan kode yang mudah dimengerti
 
-[Pedoman kontribusi Algoritma Coming Soon]
+Untuk menginstantiasi kelas algoritmanya, lakukan di file kelasnya secara langsung (instantiasi dibawah kelasnya) agar dapat dijalankan saat membuka artikel `README.md`.
 
 ## Percobaan (_Testing_)
 
-Testing hanya dilakukan untuk Algorithm dan tidak diperlukan untuk Basic Learning. Testing diperlukan agar suatu algoritma berjalan sesuai dengan yang di harapkan. Kami juga menerapkan unit testing ini pada GitHub Actions agar selalu dijaga keandalan kodenya.
+Testing hanya dilakukan untuk Algorithm dan tidak diperlukan untuk Basic Learning ataupun Utility. Testing algoritma diperlukan agar suatu algoritma berjalan sesuai dengan yang di harapkan. Kami juga menerapkan unit testing ini pada _Continuous Integration_ kami agar selalu dijaga keandalan kodenya.
 
-Kami menggunakan PHPUnit sebagai Unit Testing untuk setiap algoritma yang Anda buat. Seluruh file testing berada dalam folder `/tests`.
+Kami menggunakan [PHPUnit](https://phpunit.de/documentation.html) sebagai Unit Testing untuk setiap algoritma yang Anda buat. Seluruh file testing berada dalam folder `/tests`.
 
 Untuk membuat unit testing, Anda perlu membuat kelas turunan `TestCase`. Awali penamaan sebuah method dengan _prefix_ `testXxx()`.
 Berikut template unit testing yang dapat Anda gunakan
@@ -125,16 +187,14 @@ Untuk menjalankan seluruh tests, gunakan command:
 composer phpunit
 ```
 
-Testing ini juga kami lakukan secara _Continuous Integration_ di github action. Untuk memaksimalkan kelancaran workflow, pastikan Anda melakukan testing setiap kali Anda membuat algoritma sebelum mengajukan _*Pull Request*_.
+Untuk memaksimalkan kelancaran workflow, pastikan Anda melakukan testing setiap kali Anda membuat algoritma sebelum mengajukan _*Pull Request*_.
 
 ## Pull Request
 
 **_Pull Request_ yang Baik**
 
 - Lakukan fork pada repository kami
-- Setelah melakukan fork Anda dibebaskan untuk mengubah atau menambah algoritma
-  - Untuk _pull request_ merubah diusahakan Anda menerapkan algoritma yang lebih baik dan lebih mudah
-- Setelah merubah, menambah, atau perbaikan dokumentasi, usahakan Anda membuat branch baru
+- usahakan Anda membuat branch baru
 
 ```bash
 git checkout -b <branch_name>
