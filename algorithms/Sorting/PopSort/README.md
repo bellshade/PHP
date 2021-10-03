@@ -4,7 +4,7 @@ Pop Sort merupakan sebuah strategi untuk melakukan penyortiran nilai-nilai dalam
 
 Biasanya, pop sort ini disebut dengan **[Tower of Hanoi](https://id.wikipedia.org/wiki/Menara_Hanoi)** karena pendekatan Pop Sort ini mendekati dengan salah satu puzzle buatan Edouard Lucas pada tahun 1883.
 
-![tower_of_hanoi](./assets/tower_of_hanoi.jpeg)
+![tower_of_hanoi](../../../assets/content/algorithms/Sorting/PopSort/tower_of_hanoi.jpeg)
 
 Di atas merupakan contoh dari puzzle yang bernama Menara Hanoi, mungkin beberapa di antara kalian akan kembali bernostalgia jaman-jaman masih TK/SD saat melihatnya.
 
@@ -21,7 +21,7 @@ Untuk studi kasus kali ini, kita akan menggunakan aturan `while` loop dan `3 arr
 
 Semisalnya saya mempunyai 3 array seperti di bawah ini:
 
-![popsort](./assets/popsort1.png)
+![popsort](../../../assets/content/algorithms/Sorting/PopSort/popsort1.png)
 
 Ingat poin-poin di bawah ini:
 - Array A merupakan input dari nilai-nilai yang akan disusun
@@ -37,7 +37,7 @@ $c = [];
 
 Kita keluarkan nilai dari Array A paling luar dengan cara Array Pop kemudian kita pindahkan ke B secara berulang-ulang seperti ini:
 
-![popsort](./assets/popsort2.png)
+![popsort](../../../assets/content/algorithms/Sorting/PopSort/popsort2.png)
 
 > Semisalnya nih bang, kalau nilainya lebih gede atau lebih besar dari data yang terakhir masuk gimana tuh bang?
 
@@ -45,21 +45,21 @@ Gud kuesien.
 
 Semisalnya, data sudah seperti ini:
 
-![popsort](./assets/popsort3.png)
+![popsort](../../../assets/content/algorithms/Sorting/PopSort/popsort3.png)
 
 Logikanya, angka `62` pasti lebih besar daripada `47` dan `15`, berarti:
 1. Kita harus menyimpan `15` dan `47` ke Array C
 2. Bawa angka `62` dari Array A ke Array B agar dapat masuk ke Array B
 
-![popsort](./assets/popsort4.png)
+![popsort](../../../assets/content/algorithms/Sorting/PopSort/popsort4.png)
 
 3. Kita susun balik dari array C ke Array B yang kira-kira bentuknya seperti ini:
 
-![popsort](./assets/popsort5.png)
+![popsort](../../../assets/content/algorithms/Sorting/PopSort/popsort5.png)
 
 Dan seterusnya hingga A benar-benar kosong melompong, kira-kira seperti ini deh bentuk keseluruhannya:
 
-![popsort](./assets/popsort_finale.png)
+![popsort](../../../assets/content/algorithms/Sorting/PopSort/popsort_finale.png)
 
 > Udah paham nih om, cepetan contoh kodenya gimana!
 

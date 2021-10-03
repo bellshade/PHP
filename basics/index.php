@@ -11,10 +11,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bellshade PHP - Basic</title>
-    <link rel="stylesheet" href="<?= $base_url ?>/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="<?= $base_url ?>/assets/css/all.min.css">
-    <link rel="stylesheet" href="<?= $base_url ?>/assets/css/markdown-style.css">
-    <link rel="icon" href="<?= $base_url ?>/assets/images/icon.png">
+    <link rel="stylesheet" href="<?= $base_url ?>/../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?= $base_url ?>/../assets/css/all.min.css">
+    <link rel="stylesheet" href="<?= $base_url ?>/../assets/css/markdown-style.css">
+    <link rel="icon" href="<?= $base_url ?>/../assets/images/icon.png">
 </head>
 
 <body class="w-100 h-100 d-flex align-items-center">
@@ -22,7 +22,7 @@
         <div class="row mb-4 justify-content-center">
             <div class="col-auto text-center">
                 <div class="mt-4" style="height: 64px; mix-blend-mode: darken">
-                    <img class="h-100" src="<?= $base_url ?>/assets/images/bellshade-inline.png" alt="Bellshade PHP Logo">
+                    <img class="h-100" src="<?= $base_url ?>/../assets/images/bellshade-inline.png" alt="Bellshade PHP Logo">
                 </div>
             </div>
         </div>
@@ -33,7 +33,7 @@
                         <div class="d-flex align-items-center justify-content-between">
                             <div class="d-flex align-items-center">
                                 <div class="me-4" style="width: 64px; height: 64px;">
-                                    <img src="<?= $base_url ?>/assets/images/phplogo.png" class="img-fluid">
+                                    <img src="<?= $base_url ?>/../assets/images/phplogo.png" class="img-fluid">
                                 </div>
                                 <div>
                                     <h4 class="mb-0">PHP - Basic</h4>
@@ -62,7 +62,7 @@
                         <div class="list-group">
                             <?php foreach ($directories as $dir) : ?>
                                 <?php if (is_dir(realpath($dir)) && array_search($dir, $exception) == '') : ?>
-                                    <a href="<?= $base_url . '/' . $dir ?>" class="list-group-item list-group-item-action">
+                                    <a href="<?= $base_url . '/' . $dir . '/index.php' ?>" class="list-group-item list-group-item-action">
                                         <i class="fas fa-folder me-2"></i>
                                         <?= $dir ?>
                                     </a>
@@ -85,9 +85,9 @@
         </div>
     </div>
 
-    <script src="<?= $base_url ?>basics/assets/js/bootstrap.bundle.min.js"></script>
-    <script src="<?= $base_url ?>basics/assets/js/all.min.js"></script>
-    <script src="<?= $base_url ?>basics/assets/js/markdown.js"></script>
+    <script src="<?= $base_url ?>/../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="<?= $base_url ?>/../assets/js/all.min.js"></script>
+    <script src="<?= $base_url ?>/../assets/js/markdown.js"></script>
 </body>
 
 </html>

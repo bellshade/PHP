@@ -1,5 +1,5 @@
 <p align="center">
-    <img width="20%" src="./basics/assets/images/logo.png"><br/><br/>
+    <img width="20%" src="./assets/images/logo.png"><br/><br/>
     <img src="https://img.shields.io/github/workflow/status/bellshade/PHP/CI%20PHP%20PSR-12%20Linting?style=for-the-badge">
     <img src="https://img.shields.io/github/license/bellshade/PHPAlgorithm?style=for-the-badge">
 </p>
@@ -45,7 +45,7 @@ composer install
 ```
 - Kemudian kamu dapat mengaksesnya dibrowser.
 <p align="center">
-    <img width="80%" src="./basics/assets/images/getting-started.png"><br/><br/>
+    <img width="90%" src="./assets/images/getting-started.png"><br/><br/>
 </p>
 
 

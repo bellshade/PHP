@@ -42,7 +42,7 @@
  * kemungkinan action itu dan akan berpindah ke kemungkinan action lainnya
  */
 
-namespace BackTracking;
+namespace BackTracking\PathFinding;
 
 class PathFinding
 {
@@ -243,3 +243,21 @@ class PathFinding
         echo "</table>";
     }
 }
+
+/**
+ * Pathfinding (Backtracking)
+ * --------------------------
+ */
+echo '<h1>PathFinding (Backtracking)</h1><hr>';
+$pathFinding = new PathFinding();
+$pathFinding->setMap([
+    [0, 0, 1, 0, 1],
+    [0, 1, 0, 0, 1],
+    [0, 0, 0, 1, 0],
+    [0, 0, 1, 0, 0],
+    [1, 0, 0, 0, 0],
+]);
+$pathFinding->getMapVisual();
+$pathFinding->pathFind(0, 0);
+$pathFinding->getMapVisitedVisual();
+$pathFinding->getLog();

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <?php
     $currentDirArray = explode('\\', dirname(__FILE__));
@@ -14,8 +15,10 @@
     <link rel="stylesheet" href="<?= $base_url ?>/../../assets/css/all.min.css">
     <link rel="stylesheet" href="<?= $base_url ?>/../../assets/css/markdown-style.css">
     <link rel="icon" href="<?= $base_url ?>/../../assets/images/icon.png">
-    <title><?= $currentDirArray[count($currentDirArray) - 1] ?> - Bellshade PHP Basic</title>
+    <title><?= $currentDirArray[count($currentDirArray) - 1] ?> - Bellshade PHP Utilities</title>
+
 </head>
+
 <body class="w-100 h-100 d-flex align-items-center">
     <div class="container">
         <div class="row mb-4 justify-content-center">
@@ -35,14 +38,14 @@
                                     <img src="<?= $base_url ?>/../../assets/images/phplogo.png" class="img-fluid">
                                 </div>
                                 <div>
-                                    <h4 class="mb-0">PHP - Basic</h4>
+                                    <h4 class="mb-0">PHP - Utilities</h4>
                                     <span class="text-muted fst-italic">Demo materi bisa kamu akses dari disini</span>
                                 </div>
                             </div>
                             <nav>
                                 <ul class="breadcrumb mb-0">
                                     <li class="breadcrumb-item"><a href="../../index.php">root</a></li>
-                                    <li class="breadcrumb-item"><a href="../index.php">basic</a></li>
+                                    <li class="breadcrumb-item"><a href="../index.php">utilities</a></li>
                                     <li class="breadcrumb-item active">
                                         <?= $currentDirArray[count($currentDirArray) - 1] ?>
                                     </li>
