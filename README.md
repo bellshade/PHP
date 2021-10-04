@@ -27,7 +27,7 @@ PHP adalah bahasa pemrograman yang cukup luas dengan ekosistem yang luar biasa b
 
 
 ## Cara penggunaan
-Ada 2 cara kalian dapat menggunakan repositori ini sebagai referensi utama. 
+Ada 2 cara yang dapat kalian gunakan untuk menjadikan repositori ini sebagai referensi utama. 
 
 ### Dengan secara langsung di Github
 
@@ -35,15 +35,18 @@ kalian dapat langsung menjelajahi direktori-direktori di repo ini, dan karena ar
 
 ### Dengan clone di web server kamu di _local_
 
-Jika kalian perhatikan, tiap direktori selalu memiliki `index.php` yang berfungsi untuk menampilkan penjelasan berupa markdown `README.md` kedalam browser. Kalian juga dapat menjelajahi setiap folder langsung dari browser dan dapat menjalankan demo file PHPnya juga. akan tetapi, karena kami menggunakan _dependency_ pihak ketiga, setelah meng-_clone_ kalian harus mengikuti langkah dibawah:
+Jika kalian perhatikan, tiap direktori selalu memiliki `index.php` yang berfungsi untuk menampilkan penjelasan berupa markdown `README.md` kedalam browser. Kalian juga dapat menjelajahi setiap folder langsung dari browser dan dapat menjalankan demo file PHPnya juga. akan tetapi, karena kami menggunakan _dependency_ (bergantung pada) pihak ketiga, ikuti langkah dibawah ini:
 
 - Download & Install composer di [situs resminya](https://getcomposer.org/download/)
-- pada direktori hasil _clone_ nya, lakukan perintah berikut
+- Clone repositori dengan perintah `git clone https://github.com/bellshade/PHP`.
+- Jika kamu menggunakan LAMPP, pindahkan reponya ke dalam direktori `var/www/html`.
+- Jika kamu menggunakan XAMPP, pindahkan reponya ke dalam direktori `.../xampp/htdocs`. 
+- Pada direktori hasil _clone_ nya, lakukan perintah berikut:
 
 ```bash
 composer install
 ```
-- Kemudian kamu dapat mengaksesnya dibrowser.
+- Kemudian kamu dapat mengaksesnya di browser dengan membuka `localhost/php` atau `127.0.0.1/php`.
 <p align="center">
     <img width="90%" src="./assets/images/getting-started.png"><br/><br/>
 </p>
