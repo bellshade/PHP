@@ -1,4 +1,4 @@
-# Loops
+# Perulangan
 
 Loop digunakan untuk mengeksekusi blok kode yang sama berulang kali, selama kondisi tertentu benar atau bernilai true.
 
