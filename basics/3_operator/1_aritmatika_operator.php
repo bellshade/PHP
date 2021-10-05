@@ -1,9 +1,11 @@
 <?php
+
     /**
      * Contoh Operator Aritmatika
-     * 
+     *
      * kondiak
      */
+
     $a = (int) 4;
     $b = (int) 2;
     // Bilangan indetitas

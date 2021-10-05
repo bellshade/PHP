@@ -24,7 +24,7 @@ Dalam bahasa pemrograman, operator digunakan untuk melakukan operasi terhadap va
 7. [Operator Increment/Decrement](#operator-increment/decrement)
 8. [Operator String](#operator-string)
 9. [Operator Array](#operator-array)
-10. Liannya
+10. Lainnnya
 
 ## Operator Aritmatika
 Masih ingat dengan dasar matematika Kabataku (kali bagi tambah kurang), yang kita pelajari di sekolah?.
@@ -399,7 +399,7 @@ sebagai contoh :
 
 PHP mengikuti sistem Bahasa Perl's dalam melakukan operasi aritmatika terhadap variable karakter/huruf, bukan seperti yang di jalan oleh Bahasa C.
 
-Sebagaimana dalam ekspresi <code>$a = 'Z' ; $a++; </code>pada PHP dan Perl's akan menghasilkan 'AA', sedangan Bahasa C akan mengkonversi menjadi nilai ASCII dari huruf `Z` ( yaitu 90 ), dan kemudian menambahkan 1 sehingga menghasilkan nilai `'` (nilai ASCII 91).
+Sebagaimana dalam ekspresi <code>$a = 'Z' ; $a++; </code> pada PHP dan Perl's akan menghasilkan 'AA', sedangan Bahasa C akan mengkonversi menjadi nilai ASCII dari huruf `Z` ( yaitu 90 ), dan kemudian menambahkan 1 sehingga menghasilkan nilai `'` (ASCII 91).
 
 untuk contoh dapat di lihat [disini](./7_increment_decrement_operator.php)
 ## Operator String

@@ -1,8 +1,8 @@
 <?php
 
     /**
-     * Contoh Assigment Operator 
-     * 
+     * Contoh Assigment Operator
+     *
      * kondiak
      */
 
