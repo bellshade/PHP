@@ -14,3 +14,5 @@ while ($y <= 1) {
     echo "Nilai Y: $y <br>";
     $y++;
 }
+
+
