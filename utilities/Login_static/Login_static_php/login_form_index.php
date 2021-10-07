@@ -18,10 +18,10 @@
             <input type="password" class="form-control mb-4" name="password" placeholder="Enter ur Password"> 
 
         <button type="submit">Login</button> 
-        <?php if(isset($_GET['pesan'])) { ?>
+        <?php if (isset($_GET['pesan'])) { ?>
          <label style="color:red;"><?php echo $_GET['pesan']; ?></label>
          <!-- *Memberi Popup jika Password yang dimasukkan salah* -->
-        <?php } ?>	
+        <?php } ?>  
 </body>
 </html>
 </form>
