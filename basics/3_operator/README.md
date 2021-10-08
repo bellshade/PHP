@@ -4,7 +4,7 @@ Dalam bahasa pemrograman, operator digunakan untuk melakukan operasi terhadap va
 1. Operator Aritmatika
 2. Operator Penugasan/Assignment
 3. [Operator Pembanding/Comparison](#operator-pembanding)
-4. [Operator Logika/Logical](#operator-logical)
+4. [Operator Logika/Logical](#operator-logika)
 5. Operator Bitwise
 6. Conditional Assignment
 
