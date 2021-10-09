@@ -1,12 +1,24 @@
 # Operator
 
 Dalam bahasa pemrograman, operator digunakan untuk melakukan operasi terhadap variabel dan nilai. Dalam PHP, operator dibagi menjadi beberapa bagian yakni:
-1. Operator Aritmatika
+1. [Operator Aritmatika](#operator-aritmatika)
 2. Operator Penugasan/Assignment
 3. [Operator Pembanding/Comparison](#operator-pembanding)
 4. [Operator Logika/Logical](#operator-logical)
 5. Operator Bitwise
 6. Conditional Assignment
+
+## Operator Aritmatika
+Operator aritmatika ini digunakan untuk melakukan operasi matematika dengan tujuan untuk mengolah bilangan.
+
+Operator | Nama | Contoh | Keterangan
+:-------:|------|:------:|-----------
++ | Penjumlahan | $a + $b | Akan menjumlahkan nilai variabel $a dengan $b
+- | Pengurangan | $a - $b | Akan mengurangi nilai variabel $a dengan $b
+* | Perkalian | $a * $b | Akan mengalikan nilai variabel $a dengan $b
+** | Pemangkatan | $a ** $b | Akan memangkatkan nilai variabel $a dengan $b
+/ | Pembagian | $a / $b | Akan membagi nilai variabel $a dengan $b
+% | Modulus | $a / $b | Akan menghasilkan nilai sisa pembagian variabel $a dengan $b
 
 ## Operator Pembanding
 Operator pembanding ini digunakan untuk membandingkan dua variabel yang nilainya sama atau berbeda.
