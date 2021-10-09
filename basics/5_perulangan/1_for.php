@@ -1,88 +1,38 @@
 <?php
 
-    /**
-     * Perulangan
-     * Contoh sederhana interaksi Array dengan Perulangan For
-     * Jalankan dengan terminal untuk mendapat hasil lebih baik
-     *
-     * Kondiak
-     */
+echo '<pre>';
+echo '<h1><strong>Perulangan PHP</strong></h1>';
+echo'<h1><strong>1.Menggunakan For</strong></h1></br>';
+echo'</br>';
+//======================Teknik Sederhana Perulangan For ==========================
+//Teknik Basic
+echo'<h3><strong>Teknik Dasar</strong></h3></br>';
 
-     // Variable Array
-     $mahlukhidup = [
-         ['nama' => 'ikan', 'jenis' => 'hewan', 'habitat' => 'air', 'code' => '029381'],
-         ['nama' => 'burung', 'jenis' => 'hewan', 'habitat' => 'darat', 'code' => '098367'],
-         ['nama' => 'sagu', 'jenis' => 'tanaman', 'habitat' => 'darat', 'code' => '023485'],
-         ['nama' => 'rumput laut', 'jenis' => 'tanaman', 'habitat' => 'air', 'code' => '267851'],
-         ['nama' => 'mangga', 'jenis' => 'tanaman', 'habitat' => 'darat', 'code' => '120978']
-     ];
+echo'- Ascending 1-5</br></br>';
+//====================================
+// Logic : Pertama melakukan Pendeklarasi i dengan nilai awal 1,
+// Lalu Kondisi Jika i dibawah 5 maka i nambah 1 tiap perulangan
+for ($i = 1; $i <= 5; $i++) {
+    echo 'Perulangan ' . $i . '</br>';
+}
+//====================================
 
-     //Untuk Tampilan
 
-     $format = "\n" . ': %1$1s : %2$12s : %3$13s : %4$9s : %5$18s :';
+echo'</br></br>- Descending 5-1</br></br>';
+//====================================
+//Logic :Pertama melakukan Pendeklarasi i dengan nilai awal 5, Lalu Kondisi Jika i atas, 5 maka i kurang 1 tiap perulangan
+for ($i = 5; $i >= 1; $i--) {
+    echo 'Perulangan ' . $i . '</br>';
+}
 
-     echo <<<EOH
-     ---- -------------- --------------- ----------- --------------------
-      No   Nama            Jenis          Habitat           Kode
-     ---- -------------- --------------- ----------- --------------------
-     EOH;
 
-     /**
-      * Contoh Penggunaan For Secara Umum
-      * salah satu ekspresi memiliki dua argumen
-      * Menampilkan data Array dengan perulangan for
-      */
-     for ($i = 0, $size = count($mahlukhidup); $i < $size; ++$i) {
-         $nama = $mahlukhidup[$i]['nama'];
-         $jenis = $mahlukhidup[$i]['jenis'];
-         $habitat = $mahlukhidup[$i]['habitat'];
-         $kode = $mahlukhidup[$i]['code'];
-         printf($format, $i, $nama, $jenis, $habitat, $kode);
-     }
-
-     /**
-      * Contoh Penggunaan For tanpa truth expression
-      * Conditional Statement digunakan untuk menghentikan perulangan
-      * Mengganti nilai dalam array dengan dengan nilai sembarang
-      */
-     for ($i = 0, $size = (count($mahlukhidup) - 1);; $i++) {
-         if ($i > $size) {
-             break;
-         } else {
-             $mahlukhidup[$i]['code'] = mt_rand(000000, 999999);
-         }
-     }
-
-     //tampilan info
-     echo "\n \n Setelah Code di Edit Random \n";
-
-     //tampilkan hasil edit code array
-     $j = 0;
-     foreach ($mahlukhidup as $mh) {
-         printf($format, $j, $mh['nama'], $mh['jenis'], $mh['habitat'], $mh['code']);
-         $j++;
-     }
-
-     /**
-      * Cara Penggunaan For Tanpa Ekspressi
-      * Conditional Statement digunakan untuk menghentikan perulangan
-      * Ekspresi lainnya nya digabungkan kedalam statement
-      * Edit nilai array dengan nilai tetap
-      */
-     $i = 0;
-     for (;;) {
-         $size = count($mahlukhidup) - 1;
-         if ($i > $size) {
-             break;
-         } else {
-             $mahlukhidup[$i]['code'] = 250025;
-              $i++;
-         }
-     }
-
-     // Tampilan Hasil Edit
-     echo "\n \n Setelah Edit dengan nilai di tetapkan \n";
-     $k = 0;
-     foreach ($mahlukhidup as $mh) {
-         printf($format, $k, $mh['nama'], $mh['jenis'], $mh['habitat'], $mh['code']);
-     }
+echo'</br></br>- Nested Loop</br></br>';
+//====================================
+for ($i = 1; $i <= 5; $i++) {
+    for ($j = 1; $j <= $i; $j++) {
+        echo '*';
+    }
+    echo '</br>';
+}
+//==============================================================================
+echo '</pre>';
