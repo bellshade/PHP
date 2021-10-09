@@ -101,3 +101,71 @@ $trim = trim($text, 'inibuat');
 <a href='2_pemotongan_string.php' target='_blank'>
     <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
 </a>
+
+## 3. Kapitalisasi String
+Kapitalisasi string akan sangat dibutuhkan dalam pengembangan web. Contoh kasusnya adalah ketika menyamakan format nama dari user yang sering berbeda beda dan kebutuhkan lainnya.
+
+### Mengubah karakter menjadi huruf kecil
+Untuk mengubah karakter menjadi huruf kecil semua yang berada pada sebuah string, kamu bisa menggunakan fungsi `strtolower()`. Berikut contohnya :
+
+```php
+$text = "Ini Adalah coNtoh teKs yAng Saya Buat";
+echo 'Contoh Tulisan: ' . $text, PHP_EOL;
+echo 'Setelah Dikecilkan: ' . strtolower($text), PHP_EOL;  // Output: ini adalah contoh teks yang saya buat
+```
+
+<a href='3_kapitalisasi_string.php#strtolower' target='_blank'>
+    <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
+</a>
+
+### Mengubah karakter menjadi huruf besar
+Untuk mengubah karakter menjadi huruf besar semua yang berada pada sebuah string, kamu bisa menggunakan fungsi `strtoupper()`. Berikut contohnya :
+
+```php
+$text = "Ini Adalah coNtoh teKs yAng Saya Buat";
+echo 'Contoh Tulisan: ' . $text, PHP_EOL;
+echo 'Hasilnya: ' . strtoupper($text), PHP_EOL;  // Output: INI ADALAH CONTOH TEKS YANG SAYA BUAT
+```
+
+<a href='3_kapitalisasi_string.php#strtoupper' target='_blank'>
+    <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
+</a>
+
+### Mengubah karakter pertama menjadi huruf besar
+Untuk mengubah karakter pertama menjadi huruf besar yang berada pada sebuah string, kamu bisa menggunakan fungsi `ucfirst()`. Berikut contohnya :
+
+```php
+$text = "ini adalah contoh teks yang saya buat";
+echo 'Contoh Tulisan: ' . $text, PHP_EOL;
+echo 'Hasilnya: ' . ucfirst($text), PHP_EOL;  // Output: Ini adalah contoh teks yang saya buat
+```
+
+<a href='3_kapitalisasi_string.php#ucfirst' target='_blank'>
+    <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
+</a>
+
+### Mengubah karakter pertama setiap kata menjadi huruf besar
+Untuk mengubah karakter pertama pada setiap kata menjadi huruf besar yang berada pada sebuah string, kamu bisa menggunakan fungsi `ucwords()`. Berikut contohnya :
+
+```php
+$text = "ini adalah contoh teks yang saya buat";
+echo 'Contoh Tulisan: ' . $text, PHP_EOL;
+echo 'Hasilnya: ' . ucwords($text), PHP_EOL;  // Output: Ini Adalah Contoh Teks Yang Saya Buat
+```
+
+<a href='3_kapitalisasi_string.php#ucwords' target='_blank'>
+    <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
+</a>
+
+### Mengubah karakter pertama menjadi huruf kecil
+Untuk mengubah karakter pertama menjadi huruf kecil yang berada pada sebuah string, kamu bisa menggunakan fungsi `lcfirst()`. Berikut contohnya :
+
+```php
+$text = "INI ADALAH CONTOH TEKS YANG SAYA BUAT";
+echo 'Contoh Tulisan: ' . $text, PHP_EOL;
+echo 'Hasilnya: ' . lcfirst($text), PHP_EOL;  // Output: iNI ADALAH CONTOH TEKS YANG SAYA BUAT
+```
+
+<a href='3_kapitalisasi_string.php#lcfirst' target='_blank'>
+    <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
+</a>
