@@ -9,6 +9,7 @@ Dalam materi ini kita bahas mengenai Array lebih lanjut.
     - [Array Asosiatif](#2-array-asosiatif)
 3. [Array Multi Dimensi](#3-array-multi-dimensi)
 4. [Manipulasi Array](#4-manipulasi-array)
+    - [sizeof()](#a-sizeof)
 
 ## 1. Array
 ### Apa itu Array
@@ -269,3 +270,55 @@ Untuk mengakses data tabel tersebut kedalam tabel kita dapat menggunaan beberapa
 Untuk contoh penggunaan matrix Array kita bisa pelajari implementasi [Algoritma BackTracking pada PathFinding](../../algorithms/BackTracking/PathFinding) atau [algoritma Sorting](../../algorithms/Sorting) untuk linear Array.
 
 ## 4. Manipulasi Array
+
+Disaat menggunakan array kita akan dihadapkan dengan berbagai skenario yang mengharuskan kita melakukan manipulasi pada array, seperti menambah value, menghapus value, dan lainnya.
+
+Terdapat berbagai macam manipulasi array yang dapat kita lakukan, yaitu :
+
+### a. sizeof()
+
+Fungsi yang kita gunakan untuk mendapatkan jumlah banyaknya element pada suatu array. `sizeof()` juga merupakan suatu alias dari suatu fungsi yang memiliki kegunaan yang sama yaitu `count()`.
+
+```php
+sizeof(array $arr, int $mode = 0) : int
+```
+
+**Parameter**
+
+- `$arr` Diisi dengan variable array yang akan dicari jumlah elementnya _(wajib diisi)_
+- `$mode` Diisi dengan nilai **0** atau **1** _(opsional)_
+    - **0** - Default, tidak akan menghitung element dari array multidimensi di dalamnya
+    - **1** - Akan menghitung jumlah element dari array multidimensi di dalamnya.
+ 
+**Contoh penggunaan**
+
+```php
+$creators = ['taylor otwell', 'caleb porzio', 'evan you'];
+
+echo sizeof($creators);  // 3
+```
+
+[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_sizeof_1.php)
+
+atau 
+
+```php
+$tools = [
+    [
+        'author' => 'taylor otwell',
+        'products' => ['laravel', 'forge', 'vapor'],
+    ],
+    [
+        'author' => 'caleb porzio',
+        'products' => ['alphine.js', 'laravel livewire'],
+    ],
+];
+
+echo sizeof($tools);        // 2
+echo sizeof($tools, false); // 2
+echo sizeof($tools, 0);     // 2
+echo sizeof($tools, true);  // 11
+echo sizeof($tools, 1);     // 11
+```
+
+[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_sizeof_2.php)
