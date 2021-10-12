@@ -17,7 +17,7 @@
 
 Selamat datang di repositori Bellshade PHP. Disini kamu dapat mempelajari semua tentang bahasa pemrograman PHP mulai dari dasar-dasar, fitur-fitur PHP, implementasi algoritma dan lain sebagainya. Dikemas dengan gaya penulisan yang rapi terorganisasi dan penjelasan berbentuk artikel berbahasa Indonesia yang mudah dimengerti, sehingga repositori ini dapat kamu gunakan sebagai referensi bahasa pemrograman PHP.
 
-Repositori Bellshade PHP dapat digunakan untuk semua level baik itu pemula, menengah atau bahkan _expert_. Untuk pemula, kami menyediakan materi dasar dalam bentuk artikel dan demonstrasi yang runtut sehingga secara perlahan repositori Bellshade PHP dapat membantu kalian untuk meningkatkan pengetahuan dan keahlian pemrograman PHP tanpa mengalami kesusahan akibat jalan belajar yang tidak runtut.
+Repositori Bellshade PHP dapat digunakan untuk semua level baik itu pemula, menengah atau bahkan _expert_. Untuk pemula, kami menyediakan materi dasar dalam bentuk artikel dan demonstrasi yang runtut sehingga secara perlahan repositori Bellshade PHP dapat membantu kamu untuk meningkatkan pengetahuan dan keahlian pemrograman PHP tanpa mengalami kesusahan akibat jalan belajar yang tidak runtut.
 
 Bagi kamu yang sudah berpengalaman dalam pemrograman menggunakan PHP, tentunya kamu dapat kembali lagi mempelajari materi-materi tertentu untuk mengasah keahlian pemrograman atau hanya sekedar mengingat-ingat kembali. Selain itu, kami juga memberikan topik referensi lain yang sifatnya adalah umum dan opsional. Topik referensi ini dapat berupa implementasi fitur-fitur atau komponen kegunaan _(utilities)_ seperti manipulasi gambar, chart, datetime dan sebagainya yang sejatinya adalah opsional dan tidak ada prasyarat tertentu untuk bisa digunakan.
 
@@ -27,15 +27,15 @@ PHP adalah bahasa pemrograman yang cukup luas dengan ekosistem yang luar biasa b
 
 
 ## Cara penggunaan
-Ada 2 cara yang dapat kalian gunakan untuk menjadikan repositori ini sebagai referensi utama. 
+Ada 2 cara yang dapat kamu gunakan untuk menjadikan repositori ini sebagai referensi utama. 
 
 ### Dengan secara langsung di Github
 
-kalian dapat langsung menjelajahi direktori-direktori yang ada di repositori ini, dan karena artikel penjelasannya berupa markdown `README.md`, kalian dapat membacanya saat berada di direktori yang berkaitan. Namun kalian tidak dapat menjalankan demo file PHP-nya secara langsung.
+kamu dapat langsung menjelajahi direktori-direktori yang ada di repositori ini, dan karena artikel penjelasannya berupa markdown `README.md`, kamu dapat membacanya saat berada di direktori yang berkaitan. Namun kamu tidak dapat menjalankan demo file PHP-nya secara langsung.
 
 ### Dengan clone di web server kamu di _local_
 
-Jika diperhatikan, tiap direktori selalu memiliki `index.php` yang berfungsi untuk menampilkan penjelasan berupa markdown `README.md` ke dalam browser. Kalian juga dapat menjelajahi setiap folder langsung dari browser dan dapat menjalankan demo file PHP-nya juga. akan tetapi, karena kami menggunakan _dependency_ (bergantung pada) pihak ketiga, ikuti langkah dibawah ini:
+Jika diperhatikan, tiap direktori selalu memiliki `index.php` yang berfungsi untuk menampilkan penjelasan berupa markdown `README.md` ke dalam browser. Kamu juga dapat menjelajahi setiap folder langsung dari browser dan dapat menjalankan demo file PHP-nya juga. akan tetapi, karena kami menggunakan _dependency_ (bergantung pada) pihak ketiga, ikuti langkah dibawah ini:
 
 - Download & Install composer di [situs resminya](https://getcomposer.org/download/)
 - Clone repositori dengan perintah `git clone https://github.com/bellshade/PHP`.
@@ -58,17 +58,17 @@ composer install
 ### Pembelajaran _(basics)_
 Di repositori Bellshade PHP terdapat kategori basic yang berisi tentang kumpulan materi pembelajaran dalam bentuk artikel berisi text dan media-media visual yang informatif. Kumpulan materi pembelajaran ini juga disusun secara runtut sehingga dapat digunakan sebagai pembelajaran.
 
-> kategori pembelajaran (basic learning) ini bisa kalian ditemukan pada direktori `/basics` 
+> kategori pembelajaran (basic learning) ini bisa kamu ditemukan pada direktori `/basics` 
 
 di dalam folder `/basics` terdapat folder-folder materi yang di dalam tiap folder materi tersebut terdapat file `README.md` yang mana file ini adalah artikel penjelasan dari materinya. Dan tentunya, di dalam tiap folder materi juga terdapat file demo PHP berisi contoh kode implementasi dari materinya yang dapat dijalankan di local jika sudah di clone dan ditempatkan di web-server.
 
 
 ### Komponen kegunaan / keperluan _(utilities)_
-Kategori _utilities_ adalah kumpulan referensi dan contoh penggunaan komponen-komponen / fitur-fitur umum yang mungkin diperlukan oleh para web developer untuk diterapkan pada proyek aplikasi web-nya. Di dalam kategori ini, kalian dapat menjelajahi berbagai macam kebutuhan umum untuk pengembangan web umum dan mempelajari bagaimana cara mengimplementasikannya. 
+Kategori _utilities_ adalah kumpulan referensi dan contoh penggunaan komponen-komponen / fitur-fitur umum yang mungkin diperlukan oleh para web developer untuk diterapkan pada proyek aplikasi web-nya. Di dalam kategori ini, kamu dapat menjelajahi berbagai macam kebutuhan umum untuk pengembangan web umum dan mempelajari bagaimana cara mengimplementasikannya. 
 
-Contoh skenario penggunaan kategori referensi ini adalah sebagai berikut: _"Misalnya kamu sedang mengerjakan suatu proyek, lalu tiba-tiba di tengah pengerjaan proyek dibutuhkan bagaimana cara memanipulasi gambar yang diunggah dengan menggunakan PHP"_. Manipulasi gambar adalah hal yang sangat opsional dan tidak esensial pada setiap pengembangan web, meskipun sudah level menengah terkadang juga masih perlu mencari referensi lagi. Oleh karena itu, hal ini termasuk dalam kategori _utilities_ dan anda dapat menjelajahi kebutuhan-kebutuhan lainnya di kategori ini.
+Contoh skenario penggunaan kategori referensi ini adalah sebagai berikut: _"Misalnya kamu sedang mengerjakan suatu proyek, lalu tiba-tiba di tengah pengerjaan proyek dibutuhkan bagaimana cara memanipulasi gambar yang diunggah dengan menggunakan PHP"_. Manipulasi gambar adalah hal yang sangat opsional dan tidak esensial pada setiap pengembangan web, meskipun sudah level menengah terkadang juga masih perlu mencari referensi lagi. Oleh karena itu, hal ini termasuk dalam kategori _utilities_ dan kamu dapat menjelajahi kebutuhan-kebutuhan lainnya di kategori ini.
 
-> kategori kegunaan _(utilities)_ dapat kalian temukan pada direktori `/utilities`
+> kategori kegunaan _(utilities)_ dapat kamu temukan pada direktori `/utilities`
 
 ### Algoritma _(algorithms)_
 Topik kategori algoritma berisi tentang kumpulan penyelesaian masalah dengan berbagai macam jenis algoritma yang ditulis dalam bahasa pemrograman PHP. Meskipun kurang begitu menyenangkan untuk dipelajari, dan kurang begitu sering digunakan pada pengembangan web berbasis PHP, mempelajari algoritma dapat meningkatkan kemampuan cara berpikir fundamental sebagai seorang _programmer_.
@@ -78,4 +78,4 @@ Topik kategori algoritma berisi tentang kumpulan penyelesaian masalah dengan ber
 ## Berkontribusi
 Kami sangat senang sekali jika kamu dapat berkontribusi pada proyek open source ini. Untuk berkontribusi pastikan kamu sudah mengetahui bagaimana pola pemrograman dan struktur dari proyek repositori ini. Kami juga menuliskan pedoman berkontribusi di [`CONTRIBUTING.md`](CONTRIBUTING.md), pastikan kamu sudah membaca, menyetujui dan memenuhi syarat-syarat yang telah ditetapkan. 
 
-Tentang apa saja yang bisa kalian kerjakan untuk berkontribusi, kamu dapat mencari issue yang kosong di [_issues_](https://github.com/bellshade/PHP/issues). Lalu, kamu dapat assign diri sendiri ke salah satu issues, setelah itu ajukan _Pull Request_ dengan menutup issue itu. Kami akan mereview hasil pengerjaan anda, dan jika disetujui kami akan merge ke dalam repositori ini. 
+Tentang apa saja yang bisa kamu kerjakan untuk berkontribusi, kamu dapat mencari issue yang kosong di [_issues_](https://github.com/bellshade/PHP/issues). Lalu, kamu dapat assign diri sendiri ke salah satu issues, setelah itu ajukan _Pull Request_ dengan menutup issue itu. Kami akan mereview hasil pengerjaan kamu, dan jika disetujui kami akan merge ke dalam repositori ini. 
