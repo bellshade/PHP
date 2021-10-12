@@ -320,3 +320,67 @@ echo sizeof($tools, 1);     // 11
 ```
 
 [![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_sizeof_2.php)
+
+### Mendapatkan nilai dari array
+
+#### a. array_keys
+
+Untuk mendapatkan key dari suatu array.
+
+```php
+array_keys(array $arr, ?string $value = null, ?bool $strict) : array
+```
+
+**Parameter**
+
+- `$arr` array yang akan digunakan _(wajib diisi)_
+- `$value` nilai dari key yang akan kita ambil _(opsional)_
+- `$strict` apakah spesifik dengan tipe datanya atau tidak? _(opsional)_
+
+**Hasil**
+
+- `Array`
+
+**Contoh Penggunaan**
+
+```php
+$cars = [
+    'japan' => 'toyota',
+    'germany' => 'bmw',
+];
+
+print_r(array_keys($cars));                 // ['japan', 'germany']
+print_r(array_keys($cars, 'bmw'));          // ['germany']
+print_r(array_keys($cars, 'bmw', true));    // ['germany']
+```
+
+[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_array_keys.php)
+
+#### b. array_values
+
+Untuk mendapatkan nilai dari suatu array.
+
+```php
+array_values(array $arr) : array
+```
+
+**Parameter**
+
+- `$arr` array yang akan digunakan _(wajib diisi)_
+
+**Hasil**
+
+- `Array`
+
+**Contoh Penggunaan**
+
+```php
+$cars = [
+    'japan' => 'toyota',
+    'germany' => 'bmw',
+];
+
+print_r(array_values($cars));   // ['toyota', 'bmw']
+```
+
+[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_array_values.php)
