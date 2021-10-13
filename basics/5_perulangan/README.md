@@ -261,7 +261,7 @@ contoh pengguan while dalam PHP dapat dilihat [disini](./3_while.php)
 
 [![](https://img.shields.io/static/v1?&label=Contoh%20While&message=%3e&color)](./3_while.php)
 
-##4. Perulangan Do While
+## 4. Perulangan Do While
 Perulangan Do While hampir sama dengan perulangan While, yang membedakan yang ekpresi akan di evaluasi di akhir dari sirkulasi perulangan, sehingga perintah dalam statement akan selalu terlaksana pertama kali sirkulasi perulangan ini berjalan.
 
 Syntax
