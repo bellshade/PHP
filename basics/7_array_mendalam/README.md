@@ -386,3 +386,171 @@ print_r(array_values($cars));   // ['toyota', 'bmw']
 ```
 
 [![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_array_values.php)
+
+### Mengubah element pada array
+
+#### a. array_push
+
+Untuk menambahkan element pada bagian **akhir** array.
+
+<p align="center">
+    Sebelum <code>array_push</code> :<br>
+    <img src="../../assets/content/basics/7_array_mendalam/array push __sebelum_push.svg" alt="Sebelum array push">
+</p>
+
+<p align="center">
+    Setelah <code>array_push</code> :<br>
+    <img src="../../assets/content/basics/7_array_mendalam/array push __setelah_push.svg" alt="Setelah array push">
+</p>
+
+```php
+array_push(array &$arr, mixed ...$values) : int
+```
+
+> **mixed** berarti bertipe data campuran <br>
+> **...$values** berarti dapat diisi nilai `1,2,3`, contoh: `array_push($letters, 'a', 'b')`
+
+**Parameter**
+
+- `$arr` array tujuan
+- `$values` nilai element baru, yang akan ditambahkan
+
+**Hasil**
+
+- Jumlah element setelah ditambahkan
+
+**Contoh Penggunaan**
+
+```php
+$cars = ['bmw', 'toyota'];
+
+array_push($cars, 'daihatsu');          // 3
+array_push($cars, 'mitsubisi', 'audi'); // 5
+
+// $cars = ['bmw', 'toyota', 'daihatsu', 'mitsubisi', 'audi']
+```
+
+[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_array_push.php)
+
+#### b. array_pop
+
+Untuk mengeluarkan element bagian **akhir** pada array.
+
+<p align="center">
+    Sebelum <code>array_pop</code> :<br>
+    <img src="../../assets/content/basics/7_array_mendalam/array pop __sebelum_pop.svg" alt="Sebelum array pop">
+</p>
+
+<p align="center">
+    Setelah <code>array_pop</code> :<br>
+    <img src="../../assets/content/basics/7_array_mendalam/array pop __setelah_pop.svg" alt="Setelah array pop">
+</p>
+
+```php
+array_pop(array &$arr) : mixed
+```
+
+**Parameter**
+
+- `$arr` array yang akan dikeluarkan element terakhirnya.
+
+**Hasil**
+
+- Element yang dikeluarkan.
+
+**Contoh Pengunaan**
+
+```php
+$cars = ['bmw', 'toyota'];
+
+array_pop($cars);   // 'toyota'
+
+// $cars = ['bmw']
+```
+
+[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_array_pop.php)
+
+#### c. array_shift
+
+Untuk mengeluarkan element **pertama** pada array.
+
+<p align="center">
+    Sebelum <code>array_shift</code> :<br>
+    <img src="../../assets/content/basics/7_array_mendalam/array shift __sebelum_shift.svg" alt="Sebelum array shift">
+</p>
+
+<p align="center">
+    Setelah <code>array_shift</code> :<br>
+    <img src="../../assets/content/basics/7_array_mendalam/array shift __setelah_shift.svg" alt="Setelah array shift">
+</p>
+
+```php
+array_shift(array &$arr) : mixed
+```
+
+> **mixed** berarti bertipe data campuran. <br>
+> tanda **&** pada `$arr` berarti akan mengubah nilai dari `$arr`
+
+**Parameter**
+
+- `$arr` array yang akan dikeluarkan element pertamanya.
+
+**Hasil**
+
+- Element yang dikeluarkan.
+
+**Contoh Penggunaan**
+
+```php
+$cars = ['bmw', 'toyota'];
+
+array_shift($cars);   // 'bmw'
+
+// $cars = ['toyota']
+```
+
+[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_array_shift.php)
+
+#### d. array_unshift
+
+Untuk menambahkan element di posisi **pertama** pada array.
+
+<p align="center">
+    Sebelum <code>array_unshift</code> :<br>
+    <img src="../../assets/content/basics/7_array_mendalam/array unshift __sebelum_unshift.svg" alt="Sebelum array unshift">
+</p>
+
+<p align="center">
+    Setelah <code>array_unshift</code> :<br>
+    <img src="../../assets/content/basics/7_array_mendalam/array unshift __setelah_unshift.svg" alt="Setelah array unshift">
+</p>
+
+```php
+array_unshift(array &$arr, mixed ...$values) : int
+```
+
+> **mixed** berarti bertipe data campuran. <br>
+> tanda **&** pada `$arr` berarti akan mengubah nilai dari `$arr`. <br>
+> **...$values** berarti dapat diisi nilai `1,2,3`, contoh: `array_push($letters, 'a', 'b')`
+
+**Parameter**
+
+- `$arr` array yang akan ditambahkan element pertamanya.
+- `$values` nilai element baru, yang akan ditambahkan.
+
+**Hasil**
+
+- Jumlah element setelah ditambahkan
+
+**Contoh Penggunaan**
+
+```php
+$cars = ['bmw', 'toyota'];
+
+array_push($cars, 'daihatsu');          // 3
+array_push($cars, 'mitsubisi', 'audi'); // 5
+
+// $cars = ['mitsubisi', 'audi', 'daihatsu', 'bmw', 'toyota']
+```
+
+[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_array_unshift.php)
