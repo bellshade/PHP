@@ -13,6 +13,7 @@
         "phpunit": "phpunit tests/"
     },
     "require": {
-        "erusev/parsedown": "^1.7"
+        "erusev/parsedown": "^1.7",
+        "vlucas/phpdotenv": "^5.3"
     }
 }
