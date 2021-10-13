@@ -46,6 +46,14 @@ Jika diperhatikan, tiap direktori selalu memiliki `index.php` yang berfungsi unt
 ```bash
 composer install
 ```
+
+- Rubah file `env` menjadi `.env`, buka file tersebut lalu rubah `BASE_URL` menjadi url tempat kamu menempatkan project ini
+
+defaultnya adalah: (rubah jika diperlukan)
+```
+BASE_URL = 'http://localhost.test/PHP'
+```
+
 - Kemudian kamu dapat mengaksesnya di browser dengan membuka `localhost/php` atau `127.0.0.1/php`.
 <p align="center">
     <img width="90%" src="./assets/images/getting-started.png"><br/><br/>
