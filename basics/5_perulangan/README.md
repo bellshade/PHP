@@ -247,10 +247,8 @@ dari diagram alur diatas bisa kita lihat bahwa while hampir sama dengan for dima
 <?php
     /** deklarasi parameter $i sesuai diagram bernilai 0 */
     $i = 0;
-
     /** perulangan while dengan ekspresi selama $i lebih kecil dari 5 */
     while($ < 5){
-
         /** echo nilai $i dan kemudian $i ditambah 1 (post increment) */
         echo $i++;
     }
