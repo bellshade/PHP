@@ -42,12 +42,10 @@ dengan struktur direktori sebagai berikut <br/>
  ┃ ┃ ┣ 📜2_sub_materi.php
  ┃ ┃ ┣ 📜3_sub_materi.php
  ┃ ┃ ┣  ....
- ┃ ┃ ┣ 📜index.php
  ┃ ┃ ┗ 📜README.md
 ```
 
 > Artikel materi ditulis pada `README.md` <br/>
-> `index.php` adalah halaman navigasi dan yang menampilkan `README.md` di lokal webserver, kamu dapat mencopy dari folder materi lain
 
 
 ### Algoritma (_Algorithm_)
@@ -67,14 +65,11 @@ Semua implementasi kode untuk Algorithm bisa ditemukan di `/algorithms` dengan b
  ┣📦algorithms
  ┃ ┣ 📂NamaKategoriAlgoritma
  ┃ ┃ ┣ 📂NamaKasusAlgoritma
- ┃ ┃ ┃ ┣ 📜index.php
  ┃ ┃ ┃ ┣ 📜FileAlgoritmanya.php
  ┃ ┃ ┃ ┗ 📜README.md
- ┃ ┃ ┣ 📜index.php
  ┃ ┃ ┗ 📜README.md
 ```
 > Artikel penjelasan algoritma ditulis pada `README.md` <br/>
-> `index.php` adalah halaman navigasi dan yang menampilkan `README.md` di lokal webserver, kamu dapat mencopy dari folder algoritma / kategori algoritma lain
 
 ### Komponen / Fungsi kegunaan _(Utilities)_
 Kategori utilities adalah kumpulan referensi dan contoh penggunaan komponen-komponen / fitur-fitur umum yang mungkin diperlukan oleh para web developer untuk diterapkan pada project aplikasi webnya. Didalam kategori ini, kalian dapat menjelajahi berbagai macam kebutuhan umum untuk pengembangan web umum dan mempelajari bagaimana cara mengimplementasikannya.
@@ -89,16 +84,13 @@ dengan bentuk struktur yang mirip dengan `algorithm`
  ┣📦utilities
  ┃ ┣ 📂NamaKategoriUtility
  ┃ ┃ ┣ 📂NamaUtility
- ┃ ┃ ┃ ┣ 📜index.php
  ┃ ┃ ┃ ┣ 📜demo_utility_1.php
  ┃ ┃ ┃ ┣ 📜demo_utility_2.php
  ┃ ┃ ┃ ┣ 📜 .....
  ┃ ┃ ┃ ┗ 📜README.md
- ┃ ┃ ┣ 📜index.php
  ┃ ┃ ┗ 📜README.md
  ```
 > Artikel penjelasan utility ditulis pada `README.md` <br/>
-> `index.php` adalah halaman navigasi dan yang menampilkan `README.md` di lokal webserver, kamu dapat mencopynya dari folder utility / kategori utility lain
 
 ## Standar Penulisan
 
@@ -138,7 +130,6 @@ Selain menggunakan gaya penulisan PSR-12 untuk implementasi kode pada Basic Lear
 - Setiap materi pembelajaran berada pada folder tersendiri yang dinamai dengan materi yang berkaitan
 - Folder materi memiliki penomoran diawal sebagai _prefix_
 - Artikel penjelasan ditulis di `README.md` pada setiap folder materi. jadi kamu perlu membuat `README.md`nya
-- Agar mempunyai navigasi, cukup copy saja file `index.php` dari folder materi lain ke folder materi kamu
 - Penamaan variabel dan fungsi menggunakan `snake_case`
 
 ### Pedoman Penulisan Lainnya untuk fungsi kegunaan _(Utilities)_
