@@ -311,7 +311,8 @@ itulah 4 perulangan yang terdapat dalam PHP.
         $i++;
     }
 
-    end;
+    end:
+    return $i;
 ?>
 ```
 
