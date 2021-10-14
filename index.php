@@ -12,17 +12,6 @@
     $base_url = rtrim(($_ENV['BASE_URL'] ?? 'http://localhost/php'), '/') . '/';
 
 
-    // // Parser
-    // $pageUrl = '';
-    // if (isset($_GET['page'])) {
-    //     $pageUrl = $_GET['page'];
-    //     $pageUrl = rtrim($pageUrl, '/');
-    //     $pageUrl = str_replace('//', '/', $pageUrl);
-    //     $pageUrl = $pageUrl;
-    // }
-
-    $pageUrl = trim($_SERVER[ 'REQUEST_URI' ], '/');
-
     global $rewriteUrlList;
     global $rewritePathList;
     $rewriteUrlList = [
@@ -66,6 +55,20 @@
             $urlArray[0] = $rewritePathList[$urlArray[0]];
         }
         return implode('/', $urlArray) != '' ? implode('/', $urlArray) : './';
+    }
+
+    $pageUrl = trim($_SERVER[ 'REQUEST_URI' ], '/');
+
+    /**
+     * Fix: ketidak relevanan REQUEST_URI karena ditaruh di subdirectory
+     */
+    if (!is_dir(rewritePath($pageUrl))) {
+        if (isset($_GET['page'])) {
+            $pageUrl = $_GET['page'];
+            $pageUrl = rtrim($pageUrl, '/');
+            $pageUrl = str_replace('//', '/', $pageUrl);
+            $pageUrl = $pageUrl;
+        }
     }
     // echo '<pre>';
     // echo 'pageUrl: ' . $pageUrl, PHP_EOL;
