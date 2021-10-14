@@ -5,7 +5,7 @@ Daftar Materi Perulangan.
 4. [Perulangan Do While](#4-perulangan-do-while)
 
 # Perulangan
-Loop digunakan untuk mengeksekusi blok kode yang sama berulang kali, selama kondisi tertentu benar atau bernilai true.
+Loop atau perulangan digunakan untuk mengeksekusi blok kode yang sama berulang kali, selama kondisi tertentu benar atau bernilai true.
 
 Berikut adalah jenis loop yang ada di PHP.
 
@@ -17,7 +17,7 @@ Berikut adalah jenis loop yang ada di PHP.
 | [do while](#4-perulangan-do-while) | loop melalui blok kode satu kali, dan kemudian mengulangi loop selama kondisi yang ditentukan |
 
 ## 1. Perulangan For
-Perulangan for atau secara umum dikenal dengan For Loops adalah metode perulangan paling komplex dalam bahasa pemograman PHP.
+Perulangan for atau secara umum dikenal dengan For Loops adalah metode perulangan paling kompleks dalam bahasa pemograman PHP.
 
 For Loops secara umum ditulis dalam contoh baris code berikut :
 ```php
@@ -26,14 +26,14 @@ For Loops secara umum ditulis dalam contoh baris code berikut :
         statement
 ?>
 ```
-Perulangan Loop akan mengeksekusi expresi pertama (exp1) sesaat setelah prosedure loop dimulai dan ini hanya dieksekusi sekali selama putaran perulangan terjadi, dimana pada umumnya expresi pertama berisi argument penugasan/assignment. Contoh : $i = 1;
+Perulangan Loop akan mengeksekusi ekspresi pertama (exp1) sesaat setelah prosedure loop dimulai dan ini hanya dieksekusi sekali selama putaran perulangan terjadi, dimana pada umumnya ekspresi pertama berisi argument penugasan/assignment. Contoh : $i = 1;
 
 Expresi kedua (exp2) pada umumnya berisi conditional statement dimana perulangan ini akan mengevaluasi nilai expresi kedua, selama expresi kedua menghasilkan nilai `true` maka statement perulangan akan terus dieksekusi. contoh exp2 : $i < 10;
 
-Diakhir setiap sirkulas Perulangan, ekspresi ketiga (exp3) akan dieksekusi. dan kemudian memulai sirkulasi selanjutnya, selama expresi kedua menghasilkan nilai true.
+Diakhir setiap sirkulasi Perulangan, ekspresi ketiga (exp3) akan dieksekusi. dan kemudian memulai sirkulasi selanjutnya, selama ekspresi kedua menghasilkan nilai `true`.
 
 Setiap ekspresi bisa saja kosong atau memiliki lebih dari 1 (satu) argument yang dipisahkan oleh tanda `,`. 
-semua argument yang ada dalam ekspresi kedua akan dieksekusi dan hanya argument terakhir yang diperhitungan sebagai hasil expresi. Jika ekspresi kedua ini kosong, maka perulangan akan berjalan terus, seolah expresi kedua ini selalu menghasilkan nilai true, untuk menghentikan perulangan seperti ini kita dapat membuat conditional statement untuk menentukan kapan perulangan berakhir.
+semua argument yang ada dalam ekspresi kedua akan dieksekusi dan hanya argument terakhir yang diperhitungan sebagai hasil ekspresi. Jika ekspresi kedua ini kosong, maka perulangan akan berjalan terus, seolah ekspresi kedua ini selalu menghasilkan nilai true, untuk menghentikan perulangan seperti ini kita dapat membuat conditional statement untuk menentukan kapan perulangan berakhir.
 
 Diagram alur perulangan For :
 <p align="center">
@@ -79,12 +79,12 @@ dari diagram diatas kita bisa menulis code contoh sebagai berikut:
 ```
 keempat contoh di atas menghasilkan nilai yang sama yaitu 1 2 3 4 5.
 
-contoh penggunaan for dalam berinteraksi dengan dara Array( ), terdapat [disini](./1_for.php)
+contoh penggunaan for dalam berinteraksi dengan data Array( ), terdapat [disini](./1_for.php)
 
 ## 2. Perulangan Foreach
-perulangan Foreach atau dapat di artikan dalam bahasa Indonesia sebagai 'Untuk Setiap', dari arti kata ini dapat disimpulkan bahwa syntax ini digunakan untuk berinteraksi dengan variable yang memiliki data/arguments lebih dari satu atau lebih tepatnya kita sebut data Array(). Selain dari data Array() foreach juga dapat digunakan untuk perulangan data ber-tipe Object.
+Perulangan Foreach atau dapat di artikan dalam bahasa Indonesia sebagai 'Untuk Setiap', dari arti kata ini dapat disimpulkan bahwa syntax ini digunakan untuk berinteraksi dengan variable yang memiliki data/arguments lebih dari satu atau lebih tepatnya kita sebut data Array(). Selain dari data Array() foreach juga dapat digunakan untuk perulangan data ber-tipe Object.
 
-Perulangan foreach tidak dapat digunakan pada pada data ber-tipe selain Array() dan Object, atau variable yang tidak di insialisasikan. Memaksakan penggunaan perulangan pada data tersebut akan menimbulkan pesan kesalahan (`error`) pada aplikasi yang kita buat.
+Perulangan foreach tidak dapat digunakan pada data ber-tipe selain Array() dan Object, atau variable yang tidak di insialisasikan. Memaksakan penggunaan perulangan pada data tersebut akan menimbulkan pesan kesalahan (`error`) pada aplikasi yang kita buat.
 
 sebelum melanjutkan lebih baik kita pahami terlebih dulu mengenai data tipe [Array()](../2_variable_datatype/#membuat-array), dimana setiap elemen dari data Array() memiliki pasangan key dan value (kunci dan nilai).
 
@@ -94,7 +94,7 @@ secara umum fungsi foreach di tuliskan dalam bentuk seperti ini
         statement
     }
 ```
-Kode di atas Pada setian elemen dari Array atau Object, PHP akan mentransfer nilai yang terdapat pada elemen Array atau Object yang terdapat pada parameter $variable kedalam parameter $value, dan key dari elemen menjadi parameter $key. Untuk key berupa opsional jika kita membutuhkan nilai key dari suatu elemen.
+Kode di atas Pada setiap elemen dari Array atau Object, PHP akan mentransfer nilai yang terdapat pada elemen Array atau Object yang terdapat pada parameter $variable kedalam parameter $value, dan key dari elemen menjadi parameter $key. Untuk key berupa opsional jika kita membutuhkan nilai key dari suatu elemen.
 
 Kemudian paremeter $key dan $value dapat digunakan dalam statemen atau tugas yang kita buat di dalam fungsi foreach tersebut.
 contoh 1.
@@ -107,7 +107,7 @@ contoh 1.
     }
 ?>
 ```
-Baris kode di atas akan mentrasfer setiap nilai dari elemet parameter $nomor menjadi parameter $value dan dalam statemen kita perintahkan kan untuk menampilan nilai $value tersebut. foreach akan bekerja melakukan perulangan untuk melakukan transformasi sampai mencapai elemen terakhir dari array. Sehingga bari kode diatas akan menghasilkan
+Baris kode di atas akan mentransfer setiap nilai dari elemen parameter $nomor menjadi parameter $value dan dalam statemen kita perintahkan untuk menampilkan nilai $value tersebut. foreach akan bekerja melakukan perulangan untuk melakukan transformasi sampai mencapai elemen terakhir dari array. Sehingga baris kode diatas akan menghasilkan
 ```html
 20
 30
@@ -126,7 +126,7 @@ contoh 2.
 ?>
 ```
 Dengan baris kode diatas key dari elemen array dapat kita gunakan dan telah ditranformasikan kedalam parameter $key
-sehingga menghsilkan tampilan sebagai berikut.
+sehingga menghasilkan tampilan sebagai berikut.
 
 >**Penyegaran**
 >
@@ -151,9 +151,9 @@ sebagai contoh sebuah array linear berisi nilai integer, yang akan kita lipat ga
     print_r($nomor);
 ?>
 ```
-Kode diatas akan merubah nilai dari elemen nomor menjadi 40, 50, 60. karena kita menggunakan assigned by reference makan nilai elemen terakhir akan mengikuti perubahan terhadap parameter $value, jadi jangan lupa untuk menghentikan opertor ini jika kita tidak ingin nilai dari elemen array kita terus berubah saat nilai baru paramater $value muncul, dengan cara
+Kode diatas akan merubah nilai dari elemen $nomor menjadi 40, 50, 60. karena kita menggunakan assigned by reference makan nilai elemen terakhir akan mengikuti perubahan terhadap parameter $value, jadi jangan lupa untuk menghentikan opertor ini jika kita tidak ingin nilai dari elemen array kita terus berubah saat nilai baru paramater $value muncul, dengan cara
 ```php
-    foreach($a as &$b){
+    foreach($nomor as &$value){
         statement
     }
     unset($value);          //break terhapad operator assigned by reference
@@ -162,7 +162,7 @@ Kode diatas akan merubah nilai dari elemen nomor menjadi 40, 50, 60. karena kita
 Bagaimana dengan Array Multi Dimensi. Mari kita pelajari bersama pada materi dibawah.
 ### 2.1 Nested Foreach
 Sebelumnya kita bisa pelajari terlebih dahulu mengenai [Nested Array atau Array Multi Dimensi](../7_array_mendalam).
-Nested Foreach digunakan dalam berinteraksi dengan multi-dimensional array, dengan contoh baris perintah sebagai berikut:
+Nested Foreach digunakan dalam berinteraksi dengan Array Multi Dimensi, dengan contoh baris perintah sebagai berikut:
 ```php
 <?php
     /** Multi Dimensional Array */
@@ -179,7 +179,7 @@ Nested Foreach digunakan dalam berinteraksi dengan multi-dimensional array, deng
     }
 ?>
 ```
-Penjelas baris kode diatas tidak jauh beda dengan perulangan foreach pada linear array, hanya karena elemen dari array juga berupa array, maka kita melakukan kembali pada nilai elemen dari array. seperti yang kita peroleh dari bari kode di atas elemen array dari parameter $array di transformasikan kedalam parameter $value1 dimana nilainya juga berupa array, kemudian kita lakukan perulangan lagi pada elemen array yang terdapat pada parameter $value1. sehingga setiap elemen array pada parameter $value1 di transformasikan ke dalam paramater $value2.
+Penjelas baris kode diatas tidak jauh beda dengan perulangan foreach pada linear array, hanya karena elemen dari array juga berupa array, maka kita melakukan perulangan kembali pada nilai elemen dari array. seperti yang kita peroleh dari bari kode di atas, elemen array dari parameter $array di transformasikan kedalam parameter $value1 dimana nilainya juga berupa array, kemudian kita lakukan perulangan lagi pada elemen array yang terdapat pada parameter $value1. sehingga setiap elemen array pada parameter $value1 di transformasikan ke dalam paramater $value2.
 
 >**Penting**
 >
@@ -197,7 +197,7 @@ contoh :
     );
 
     foreach($data as list($val1, $val2)){
-        echo $val . ', ' . $val2 . '\n'
+        echo $val1 . ', ' . $val2 . '\n'
     }
 
     //akan menghasilkan
@@ -205,9 +205,9 @@ contoh :
     //201, 202
 ?>
 ```
-Baris kode di atas menjelaskan bahwa $val1 menampung nilai pertama dari dan $val2 menampung nilai kedua dari elemen array pada perameter $data.
+Baris kode di atas menjelaskan bahwa $val1 menampung nilai pertama dan $val2 menampung nilai kedua dari elemen array pada perameter $data.
 
-Jika parameter dalam list melebihan dari nilai yang terdapat dalam elemen parameter $data maka akan memunculkan pesan kesalahan. sebagai contoh tetap menggunakan array diatas.
+Jika parameter dalam list melebihi dari nilai yang terdapat dalam elemen parameter $data maka akan memunculkan pesan kesalahan. sebagai contoh tetap menggunakan array diatas.
 ```php
 ....
     foreach($data as list($val1, $val2, $val3)){
@@ -237,7 +237,7 @@ Perulangan While merupakan perulangan yang paling sederhana pada PHP, perulangan
 while(exp)
     statement
 ```
-Tujuan dari baris kode tersebut sangat sederhana yaitu memerintah PHP untuk melakukan sirkulasi perulangan selama ekspresi yang diberikan bernilai `true`, sama seperti for, nilai expresi akan kembali di evalusi setelah satu sirkulasi selesai. Kemudian membuat sirkulasi baru jika ekspresi menghasilkan nilai `true` dan akan berhenti jika ekspresi bernilai `false`. sama dengan conditional statement if ekspresi dapat diberikan dalam bentuk group didalam tanpa kurung ekspresi.
+Tujuan dari baris kode tersebut sangat sederhana yaitu memerintah PHP untuk melakukan sirkulasi perulangan selama ekspresi yang diberikan bernilai `true`, sama seperti for, nilai expresi akan kembali di evalusi setelah satu sirkulasi selesai. Kemudian membuat sirkulasi baru jika ekspresi menghasilkan nilai `true` dan akan berhenti jika ekspresi bernilai `false`. sama seperti conditional statement if, ekspresi dapat diberikan dalam bentuk group didalam tanpa kurung ekspresi.
 Perhatikan diagram alur dari while.
 <p align="center">
     <img src="../../assets/content/basics/5_perulangan/while.png">
@@ -255,14 +255,14 @@ dari diagram alur diatas bisa kita lihat bahwa while hampir sama dengan for dima
 ?>
 ```
 
-baris kode di atas akan menghasilkan nilai 01234, jadi selama $i lebih kecil dari 5 PHP akan melakukan tugas yang tertuang dalam statement, jika kita memberikan ekspresi awal bernilai `false` maka perulangan ini tidak dilakukan, dan sebalik nya jika kita memberikan ekspresi yang selalu bernilai true, maka PHP akan selalu akan melakukan perulangan tanpa berhenti seperti contoh di atas kita berikan ekspresi $i >= 0 maka nilai nya akan selalu `true`.
+baris kode di atas akan menghasilkan nilai 01234, jadi selama $i lebih kecil dari 5 PHP akan melakukan tugas yang tertuang dalam statement, jika kita memberikan ekspresi awal bernilai `false` maka perulangan ini tidak akan pernah terjadi, dan sebaliknya jika kita memberikan ekspresi yang selalu bernilai `true`, maka PHP akan selalu akan melakukan perulangan tanpa berhenti seperti contoh di atas kita berikan ekspresi $i >= 0 maka nilai nya akan selalu `true`.
 
 contoh pengguan while dalam PHP dapat dilihat [disini](./3_while.php)
 
 [![](https://img.shields.io/static/v1?&label=Contoh%20While&message=%3e&color)](./3_while.php)
 
 ## 4. Perulangan Do While
-Perulangan Do While hampir sama dengan perulangan While, yang membedakan yang ekpresi akan di evaluasi di akhir dari sirkulasi perulangan, sehingga perintah dalam statement akan selalu terlaksana pertama kali sirkulasi perulangan ini berjalan.
+Perulangan Do While hampir sama dengan perulangan While, yang membedakan yang ekpresi akan di evaluasi di akhir dari sirkulasi perulangan, sehingga perintah dalam statement akan selalu terlaksana saat pertama kali sirkulasi perulangan ini berjalan.
 
 Syntax
 ```php
@@ -275,7 +275,7 @@ coba kita pelajari diagram alur dari sirkulasi perulangan Do While di bawah ini.
     <img src="../../assets/content/basics/5_perulangan/do_while.png">
 </p>
 
-Dari diagram bisa kita simpulkan bahwa statememt akan di eksekusi pertama kali sebelum ekspresi di evalusi di akhir perulangan. sesuai diagram alir kita susun baris kode sebagai berikut.
+Dari diagram bisa kita simpulkan bahwa statement akan di eksekusi pertama kali sebelum ekspresi di evalusi di akhir sirkulasi perulangan. sesuai diagram alir kita susun baris kode sebagai berikut.
 ```php
 <?php
     /** deklarasi parameter berupa $i dengan nilai awal 6 */
