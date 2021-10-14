@@ -20,6 +20,9 @@ Dalam materi ini kita bahas mengenai Array lebih lanjut.
         - [array_pop](#b-arraypop)
         - [array_shift](#c-arrayshift)
         - [array_unshift](#d-arrayunshift)
+    - [Membandingkan array](#membandingkan-array)
+        - [array_diff](#a-arraydiff)
+        - [array_splice](#b-arraysplice)
 
 ## 1. Array
 ### Apa itu Array
@@ -599,3 +602,91 @@ array_push($cars, 'mitsubisi', 'audi'); // 5
 ```
 
 [![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_array_unshift.php)
+
+### Membandingkan array
+
+#### a. array_diff
+
+Berfungsi untuk membandingkan 1 atau lebih array, dan akan menghasilkan element yang tidak terdapat pada tiap array
+
+<p align="center">
+    Sebelum <code>array_diff</code> :<br>
+    <img src="../../assets/content/basics/7_array_mendalam/array diff __sebelum_diff.svg" alt="Sebelum array diff">
+</p>
+
+<p align="center">
+    Setelah <code>array_diff</code> :<br>
+    <img src="../../assets/content/basics/7_array_mendalam/array diff __setelah_diff.svg" alt="Setelah array diff">
+</p>
+
+```php
+array_diff(array $arr, array ...$arrs) : array
+```
+
+> **...$arrs** berarti dapat diisi nilai `[1],[2],[3]`, contoh: `array_diff($arr1, $arr2, $arr3)`
+
+**Parameter**
+
+- `$arr` array pertama yang akan dibandingkan.
+- `$arrs` array lain sebagai pembanding.
+
+**Hasil**
+
+- Element-element yang tidak terdapat di array pembanding.
+
+**Contoh Penggunaan**
+
+```php
+$myHobies = ['coding', 'gaming'];
+$yourHobies = ['reading', 'gaming'];
+
+echo array_diff($myHobies, $yourHobies); // ['coding']
+```
+
+[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_array_diff.php)
+
+#### b. array_splice
+
+Berfungsi untuk menghapus element pada array dimulai dari nilai `offset` sebanyak nilai `length` dari array, dan dimungkinkan juga digantikan dengan array `replacement` jika ada.
+
+```php
+array_splice(array &$arr, int $offset, ?int $length = null, mixed $replacement = []) : array
+```
+
+> **mixed** berarti bertipe data campuran. <br>
+> tanda **&** pada `$arr` berarti akan mengubah nilai dari `$arr`. <br>
+> tanda **?** pada `int $length` berarti boleh kosong / null.
+
+**Parameter**
+
+- `$arr` array yang akan dihapus elementnya
+- `$offset` urutan awal element yang akan dihapus
+    - Jika _positive_ maka `offset` akan dihitung dari **awal** array
+    - Jika _negative_ maka `offset` akan dihitung dari **akhir** array
+- `$length` banyaknya element yang akan dihapus
+    - Jika _null_ maka dimulai dari `offset` hingga akhir array
+    - Jika _positive_ maka dihapus sesuai `$length`
+    - Jika _negative_ maka akhir dari bagian yang dihapus akan menjadi element dari array
+- `$replacement` array yang akan menggantikan array yang dihapus
+
+**Hasil**
+
+- Array yang tersisa
+
+**Contoh Penggunaan**
+
+```php
+$arr1 = ['a', 'b', 'c', 'd'];
+array_splice($arr1, 2);     // ['c', 'd']
+// $arr1 = ['a', 'b']
+
+$arr2 = ['a', 'b', 'c', 'd'];
+array_splice($arr2, 2, 1);      // ['c']
+// $arr1 = ['a', 'b', 'd']
+
+$arr3 = ['a', 'b', 'c', 'd'];
+array_splice($arr3, 2, 1, ['e']);   // ['c']
+// $arr1 = ['a', 'b', 'e', 'd']
+```
+
+[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_array_splice.php)
