@@ -47,9 +47,9 @@ Jika diperhatikan, tiap direktori selalu memiliki `index.php` yang berfungsi unt
 composer install
 ```
 
-- Rubah file `env` menjadi `.env`, buka file tersebut lalu rubah `BASE_URL` menjadi url tempat kamu menempatkan project ini
+- Copy file `env` lalu ubah file duplikat itu menjadi `.env`, buka file tersebut lalu rubah `BASE_URL` menjadi url tempat kamu menempatkan project ini
 
-defaultnya adalah: (rubah jika diperlukan)
+Contoh: 
 ```
 BASE_URL = 'http://localhost.test/PHP'
 ```
@@ -67,6 +67,13 @@ location / {
   index index.php;
 }
 ```
+
+### Konfigurasi untuk PHP Built-in Web Server
+Jika kamu menggunakan _web server_ bawaan PHP. Kami telah menyediakan `router.php` untuk menangani request URL. Untuk menjalankan server, kamu dapat menggunakan command ini:
+```
+php -S localhost:8080 router.php
+```
+> Keterangan: Port bisa disesuaikan sesuai kebutuhan kamu
 
 
 
