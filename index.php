@@ -1,4 +1,5 @@
 <?php
+
     $actualDirectory = './';
     if (isset($currentDirectory)) {
         $actualDirectory = $currentDirectory;
@@ -11,14 +12,16 @@
     $base_url = rtrim(($_ENV['BASE_URL'] ?? 'http://localhost/php'), '/') . '/';
 
 
-    // Parser
-    $pageUrl = '';
-    if (isset($_GET['page'])) {
-        $pageUrl = $_GET['page'];
-        $pageUrl = rtrim($pageUrl, '/');
-        $pageUrl = str_replace('//', '/', $pageUrl);
-        $pageUrl = $pageUrl;
-    }
+    // // Parser
+    // $pageUrl = '';
+    // if (isset($_GET['page'])) {
+    //     $pageUrl = $_GET['page'];
+    //     $pageUrl = rtrim($pageUrl, '/');
+    //     $pageUrl = str_replace('//', '/', $pageUrl);
+    //     $pageUrl = $pageUrl;
+    // }
+
+    $pageUrl = trim($_SERVER[ 'REQUEST_URI' ], '/');
 
     global $rewriteUrlList;
     global $rewritePathList;
@@ -143,6 +146,7 @@
                             '.htaccess',
                             'autoload.php',
                             'run.php',
+                            'router.php',
                         ];
                         if ($pageUrl == '') {
                             $exception[] = '..';
@@ -227,6 +231,7 @@
 
     <script>
         const BASE_URL = '<?= $base_url ?>';
+        const CURRENT_PATH = '<?= $currentPath ?>';
     </script>
     <script src="<?=$base_url?>assets/js/markdown.js"></script>
 </body>
