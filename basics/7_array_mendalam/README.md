@@ -9,7 +9,17 @@ Dalam materi ini kita bahas mengenai Array lebih lanjut.
     - [Array Asosiatif](#2-array-asosiatif)
 3. [Array Multi Dimensi](#3-array-multi-dimensi)
 4. [Manipulasi Array](#4-manipulasi-array)
-    - [sizeof()](#a-sizeof)
+    - [Menghitung ukuran array](#menghitung-ukuran-array)
+        - [sizeof](#a-sizeof)
+        - [count](#b-count)
+    - [Mendapatkan nilai dari array](#mendapatkan-nilai-dari-array)
+        - [array_keys](#a-arraykeys)
+        - [array_values](#b-arrayvalues)
+    - [Mengubah element pada array](#mengubah-element-pada-array)
+        - [array_push](#a-arraypush)
+        - [array_pop](#b-arraypop)
+        - [array_shift](#c-arrayshift)
+        - [array_unshift](#d-arrayunshift)
 
 ## 1. Array
 ### Apa itu Array
@@ -275,9 +285,11 @@ Disaat menggunakan array kita akan dihadapkan dengan berbagai skenario yang meng
 
 Terdapat berbagai macam manipulasi array yang dapat kita lakukan, yaitu :
 
-### a. sizeof()
+### Menghitung ukuran array
 
-Fungsi yang kita gunakan untuk mendapatkan jumlah banyaknya element pada suatu array. `sizeof()` juga merupakan suatu alias dari suatu fungsi yang memiliki kegunaan yang sama yaitu `count()`.
+Untuk menghitung elemen yang terdapat didalam sebuah Array dapat menggunakan dua fungsi yaitu `sizeof()` dan `count()`, kedua syntax tersebut memiliki tujuan dan fungsi yang sama, dimana `sizeof()` adalah nama lain dari `count()`. dengan penggunaan syntax sebagai berikut
+
+#### a. sizeof
 
 ```php
 sizeof(array $arr, int $mode = 0) : int
@@ -287,8 +299,12 @@ sizeof(array $arr, int $mode = 0) : int
 
 - `$arr` Diisi dengan variable array yang akan dicari jumlah elementnya _(wajib diisi)_
 - `$mode` Diisi dengan nilai **0** atau **1** _(opsional)_
-    - **0** - Default, tidak akan menghitung element dari array multidimensi di dalamnya
-    - **1** - Akan menghitung jumlah element dari array multidimensi di dalamnya.
+    - **0** atau **COUNT_NORMAL** - Default, tidak akan menghitung element dari array multidimensi di dalamnya _(linear)_.
+    - **1** atau **COUNT_RECURSIVE** - Akan menghitung jumlah element dari array multidimensi di dalamnya _(recursive)_.
+
+**Hasil**
+
+- Jumlah element pada array
  
 **Contoh penggunaan**
 
@@ -322,6 +338,37 @@ echo sizeof($tools, 1);     // 11
 ```
 
 [![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_sizeof_2.php)
+
+#### b. count
+
+```php
+count(array $arr, int $mode = 0) : int
+```
+
+**Parameter**
+
+- `$arr` Diisi dengan variable array yang akan dicari jumlah elementnya _(wajib diisi)_
+- `$mode` Diisi dengan nilai **0** atau **1** _(opsional)_
+    - **0** atau **COUNT_NORMAL** - Default, tidak akan menghitung element dari array multidimensi di dalamnya _(linear)_.
+    - **1** atau **COUNT_RECURSIVE** - Akan menghitung jumlah element dari array multidimensi di dalamnya _(recursive)_.
+
+**Hasil**
+
+- Jumlah element pada array
+
+**Contoh Penggunaan**
+
+```php
+$array = [
+    ['sepeda', 'motor', 'mobil'],
+    ['gantole', 'helikopter', 'pesawat'],
+];
+
+echo count($array);                     //COUNT_NORMAL Mode menghasilkan nilai : 2
+echo count($array, COUNT_RECURSIVE);    //COUNT_RECURSIVE Mode menghasilkan nilai : 8
+```
+
+[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_count.php)
 
 ### Mendapatkan nilai dari array
 
