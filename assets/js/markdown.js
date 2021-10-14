@@ -67,4 +67,17 @@ document.addEventListener("DOMContentLoaded", () => {
               )
             : ""
     );
+    const links = document.querySelectorAll(".readme-content a");
+    links.forEach((a) => {
+        href = a.getAttribute("href");
+        console.log(href);
+        if (href.includes(".php")) {
+            href = href.replace(/basic\//, "basics/");
+            href = href.replace(/utility\//, "utilities/");
+            href = href.replace(/algorithm\//, "algorithms/");
+            href = BASE_URL + CURRENT_PATH + "/" + href;
+        }
+        a.setAttribute("href", href);
+        a.setAttribute("target", "_blank");
+    });
 });
