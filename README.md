@@ -51,7 +51,7 @@ composer install
 
 Contoh: 
 ```
-BASE_URL = 'http://localhost.test/PHP'
+BASE_URL = 'http://localhost/PHP'
 ```
 
 - Kemudian kamu dapat mengaksesnya di browser dengan membuka `localhost/php` atau `127.0.0.1/php`.
