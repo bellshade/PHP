@@ -23,6 +23,8 @@ Dalam materi ini kita bahas mengenai Array lebih lanjut.
     - [Membandingkan array](#membandingkan-array)
         - [array_diff](#a-arraydiff)
         - [array_splice](#b-arraysplice)
+    - [Menggabungkan array](#menggabungkan-array)
+        - [array_merge](#a-arraymerge)
 
 ## 1. Array
 ### Apa itu Array
@@ -692,3 +694,34 @@ array_splice($arr3, 2, 1, ['e']);   // ['c']
 ```
 
 [![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_array_splice.php)
+
+### Menggabungkan array
+
+#### a. array_merge
+
+Berfungsi untuk menggabungkan 2 atau lebih array menjadi 1 array.
+
+```php
+array_merge(array ...$arrs) : array
+```
+
+> **...$arrs** berarti dapat diisi nilai `[1],[2],[3]`, contoh: `array_merge($arr1, $arr2, $arr3)`
+
+**Parameter**
+
+- `$arrs` array yang akan digabungkan.
+
+**Hasil**
+
+- Array yang telah digabungkan
+
+**Contoh Penggunaan**
+
+```php
+$arr1 = ['a', 'b'];
+$arr2 = ['c', 'd'];
+
+$merged = array_merge($arr1, $arr2);    // ['a', 'b', 'c', 'd'];
+```
+
+[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_array_merge.php)
