@@ -30,6 +30,13 @@ Dalam materi ini kita bahas mengenai Array lebih lanjut.
         - [array_reverse](#b-arrayreverse)
         - [array_rand](#c-arrayrand)
         - [array_slice](#d-arrayslice)
+    - [Pengurutan pada array](#pengurutan-pada-array)
+        - [sort](#a-sort)
+        - [rsort](#b-rsort)
+        - [asort](#c-asort)
+        - [arsort](#d-arsort)
+        - [ksort](#e-ksort)
+        - [krsort](#f-krsort)
 
 ## 1. Array
 ### Apa itu Array
@@ -862,3 +869,257 @@ array_slice($fruits, 2, 2, true);   // ['1' => 'grape', '2' => 'banana']
 ```
 
 [![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_array_slice.php)
+
+### Pengurutan pada array
+
+Ketika menggunakan array seringkali element pada array tersebut memiliki urutan yang acak, maka untuk merapihkannya kita memerlukan fungsi untuk pengurutan _(order)_, seperti berikut :
+
+#### a. sort
+
+Berfungsi untuk mengurutkan array secara _ascending_ atau **A-Z**.
+
+```php
+sort(array &$arr, int $flags = SORT_REGULAR) : bool
+```
+
+> tanda **&** pada `$arr` berarti akan mengubah nilai dari `$arr`
+
+**Parameter**
+
+- `$arr` array yang akan diurutkan
+- `$flags` ketentuan dari pengurutan yang akan dilakukan
+    - **SORT_REGULAR** melakukan pengurutan secara normal
+    - **SORT_NUMERIC** melakukan pengurutan secara angka / numerik
+    - **SORT_STRING** melakukan pengurutan secara huruf
+    - **SORT_LOCALE_STRING** melakukan pengurutan secara huruf, tetapi berdasarkan lokal / lokasinya, yang dapat ditentukan dengan `setlocale()`
+    - **SORT_NATURAL** melakukan pengurutan secara huruf menggunakan pengurutan natural
+    - **SORT_FLAG_CASE** dapat menggabungkan SORT_STRING atau SORT_NATURAL
+
+**Hasil**
+
+- Nilai _true_
+
+**Contoh Penggunaan**
+
+```php
+$fruits = ['orange', 'grape', 'banana', 'avocado', 1213, '32', 32, 2213];
+
+sort($fruits);                  // ["32",32,1213,2213,"avocado","banana","grape","orange"]
+sort($fruits, SORT_NUMERIC);    // ["avocado","banana","grape","orange","32",32,1213,2213]
+sort($fruits, SORT_STRING);     // [1213,2213,"32",32,"avocado","banana","grape","orange"]
+```
+
+[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_sort.php)
+
+#### b. rsort
+
+Berfungsi untuk mengurutkan array secara _descending_ atau **Z-A**.
+
+```php
+rsort(array &$arr, int $flags = SORT_REGULAR) : bool
+```
+
+> tanda **&** pada `$arr` berarti akan mengubah nilai dari `$arr`
+
+**Parameter**
+
+- `$arr` array yang akan diurutkan
+- `$flags` ketentuan dari pengurutan yang akan dilakukan
+    - **SORT_REGULAR** melakukan pengurutan secara normal
+    - **SORT_NUMERIC** melakukan pengurutan secara angka / numerik
+    - **SORT_STRING** melakukan pengurutan secara huruf
+    - **SORT_LOCALE_STRING** melakukan pengurutan secara huruf, tetapi berdasarkan lokal / lokasinya, yang dapat ditentukan dengan `setlocale()`
+    - **SORT_NATURAL** melakukan pengurutan secara huruf menggunakan pengurutan natural
+    - **SORT_FLAG_CASE** dapat menggabungkan SORT_STRING atau SORT_NATURAL
+
+**Hasil**
+
+- Nilai _true_
+
+**Contoh Penggunaan**
+
+```php
+$fruits = ['orange', 'grape', 'banana', 'avocado', 1213, '32', 32, 2213];
+
+rsort($fruits);                  // ["orange","grape","banana","avocado",2213,1213,"32",32]
+rsort($fruits, SORT_NUMERIC);    // [2213,1213,"32",32,"orange","grape","banana","avocado"]
+rsort($fruits, SORT_STRING);     // ["orange","grape","banana","avocado","32",32,2213,1213]
+```
+
+[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_rsort.php)
+
+#### c. asort
+
+Sama seperti [sort](#a-sort) berfungsi untuk mengurutkan array secara _ascending_ atau **A-Z** tetapi dengan **mempertahankan nilai dari key tiap element**.
+
+```php
+asort(array &$arr, int $flags = SORT_REGULAR) : bool
+```
+
+> tanda **&** pada `$arr` berarti akan mengubah nilai dari `$arr`
+
+**Parameter**
+
+- `$arr` array yang akan diurutkan
+- `$flags` ketentuan dari pengurutan yang akan dilakukan
+    - **SORT_REGULAR** melakukan pengurutan secara normal
+    - **SORT_NUMERIC** melakukan pengurutan secara angka / numerik
+    - **SORT_STRING** melakukan pengurutan secara huruf
+    - **SORT_LOCALE_STRING** melakukan pengurutan secara huruf, tetapi berdasarkan lokal / lokasinya, yang dapat ditentukan dengan `setlocale()`
+    - **SORT_NATURAL** melakukan pengurutan secara huruf menggunakan pengurutan natural
+    - **SORT_FLAG_CASE** dapat menggabungkan SORT_STRING atau SORT_NATURAL
+
+**Hasil**
+
+- Nilai _true_
+
+**Contoh Penggunaan**
+
+```php
+$fruits = [
+    'a' => 'orange',
+    'b' => 'manggo',
+    'c' => 'grape',
+];
+
+asort($fruits);
+// [
+//     'c' => 'grape',
+//     'b' => 'manggo',
+//     'a' => 'orange',
+// ];
+```
+
+[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_asort.php)
+
+#### d. arsort
+
+Sama seperti [rsort](#b-rsort) berfungsi untuk mengurutkan array secara _descending_ atau **Z-A** tetapi dengan **mempertahankan nilai dari key tiap element**.
+
+```php
+arsort(array &$arr, int $flags = SORT_REGULAR) : bool
+```
+
+> tanda **&** pada `$arr` berarti akan mengubah nilai dari `$arr`
+
+**Parameter**
+
+- `$arr` array yang akan diurutkan
+- `$flags` ketentuan dari pengurutan yang akan dilakukan
+    - **SORT_REGULAR** melakukan pengurutan secara normal
+    - **SORT_NUMERIC** melakukan pengurutan secara angka / numerik
+    - **SORT_STRING** melakukan pengurutan secara huruf
+    - **SORT_LOCALE_STRING** melakukan pengurutan secara huruf, tetapi berdasarkan lokal / lokasinya, yang dapat ditentukan dengan `setlocale()`
+    - **SORT_NATURAL** melakukan pengurutan secara huruf menggunakan pengurutan natural
+    - **SORT_FLAG_CASE** dapat menggabungkan SORT_STRING atau SORT_NATURAL
+
+**Hasil**
+
+- Nilai _true_
+
+**Contoh Penggunaan**
+
+```php
+$fruits = [
+    'a' => 'orange',
+    'b' => 'manggo',
+    'c' => 'grape',
+];
+
+arsort($fruits);
+// [
+//     'a' => 'orange',
+//     'b' => 'manggo',
+//     'c' => 'grape',
+// ];
+```
+
+[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_arsort.php)
+
+#### e. ksort
+
+Sama seperti [sort](#a-sort) berfungsi untuk mengurutkan array secara _ascending_ atau **A-Z** tetapi berdasarkan key dari element.
+
+```php
+ksort(array &$arr, int $flags = SORT_REGULAR) : bool
+```
+
+> tanda **&** pada `$arr` berarti akan mengubah nilai dari `$arr`
+
+**Parameter**
+
+- `$arr` array yang akan diurutkan
+- `$flags` ketentuan dari pengurutan yang akan dilakukan
+    - **SORT_REGULAR** melakukan pengurutan secara normal
+    - **SORT_NUMERIC** melakukan pengurutan secara angka / numerik
+    - **SORT_STRING** melakukan pengurutan secara huruf
+    - **SORT_LOCALE_STRING** melakukan pengurutan secara huruf, tetapi berdasarkan lokal / lokasinya, yang dapat ditentukan dengan `setlocale()`
+    - **SORT_NATURAL** melakukan pengurutan secara huruf menggunakan pengurutan natural
+    - **SORT_FLAG_CASE** dapat menggabungkan SORT_STRING atau SORT_NATURAL
+
+**Hasil**
+
+- Nilai _true_
+
+**Contoh Penggunaan**
+
+```php
+$fruits = [
+    'a' => 'orange',
+    'c' => 'grape',
+    'b' => 'manggo',
+];
+
+ksort($fruits);
+// [
+//     'a' => 'orange',
+//     'b' => 'manggo',
+//     'c' => 'grape',
+// ];
+```
+
+[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_ksort.php)
+
+#### f. krsort
+
+Sama seperti [rsort](#b-rsort) berfungsi untuk mengurutkan array secara _descending_ atau **Z-A** tetapi berdasarkan key dari element.
+
+```php
+krsort(array &$arr, int $flags = SORT_REGULAR) : bool
+```
+
+> tanda **&** pada `$arr` berarti akan mengubah nilai dari `$arr`
+
+**Parameter**
+
+- `$arr` array yang akan diurutkan
+- `$flags` ketentuan dari pengurutan yang akan dilakukan
+    - **SORT_REGULAR** melakukan pengurutan secara normal
+    - **SORT_NUMERIC** melakukan pengurutan secara angka / numerik
+    - **SORT_STRING** melakukan pengurutan secara huruf
+    - **SORT_LOCALE_STRING** melakukan pengurutan secara huruf, tetapi berdasarkan lokal / lokasinya, yang dapat ditentukan dengan `setlocale()`
+    - **SORT_NATURAL** melakukan pengurutan secara huruf menggunakan pengurutan natural
+    - **SORT_FLAG_CASE** dapat menggabungkan SORT_STRING atau SORT_NATURAL
+
+**Hasil**
+
+- Nilai _true_
+
+**Contoh Penggunaan**
+
+```php
+$fruits = [
+    'a' => 'orange',
+    'c' => 'grape',
+    'b' => 'manggo',
+];
+
+krsort($fruits);
+// [
+//     'c' => 'grape',
+//     'b' => 'manggo',
+//     'a' => 'orange',
+// ];
+```
+
+[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_krsort.php)
