@@ -1,3 +1,4 @@
-/vendor/
+/vendor
+**/storage/*
 tasks.md
-*/storage/*
+.env

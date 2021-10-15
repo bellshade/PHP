@@ -46,10 +46,34 @@ Jika diperhatikan, tiap direktori selalu memiliki `index.php` yang berfungsi unt
 ```bash
 composer install
 ```
+
+- Copy file `env` lalu ubah file duplikat itu menjadi `.env`, buka file tersebut lalu rubah `BASE_URL` menjadi url tempat kamu menempatkan project ini
+
+Contoh: 
+```
+BASE_URL = 'http://localhost.test/PHP'
+```
+
 - Kemudian kamu dapat mengaksesnya di browser dengan membuka `localhost/php` atau `127.0.0.1/php`.
 <p align="center">
     <img width="90%" src="./assets/images/getting-started.png"><br/><br/>
 </p>
+
+### Konfigurasi untuk Nginx
+Jika kamu menggunakan Nginx sebagai Web Server, kamu memerlukan konfigurasi tambahan karena nginx tidak mendukung konfigurasi `.htaccess`. Dan karena project ini menggunakan _rewriting dan parsing url_, kamu harus menerapkan konfigurasi web server nginx berikut ini agar dapat rewrite path url menjadi sebuah parameter get yang merujuk ke `index.php` 
+```
+location / {
+  try_files $uri $uri/ /index.php?page=$uri;
+  index index.php;
+}
+```
+
+### Konfigurasi untuk PHP Built-in Web Server
+Jika kamu menggunakan _web server_ bawaan PHP. Kami telah menyediakan `router.php` untuk menangani request URL. Untuk menjalankan server, kamu dapat menggunakan command ini:
+```
+php -S localhost:8080 router.php
+```
+> Keterangan: Port bisa disesuaikan sesuai kebutuhan kamu
 
 
 
