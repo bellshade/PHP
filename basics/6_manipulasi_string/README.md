@@ -1,3 +1,24 @@
+1. Mengambil Property String
+2. Pemotongan String
+3. Kapitalisasi String
+4. Konversi String Kedalam Array
+    - explode()
+    - implode()
+    - str_split()
+    _ join()
+5. Escape dan Formating String
+    - addslashes()
+    - stripslashes()
+    - htmlspecialchars()
+    - htmlspecialchars_decode()
+6. Manipulasi String
+    - str_pad()
+    - wordwrap()
+    - str_shuffle()
+    - str_repeat()
+    - str_replace()
+    - strtr()
+
 # Manipulasi String
 
 PHP menyediakan berbagai fungsi dan fitur untuk memanipulasi string agar suatu teks dapat sesuai dengan yang kita inginkan. Berikut adalah contoh-contoh dari beberapa fungsi ini
@@ -169,3 +190,83 @@ echo 'Hasilnya: ' . lcfirst($text), PHP_EOL;  // Output: iNI ADALAH CONTOH TEKS 
 <a href='3_kapitalisasi_string.php#lcfirst' target='_blank'>
     <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
 </a>
+
+
+## 4. Konversi Antara String dan Array
+
+### 4.1 Konversi Dari String Menjadi Array
+
+### explode()
+Fungsi explode adalah memecah atau membagi sebuah data string menjadi beberapa bagian yang dipisahkan oleh separator "pemisah" dimana setiap bagian di konversikan menjadi elemen array().
+
+Syntax :
+```php
+explode ( string $separator , string $string [, int $limit = PHP_INT_MAX ] ) : array
+```
+#### Paramater
+
+|    Nama    |   Tipe Data   |    Input     |   Keterangan                                                           |
+|:----------:|:-------------:|:------------:|------------------------------------------------------------------------|
+| `separator`| String        | Wajib di isi | Nilai pemisah string                                                   |
+| `string`   | String        | Wajib di isi | Sting yang akan di konversi                                            |
+| `limit`    | String        | Opsional     | Banyaknya elemen array yang akan di bentuk default value `PHP_INT_MAX` |
+
+#### Hasil
+
+Pecahan string berupa Array().
+- Jika `limit` diset positif maka setelah pembagian string, jika elemen array melebehi `limit` sisa dari elemen digabungkan kedalam elemen limit tertingi
+- jika `limit` diset negatif maka setelah pembagian string, total seluruh elemen akan dikurangi dengan limit di mulai dari elemen terakhir (`limit` tertingi).
+- Jika `limit` diset `0` maka akan di menghasilkan `1` elemen array tanpa adanya pemecahan string (seluruh `string` di konversikan menjadi `1` elemen array).
+
+#### Contoh Penggunaan
+
+Berikut contoh baris kode penggunaan explode :
+```php
+<?php
+    $string = "ular melingkar dipagar pak umar";         //String yang akan di konversi
+
+    $contoh1 = explode (" ", $string);                   //separator spasi
+    $contoh2 = explode (" ", $string, 3);                //limit postitif
+    $contoh3 = explode (" ", $string, -3);               //Limit Negatif
+    $contoh4 = explode (" ", $string, 6);
+
+    echo '<pre>';
+    echo 'Contoh 1 : ';
+    print_r($contoh1);
+    echo 'Contoh 2 : ';
+    print_r($contoh2);
+    echo 'Contoh 3 : ';
+    print_r($contoh3);
+    echo 'Contoh 4 : ';
+    print_r($contoh4);
+    echo '</pre>';
+?>
+```
+Bila kita jalankan baris kode diatas akan menghasilkan hal dibawah ini :
+```html
+Contoh 1 : Array
+(
+    [0] => ular
+    [1] => melingkar
+    [2] => dipagar
+    [3] => pak
+    [4] => umar
+)
+Contoh 2 : Array
+(
+    [0] => ular
+    [1] => melingkar
+    [2] => dipagar pak umar
+)
+Contoh 3 : Array
+(
+    [0] => ular
+    [1] => melingkar
+)
+Contoh 4 : Array
+(
+    [0] => ular melingkar dipagar pak umar
+)
+```
+[![](https://img.shields.io/static/v1?&label=Contoh%20Kode&message=%3e&color)](4_manipulasi_string_explode.php)
+
