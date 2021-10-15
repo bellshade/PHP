@@ -68,8 +68,12 @@
             $pageUrl = rtrim($pageUrl, '/');
             $pageUrl = str_replace('//', '/', $pageUrl);
             $pageUrl = $pageUrl;
+        } else {
+            $pageUrl = '';
         }
     }
+
+    // die;
     // echo '<pre>';
     // echo 'pageUrl: ' . $pageUrl, PHP_EOL;
     // echo 'rewriteUrl: ' . rewriteUrl($pageUrl), PHP_EOL;
