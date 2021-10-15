@@ -25,6 +25,11 @@ Dalam materi ini kita bahas mengenai Array lebih lanjut.
         - [array_splice](#b-arraysplice)
     - [Menggabungkan array](#menggabungkan-array)
         - [array_merge](#a-arraymerge)
+    - [Pengacakan pada array](#pengacakan-pada-array)
+        - [array_flip](#a-arrayflip)
+        - [array_reverse](#b-arrayreverse)
+        - [array_rand](#c-arrayrand)
+        - [array_slice](#d-arrayslice)
 
 ## 1. Array
 ### Apa itu Array
@@ -723,3 +728,135 @@ $merged = array_merge($arr1, $arr2);    // ['a', 'b', 'c', 'd'];
 ```
 
 [![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_array_merge.php)
+
+### Pengacakan pada array
+
+#### a. array_flip
+
+Berfungsi untuk membalikan nilai array menjadi keys, dan sebaliknya.
+
+```php
+array_flip(array $arr) : array
+```
+
+**Parameter**
+
+- `$arr` array yang akan diubah
+
+**Hasil**
+
+- Array setelah diubah
+
+**Contoh Penggunaan**
+
+```php
+$arr = [
+    'senin' => 'dota 2',
+    'selasa' => 'apex',
+    'rabu' => 'pokemon unite',
+];
+
+$fliped = array_flip($arr);
+// [
+//      'dota 2' => 'senin',
+//      'apex' => 'selasa',
+//      'pokemon unite' => 'rabu', 
+// ]
+```
+
+[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_array_flip.php)
+
+#### b. array_reverse
+
+Berfungsi untuk membalikan urutan element pada array.
+
+```php
+array_reverse(array $arr, bool $preverse_keys = false) : array
+```
+
+**Parameter**
+
+- `$arr` array yang akan dibalikan
+- `$preverse_keys` jika _true_ maka key tidak akan diubah
+
+**Hasil**
+
+- Array yang telah dibalikan urutannya
+
+**Contoh Penggunaan**
+
+```php
+$arr = ['a', 'b', 'c'];
+
+array_reverse($arr);    // ['c', 'b', 'a']
+```
+
+[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_array_reverse.php)
+
+#### c. array_rand
+
+Berfungsi untuk mengambil satu atau lebih element array secara acak _(random)_.
+
+```php
+array_rand(array $arr, int $num = 1) : int|string|array
+```
+
+> tanda **|** berarti "atau"
+
+**Parameter**
+
+- `$arr` array yang akan diambil elementnya
+- `$num` jumlah element yang akan diambil
+
+**Hasil**
+
+- Key dari element yang diambil secara acak
+
+**Contoh Penggunaan**
+
+```php
+$games = ['apex', 'tetris', 'zuma'];
+
+array_rand($games);
+array_rand($games, 2);
+```
+
+[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_array_rand.php)
+
+#### d. array_slice
+
+Berfungsi untuk mendapatkan element dari urutan yang ditentukan, dan banyaknya sesuai nilai `length`.
+
+```php
+array_slice(array $arr, int $offset, ?int $length = null, bool $preserve_keys = false) : array
+```
+
+> tanda **?** pada `int $length` berarti boleh kosong / null.
+
+**Parameter**
+
+- `$arr` array yang akan diambil elementnya
+- `$offset` urutan awal element yang akan diambil
+    - Jika _positive_ maka urutan akan dihitung dari **awal** `offset` tersebut
+    - Jika _negative_ maka urutan akan dari **akhir** array hingga `offset` tersebut
+- `$length` banyaknya element yang akan dihapus
+    - Jika _null_ maka diambil dari `offset` hingga akhir array
+    - Jika _positive_ maka diambil sesuai `length`
+    - Jika _negative_ maka akan berhenti sesuai `length` dari akhir array
+- `$preserve_keys` jika _true_ akan mempertahankan key / tidak mengubah key pada element
+
+**Hasil**
+
+- Array yang diambil
+
+**Contoh Penggunaan**
+
+```php
+$fruits = ['orange', 'grape', 'banana', 'avocado'];
+
+array_slice($fruits, 2);            // ['grape', 'banana', 'avocado']
+array_slice($fruits, 2, 2);         // ['grape', 'banana']
+array_slice($fruits, 2, 2, true);   // ['1' => 'grape', '2' => 'banana']
+```
+
+[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_array_slice.php)
