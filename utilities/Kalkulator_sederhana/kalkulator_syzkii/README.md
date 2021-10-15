@@ -51,3 +51,11 @@
 </body>
 
 ```
+
+Untuk penggunaan cukup mudah, kalian bisa menginputkan Nilai 1 dan Nilai 2.
+Misal kalian ingin menjumlahkan, Masukkan saja Nilai 1 = 2 dan Nilai 2 = 2. Maka hasilnya adalah 4.
+Dan (kurang, kali, bagi) mengikuti apa yang kalian inputkan
+
+Seperti ini :
+
+![kalkulator_output](kalkulator.png)
