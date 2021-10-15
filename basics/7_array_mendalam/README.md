@@ -13,7 +13,7 @@ Dalam materi ini kita bahas mengenai Array lebih lanjut.
 ## 1. Array
 ### Apa itu Array
 Pada [materi](../2_variable_datatype) sebelumnya kita sudah berkenalan dengan tipe data berbentuk Array, jadi apa itu Array?.
-Sebuah Array adalah data struktur yang dapat menyimpan beberapa atau lebih elemen(parameter/nilai/variable) dalam satu variable, dan elemen ini tersimpan dalam bentuk key-value yang saling terhubung satu sama lain. Dalam pelaksanaan nya kita dapat menggunakan array kapan saja saat kita ingin menyimpan daftar elemen(tabel elemen).
+Sebuah Array adalah data struktur yang dapat menyimpan beberapa atau lebih elemen(parameter/nilai/variable) dalam satu variable, dan elemen ini tersimpan dalam bentuk pasangan key-value yang saling terhubung satu sama lain. Dalam pelaksanaan nya kita dapat menggunakan array kapan saja saat kita ingin menyimpan daftar elemen(tabel elemen).
 
 Array dapat menampung hampir semua tipe data dan bisa menampung berbagai macam tipe data dalam satu array, walaupun demikian dalam pelaksanaannya penggunaan Array memiliki elemen dengan tipe data yang sama.
 
@@ -80,7 +80,7 @@ Kode diatas juga bisa ganti dengan syntax yang lebih pendek dengan mendeklarasik
 ```
 [![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](1_array.php#L10-L28)
 
-### Mengakses elemen Array
+### Mengakses Elemen Array
 Setelah membuat dan menyimpan array, tentunya kita akan mengakses elemen pada array pada saat dibutuhkan, untuk mengakses kita dapat mengguakan syntax sebagai berikut :
 ```php
 <?php
@@ -88,7 +88,7 @@ Setelah membuat dan menyimpan array, tentunya kita akan mengakses elemen pada ar
     $var['key'];        //Array Asosiatif
 ?>
 ```
-Pada materi [`Bagaimana Membuat Array`](#bagaimana-membuat-array), kita telah membuat sebuat array yag berisi nama kota yaitu 'Padang', 'Batu Sangkar', 'Payakumbuh'. Sekarang kita ingin menggunakan nilai 'Batu Sangkar' dan melakukan echo ke tampilan. Array di atas berupa array linear dengan key berupa index yang dimulai dari `0`, nilai 'Batu Sangkar' terdapat di barisan kedua sehingga memiliki index `1`, untuk mengakses nya kita gunakan syntax sebagai berikut :
+Pada materi [`Bagaimana Membuat Array`](#bagaimana-membuat-array), kita telah membuat sebuat array yang berisi nama kota yaitu 'Padang', 'Batu Sangkar', 'Payakumbuh'. Sekarang kita ingin menggunakan nilai 'Batu Sangkar' dan melakukan echo ke tampilan. Array di atas berupa array linear dengan key berupa index yang dimulai dari `0`, nilai 'Batu Sangkar' terdapat di barisan kedua sehingga memiliki index `1`, untuk mengakses nya kita gunakan syntax sebagai berikut :
 ```php
 <?php
     echo $kota[1];
@@ -99,11 +99,11 @@ dengan demikian kita telah bisa membuat dan mengakses sebuah Array.
 [![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](1_array.php#L29-L34)
 
 ## 2. Jenis Array
-Berdasarkan Jenis Key yang tedapat dalam elemen Array, Array dapat dikelompokan menjadi 2 yaitu :
+Berdasarkan Jenis Key yang terdapat dalam elemen Array, Array dapat dikelompokan menjadi 2 yaitu :
 ### 1. Array Index
 Array yang memiliki Key/Index berupa angka/bilangan integer akan tergabung dalam Array jenis ini atau disebut Numerical Index Array, array yang kita buat pada contoh-contoh di atas termasuk kedalam jenis Array Index, dimana index nya berupa integer yang dibuat secara otomotis oleh sistem dengan nilai pertama dari index adalah `0`.
 
-Untuk Array Index yang tidak key awal nya tidak kita definisikan maka secara otomatis menjadi `0`, sebagai contoh :
+Untuk Array Index yang key awalnya tidak kita definisikan maka secara otomatis menjadi `0`, sebagai contoh :
 ```php
 <?php
     $kota = ['Padang', 'Batu Sangkar', 'Payakumbuh'];
@@ -132,7 +132,7 @@ Dan hal ini berlaku bila index yang di definisikan adalah index pertama, bagai m
     print_r($kota);                                         //Menampilkan Hasil
 ?>
 ```
-Syntax di atas secara otomotis PHP mengenali bahwa pada index kedua key terdefinisikan sebagai (`integer`) `8`, dengan demikian PHP tidak memulai index dari `8` tetapi tetap dari `0` untuk elemen yang terdapat sebelum key `8` ditemukan dan melajutkan key `8` untuk elemen yang terdapat setelahnya, sehingga hasil `print_r` diatas akan menghasilkan,
+Syntax di atas secara otomotis PHP mengenali bahwa pada index ketiga key terdefinisikan sebagai (`integer`) `8`, dengan demikian PHP tidak memulai index dari `8` tetapi tetap dari `0` untuk elemen yang terdapat sebelum key `8` ditemukan dan melajutkan key `8` untuk elemen yang terdapat setelahnya, sehingga hasil `print_r` diatas akan menghasilkan,
 ```html
 Array
 (
@@ -146,14 +146,14 @@ Array
 Wah.. cukup dinamis bukan!!!
 > ** Penting **
 >
-> Kesimpulan : dalam PHP Array Index adalah array yang memiliki key berupa angka Integer, bilangan desimal atau lainnya akan di konversi menjadi integer oleh php dan bilangan yang tidak dapat di konversikan menjadi integer akan dianggap bukan bagian dari array tersebut.
+> Kesimpulan : dalam PHP Array Index adalah array yang memiliki key berupa angka Integer, bilangan desimal atau lainnya akan di konversi menjadi integer oleh php dan data bertipe boolean akan di konversi menjadi integer dengan nilai `0` dan `1`.
 
 Untuk memahami lebih lanjut kita dapat pelajari contoh kode.
 
 [![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](2_jenis_array.php#L11-L22)
 
 ### 2. Array Asosiatif
-Array Asosiatif tidak jauh beda denga array index, yang membedakan hanya key array asosiatif berupa `string`. jadi kita tidak akan membahas lebih lanjut.
+Array Asosiatif tidak jauh beda dengan array index, yang membedakan hanya key array asosiatif berupa `string`. jadi kita tidak akan membahas lebih lanjut.
 Inti nya semua Array yang key nya telah di definisikan berupa `string` termasuk dalam array asosiatif ini.
 contoh membuat array asosiatif:
 ```php
@@ -163,7 +163,7 @@ contoh membuat array asosiatif:
     print_r($propinsi);                                                     //Menampilkan Array
 ?>
 ```
-dari contoh di atas kita memiliki sebuah array dengan dua elemen, dimana elemen pertama memiliki key berupa `string` yang bernilai `nama` dana elemen kedua key juga berupa `string` yang bernilai `ibukota`. Sehingga hasil dari perintah `print_r` yang kita buat akan menampilkan.
+dari contoh di atas kita memiliki sebuah array dengan dua elemen, dimana elemen pertama memiliki key berupa `string` yang bernilai `nama` dan elemen kedua key juga berupa `string` yang bernilai `ibukota`. Sehingga hasil dari perintah `print_r` yang kita buat akan menampilkan.
 ```html
 Array
 (
@@ -171,7 +171,7 @@ Array
     [ibukota] => Padang
 )
 ```
-Untuk mengakses data tersebut sama caranya dengan Array index hanya key tadi berupa index kita rubah menjadi string contoh kita ingin memanggil data Padang.
+Untuk mengakses data tersebut sama caranya dengan Array index hanya key yang tadi berupa index kita rubah menjadi string contoh kita ingin memanggil data Padang.
 ```php
 <?php
     echo $kota['ibukota'];          //tampilkan elemen array dengan key ibukota
@@ -261,9 +261,11 @@ kode diatas telah menyimpan data [tabel 1. Contoh](#tabel-1-contoh) kedalam Mult
 
 [![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](3_2_implementasi_table_array.php)
 
-Untuk memakses data tabel tersebut kedalam tabel kita dapat menggunaan beberapa metode perulangan. [![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](3_3_array_kedalam_table.php)
+Untuk mengakses data tabel tersebut kedalam tabel kita dapat menggunaan beberapa metode perulangan. [![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](3_3_array_kedalam_table.php)
 
 > **Dimensi Array**
-> Walaupun Array memiliki dimensi yang tidak terbatas, tetapi array yang memeliki 4 dimensi dan lebih akan sulit dikelola, sehingga akan lebih efisien menggunakan array berdimensi sebatas 3.
+> Walaupun Array memiliki dimensi yang tidak terbatas, tetapi array yang memiliki 4 dimensi dan lebih akan sulit dikelola, sehingga akan lebih efisien menggunakan array berdimensi sebatas 3.
+
+Untuk contoh penggunaan matrix Array kita bisa pelajari implementasi [Algoritma BackTracking pada PathFinding](../../algorithms/BackTracking/PathFinding) atau [algoritma Sorting](../../algorithms/Sorting) untuk linear Array.
 
 ## 4. Manipulasi Array
