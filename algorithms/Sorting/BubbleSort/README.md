@@ -5,10 +5,10 @@ Bubble Sort adalah metode pengurutan algoritma dengan cara melakukan penukaran d
 Urutan Kerja Bubble Sorting sebagai berikut :
 1. Ambil dua data yang saling berdekatan, bila susunan menaik (Ascending) dimulai dari data paling bawah (index terkecil), sebaliknya untuk susunan menurun mulai dari data paling atas (index terbesar).
 2. Bila bila susunan data tidak benar lakukan pertukaran. Untuk susunan naik nilai terkecil berada di bawah, dan sebaliknya untuk susunan menurun.
-3. Untuk susuan menaik ambil nilai terbesar dari kedua data tersebut dan bandingkan dengan nilai data yang berada di posisi berdekatan selanjutnya, sebaliknya untuk susunan menurun ambil data terkecil.
+3. Untuk susunan menaik ambil nilai terbesar dari kedua data tersebut dan bandingkan dengan nilai data yang berada di posisi berdekatan selanjutnya, sebaliknya untuk susunan menurun ambil data terkecil.
 4. Ulangi langkah 2 dan 3 sampai tidak ada lagi posisi yang salah.
 
-Penting untuk di ingat saat menyusun secara naik atau turun ( Asc dan Desc ), Penyususan data naik (Asc) dimulai dari index terkecil, dan menukar nilai terbesar ke index lebih besar. Sedangkan penyusunan secara menurun kita mulai dari index terbesar dengan menggeser nilai terkecil ke indek lebih kecil.
+Penting untuk di ingat saat menyusun secara naik atau turun ( Asc dan Desc ), Penyusunan data naik (Asc) dimulai dari index terkecil, dan menukar nilai terbesar ke index lebih besar. Sedangkan penyusunan secara menurun kita mulai dari index terbesar dengan menggeser nilai terkecil ke indek lebih besar.
 
 Untuk lebih memahami coba kita pelajari hasil kerja Bubble Sort untuk penyusunan data secara naik (Asc) di bawah ini :
 
@@ -30,7 +30,7 @@ Dari alur di atas dapat kita susun sebuah Pengkondisian yaitu bila nilai elemen 
 ?>
 ```
 
-Sekarang bagaimana melakukan pertukaran nilai antara elemen, kita bisa menggukan sebuah varible untuk menampung salah satu data terlebih dahulu dengan cara.
+Sekarang bagaimana melakukan pertukaran nilai antara elemen, kita bisa menggukan sebuah variable untuk menampung salah satu data terlebih dahulu dengan cara.
 ```php
     $temp = $array[$index];                 //tampung nilai dari elemen array[index] terlebih dahulu
     $array[$index] = $array[$index + 1];    //pindahkan nilai dari elemen $array[index + 1] kedalam elemen $array[index]
@@ -102,7 +102,7 @@ Baris kode diatas akan menghasilkan :
 [1,2,3,4]
 [1,2,3,4]
 ```
-Sampi disini baris kode yang kita buat sudah berhasil melakukan sorting terhadap array, tetap ini hanya berlaku untuk array yang terdisi dari 4 elemen, bagaimana jika array yang di sorting kurang atau lebih dari 4 elemen. Tentunya kita harus merubah kebali baris kode ini untuk menyesuaikan kebutuhan kita, coba kita uji dengan array memiliki 6 elemen, sebagai contoh $array2 = [3,5,2,4,1,6]. jika kita buat dalam bentuk ilustrasi di atas maka akan membuat langkah berikut:
+Sampi disini baris kode yang kita buat sudah berhasil melakukan sorting terhadap array, tetap ini hanya berlaku untuk array yang terdiri dari 4 elemen, bagaimana jika array yang di sorting kurang atau lebih dari 4 elemen. Tentunya kita harus merubah kembali baris kode ini untuk menyesuaikan kebutuhan kita, coba kita uji dengan array memiliki 6 elemen, sebagai contoh $array2 = [3,5,2,4,1,6]. jika kita buat dalam bentuk ilustrasi di atas maka akan membuat langkah berikut:
 ```html
 [3,5,2,4,1,6]   [2,3,4,1,5,6]   [2,3,1,4,5,6]   [1,2,3,4,5,6]   [1,2,3,4,5,6]
 [3,2,5,4,1,6]   [2,3,4,1,5,6]   [2,1,3,4,5,6]   [1,2,3,4,5,6]
@@ -157,4 +157,78 @@ Dengan langkah hasil kerja seperti di atas dan di bandingkan dengan langkah hasi
 ?>
 ```
 
-Sampai disini akhirnya Algoritma BubbleSort kita selesai.
+Sampai disini akhirnya Algoritma BubbleSort Pengurutan Naik (Ascending) kita selesai. Untuk Pengurutan secara menurun kita cukup membalik pola kerja langkah, dimana dimulai dari index elemen array terbesar ke terkecil, dengan pertukaran perbandingan dari yang besar berada dibagian depan.
+
+Untuk membuat pengurutan secara menurun (descending), lebih baik kita jadikan baris kode di atas menjadi sebuah fungsi dengan menambah sebuah paramater bertipe boolean untuk menentukan apakah pengurutan secara naik atau secara turun. Rincin flow nya sebagai berikut :
+1. Langkah dimulai dari index elemen array tertinggi. | $langkah = count($array) - 1.
+2. index elemen yang akan dibandingkan adalah langkah dan langkah - 1 | $array[$langkah] > $array[$langkah - 1].
+4. setiap tahap mengurangi index elemen yang akan diurutkan, yaitu elemen dengan index terendah | indexTerendah = $tahap - 1. 
+3. Langkah berada pada index elemen tertinggi ke yang index elemen terendah setiap tahap | $tahap - 1 < $langkah < count($array) | $tahap <= $langkah < count(array).
+
+Baris kode :
+```php
+<?php
+
+namespace Algoritma;
+
+class MyClass
+{
+    public function BubbleSort(array $array, bool $desc = false)
+    {
+        $size = count($array);
+
+        if ($size <= 1)return $array;
+
+        $a = ($desc) ? $size - 1 : 0;
+
+        for ($tahap = 1; $tahap < $size; $tahap++)
+        {
+            for($langkah = $a; ($desc) ? $langkah >= $tahap : $langkah < $size - $tahap; ($desc) ? $langkah-- : $langkah++)
+            {
+                $index = $langkah;
+                $nextIndex = ($desc) ? $langkah - 1 : $langkah + 1;
+                if ($array[$index] > $array[$nextIndex])
+                {
+                    $temp = $array[$index];
+                    $array[$index] = $array[$nextIndex];
+                    $array[$nextIndex] = $temp;
+                }
+            }
+        }
+
+        return $array;
+    }
+}
+
+$array = [100,120,140,110,130,105,115,125]      //contoh array.
+echo '<pre>';
+echo json_encode($array) . PHP_EOL;             //Array Sebelum diurutkan
+
+$asc = (MyClass())->BubbleSort($array);         //Pengurutan Naik.
+$desc = (MyClass())->BubbleSort($array, true);  //Pengurutan Turun.
+
+echo json_encode($asc) . PHP_EOL;               //hasil pengurutan naik
+echo json_encode($desc) . PHP_EOL;              //hasil pengurutan turun
+echo '</pre>';
+?>
+```
+
+Akhirnya algoritma kita selesai dan dapat kita panggil dengan syntax:
+```php
+BubbleSort(array $array[, bool $desc = false]);
+```
+dengan parameter $desc adalah opsional jika menginginkan pengurutan secara menurun. Hasil dari baris kode diatas :
+```html
+[100,120,140,110,130,105,115,125]       //sebelum
+[100,105,110,115,120,125,130,140]       //Ascending
+[140,130,125,120,115,110,105,100]       //Descending
+```
+
+Untuk algoritma parameter dan nilai parameter tidaklah baku, baris kode diatas dapat berubah-ubah sesuai pendekatan yang kita gunakan, dari sebuah algoritma yang terpenting adalah flow atau standard kerja sistem komputasi untuk menyelesaikan suatu masalah komputasi.
+
+Baris kode kita diatas bila kita susun diagram alur nya akan terbentuk seperti ini :
+<p align="center">
+    <img src="../../assets/content/algorithms/Sorting/Bubble/BubbleSort.svg" alt="Bubble Sorting Diagram">
+</p>
+
+<p align="center">Terima Kasih</p>
