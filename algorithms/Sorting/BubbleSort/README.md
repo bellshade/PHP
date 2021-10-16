@@ -227,8 +227,7 @@ dengan parameter $desc adalah opsional jika menginginkan pengurutan secara menur
 Untuk algoritma parameter dan nilai parameter tidaklah baku, baris kode diatas dapat berubah-ubah sesuai pendekatan yang kita gunakan, dari sebuah algoritma yang terpenting adalah flow atau standard kerja sistem komputasi untuk menyelesaikan suatu masalah komputasi.
 
 Baris kode kita diatas bila kita susun diagram alur nya akan terbentuk seperti ini :
-<p align="center">
-    <img src="../../assets/content/algorithms/Sorting/Bubble/BubbleSort.svg" alt="Bubble Sorting Diagram">
-</p>
+![bubble chart](../../../assets/content/algorithms/Sorting/Bubble/BubbleSort.svg)
 
-<p align="center">Terima Kasih</p>
+
+<p align="center">*** Terima Kasih ***</p>
