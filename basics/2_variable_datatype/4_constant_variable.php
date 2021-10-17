@@ -23,3 +23,19 @@ echo __NAMA__;    // Hasil: Wahyudi
 // Contoh:
 define('01NAMA', "Badar Wildanie");
 define('MEREK-MOBIL', "Honda");
+
+
+/* 
+ * Deklarasi variabel konstanta dengan kata kunci const
+ * const NAMA_VARIABEL = "nilai variabel"
+ * nilai variabel dapat berupa string, number, null, dan boolean
+ */
+
+// Contoh:
+// Deklarasi Variabel
+const NAMA_LENGKAP = "Rochmad Nurul Fahmi";
+
+// Menampilkan nilai
+echo NAMA_LENGKAP; // Hasil: Rochmad Nurul Fahmi
+// atau
+echo constant("NAMA_LENGKAP"); // Hasil: Rochmad Nurul Fahmi
