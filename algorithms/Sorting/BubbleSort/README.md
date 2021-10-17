@@ -36,7 +36,7 @@ Sekarang bagaimana melakukan pertukaran nilai antara elemen, kita bisa menggunak
     $array[$index] = $array[$index + 1];    //pindahkan nilai dari elemen $array[index + 1] kedalam elemen $array[index]
     $array[$index + 1] = $temp              //Kembalikan nilai yang kita tampung dari elemen $array[index] kedalam elemen $array[index + 1]
 ```
-dengan demikian kita dapat peroleh baris kode secara untuh seperti ini:
+dengan demikian kita dapat peroleh baris kode secara utuh seperti ini:
 ```php
 <?php
     if ($array[$index] > $array[$index + 1])
