@@ -1,6 +1,6 @@
 # DATABASE - MYSQL
 
-Dalam pemrograman, Database digunakan sebagai media penyimpanan data. Jika diibaratkan, database adalah lemari yang mampu digunakan untuk menyimpan banyak barang, kemudian rak pada lemari adalah tabel tabel/collection yang ada pada database. pada seksi ini kita akan mempelajari tentang database mysql, salah satu database yang sering digunakan dalam berbagai kondisi.
+Dalam pemrograman, database digunakan sebagai media penyimpanan data. Jika diibaratkan, database adalah lemari yang mampu digunakan untuk menyimpan banyak barang, kemudian rak pada lemari adalah tabel-tabel/collection yang ada pada database. pada seksi ini kita akan mempelajari tentang database mysql, salah satu database yang sering digunakan dalam berbagai kondisi.
 
 ## Connection/Koneksi
 > Setelah melewati materi ini diharapkan teman teman dapat memahami bagaimana melakukan koneksi database mysql pada bahasa pemrograman PHP.
