@@ -102,7 +102,7 @@ Baris kode diatas akan menghasilkan :
 [1,2,3,4]
 [1,2,3,4]
 ```
-Sampi disini baris kode yang kita buat sudah berhasil melakukan sorting terhadap array, tetapi ini hanya berlaku untuk array yang terdiri dari 4 elemen, bagaimana jika array yang di sorting kurang atau lebih dari 4 elemen? Tentunya kita harus mengubah kembali baris kode ini untuk menyesuaikan kebutuhan kita, coba kita uji dengan array yang memiliki 6 elemen, sebagai contoh $array2 = [3,5,2,4,1,6]. Jika kita buat dalam bentuk ilustrasi di atas maka akan membuat langkah sebagai berikut:
+Sampai di sini, baris kode yang kita buat sudah berhasil melakukan sorting terhadap array. Akan tetapi, ini hanya berlaku untuk array yang terdiri dari 4 elemen. Bagaimana jika array yang di-sorting kurang atau lebih dari 4 elemen? Tentunya kita harus mengubah kembali baris kode ini untuk menyesuaikan kebutuhan kita. Coba kita uji dengan array yang memiliki 6 elemen, sebagai contoh $array2 = [3,5,2,4,1,6]. Jika kita buat dalam bentuk ilustrasi di atas maka kita akan membuat langkah sebagai berikut:
 ```html
 [3,5,2,4,1,6]   [2,3,4,1,5,6]   [2,3,1,4,5,6]   [1,2,3,4,5,6]   [1,2,3,4,5,6]
 [3,2,5,4,1,6]   [2,3,4,1,5,6]   [2,1,3,4,5,6]   [1,2,3,4,5,6]
