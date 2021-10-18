@@ -25,7 +25,7 @@ define('01NAMA', "Badar Wildanie");
 define('MEREK-MOBIL', "Honda");
 
 
-/* 
+/*
  * Deklarasi variabel konstanta dengan kata kunci const
  * const NAMA_VARIABEL = "nilai variabel"
  * nilai variabel dapat berupa string, number, null, dan boolean

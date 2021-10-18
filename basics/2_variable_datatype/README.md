@@ -275,7 +275,7 @@ Dalam bahasa pemrograman PHP, pembuatan konstanta berbeda dengan pembuatan varia
 
 [![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_constant_variable.php#L3-L25)
 
-Mendeklarasikan variabel Konstanta pada PHP juga dapat dilakukan dengan menggunakan kata kunci `const` disusul dengan `NAMA_KONSTANTA` beserta `nilai` dari konstanta yang dibuat.
+Deklarasi variabel konstanta pada PHP juga dapat dilakukan dengan menggunakan kata kunci `const` disusul dengan `NAMA_KONSTANTA` beserta `nilai` dari konstanta yang dibuat.
 > **INFO:**
 > 
 > Deklarasi variabel konstanta ini seperti deklarasi variabel konstanta pada bahasa pemrograman JavaScript
@@ -283,7 +283,7 @@ Mendeklarasikan variabel Konstanta pada PHP juga dapat dilakukan dengan mengguna
 [![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_constant_variable.php#L28-L41)
 
 ## 6. Variabel telah Ditetapkan
-Variabel telah Ditetapkan (*predefined variables*) adalah variabel bawaan PHP yang "superglobals" yang dapat di akses di tempat tertentu dalam kode.
+Variabel telah ditetapkan (*predefined variables*) adalah variabel bawaan PHP yang bersifat "superglobal" dan dapat diakses di tempat tertentu dalam kode.
 
 Berikut beberapa variabel *superglobals* dalam bahasa pemrogramana PHP:
 
