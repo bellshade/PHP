@@ -5,7 +5,7 @@ Bubble Sort adalah metode pengurutan algoritma dengan cara melakukan penukaran d
 Urutan Kerja Bubble Sorting sebagai berikut :
 1. Ambil dua data yang saling berdekatan. Bila susunan menaik (Ascending) dimulai dari data paling bawah (index terkecil). Sebaliknya, untuk susunan menurun mulai dari data paling atas (index terbesar).
 2. Bila susunan data tidak benar maka akan dilakukan pertukaran. Untuk susunan naik nilai terkecil berada di bawah dan sebaliknya untuk susunan menurun.
-3. Untuk susunan menaik ambil nilai terbesar dari kedua data tersebut dan bandingkan dengan nilai data yang berada di posisi berdekatan selanjutnya, sebaliknya untuk susunan menurun ambil data terkecil.
+3. Untuk susunan menaik ambil nilai terbesar dari kedua data tersebut dan bandingkan dengan nilai data yang berada di posisi berdekatan selanjutnya. Sebaliknya, untuk susunan menurun ambil data terkecil.
 4. Ulangi langkah 2 dan 3 sampai tidak ada lagi posisi yang salah.
 
 Penting untuk diingat saat menyusun secara naik atau turun (Asc dan Desc). Penyusunan data naik (Asc) dimulai dari index terkecil dengan menukar nilai terbesar ke index lebih besar. Sedangkan penyusunan secara menurun dimulai dari index terbesar dengan menggeser nilai terkecil ke index lebih besar.
