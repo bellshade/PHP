@@ -169,3 +169,27 @@ echo 'Hasilnya: ' . lcfirst($text), PHP_EOL;  // Output: iNI ADALAH CONTOH TEKS 
 <a href='3_kapitalisasi_string.php#lcfirst' target='_blank'>
     <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
 </a>
+
+## 4. *String Array*
+*String array* merupakan fungsi/fitur yang disediakan oleh PHP untuk melakukan manipulasi `string` menjadi `array` ataupun sebaliknya.
+
+### implode()
+Fungsi `implode()` digunakan untuk membuat `array` menjadi `string`.
+
+**Cara Penggunaan:**
+`implode($pemisah, $array)`
+
+- `$pemisah` | opsional, bertipe data `string`, memberi pemisah diantara elemen `array`
+- `$array` | wajib, bertipe data `array`, `array` yang akan dijadikan `string`
+
+**Contoh:**
+```php
+$daftar_buah = ['apel', 'nanas', 'pisang', 'mangga'];
+
+print_r($daftar_buah);
+
+$string_buah = implode(",", $daftar_buah);
+```
+<a href='4_string_array.php#L9-L31' target='_blank'>
+    <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
+</a>
