@@ -189,7 +189,37 @@ $daftar_buah = ['apel', 'nanas', 'pisang', 'mangga'];
 print_r($daftar_buah);
 
 $string_buah = implode(",", $daftar_buah);
+
+echo $string_buah;
 ```
 <a href='4_string_array.php#L9-L31' target='_blank'>
+    <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
+</a>
+
+### explode()
+Fungsi `explode()` merupakan kebalikan dari fungsi implode(), dimana fungsi ini digunakan untuk membuat `string` menjadi `array`.
+
+**Cara Penggunaan:**
+`explode($pemisah, $string, $limit)`
+
+- `$pemisah` | wajib, bertipe data `string`, memberi batas dalam menentukan nilai pada setiap elemen `array`
+- `$string` | wajib, bertipe data `string`, `string` yang akan dijadikan `array`
+- `$limit` | opsional, bertipe data `integer`, menentukan berapa banyak elemen `array` yang akan dibuat
+
+**Contoh:**
+```php
+$teks = "Bellshade memang keren";
+
+print_r($teks);
+
+// penggunaan tanpa limit
+$teks_array = explode(" ", $teks);
+print_r($teks_array);
+
+// penggunaan dengan limit
+$teks_array = explode(" ", $teks, 1);
+print_r($teks_array);
+```
+<a href='4_string_array.php#L34-L68' target='_blank'>
     <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
 </a>
