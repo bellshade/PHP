@@ -13,7 +13,7 @@ Untuk melakukan koneksi sendiri, PHP sejak versi 7 menyediakan 2 pilihan yaitu m
     $username = "username";
     $password = "password";
 
-    // Koneksi ke Database
+    // Koneksi ke database
     $conn = mysqli_connect($servername, $username, $password);
 
     // Mengecek koneksi
