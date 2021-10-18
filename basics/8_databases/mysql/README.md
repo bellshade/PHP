@@ -41,7 +41,7 @@ Untuk melakukan koneksi sendiri, PHP sejak versi 7 menyediakan 2 pilihan yaitu m
     ```
 
 ## Select data (mengambil data) dari database
-> Setelah melewati materi ini diharapkan teman teman dapat memahami bagaimana melakukan select data dari database mysql pada bahasa pemrograman PHP.
+> Setelah melewati materi ini, diharapkan teman-teman dapat memahami bagaimana melakukan select data dari database mysql pada bahasa pemrograman PHP.
 
 Mengambil data di database adalah salah satu yang paling sering dilakukan oleh web developer.
 1. mysqli
