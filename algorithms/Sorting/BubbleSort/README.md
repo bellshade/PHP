@@ -8,7 +8,7 @@ Urutan Kerja Bubble Sorting sebagai berikut :
 3. Untuk susunan menaik ambil nilai terbesar dari kedua data tersebut dan bandingkan dengan nilai data yang berada di posisi berdekatan selanjutnya, sebaliknya untuk susunan menurun ambil data terkecil.
 4. Ulangi langkah 2 dan 3 sampai tidak ada lagi posisi yang salah.
 
-Penting untuk di ingat saat menyusun secara naik atau turun (Asc dan Desc), Penyusunan data naik (Asc) dimulai dari index terkecil dan menukar nilai terbesar ke index lebih besar. Sedangkan penyusunan secara menurun dimulai dari index terbesar dengan menggeser nilai terkecil ke index lebih besar.
+Penting untuk diingat saat menyusun secara naik atau turun (Asc dan Desc). Penyusunan data naik (Asc) dimulai dari index terkecil dengan menukar nilai terbesar ke index lebih besar. Sedangkan penyusunan secara menurun dimulai dari index terbesar dengan menggeser nilai terkecil ke index lebih besar.
 
 Untuk lebih memahami coba kita pelajari hasil kerja Bubble Sort untuk penyusunan data secara naik (Asc) di bawah ini :
 
