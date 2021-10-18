@@ -177,6 +177,7 @@ echo 'Hasilnya: ' . lcfirst($text), PHP_EOL;  // Output: iNI ADALAH CONTOH TEKS 
 Fungsi `implode()` digunakan untuk membuat `array` menjadi `string`.
 
 **Cara Penggunaan:**
+
 `implode($pemisah, $array)`
 
 - `$pemisah` | opsional, bertipe data `string`, memberi pemisah diantara elemen `array`
@@ -200,6 +201,7 @@ echo $string_buah;
 Fungsi `explode()` merupakan kebalikan dari fungsi implode(), dimana fungsi ini digunakan untuk membuat `string` menjadi `array`.
 
 **Cara Penggunaan:**
+
 `explode($pemisah, $string, $limit)`
 
 - `$pemisah` | wajib, bertipe data `string`, memberi batas dalam menentukan nilai pada setiap elemen `array`
@@ -209,7 +211,6 @@ Fungsi `explode()` merupakan kebalikan dari fungsi implode(), dimana fungsi ini 
 **Contoh:**
 ```php
 $teks = "Bellshade memang keren";
-
 print_r($teks);
 
 // penggunaan tanpa limit
@@ -221,5 +222,32 @@ $teks_array = explode(" ", $teks, 1);
 print_r($teks_array);
 ```
 <a href='4_string_array.php#L34-L68' target='_blank'>
+    <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
+</a>
+
+### str_split()
+Fungsi `str_split()` sama seperti fungsi `implode()`, akan tetapi dalam menentukan elemen `array` menggunakan panjang dari `string` yang akan diubah.
+
+**Cara Penggunaan:**
+
+`str_split($string, $panjang)`
+
+- `$string` | wajib, bertipe data `string`, sebuah `string` yang akan diubah
+- `$panjang` | opsional, bertipe data `integer`, nilai untuk menentukan panjang setiap elemen `array`
+
+**Contoh:**
+```php
+$teks = "Bellshade memang keren";
+print_r($teks);
+
+// penggunaan tanpa panjang
+$teks_array = str_split($teks);
+print_r($teks_array);
+
+// penggunaan dengan panjang
+$teks_array = str_split($teks, 5);
+print_r($teks_array);
+```
+<a href='4_string_array.php#L70-L108' target='_blank'>
     <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
 </a>

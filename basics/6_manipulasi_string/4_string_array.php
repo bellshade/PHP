@@ -67,4 +67,44 @@ print_r($teks_array);
 echo "<br>";
 
 // ---------------------------------------------------------------------------
+
+echo '<h2 id="str_split">Str_split()</h2>';
+
+$teks = "Bellshade memang keren";
+
+echo "Hasil awal:", PHP_EOL;
+print_r($teks);
+echo "<br><br>";
+
+echo "Hasil setelah menggunakan str_split():", PHP_EOL;
+// penggunaan tanpa panjang
+$teks_array = str_split($teks);
+
+print_r($teks_array);
+/* Hasil
+*  Array
+*  (
+*      [0] => B
+*      [1] => e
+*      [2] => l
+*      [3] => l
+*      ...
+*  )
+*/
+echo "<br>";
+
+// penggunaan dengan panjang
+$teks_array = str_split($teks, 7);
+print_r($teks_array);
+/* Array
+ * (
+ *   [0] => Bellsha
+ *   [1] => de mema
+ *   [2] => ng kere
+ *   [3] => n
+ * )
+*/
+echo "<br>";
+
+// ---------------------------------------------------------------------------
 echo '</pre>';
