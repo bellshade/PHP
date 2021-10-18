@@ -55,7 +55,7 @@ Karena bisa kita pastikan acuan kita adalah nomor index dari array, dimana perul
 
     $array = [3,2,4,1];
 
-    for($i = 0; $i < 3; $i++)
+    for($j = 0; $j < 3; $j++)
     {
         if ($array[$i] > $array[$i + 1])
         {
@@ -65,7 +65,8 @@ Karena bisa kita pastikan acuan kita adalah nomor index dari array, dimana perul
         }
     }
 
-    echo json_encode($array);                   //hasil tahap satu
+    print_r($array);                   //hasil tahap satu
+    echo '<br>';
 ?>
 ```
 Sekarang kita sudah selesaikan tahap 1, bagaimana dengan tahap 2 dan selanjutnya. Dari gambar hasil kerja dapat kita lihat bahwa ada 3 Tahap, dan setiap langkah dikerjakan dalam setiap tahap, berdasarkan hal ini kita bisa buatkan sebuah perulangan bersarang dengan metode perulangan for, dan perulangan for untuk langkah berada dalam perulangan for untuk tahap, dengan aturan for melakukan perulangan untuk tahap sebanyak 3 kali. sehingga bisa kita tulis baris kode sebagai berikut:
@@ -74,7 +75,7 @@ Sekarang kita sudah selesaikan tahap 1, bagaimana dengan tahap 2 dan selanjutnya
     $array = [3,2,4,1];
 
     //loop untuk Tahap
-    for ($i = 3; $i > 0; $i--)
+    for ($j = 3; $j > 0; $j--)
     {
         //nested loop untuk langkah
         for($i = 0; $i < 3; $i++)
@@ -85,7 +86,8 @@ Sekarang kita sudah selesaikan tahap 1, bagaimana dengan tahap 2 dan selanjutnya
                 $array[$i] = $array[$i + 1];
                 $array[$i + 1] = $temp;
             }
-            echo json_encode($array) . PHP_EOL;         //cek hasil setiap langkah
+            print_r($array);         //cek hasil setiap langkah
+            echo '<br>';
         }
     }
 ?>
@@ -149,7 +151,8 @@ Dengan langkah hasil kerja seperti di atas dan di bandingkan dengan langkah hasi
                 $array[$langkah + 1] = $temp;                    //Kembalikan data tersimpan
             }
             /** coba kita cek hasil setiap langkah */
-            echo json_encode($array);
+            print_r($array);
+            echo '<br>';
         }
         echo '<hr>';
 
@@ -202,13 +205,16 @@ class MyClass
 
 $array = [100,120,140,110,130,105,115,125]      //contoh array.
 echo '<pre>';
-echo json_encode($array) . PHP_EOL;             //Array Sebelum diurutkan
+echo 'Sebelum Pengurutan :' . PHP_EOL;
+print_r($array) . PHP_EOL;             //Array Sebelum diurutkan
 
 $asc = (MyClass())->BubbleSort($array);         //Pengurutan Naik.
 $desc = (MyClass())->BubbleSort($array, true);  //Pengurutan Turun.
 
-echo json_encode($asc) . PHP_EOL;               //hasil pengurutan naik
-echo json_encode($desc) . PHP_EOL;              //hasil pengurutan turun
+echo PHP_EOL . 'Pengurutan Secara Ascending :' . PHP_EOL;
+print_r($asc);                          //hasil pengurutan naik
+echo PHP_EOL . 'Pengurutan Secara Descending :' . PHP_EOL;
+print_r($desc);                         //hasil pengurutan turun
 echo '</pre>';
 ?>
 ```
@@ -219,9 +225,44 @@ BubbleSort(array $array[, bool $desc = false]);
 ```
 dengan parameter $desc bersifat opsional jika menginginkan pengurutan secara menurun. Hasil dari baris kode diatas adalah:
 ```html
-[100,120,140,110,130,105,115,125]       //sebelum
-[100,105,110,115,120,125,130,140]       //Ascending
-[140,130,125,120,115,110,105,100]       //Descending
+Sebelum Pengurutan :
+Array
+(
+    [0] => 100
+    [1] => 120
+    [2] => 140
+    [3] => 110
+    [4] => 130
+    [5] => 105
+    [6] => 115
+    [7] => 125
+)
+
+Pengurutan Secara Ascending :
+Array
+(
+    [0] => 100
+    [1] => 105
+    [2] => 110
+    [3] => 115
+    [4] => 120
+    [5] => 125
+    [6] => 130
+    [7] => 140
+)
+
+Pengurutan Secara Descending :
+Array
+(
+    [0] => 140
+    [1] => 130
+    [2] => 125
+    [3] => 120
+    [4] => 115
+    [5] => 110
+    [6] => 105
+    [7] => 100
+)
 ```
 
 Untuk algoritma parameter dan nilai parameter tidaklah baku, baris kode diatas dapat berubah-ubah sesuai pendekatan yang kita gunakan, dari sebuah algoritma yang terpenting adalah flow atau standard kerja sistem komputasi untuk menyelesaikan suatu masalah komputasi, sebagai contoh metode `For` di atas bisa saja kita ganti dengan metode perulangan lain seperti `While` dan `Do While` bahkan dengan metode `Foreach`, yang terpenting adalah menterjemahkan alur kerja algoritmanya dan kemudian kita terjemahkan kedalam baris kode.
