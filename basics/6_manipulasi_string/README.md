@@ -193,7 +193,7 @@ $string_buah = implode(",", $daftar_buah);
 
 echo $string_buah;
 ```
-<a href='4_string_array.php#L9-L31' target='_blank'>
+<a href='4_string_array.php#L9-L32' target='_blank'>
     <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
 </a>
 
@@ -221,7 +221,7 @@ print_r($teks_array);
 $teks_array = explode(" ", $teks, 1);
 print_r($teks_array);
 ```
-<a href='4_string_array.php#L34-L68' target='_blank'>
+<a href='4_string_array.php#L34-L69' target='_blank'>
     <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
 </a>
 
@@ -248,6 +248,30 @@ print_r($teks_array);
 $teks_array = str_split($teks, 5);
 print_r($teks_array);
 ```
-<a href='4_string_array.php#L70-L108' target='_blank'>
+<a href='4_string_array.php#L71-L110' target='_blank'>
+    <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
+</a>
+
+### join()
+Fungsi `join()` merupakan *alias* atau nama lain dari fungsi `implode()`.
+
+**Cara Penggunaan:**
+
+`join($pemisah, $array)`
+
+- `$pemisah` | opsional, bertipe data `string`, memberi pemisah diantara elemen `array`
+- `$array` | wajib, bertipe data `array`, `array` yang akan dijadikan `string`
+
+**Contoh:**
+```php
+$daftar_buah = ['apel', 'nanas', 'pisang', 'mangga'];
+
+print_r($daftar_buah);
+
+$string_buah = join(",", $daftar_buah);
+
+echo $string_buah;
+```
+<a href='4_string_array.php#L112-L135' target='_blank'>
     <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
 </a>

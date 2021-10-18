@@ -13,7 +13,7 @@ $daftar_buah = ['apel', 'nanas', 'pisang', 'mangga'];
 
 echo "Hasil Awal:", PHP_EOL;
 print_r($daftar_buah);
-/* Hasil :
+/* Hasil:
  * Array
  * (
  *   [0] => apel
@@ -45,7 +45,7 @@ echo "Hasil setelah menggunakan explode():", PHP_EOL;
 $teks_array = explode(" ", $teks);
 
 print_r($teks_array);
-/* Hasil
+/* Hasil:
 *  Array
 *  (
 *      [0] => Bellshade
@@ -58,7 +58,8 @@ echo "<br>";
 // penggunaan dengan limit
 $teks_array = explode(" ", $teks, 2);
 print_r($teks_array);
-/* Array
+/* Hasil:
+ * Array
  * (
  *   [0] => Bellshade
  *   [1] => memang keren
@@ -81,7 +82,7 @@ echo "Hasil setelah menggunakan str_split():", PHP_EOL;
 $teks_array = str_split($teks);
 
 print_r($teks_array);
-/* Hasil
+/* Hasil:
 *  Array
 *  (
 *      [0] => B
@@ -96,7 +97,8 @@ echo "<br>";
 // penggunaan dengan panjang
 $teks_array = str_split($teks, 7);
 print_r($teks_array);
-/* Array
+/* Hasil:
+ * Array
  * (
  *   [0] => Bellsha
  *   [1] => de mema
@@ -105,6 +107,31 @@ print_r($teks_array);
  * )
 */
 echo "<br>";
+
+// ---------------------------------------------------------------------------
+
+echo '<h2 id="join">Join()</h2>';
+
+$daftar_buah = ['apel', 'nanas', 'pisang', 'mangga'];
+
+echo "Hasil Awal:", PHP_EOL;
+print_r($daftar_buah);
+/* Hasil:
+ * Array
+ * (
+ *   [0] => apel
+ *   [1] => nanas
+ *   [2] => pisang
+ *   [3] => mangga
+ * )
+*/
+
+echo '<br>';
+
+$string_buah = join(",", $daftar_buah);
+
+echo "Hasil setelah menggunakan join(): ", PHP_EOL;
+echo $string_buah; // Hasil: apel,nanas,pisang,mangga
 
 // ---------------------------------------------------------------------------
 echo '</pre>';
