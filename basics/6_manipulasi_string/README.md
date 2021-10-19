@@ -169,3 +169,109 @@ echo 'Hasilnya: ' . lcfirst($text), PHP_EOL;  // Output: iNI ADALAH CONTOH TEKS 
 <a href='3_kapitalisasi_string.php#lcfirst' target='_blank'>
     <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
 </a>
+
+## 4. *String Array*
+*String array* merupakan fungsi/fitur yang disediakan oleh PHP untuk melakukan manipulasi `string` menjadi `array` ataupun sebaliknya.
+
+### implode()
+Fungsi `implode()` digunakan untuk membuat `array` menjadi `string`.
+
+**Cara Penggunaan:**
+
+`implode($pemisah, $array)`
+
+- `$pemisah` | opsional, bertipe data `string`, memberi pemisah diantara elemen `array`
+- `$array` | wajib, bertipe data `array`, `array` yang akan dijadikan `string`
+
+**Contoh:**
+```php
+$daftar_buah = ['apel', 'nanas', 'pisang', 'mangga'];
+
+print_r($daftar_buah);
+
+$string_buah = implode(",", $daftar_buah);
+
+echo $string_buah;
+```
+<a href='4_string_array.php#L9-L32' target='_blank'>
+    <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
+</a>
+
+### explode()
+Fungsi `explode()` merupakan kebalikan dari fungsi implode(), dimana fungsi ini digunakan untuk membuat `string` menjadi `array`.
+
+**Cara Penggunaan:**
+
+`explode($pemisah, $string, $limit)`
+
+- `$pemisah` | wajib, bertipe data `string`, memberi batas dalam menentukan nilai pada setiap elemen `array`
+- `$string` | wajib, bertipe data `string`, `string` yang akan dijadikan `array`
+- `$limit` | opsional, bertipe data `integer`, menentukan berapa banyak elemen `array` yang akan dibuat
+
+**Contoh:**
+```php
+$teks = "Bellshade memang keren";
+print_r($teks);
+
+// penggunaan tanpa limit
+$teks_array = explode(" ", $teks);
+print_r($teks_array);
+
+// penggunaan dengan limit
+$teks_array = explode(" ", $teks, 1);
+print_r($teks_array);
+```
+<a href='4_string_array.php#L34-L69' target='_blank'>
+    <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
+</a>
+
+### str_split()
+Fungsi `str_split()` sama seperti fungsi `implode()`, akan tetapi dalam menentukan elemen `array` menggunakan panjang dari `string` yang akan diubah.
+
+**Cara Penggunaan:**
+
+`str_split($string, $panjang)`
+
+- `$string` | wajib, bertipe data `string`, sebuah `string` yang akan diubah
+- `$panjang` | opsional, bertipe data `integer`, nilai untuk menentukan panjang setiap elemen `array`
+
+**Contoh:**
+```php
+$teks = "Bellshade memang keren";
+print_r($teks);
+
+// penggunaan tanpa panjang
+$teks_array = str_split($teks);
+print_r($teks_array);
+
+// penggunaan dengan panjang
+$teks_array = str_split($teks, 5);
+print_r($teks_array);
+```
+<a href='4_string_array.php#L71-L110' target='_blank'>
+    <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
+</a>
+
+### join()
+Fungsi `join()` merupakan *alias* atau nama lain dari fungsi `implode()`.
+
+**Cara Penggunaan:**
+
+`join($pemisah, $array)`
+
+- `$pemisah` | opsional, bertipe data `string`, memberi pemisah diantara elemen `array`
+- `$array` | wajib, bertipe data `array`, `array` yang akan dijadikan `string`
+
+**Contoh:**
+```php
+$daftar_buah = ['apel', 'nanas', 'pisang', 'mangga'];
+
+print_r($daftar_buah);
+
+$string_buah = join(",", $daftar_buah);
+
+echo $string_buah;
+```
+<a href='4_string_array.php#L112-L135' target='_blank'>
+    <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
+</a>
