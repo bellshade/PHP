@@ -16,11 +16,11 @@
 
 ## Contributor
 
-Kami sangat senang Anda dapat ikut berkontribusi dalam implementasi algoritma, struktur data atau memperbaiki error serta merilis implementasi materi basic learning PHP. Semua boleh ikut berkontribusi walaupun hal kecil dengan ketentuan sebagai berikut:
+Kami sangat senang Kamu dapat ikut berkontribusi dalam implementasi algoritma, struktur data atau memperbaiki error serta merilis implementasi materi basic learning PHP. Semua boleh ikut berkontribusi walaupun hal kecil dengan ketentuan sebagai berikut:
 
-- Hasil pekerjaan Anda adalah buatan Anda sendiri dan tidak ada hak cipta dari orang lain, jika kami menemukan kesamaan maka kami tidak `merged`.
-- Hasil kerja Anda akan berlisensi [MIT](LICENSE) ketika permintaan pull Anda sudah di merged
-- Hasil kerja Anda wajib mengikuti standar dan style koding dari kami (lihat bagian [Standar penulisan](#standar-penulisan))
+- Hasil pekerjaan Kamu adalah buatan Kamu sendiri dan tidak ada hak cipta dari orang lain, jika kami menemukan kesamaan maka kami tidak `merged`.
+- Hasil kerja Kamu akan berlisensi [MIT](LICENSE) ketika permintaan pull Kamu sudah di merged
+- Hasil kerja Kamu wajib mengikuti standar dan style koding dari kami (lihat bagian [Standar penulisan](#standar-penulisan))
 - Jika dibutuhkan, hanya gunakan library package dari composer, sebelumnya silahkan diskusi di [issue](https://github.com/bellshade/PHP/issues)
 
 ## Kategori yang tersedia
@@ -99,9 +99,9 @@ dengan bentuk struktur yang mirip dengan `algorithm`
 Kami menggunakan standar penulisan PSR-12 untuk seluruh implementasi kode Basics & Algorithms. PSR-12 adalah rekomendasi standar PHP untuk gaya dan konvensi penulisan kode. [lihat dokumentasi resmi PSR-12](https://www.php-fig.org/psr/psr-12/)
 
 Untuk _integration_ nya, kami menggunakan [CodeSniffer](https://packagist.org/packages/squizlabs/php_codesniffer) untuk mengecek apakah seluruh kode sudah mengikuti standar gaya penulisan PSR-12.
-Package CodeSniffer ini sudah termasuk dalam _composer.json_ untuk Anda gunakan di lokal
+Package CodeSniffer ini sudah termasuk dalam _composer.json_ untuk Kamu gunakan di lokal
 
-Setelah Anda clone repository ini, lakukan instalasi package composer terlebih dahulu
+Setelah Kamu clone repository ini, lakukan instalasi package composer terlebih dahulu
 
 ```bash
 composer install
@@ -119,13 +119,13 @@ Untuk memanfaatkan CodeSniffer agar bisa memperbaiki kode yang tidak memenuhi st
 composer phpcbf
 ```
 
-Jika menggunakan `phpcbf` masih belum memperbaiki seluruh kesalahan yang ada, Anda harus memperbaikinya secara manual. <br/>Kami sangat sarankan untuk Anda jika menggunakan software text editor Visual Studio Code, Anda dapat menggunakan ekstensi bernama [PHPCS](https://marketplace.visualstudio.com/items?itemName=ikappas.phpcs). Dengan ekstensi itu, Visual Studio Code akan menunjukkan letak kesalahannya jika Anda melakukan kesalahan penulisan.
+Jika menggunakan `phpcbf` masih belum memperbaiki seluruh kesalahan yang ada, Kamu harus memperbaikinya secara manual. <br/>Kami sangat sarankan untuk Kamu jika menggunakan software text editor Visual Studio Code, Kamu dapat menggunakan ekstensi bernama [PHPCS](https://marketplace.visualstudio.com/items?itemName=ikappas.phpcs). Dengan ekstensi itu, Visual Studio Code akan menunjukkan letak kesalahannya jika Kamu melakukan kesalahan penulisan.
 
-Pastikan Anda sudah melakukan pengecekan ini sebelum mengajukan _*Pull Request*_ karena ini termasuk salah satu workflow yang dijalankan secara otomatis oleh kami saat Anda mengajukan _*Pull Request*_
+Pastikan Kamu sudah melakukan pengecekan ini sebelum mengajukan _*Pull Request*_ karena ini termasuk salah satu workflow yang dijalankan secara otomatis oleh kami saat Kamu mengajukan _*Pull Request*_
 
 ### Pedoman Penulisan Lainnya untuk Pembelajaran Dasar (_Basic Learning_)
 
-Selain menggunakan gaya penulisan PSR-12 untuk implementasi kode pada Basic Learning. Ada ketentuan konsistensi yang harus Anda terapkan yaitu:
+Selain menggunakan gaya penulisan PSR-12 untuk implementasi kode pada Basic Learning. Ada ketentuan konsistensi yang harus Kamu terapkan yaitu:
 
 - Setiap materi pembelajaran berada pada folder tersendiri yang dinamai dengan materi yang berkaitan
 - Folder materi memiliki penomoran diawal sebagai _prefix_
@@ -149,25 +149,82 @@ Salah satu perbedaan yang mencolok untuk penulisan pada Algorithm adalah selain 
 
 Untuk menginstantiasi kelas algoritmanya, lakukan di file kelasnya secara langsung (instantiasi dibawah kelasnya) agar dapat dijalankan saat membuka artikel `README.md`.
 
+## Penggunaan Database
+
+Penggunaan layanan database seringkali dibutuhkan untuk kebanyakan kegunaan. Untuk menjaga konsistensi dan kerapian project repository ini dalam penggunaan database, ada beberapa ketentuan untuk mencapai hal itu, diantaranya:
+
+- Hanya ada satu database untuk melayani keseluruhan project repositori ini.
+- Seluruh informasi koneksi database diatur dalam satu file konfigurasi `.env`
+> **_Pengecualian:_** Untuk materi basic pengenalan database, tidak perlu memuat konfigurasi .env agar mudah dipahami. Nama database menggunakan "bellshade_php"
+- Default nama databasenya adalah `bellshade_php` _(yang dapat diganti di `.env`)_
+- Nama tabel mengikuti format `[nomor]_[nama materi]_[nama tabel]`, spasi bisa menggunakan `_` _(underscore)_. 
+> **Contoh nama tabel:** `11_database_prosedural_buku` 
+
+Untuk membuat koneksi database, kamu perlu membuat file koneksi sendiri terlebih dahulu di folder yang sedang kamu kerjakan. Kami sudah menyediakan `config.php` pada direktori root `/` untuk memuat seluruh konfigurasi yang tertulis di `.env` _(termasuk informasi database)_. Oleh karena itu, file koneksi kamu harus `require()` ke file `config.php` ini di root `/`.
+
+Untuk lebih mudahnya, kami menyediakan contoh file koneksi database yang dapat kamu gunakan sebagai file koneksi `connect.php`.
+```php
+<?php
+
+/**
+ * Load Konfigurasi ENV
+ * -----------------------------------------
+ * Untuk memuat konfigurasi yang ada di file `.env`
+ * diperlukan untuk memanggil file `config.php` yang ada di root
+ * dengan membawa variabel $path_to_root yang berisi path relatif ke direktori root
+ */
+
+$path_to_root = '../..';    // Ini adalah jalan path ke root `/` dari folder yang kamu kerjakan. Ganti jika perlu.
+require_once $path_to_root . '/config.php';
+
+/**
+ * Koneksi ke Database
+ * -----------------------------------------
+ * Koneksi menggunakan konfigurasi yang
+ * telah ditulis di `.env` dan sudah dimuat
+ */
+
+$db_host = $_ENV['DB_HOST'];
+$db_port = $_ENV['DB_PORT'];
+$db_user = $_ENV['DB_USER'];
+$db_pass = $_ENV['DB_PASS'];
+$db_name = $_ENV['DB_NAME'];
+
+$connection = @mysqli_connect($db_host, $db_user, $db_pass, $db_name, $db_port);
+
+if (mysqli_connect_error()) {
+    echo '<pre>';
+    echo 'Tidak dapat terhubung dengan MySQL: ' . mysqli_connect_error(), PHP_EOL;
+    echo '-----------------------------------', PHP_EOL;
+    echo 'Database host: ' . $db_host, PHP_EOL;
+    echo 'Database port: ' . $db_port, PHP_EOL;
+    echo 'Database user: ' . $db_user, PHP_EOL;
+    echo 'Database name: ' . $db_name, PHP_EOL;
+    echo '</pre>';
+    die;
+}
+
+```
+
 ## Percobaan (_Testing_)
 
 Testing hanya dilakukan untuk Algorithm dan tidak diperlukan untuk Basic Learning ataupun Utility. Testing algoritma diperlukan agar suatu algoritma berjalan sesuai dengan yang di harapkan. Kami juga menerapkan unit testing ini pada _Continuous Integration_ kami agar selalu dijaga keandalan kodenya.
 
-Kami menggunakan [PHPUnit](https://phpunit.de/documentation.html) sebagai Unit Testing untuk setiap algoritma yang Anda buat. Seluruh file testing berada dalam folder `/tests`.
+Kami menggunakan [PHPUnit](https://phpunit.de/documentation.html) sebagai Unit Testing untuk setiap algoritma yang Kamu buat. Seluruh file testing berada dalam folder `/tests`.
 
-Untuk membuat unit testing, Anda perlu membuat kelas turunan `TestCase`. Awali penamaan sebuah method dengan _prefix_ `testXxx()`.
-Berikut template unit testing yang dapat Anda gunakan
+Untuk membuat unit testing, Kamu perlu membuat kelas turunan `TestCase`. Awali penamaan sebuah method dengan _prefix_ `testXxx()`.
+Berikut template unit testing yang dapat Kamu gunakan
 
 ```php
 require_once 'algorithms/autoload.php';
 
 use PHPUnit\Framework\TestCase;
 
-class KelasTestAnda extends TestCase
+class KelasTestKamu extends TestCase
 {
     public function testMethodAnda()
     {
-      # Lakukan Test Anda disini
+      # Lakukan Test Kamu disini
     }
 }
 ```
@@ -178,14 +235,14 @@ Untuk menjalankan seluruh tests, gunakan command:
 composer phpunit
 ```
 
-Untuk memaksimalkan kelancaran workflow, pastikan Anda melakukan testing setiap kali Anda membuat algoritma sebelum mengajukan _*Pull Request*_.
+Untuk memaksimalkan kelancaran workflow, pastikan Kamu melakukan testing setiap kali Kamu membuat algoritma sebelum mengajukan _*Pull Request*_.
 
 ## Pull Request
 
 **_Pull Request_ yang Baik**
 
 - Lakukan fork pada repository kami
-- usahakan Anda membuat branch baru
+- usahakan Kamu membuat branch baru
 
 ```bash
 git checkout -b <branch_name>
@@ -193,7 +250,7 @@ git add .
 git commit -m "add: menambahkan algoritma baru"
 ```
 
-- Lakukan push ke branch Anda dan kemudian *open *pull request\*\*
+- Lakukan push ke branch Kamu dan kemudian *open *pull request\*\*
 
 **Saran Pesan Commit:**
 
@@ -201,6 +258,7 @@ git commit -m "add: menambahkan algoritma baru"
 - `fix` Untuk mengubah algoritma yang sudah ada atau memperbaiki
 - `docs` Untuk mengubah atau membuat dokumentasi
 - `style` Untuk mengubah atau memperbaiki style kode untuk contohnya bisa dilihat pada commit yang diatas
+- `feat` Untuk fitur baru atau _enhancement_
 
 **_Pull Request_ `merged` jika:**
 
@@ -209,9 +267,9 @@ git commit -m "add: menambahkan algoritma baru"
 
 **Tambahan:**
 
-- Jika ada kendala atau masalah dalam _pull request_, Anda bisa laporkan masalah pada [issue](https://github.com/bellshade/PHP/issues)
+- Jika ada kendala atau masalah dalam _pull request_, Kamu bisa laporkan masalah pada [issue](https://github.com/bellshade/PHP/issues)
 - Jika ada tes yang tidak lewat atau gagal, kami akan mengecek kembali perubahan.
 
-Untuk _pull request_ kami sarankan untuk menjelaskan secara detail yang Anda ubah atau tambahkan, dan bersikap sopan, serta selalu berterima kasih, itu salah satu bentuk tata krama yang baik terhadap sesama contributor dan programmer lainnya.
+Untuk _pull request_ kami sarankan untuk menjelaskan secara detail yang Kamu ubah atau tambahkan, dan bersikap sopan, serta selalu berterima kasih, itu salah satu bentuk tata krama yang baik terhadap sesama contributor dan programmer lainnya.
 
 Terima kasih sudah berkontribusi di **Bellshade/PHP**
