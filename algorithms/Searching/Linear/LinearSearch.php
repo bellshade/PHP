@@ -9,7 +9,7 @@ namespace Searching\Linear;
  *
  * kondiak
  */
-class Linear
+class LinearSearch
 {
     protected $hasil = false;
 
@@ -53,7 +53,7 @@ class Linear
 $array = [1, 2, 3, 4, 5, [6, 7, 12, 18], 8, 9, 10];
 $nilai1 = 37;
 $nilai2 = 12;
-$linear = new Linear();
+$linear = new LinearSearch();
 
 $hasil1 = $linear->cari($array, $nilai1);
 $hasil2 = $linear->cari($array, $nilai2);
