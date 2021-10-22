@@ -20,7 +20,7 @@ untuk lebih jelas kita bisa melihat simulasi pencarian secara linear dibawah ini
 </p>
 
 Pada contoh animasi diatas kita memiliki sekumpulan data dengan nilai:
-[47,62,93,10,8,8,51,32,7,48,96,49,47,34,6,52,26,41,59,37] dan nilai yang ingin dicari didalam data adalah nilai 26. Pola yang dilakukan oleh animasi berupa mengecek nilai dari data index pertama sampai data ditemukan. dengan demikian bisa kita buatkan sebuah alur kerja dari animasi tersebut sebagai berikut: 
+[8,51,32,7,48,96,49,47,34,6,52,26,41] dan nilai yang ingin dicari didalam data adalah nilai 26. Pola yang dilakukan oleh animasi berupa mengecek nilai dari data index pertama sampai data ditemukan. dengan demikian bisa kita buatkan sebuah alur kerja dari animasi tersebut sebagai berikut: 
 
 <p align="center">
 <img src="../../../assets/content/algorithms/Searching/Linear/chart.svg" />
@@ -30,7 +30,7 @@ Alur diatas menjelaskan pola kerja dari algoritma yang akan kita tulis, setelah 
 
 ```php
 <?php
-    $data = [47,62,93,10,8,8,51,32,7,48,96,49,47,34,6,52,26,41,59,37];
+    $data = [8,51,32,7,48,96,49,47,34,6,52,26,41];
     $index = count($data);
     $i = 0;
     $key = 26;
@@ -77,7 +77,7 @@ Jangan lupa untuk menghentikan perulangan jika data sudah ditemukan, hal ini dap
 
 ```php
 <?php
-    $data = [47,62,93,10,8,8,51,32,7,48,96,49,47,34,6,52,26,41,59,37];
+    $data = [8,51,32,7,48,96,49,47,34,6,52,26,41];
     $key = 26;
     $index = count($array);
     $i = 0
@@ -138,7 +138,7 @@ Sampai disini telah selesai, baris kode diatas sudah bisa kita akses secara glob
 
     use LinearSearch;
 
-    $data = [47,62,93,10,8,8,51,32,7,48,96,49,47,34,6,52,26,41,59,37];
+    $data = [8,51,32,7,48,96,49,47,34,6,52,26,41];
     $linear = new LinearSearch();
 
     $hasil = $linear->cari($data, 26);
