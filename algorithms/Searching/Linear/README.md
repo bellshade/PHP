@@ -1,7 +1,8 @@
 <p align="center">
-  <img width="15%" src="./../assets/images/phplogo.png" />
+  <img width="15%" src="../../../assets/images/phplogo.png" />
   <h1 align="center">Linear Search</h1>
 </p> 
+
 ## Algoritma Pencarian Secara Linear
 <p align="justify">Pencarian secara linear merupakan bagian dari algorima pencarian. Algoritma ini terbilang sebuah algoritma sederhana, dengan tingkat kompleksitas rendah. Algoritma ini akan membandingkan semua elemen array dengan nilai pencarian, bila nilai ditemukan akan mengembalikan nilai true dan bila tidak ditemukan akan mengembalikan nilai false.</p>
 
@@ -13,16 +14,20 @@ Alur kerja algoritma ini adalah :
 5. kembalikan hasil keluaran.
 
 untuk lebih jelas kita bisa melihat simulasi pencarian secara linear dibawah ini:
+
 <p align="center">
 <img src="../../../assets/content/algorithms/Searching/Linear/Linear.gif" />
 </p>
-<p align="justify">Pada contoh animasi diatas kita memiliki sekumpulan data dengan nilai:
-[47,62,93,10,8,8,51,32,7,48,96,49,47,34,6,52,26,41,59,37] dan nilai yang ingin dicari didalam data adalah nilai 26. Pola yang dilakukan oleh animasi berupa mengecek nilai dari data index pertama sampai data ditemukan. dengan demikian bisa kita buatkan sebuah alur kerja dari animasi tersebut sebagai berikut: </p>
+
+Pada contoh animasi diatas kita memiliki sekumpulan data dengan nilai:
+[47,62,93,10,8,8,51,32,7,48,96,49,47,34,6,52,26,41,59,37] dan nilai yang ingin dicari didalam data adalah nilai 26. Pola yang dilakukan oleh animasi berupa mengecek nilai dari data index pertama sampai data ditemukan. dengan demikian bisa kita buatkan sebuah alur kerja dari animasi tersebut sebagai berikut: 
 
 <p align="center">
 <img src="../../../assets/content/algorithms/Searching/Linear/chart.svg" />
 </p>
+
 Alur diatas menjelaskan pola kerja dari algoritma yang akan kita tulis, setelah dapat alur kerja kita bisa langsung menuliskan baris kode. Tahap awal dulu kita siapkan paramater-parameter yang diperlukan, contoh sebagai berikut :
+
 ```php
 <?php
     $data = [47,62,93,10,8,8,51,32,7,48,96,49,47,34,6,52,26,41,59,37];
@@ -31,7 +36,9 @@ Alur diatas menjelaskan pola kerja dari algoritma yang akan kita tulis, setelah 
     $key = 26;
 ?>
 ```
+
 kemudian kita buat perbandingan antara nilai elemen array dari index ke `i` dengan data kunci (nilai yang dicari) dengan cara pengkondisian, contoh sebagai berikut :
+
 ```php
 <?php
     if ($data[$i] = $key)
@@ -44,7 +51,9 @@ kemudian kita buat perbandingan antara nilai elemen array dari index ke `i` deng
     }
 ?>
 ```
+
 Kita lakukan perulangan untuk memeriksa nilai dari setiap elemen array, dalam kasus ini kita bebas menentukan metode perulangan yang kita ingin gunakan, dalam contoh ini saya menggukan metode perulangan do..while, contoh sebagai berikut :
+
 ```php
 <?php
     do
@@ -63,7 +72,9 @@ Kita lakukan perulangan untuk memeriksa nilai dari setiap elemen array, dalam ka
     echo $hasil;
 ?>
 ```
+
 Jangan lupa untuk menghentikan perulangan jika data sudah ditemukan, hal ini dapat mengurangi beban kerja perangkat kita. Sebagai hasil baris kode lengkap sebagai berikut :
+
 ```php
 <?php
     $data = [47,62,93,10,8,8,51,32,7,48,96,49,47,34,6,52,26,41,59,37];
@@ -85,9 +96,11 @@ Jangan lupa untuk menghentikan perulangan jika data sudah ditemukan, hal ini dap
     echo $hasil;        //true
 ?>
 ```
-Baris kode di atas telah berhasil memeriksa apakah nilai yang kita cari terdapat dalam elemen array tersebut, agar kita dapat menggukan baris kode diatas secara global, ada baiknya baris kode diatas kita tuangkan kedalam fungsi PHP, agar kita dapat mengaksesnya kapan saja, kemudian nilai `false` untuk parameter $hasil akan selalu muncul kecuali nilai yang kita cari dalam array ditemukan maka parameter $hasil bernilai `true`, sebaiknya nilai dari parameter $hasil kita set `false` secara default dan kita rubah menjadi `true` saat data ditemukan. 
+
+Baris kode di atas telah berhasil memeriksa apakah nilai yang kita cari terdapat dalam elemen array tersebut, agar kita dapat menggukan baris kode diatas secara global, ada baiknya baris kode diatas kita tuangkan kedalam fungsi PHP, agar kita dapat mengaksesnya kapan saja, kemudian nilai `false` untuk parameter $hasil akan selalu muncul kecuali nilai yang kita cari dalam array ditemukan maka parameter $hasil bernilai `true`, sebaiknya nilai dari parameter $hasil kita set `false` secara default dan kita rubah menjadi `true` saat data ditemukan.
 
 contoh baris kode sebagai berikut:
+
 ```php
 <?php
 namespace Algoritma;
@@ -118,6 +131,7 @@ class LinearSearch
 ```
 
 Sampai disini telah selesai, baris kode diatas sudah bisa kita akses secara global sebagai contoh :
+
 ```php
 <?php
     require_once 'Algoritma\LinearSearch.php';
