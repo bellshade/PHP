@@ -16,15 +16,15 @@ class LinearSearch
     /**
      * Fungsi Pencarian
      * @param array $array
-     * @param string $key
+     * @param mixed $key
      * @return mixed
      */
-    public function cari(array $array, string $key)
+    public function cari(array $array, $key)
     {
         //cek panjang elemen array
-        $lenght = count($array);
+        $length = count($array);
         //jika array memiliki 0 elemen
-        if ($lenght < 1) {
+        if ($length < 1) {
             return $this->hasil;
         }
 
@@ -42,7 +42,7 @@ class LinearSearch
                 $this->cari($array[$i], $key);
             }
             $i++;
-        } while ($i < $lenght);
+        } while ($i < $length);
 
         //kembalikan hasil keluaran
         return $this->hasil;

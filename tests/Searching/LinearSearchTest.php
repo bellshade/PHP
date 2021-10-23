@@ -11,9 +11,9 @@ class LinearSearchTest extends TestCase
     {
         $input = [23, 25, 12, 14, 2, 10, 33, 76, 6, 18];
         $key = 10;
-        $expeted = true;
+        $expected = true;
         $output = (new LinearSearch())->cari($input, $key);
 
-        $this->assertEquals($expeted, $output);
+        $this->assertEquals($expected, $output);
     }
 }
