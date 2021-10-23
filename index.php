@@ -154,6 +154,8 @@
                             'autoload.php',
                             'run.php',
                             'router.php',
+                            'config.php',
+                            'tasks.md'
                         ];
                         if ($pageUrl == '') {
                             $exception[] = '..';

@@ -1,5 +1,6 @@
 <p align="center">
     <img width="20%" src="./assets/images/logo.png"><br/><br/>
+     <a href="http://discord.gg/S4rrXQU"><img src="https://img.shields.io/discord/722002048643497994?logo=discord&logoColor=white&style=for-the-badge"></a>
     <img src="https://img.shields.io/github/workflow/status/bellshade/PHP/CI%20PHP%20PSR-12%20Linting?style=for-the-badge">
     <img src="https://img.shields.io/github/license/bellshade/PHPAlgorithm?style=for-the-badge">
 </p>
