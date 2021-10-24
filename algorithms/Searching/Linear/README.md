@@ -1,12 +1,14 @@
 <p align="center">
   <img width="15%" src="../../../assets/images/phplogo.png" />
   <h1 align="center">Linear Search</h1>
-</p> 
+</p>
 
 ## Algoritma Pencarian Secara Linear
-<p align="justify">Pencarian secara linear merupakan bagian dari algorima pencarian. Algoritma ini terbilang sebuah algoritma sederhana, dengan tingkat kompleksitas rendah. Algoritma ini akan membandingkan semua elemen array dengan nilai pencarian, bila nilai ditemukan akan mengembalikan nilai true dan bila tidak ditemukan akan mengembalikan nilai false.</p>
+
+<p align="justify">Pencarian secara linear merupakan bagian dari algoritma pencarian. Algoritma ini terbilang sebuah algoritma sederhana, dengan tingkat kompleksitas rendah. Algoritma ini akan membandingkan semua elemen array dengan nilai pencarian, bila nilai ditemukan akan mengembalikan nilai true dan bila tidak ditemukan akan mengembalikan nilai false.</p>
 
 Alur kerja algoritma ini adalah :
+
 1. Ambil nilai dari elemen array.
 2. Ambil nilai yang akan dicari.
 3. Bandingkan nilai dari elemen array dengan nilai yang dicari.
@@ -20,7 +22,7 @@ untuk lebih jelas kita bisa melihat simulasi pencarian secara linear dibawah ini
 </p>
 
 Pada contoh animasi diatas kita memiliki sekumpulan data dengan nilai:
-[8,51,32,7,48,96,49,47,34,6,52,26,41] dan nilai yang ingin dicari didalam data adalah nilai 26. Pola yang dilakukan oleh animasi berupa mengecek nilai dari data index pertama sampai data ditemukan. dengan demikian bisa kita buatkan sebuah alur kerja dari animasi tersebut sebagai berikut: 
+[8,51,32,7,48,96,49,47,34,6,52,26,41] dan nilai yang ingin dicari didalam data adalah nilai 26. Pola yang dilakukan oleh animasi berupa mengecek nilai dari data index pertama sampai data ditemukan. dengan demikian bisa kita buatkan sebuah alur kerja dari animasi tersebut sebagai berikut:
 
 <p align="center">
 <img src="../../../assets/content/algorithms/Searching/Linear/chart.svg" />
@@ -97,7 +99,7 @@ Jangan lupa untuk menghentikan perulangan jika data sudah ditemukan, hal ini dap
 ?>
 ```
 
-Baris kode di atas telah berhasil memeriksa apakah nilai yang kita cari terdapat dalam elemen array tersebut, agar kita dapat menggukan baris kode diatas secara global, ada baiknya baris kode diatas kita tuangkan kedalam fungsi PHP, agar kita dapat mengaksesnya kapan saja, kemudian nilai `false` untuk parameter $hasil akan selalu muncul kecuali nilai yang kita cari dalam array ditemukan maka parameter $hasil bernilai `true`, sebaiknya nilai dari parameter $hasil kita set `false` secara default dan kita rubah menjadi `true` saat data ditemukan.
+Baris kode di atas telah berhasil memeriksa apakah nilai yang kita cari terdapat dalam elemen array tersebut, agar kita dapat menggunakan baris kode diatas secara global, ada baiknya baris kode diatas kita tuangkan kedalam fungsi PHP, agar kita dapat mengaksesnya kapan saja, kemudian nilai `false` untuk parameter $hasil akan selalu muncul kecuali nilai yang kita cari dalam array ditemukan maka parameter $hasil bernilai `true`, sebaiknya nilai dari parameter $hasil kita set `false` secara default dan kita ubah menjadi `true` saat data ditemukan.
 
 contoh baris kode sebagai berikut:
 
@@ -153,14 +155,17 @@ Baris kode kita telah selesai sampai disini.
 Algoritma ini memiliki kelebihan dan kekurangan, sebagai gambaran
 
 **Kelebihan** :
-- Data Array yang diterima diawal tidak harus terurut, sehingga langsung bisa dapat melakukan pencarian.
+
+-   Data Array yang diterima diawal tidak harus terurut, sehingga langsung bisa dapat melakukan pencarian.
 
 **Kelemahan** :
-- Jika Array yang diterima memiliki elemen yang banyak maka akan memberatkan kinerja dari perangkat kita.
+
+-   Jika Array yang diterima memiliki elemen yang banyak maka akan memberatkan kinerja dari perangkat kita.
 
 dalam hal demikian algoritma ini baik digunakan untuk pencarian dalam data kecil dengan data array berupa linear ( array satu dimensi ), walaupun dapat digunakan untuk pencarian di dalam array multi dimensi dengan metode recursive, tetapi hal tersebut <b>dapat membebani memory perangkat</b>.
 
 untuk mencari pada array multi dimensi, bisa menggunakan contoh baris kode dibawah ini :
+
 ```php
 <?php
 class .......
@@ -183,6 +188,7 @@ class .......
 [![](https://img.shields.io/static/v1?&label=Contoh%20Kode&message=%3e&color)](LinearSearch.php)
 
 ### Referensi
-- Programiz. *"Linear Search C, C++, Java, Python"*. [Pranala Luar](https://www.programiz.com/dsa/linear-search).
-- Edy Budiman. *"Belajar Dasar: Algoritma dan Pemograman"*. Repository Unmul.
-- Udy Manber. *Using Mathematical Induction to Design Computer Algorithms*, Computer Science Technical Report#660. 1986
+
+-   Programiz. _"Linear Search C, C++, Java, Python"_. [Pranala Luar](https://www.programiz.com/dsa/linear-search).
+-   Edy Budiman. _"Belajar Dasar: Algoritma dan Pemograman"_. Repository Unmul.
+-   Udy Manber. _Using Mathematical Induction to Design Computer Algorithms_, Computer Science Technical Report#660. 1986
