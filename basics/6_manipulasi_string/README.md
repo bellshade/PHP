@@ -67,7 +67,7 @@ echo "Posisi kata 'contoh': " . strpos($text, 'contoh'), PHP_EOL;  // Output: 11
 
 ### Menghitung Banyaknya Kata Tertentu
 
-Jika kamu ingin menemukan kata tertentu dalam sebuah string, kamu dapat gunakan `substr_count($string, "yangmaudicari")`
+Jika kamu ingin menemukan kata tertentu dalam sebuah string, kamu dapat menggunakan `substr_count($string, "yangmaudicari")`
 
 <p align="center">
     <img src="../../assets/content/basics/5_string_manipulation/substr_count.gif">

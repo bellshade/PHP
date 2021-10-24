@@ -44,7 +44,7 @@ PHP adalah _Server Side Scripting_ yang artinya dilakukan di sisi server. Kode P
 
 ## 1. Persiapan
 
-Di atas sudah dibahas bahwa dengan menggunakan PHP, diperlukan sebuah server agar dapat berjalan. Di bagian ini kita akan bahas tentang apa saja yang dibutuhkan agar sebuah aplikasi web berbasis PHP dapat berjalan, dan bagaimana cara menyiapkan lingkungan  pengembangan pemrograman PHP yang ideal.
+Di atas sudah dibahas bahwa dengan menggunakan PHP, diperlukan sebuah server agar dapat berjalan. Di bagian ini kita akan bahas tentang apa saja yang dibutuhkan agar sebuah aplikasi web berbasis PHP dapat berjalan, dan bagaimana cara menyiapkan lingkungan pengembangan pemrograman PHP yang ideal.
 
 Ada tiga komponen utama agar aplikasi web berbasis PHP dapat berjalan, diantaranya:
 

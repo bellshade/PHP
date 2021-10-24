@@ -41,12 +41,13 @@ for(exp1, exp2, exp3)
 
 Perulangan *Loop* akan mengeksekusi ekspresi pertama (exp1) sesaat setelah *prosedure loop* dimulai dan ini hanya dieksekusi sekali selama putaran perulangan terjadi, dimana pada umumnya ekspresi pertama berisi argument penugasan/assignment. Contoh : `$i = 1;`
 
-Expresi kedua (exp2) pada umumnya berisi conditional statement dimana perulangan ini akan mengevaluasi nilai expresi kedua, selama expresi kedua menghasilkan nilai `true` maka *statement* perulangan akan terus dieksekusi. contoh exp2 : `$i < 10;`
+Ekspresi kedua (exp2) pada umumnya berisi *conditional statement* dimana perulangan ini akan mengevaluasi nilai ekspresi kedua, selama ekspresi kedua menghasilkan nilai `true` maka *statement* perulangan akan terus dieksekusi. contoh exp2 : `$i < 10;`
 
 Diakhir setiap sirkulasi Perulangan, ekspresi ketiga (exp3) akan dieksekusi. dan kemudian memulai sirkulasi selanjutnya, selama ekspresi kedua menghasilkan nilai `true`.
 
 Setiap ekspresi bisa saja kosong atau memiliki lebih dari 1 (satu) argumen yang dipisahkan oleh tanda `,`.
-semua argumen yang ada dalam ekspresi kedua akan dieksekusi dan hanya argumen terakhir yang diperhitungan sebagai hasil ekspresi. Jika ekspresi kedua ini kosong, maka perulangan akan berjalan terus, seolah ekspresi kedua ini selalu menghasilkan nilai true, untuk menghentikan perulangan seperti ini kita dapat membuat *conditional* statement untuk menentukan kapan perulangan berakhir.
+
+Semua argumen yang ada dalam ekspresi kedua akan dieksekusi dan hanya argumen terakhir yang diperhitungan sebagai hasil ekspresi. Jika ekspresi kedua ini kosong, maka perulangan akan berjalan terus, seolah ekspresi kedua ini selalu menghasilkan nilai true, untuk menghentikan perulangan seperti ini kita dapat membuat *conditional* statement untuk menentukan kapan perulangan berakhir.
 
 Diagram alur perulangan *For* :
 
@@ -101,7 +102,7 @@ Contoh penggunaan *for* dalam berinteraksi dengan data *Array()*, terdapat [disi
 
 Perulangan Foreach atau dapat di artikan dalam bahasa Indonesia sebagai 'Untuk Setiap', dari arti kata ini dapat disimpulkan bahwa syntax ini digunakan untuk berinteraksi dengan variabel yang memiliki data/*arguments* lebih dari satu atau lebih tepatnya kita sebut data *Array()*. Selain dari data *Array()*, *foreach* juga dapat digunakan untuk perulangan data ber-tipe *Object*.
 
-Perulangan *foreach* tidak dapat digunakan pada data ber-tipe selain *Array()* dan *Object*, atau variable yang tidak di insialisasikan. Memaksakan penggunaan perulangan pada data tersebut akan menimbulkan pesan kesalahan (`error`) pada aplikasi yang kita buat.
+Perulangan *foreach* tidak dapat digunakan pada data ber-tipe selain *Array()* dan *Object*, atau variabel yang tidak di inisialisasikan. Memaksakan penggunaan perulangan pada data tersebut akan menimbulkan pesan kesalahan (`error`) pada aplikasi yang kita buat.
 
 Sebelum melanjutkan lebih baik kita pahami terlebih dulu mengenai data tipe [*Array()*](../2_variable_datatype/#membuat-array), dimana setiap elemen dari data *Array()* memiliki pasangan *key* dan *value* (kunci dan nilai).
 
@@ -115,7 +116,7 @@ foreach(Array|Object $variable as [$key =>] $value){
 }
 ```
 
-Kode di atas Pada setiap elemen dari *Array* atau *Object*, PHP akan mentransfer nilai yang terdapat pada elemen *Array* atau *Object* yang terdapat pada parameter `$variable` ke dalam parameter `$value`, dan *key* dari elemen menjadi parameter `$key`. Untuk *key* berupa opsional jika kita membutuhkan nilai *key* dari suatu elemen.
+Kode di atas pada setiap elemen dari *Array* atau *Object*, PHP akan mentransfer nilai yang terdapat pada elemen *Array* atau *Object* yang terdapat pada parameter `$variable` ke dalam parameter `$value`, dan *key* dari elemen menjadi parameter `$key`. Untuk *key* berupa opsional jika kita membutuhkan nilai *key* dari suatu elemen.
 
 Kemudian paremeter `$key` dan `$value` dapat digunakan dalam statemen atau tugas yang kita buat di dalam fungsi *foreach* tersebut.
 
@@ -187,10 +188,10 @@ Kode di atas akan merubah nilai dari elemen `$nomor` menjadi 40, 50, 60. Karena 
 foreach($nomor as &$value){
     statement
 }
-unset($value);  // Break terhapad operator assigned by reference
+unset($value);  // Break terhadap operator assigned by reference
 ```
 
-Bagaimana dengan Array Multi Dimensi. Mari kita pelajari bersama pada materi dibawah.
+Bagaimana dengan Array Multi Dimensi. Mari kita pelajari bersama pada materi di bawah.
 
 ### 2.1 Nested Foreach
 
@@ -216,11 +217,11 @@ foreach ($array as $value1){                        //elemen array dimensi satu
 
 Penjelas baris kode di atas tidak jauh beda dengan perulangan foreach pada linear array, hanya karena elemen dari array juga berupa array, maka kita melakukan perulangan kembali pada nilai elemen dari array.
 
-Seperti yang kita peroleh dari bari kode di atas, elemen array dari parameter `$array` di transformasikan ke dalam parameter `$value1` dimana nilainya juga berupa array, kemudian kita lakukan perulangan lagi pada elemen array yang terdapat pada parameter `$value1`. Sehingga setiap elemen array pada parameter `$value1` di transformasikan ke dalam paramater `$value2`.
+Seperti yang kita peroleh dari baris kode di atas, elemen array dari parameter `$array` di transformasikan ke dalam parameter `$value1` dimana nilainya juga berupa array, kemudian kita lakukan perulangan lagi pada elemen array yang terdapat pada parameter `$value1`. Sehingga setiap elemen array pada parameter `$value1` di transformasikan ke dalam paramater `$value2`.
 
 >**Penting :**
 >
-> Karena Array di atas berupa *matrix array* sehingga dapat langsung digunakan *nested foreach*, untuk menghindari pesan error sebaik dilakukan pengecekan terlebih dahulu terhadap `$value1` apakah dia berupa array dengan menggunakan *conditional statement* seperti `if...else` dengan expresi `is_array()`
+> Karena Array di atas berupa *matrix array* sehingga dapat langsung digunakan *nested foreach*, untuk menghindari pesan error sebaik dilakukan pengecekan terlebih dahulu terhadap `$value1` apakah dia berupa array dengan menggunakan *conditional statement* seperti `if...else` dengan ekspresi `is_array()`
 >
 > Misalnya: `if(is_array($value1)) { ... }`
 
@@ -285,7 +286,7 @@ while(exp)
     statement
 ```
 
-Tujuan dari baris kode tersebut sangat sederhana yaitu memerintah PHP untuk melakukan sirkulasi perulangan selama ekspresi yang diberikan bernilai `true`, sama seperti *for*, nilai expresi akan kembali di evalusi setelah satu sirkulasi selesai. Kemudian membuat sirkulasi baru jika ekspresi menghasilkan nilai `true` dan akan berhenti jika ekspresi bernilai `false`.
+Tujuan dari baris kode tersebut sangat sederhana yaitu memerintah PHP untuk melakukan sirkulasi perulangan selama ekspresi yang diberikan bernilai `true`, sama seperti *for*, nilai ekspresi akan kembali di evalusi setelah satu sirkulasi selesai. Kemudian membuat sirkulasi baru jika ekspresi menghasilkan nilai `true` dan akan berhenti jika ekspresi bernilai `false`.
 
 Sama seperti *conditional statement* `if`, ekspresi dapat diberikan dalam bentuk group di dalam tanpa kurung ekspresi.
 Perhatikan diagram alur dari *while*.
@@ -310,13 +311,13 @@ while($ < 5){
 
 Baris kode di atas akan menghasilkan nilai `01234`, jadi selama `$i` lebih kecil dari 5, PHP akan melakukan tugas yang tertuang dalam *statement*, jika kita memberikan ekspresi awal bernilai `false` maka perulangan ini tidak akan pernah terjadi, dan sebaliknya jika kita memberikan ekspresi yang selalu bernilai `true`, maka PHP akan selalu akan melakukan perulangan tanpa berhenti seperti contoh di atas kita berikan ekspresi `$i >= 0` maka nilai nya akan selalu `true`.
 
-Contoh pengguan *while* dalam PHP dapat dilihat [disini](./3_while.php)
+Contoh penggunaan *while* dalam PHP dapat dilihat [disini](./3_while.php)
 
 [![](https://img.shields.io/static/v1?&label=Contoh%20While&message=%3e&color)](./3_while.php)
 
 ## 4. Perulangan Do While
 
-Perulangan *Do While* hampir sama dengan perulangan *While*, yang membedakan yang ekpresi akan di evaluasi di akhir dari sirkulasi perulangan, sehingga perintah dalam *statement* akan selalu terlaksana saat pertama kali sirkulasi perulangan ini berjalan.
+Perulangan *Do While* hampir sama dengan perulangan *While*, yang membedakan adalah ekpresi akan dievaluasi di akhir dari sirkulasi perulangan, sehingga perintah dalam *statement* akan selalu terlaksana saat pertama kali sirkulasi perulangan ini berjalan.
 
 Syntax :
 
@@ -331,7 +332,7 @@ coba kita pelajari diagram alur dari sirkulasi perulangan Do While di bawah ini.
     <img src="../../assets/content/basics/5_perulangan/do_while.png">
 </p>
 
-Dari diagram bisa kita simpulkan bahwa statement akan di eksekusi pertama kali sebelum ekspresi di evalusi di akhir sirkulasi perulangan. sesuai diagram alir kita susun baris kode sebagai berikut.
+Dari diagram bisa kita simpulkan bahwa statement akan dieksekusi pertama kali sebelum ekspresi dievalusi di akhir sirkulasi perulangan. Sesuai diagram alir kita susun baris kode sebagai berikut.
 
 ```php
 <?php

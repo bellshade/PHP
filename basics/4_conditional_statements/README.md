@@ -2,7 +2,7 @@
 
 Pengkondisian adalah sebuah cara untuk menjalankan kumpulan baris kode yang berbeda berdasarkan dengan kondisi yang berbeda pula.
 
-Seperti halnya bahasa pemrograman lainnya, materi Pengkondisian bisa dibilang "wajib" untuk dipelajari, mengingat ada berbagai macam kasus dunia nyata yang membutuhkan pengkondisian untuk menyelesaikannya. Terdapat 2 cara untuk melakukan pengkondisian dalam PHP, yaitu `if...elseif...else` dan `switch`.
+Seperti halnya bahasa pemrograman lainnya, materi pengkondisian bisa dibilang "wajib" untuk dipelajari, mengingat ada berbagai macam kasus dunia nyata yang membutuhkan pengkondisian untuk menyelesaikannya. Terdapat 2 cara untuk melakukan pengkondisian dalam PHP, yaitu `if...elseif...else` dan `switch`.
 
 ## Daftar Isi
 
@@ -92,7 +92,7 @@ if (kondisi_1) {
 
 ## 2. Switch ([*2_switch.php*](2_switch.php))
 
-Switch juga merupakan salah satu cara pengkondisian yang bisa digunakan untuk banyak kondisi. Cara kerjanya adalah dengan membandingkan ekspresi PHP (operasi artimatika, perbandingan, dll.) yang diberikan dengan kondisi-kondisinya.
+Switch juga merupakan salah satu cara pengkondisian yang bisa digunakan untuk banyak kondisi. Cara kerjanya adalah dengan membandingkan ekspresi PHP (operasi aritmatika, perbandingan, dll.) yang diberikan dengan kondisi-kondisinya.
 
 Berbeda dengan *If*, *Else If*, dan *Else*, `switch` memiliki *keyword* `continue` dan `break` yang digunakan untuk mengatur jalannya kode program setelah suatu kondisi telah terpenuhi.
 

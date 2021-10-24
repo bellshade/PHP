@@ -47,11 +47,11 @@ Dalam materi ini kita bahas mengenai Array lebih lanjut.
 
 Pada [materi](../2_variable_datatype) sebelumnya kita sudah berkenalan dengan tipe data berbentuk Array, jadi apa itu Array?.
 
-Sebuah Array adalah data struktur yang dapat menyimpan beberapa atau lebih elemen (parameter/nilai/variabel) dalam satu variabel, dan elemen ini tersimpan dalam bentuk pasangan key-value yang saling terhubung satu sama lain. Dalam pelaksanaan nya kita dapat menggunakan array kapan saja saat kita ingin menyimpan daftar elemen (tabel elemen).
+Sebuah Array adalah data struktur yang dapat menyimpan beberapa atau lebih elemen (parameter/nilai/variabel) dalam satu variabel, dan elemen ini tersimpan dalam bentuk pasangan key-value yang saling terhubung satu sama lain. Dalam pelaksanaannya kita dapat menggunakan array kapan saja saat kita ingin menyimpan daftar elemen (tabel elemen).
 
 Array dapat menampung hampir semua tipe data dan bisa menampung berbagai macam tipe data dalam satu array, walaupun demikian dalam pelaksanaannya penggunaan Array memiliki elemen dengan tipe data yang sama.
 
-Bahasa Pemograman PHP tidak memproses atau meng-alokasikan memori sebagai mana pada bahasa pemograman lain memproses memori untuk array, sehingga array dalam PHP hampir tidak memiliki keterbatasan kecuali maksimum memori yang dapat digunakan oleh PHP itu sendiri. sebagai contoh dalam bahasa pemograman lain array memiliki alokasi memori saat di deklarsikan dan array tersebut memiliki ukuran tetap, tidak dapat di tambahkan atau dikurangi (array bertipe statis), berbeda dengan array dalam PHP bersifat dinamis, dimana kita dapat menambah dan mengurangi ukuran dari array tersebut, dan memiliki kebebasan penuh dalam menetukan key dari elemen array.
+Bahasa Pemograman PHP tidak memproses atau meng-alokasikan memori sebagaimana pada bahasa pemograman lain memproses memori untuk array, sehingga array dalam PHP hampir tidak memiliki keterbatasan kecuali maksimum memori yang dapat digunakan oleh PHP itu sendiri. Sebagai contoh dalam bahasa pemrograman lain array memiliki alokasi memori saat di dideklarsikan dan array tersebut memiliki ukuran tetap, tidak dapat ditambahkan atau dikurangi (array bertipe statis), berbeda dengan array dalam PHP yang bersifat dinamis, di mana kita dapat menambah dan mengurangi ukuran dari array tersebut, dan memiliki kebebasan penuh dalam menetukan key dari elemen array.
 
 > **Catatan :**
 >
@@ -59,7 +59,7 @@ Bahasa Pemograman PHP tidak memproses atau meng-alokasikan memori sebagai mana p
 
 Array sering di-sinonim-kan sebagai tabel, walaupun bukan, tetapi tabel sering di-implementasikan dalam bentuk array.
 
-Sebagai contoh kita memiliki parameter berisi beberapa nama kota di indonesia, jika tidak memiliki array maka kita akan mebuat begitu banyak variabel, di mana setiap kota memiliki variabel sendiri, dengan array kita hanya butuh mendeklarasikan satu variabel, contoh :
+Sebagai contoh kita memiliki parameter berisi beberapa nama kota di Indonesia, jika tidak memiliki array maka kita akan membuat begitu banyak variabel, di mana setiap kota memiliki variabel sendiri, dengan array kita hanya butuh mendeklarasikan satu variabel, contoh :
 
 ```php
 <?php
@@ -67,15 +67,15 @@ Sebagai contoh kita memiliki parameter berisi beberapa nama kota di indonesia, j
 $kota = array('Padang', 'Payakumbuh', 'Solok', 'Batu Sangkar', 'Pariaman');
 ```
 
-Seperti kita lihat dalam contoh kita telah memiliki sebuah variabel `$kota` yang berisi beberapa nama kota, dan array ini dapat kita tambahkan elemen baru di waktu lain.
+Seperti kita lihat dalam contoh, kita telah memiliki sebuah variabel `$kota` yang berisi beberapa nama kota, dan array ini dapat kita tambahkan elemen baru di waktu lain.
 
-Kita dapat menggunakan berbagai macam cara untuk berinteraksi dengan array dan hal ini akan kita perlajari bersama pada materi berikutnya.
+Kita dapat menggunakan berbagai macam cara untuk berinteraksi dengan array dan hal ini akan kita pelajari bersama pada materi berikutnya.
 
 ### Bagaimana Membuat Array
 
-Setelah kita mengenal apa itu Array, sekarang kita akan mencoba membuat atau menginialisasikan sebuah Array.
+Setelah kita mengenal apa itu Array, sekarang kita akan mencoba membuat atau menginisialisasikan sebuah Array.
 
-Ada beberapa macam cara untuk membuat array, pada umumnya array di buat dengan fungsi `array()` yang akan menugaskan suatu variabel menjadi sebuah Array.
+Ada beberapa macam cara untuk membuat array, pada umumnya array dibuat dengan fungsi `array()` yang akan menugaskan suatu variabel menjadi sebuah Array.
 
 ```php
 <?php
@@ -120,7 +120,7 @@ Array
 )
 ```
 
-Kode di atas juga bisa ganti dengan syntax yang lebih pendek dengan mendeklarasikan array dan nilainya sekaligus
+Kode di atas juga bisa diganti dengan syntax yang lebih pendek dengan mendeklarasikan array dan nilainya sekaligus
 
 ```php
 <?php
@@ -132,7 +132,7 @@ $variable = ['Padang', 'Batu Sangkar', 'Payahkumbuh'];
 
 ### Mengakses Elemen Array
 
-Setelah membuat dan menyimpan array, tentunya kita akan mengakses elemen pada array pada saat dibutuhkan, untuk mengakses kita dapat mengguakan syntax sebagai berikut :
+Setelah membuat dan menyimpan array, tentunya kita akan mengakses elemen pada array pada saat dibutuhkan, untuk mengaksesnya kita dapat menggukan syntax sebagai berikut :
 
 ```php
 <?php
@@ -140,7 +140,7 @@ $var[index];        //Array Index
 $var['key'];        //Array Asosiatif
 ```
 
-Pada materi [`Bagaimana Membuat Array`](#bagaimana-membuat-array), kita telah membuat sebuat array yang berisi nama kota yaitu 'Padang', 'Batu Sangkar', 'Payakumbuh'. Sekarang kita ingin menggunakan nilai 'Batu Sangkar' dan melakukan echo ke tampilan. Array di atas berupa array linear dengan key berupa index yang dimulai dari `0`, nilai 'Batu Sangkar' terdapat di barisan kedua sehingga memiliki index `1`, untuk mengakses nya kita gunakan syntax sebagai berikut :
+Pada materi [`Bagaimana Membuat Array`](#bagaimana-membuat-array), kita telah membuat sebuat array yang berisi nama kota yaitu 'Padang', 'Batu Sangkar', 'Payakumbuh'. Sekarang kita ingin menggunakan nilai 'Batu Sangkar' dan melakukan echo ke tampilan. Array di atas berupa array linear dengan key berupa index yang dimulai dari `0`, nilai 'Batu Sangkar' terdapat di barisan kedua sehingga memiliki index `1`, untuk mengaksesnya kita gunakan syntax sebagai berikut :
 
 ```php
 <?php
@@ -158,7 +158,7 @@ Berdasarkan jenis *key* yang terdapat dalam elemen Array, Array dapat dikelompok
 
 ### 1. Array Index
 
-Array yang memiliki Key/Index berupa angka/bilangan *integer* akan tergabung dalam Array jenis ini atau disebut *Numerical Index Array*, array yang kita buat pada contoh-contoh di atas termasuk ke dalam jenis *Array Index*, dimana index nya berupa integer yang dibuat secara otomotis oleh sistem dengan nilai pertama dari index adalah `0`.
+Array yang memiliki Key/Index berupa angka/bilangan *integer* akan tergabung dalam Array jenis ini atau disebut *Numerical Index Array*, array yang kita buat pada contoh-contoh di atas termasuk ke dalam jenis *Array Index*, di mana index nya berupa integer yang dibuat secara otomotis oleh sistem dengan nilai pertama dari index adalah `0`.
 
 Untuk *Array Index* yang *key* awalnya tidak kita definisikan maka secara otomatis menjadi `0`, sebagai contoh :
 
@@ -168,7 +168,7 @@ Untuk *Array Index* yang *key* awalnya tidak kita definisikan maka secara otomat
 $kota = ['Padang', 'Batu Sangkar', 'Payakumbuh'];
 ```
 
-Karena tidak ditemukan key yang didefinisikan maka sistem secara otomotis membuat index key berupa `Integer` yang di mulai dari `0`, sehinga menghasilkan
+Karena tidak ditemukan key yang didefinisikan maka sistem secara otomotis membuat index key berupa `Integer` yang di mulai dari `0`, sehingga menghasilkan
 
 |  Key  | Nilai        |
 | :---: | ------------ |
@@ -184,9 +184,9 @@ kita juga bisa mendifinisikan index pertama dari Array tersebut, sebagai contoh 
 $kota = [5 => 'Padang', 'Batu Sangkar', 'Payakumbuh'];
 ```
 
-Maka index dari array tersebut dimulai dari 5 yaitu : `5` = Padang, `6` = Batu Sangkar, `7` = Payakumbuh. Berbeda dengan beberapa bahasa pemograman lain bukan, dimana index sebuah array harus dimulai dari `0`.
+Maka index dari array tersebut dimulai dari 5 yaitu : `5` = Padang, `6` = Batu Sangkar, `7` = Payakumbuh. Berbeda dengan beberapa bahasa pemrograman lain bukan, di mana index sebuah array harus dimulai dari `0`.
 
-Dan hal ini berlaku bila index yang di definisikan adalah index pertama, bagai mana jika index yang kita definisikan bukan index pertama, ini tetap bisa dilakukan, PHP akan mengenali dimana saat index terdefinisi, tetapi sebelum ditemukan index yang terdefinisi PHP secara otomotis tetap membuat index yang dimulai dari `0`, sebagai contoh:
+Dan hal ini berlaku bila index yang didefinisikan adalah index pertama, bagaimana jika index yang kita definisikan bukan index pertama, ini tetap bisa dilakukan, PHP akan mengenali di mana saat index terdefinisi, tetapi sebelum ditemukan index yang terdefinisi PHP secara otomotis tetap membuat index yang dimulai dari `0`, sebagai contoh:
 
 ```php
 <?php
@@ -235,7 +235,7 @@ $propinsi = ['nama' => 'Sumatera Barat', 'ibukota' => 'Padang'];``// Membuat Arr
 print_r($propinsi);     // Menampilkan Array
 ```
 
-Dari contoh di atas kita memiliki sebuah array dengan dua elemen, dimana elemen pertama memiliki key berupa `string` yang bernilai `nama` dan elemen kedua *key*-nya juga berupa `string` yang bernilai `ibukota`. Sehingga hasil dari perintah `print_r` yang kita buat akan menampilkan.
+Dari contoh di atas kita memiliki sebuah array dengan dua elemen, di mana elemen pertama memiliki key berupa `string` yang bernilai `nama` dan elemen kedua *key*-nya juga berupa `string` yang bernilai `ibukota`. Sehingga hasil dari perintah `print_r` yang kita buat akan menampilkan.
 
 ```html
 Array
@@ -268,7 +268,7 @@ $data = ['mangga', 'apel', 'sayur' => 'bayam', 'lauk' => 'daging', 8 => 'jeruk',
 print_r($data);
 ```
 
-Perintah `print_r` di atas akan menapilkan hasil:
+Perintah `print_r` di atas akan menampilkan hasil:
 
 ```html
 Array
@@ -292,7 +292,7 @@ Pada pembahasan di atas kita sudah membuat dan mengkases data array dengan nilai
 
 Bila terdapat data Array dalam nilai elemen sebuah Array maka Array itu disebut Array Multi Dimensi (*Multidimensional Array*), Array yang telah kita pelajari sebelumnya adalah Array Linear (Array Satu Dimensi).
 
-Dalam pelajaran matematika di sekolah kita pernah mempelajari yang namanya matrix, nah Array Dua dimensi juga dikenal sebagi Array Matrix (*matrice array*). dimana Array Dua Dimensi(*note :* Termasuk ke dalam Multi Dimensi Array) memiliki Kolom dan Baris seperti tabel. dan Table sering di implementasikan ke dalam Array Dua Dimensi ini.
+Dalam pelajaran matematika di sekolah kita pernah mempelajari yang namanya matrix, nah Array Dua dimensi juga dikenal sebagi Array Matrix (*matrice array*). di mana Array Dua Dimensi(*note :* Termasuk ke dalam Multi Dimensi Array) memiliki Kolom dan Baris seperti tabel. dan Table sering di implementasikan ke dalam Array Dua Dimensi ini.
 
 sebagai contoh :
 
@@ -351,7 +351,7 @@ Kode di atas telah menyimpan data [tabel 1. Contoh](#tabel-1-contoh) ke dalam Mu
 
 [![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](3_2_implementasi_table_array.php)
 
-Untuk mengakses data tabel tersebut ke dalam tabel kita dapat menggunaan beberapa metode perulangan.
+Untuk mengakses data tabel tersebut ke dalam tabel kita dapat menggunakan beberapa metode perulangan.
 
 [![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](3_3_array_kedalam_table.php)
 
@@ -369,7 +369,7 @@ Terdapat berbagai macam manipulasi array yang dapat kita lakukan, yaitu :
 
 ### Menghitung ukuran array
 
-Untuk menghitung elemen yang terdapat di dalam sebuah Array dapat menggunakan dua fungsi yaitu `sizeof()` dan `count()`, kedua syntax tersebut memiliki tujuan dan fungsi yang sama, dimana `sizeof()` adalah nama lain dari `count()`. dengan penggunaan sintaks sebagai berikut
+Untuk menghitung elemen yang terdapat di dalam sebuah Array dapat menggunakan dua fungsi yaitu `sizeof()` dan `count()`, kedua syntax tersebut memiliki tujuan dan fungsi yang sama, di mana `sizeof()` adalah nama lain dari `count()`. dengan penggunaan sintaks sebagai berikut
 
 #### a. sizeof
 
@@ -756,7 +756,7 @@ array_diff(array $arr, array ...$arrs) : array
 
 **Hasil**
 
-- Element-elemen yang tidak terdapat di array pembanding.
+- Elemen-elemen yang tidak terdapat di array pembanding.
 
 **Contoh Penggunaan**
 

@@ -48,8 +48,8 @@ Secara umum operator aritmatika disusun sebagai berikut :
 | `+`    | Penambahan  | $a + $b  | Jumlah dari nilai $a dan $b                                        |
 | `-`    | Pengurangan | $a - $b  | Selisih dari nilai $a dan $b                                       |
 | `*`    | Perkalian   | $a * $b  | Perkalian dari nilai $a dan $b                                     |
-| `/`    | Pembagian   | $a / $b  | nilai $a dibagi dengan nilai $b                                    |
-| `%`    | Modulus     | $a % $b  | sisa dari nilai $a di bagi nilai $b                                |
+| `/`    | Pembagian   | $a / $b  | Nilai $a dibagi dengan nilai $b                                    |
+| `%`    | Modulus     | $a % $b  | Sisa dari nilai $a di bagi nilai $b                                |
 | `**`   | Exponensial | $a ** $b | Hasil dari nilai $a pangkat nilai $b ( $a <sup><em>$b</em></sup> ) |
 
 > **Catatan :**
@@ -103,7 +103,7 @@ echo (15-9);        // Hasil 6
 
 ### Perkalian
 
-Perkalian dalam PHP mengguankan simbol/syntax (`*`)
+Perkalian dalam PHP menggunakan simbol/syntax (`*`)
 
 Contoh penggunaan :
 
@@ -121,7 +121,7 @@ echo (4*2);     // Hasil 8
 
 Pembagian dalam PHP menggunakan simbol/syntax (`/`)
 
-Operator pembagian (`/`) akan menghasil nilai `float` kecuali kedua bilangan di tentukan dalam type `integer` (atau string yang di konversikan menjadi *int*) dan hasil pembagian berupa bilangan bulat, maka dalam hal ini akan menghasilkan nilai `integer`.
+Operator pembagian (`/`) akan menghasilkan nilai `float` kecuali kedua bilangan ditentukan dalam tipe `integer` (atau string yang dikonversikan menjadi *int*) dan hasil pembagian berupa bilangan bulat, maka dalam hal ini akan menghasilkan nilai `integer`.
 
 Contoh penggunaan :
 
@@ -137,11 +137,17 @@ echo (4/2);     // Hasil 2
 
 ### Modulus
 
-Modulus adalah nilai sisa dari hasil pembagian, dimana pembagian tidak habis, bila pembagian hasil makan nilai modulus adalah Nol (0) sebagai contoh modulus `7:4 = 3` dan modulus `8:4 = 0` dimana `7:4` menghasilkan 1 bilangan bulat dan bersisa 3, sedangankan `8:4` menghasilkan 2 bilangan bulat tanpa ada sisa pembagian.
+Modulus adalah operasi yang menghasilkan nilai sisa bagi antara 2 buah bilangan integer.
 
-Dalam Operator modulus (`%`) sebelum memproses data sistem akan mengkonversi kedua operand/bilangan ke datatype `integer` dengan menghilangkan angka desimal dalam bilangan terlebih dahulu.
+Contoh:
 
-Hasil dari opertor modulus (`%`) akan memiliki tanda nilai yang sama dengan tanda pada nilai pembilang, — (jika pembilang bernilai positif maka hasilnya akan bernilai positif, jika pembilang bernilai negatif maka hasil akan bernilai negatif, tidak terpengaruh terhadap penyebut yang memiliki nilai positif ataupun negatif).
+1. `3/2 = 1` sisa `1`, maka `3 % 2 = 1`.
+2. `9/4 = 2` sisa `1`, maka `9 % 4 = 1`.
+3. `6/3 = 2` sisa `0` maka `6 % 3 = 0` .
+
+Karena operator modulus hanya bisa memproses data dengan tipe integer maka operator modulus akan mengkonversi kedua operand/bilangan menjadi `integer` secara paksa.
+
+Hasil dari operator modulus (`%`) akan memiliki tanda nilai yang sama dengan tanda pada nilai pembilang, — (jika pembilang bernilai positif maka hasilnya akan bernilai positif, jika pembilang bernilai negatif maka hasil akan bernilai negatif, tidak terpengaruh terhadap penyebut yang memiliki nilai positif ataupun negatif).
 
 Contoh penggunaan :
 
@@ -176,7 +182,7 @@ Demo kode dapat dilihat [disini](./1_operator_aritmatika.php)
 
 ## Operator Penugasan
 
-Operator penugasan dasarnya adalah "`=`", mungkin pemikiran awal kita meng-anggap bahwa ini  sama dengan (sebanding), nyatanya bukan itu maksudnya tetapi nilai variabel pada sisi sebelah kiri operator ditentukan/ditetapkan sebagaimana ekspresi yang terdapat pada bahagian sebelah kanan dari operator.
+Operator penugasan dasarnya adalah "`=`", mungkin pemikiran awal kita meng-anggap bahwa ini  sama dengan (sebanding), nyatanya bukan itu maksudnya tetapi nilai variabel pada sisi sebelah kiri operator ditentukan/ditetapkan sebagaimana ekspresi yang terdapat pada bagian sebelah kanan dari operator.
 
 Contoh:
 
@@ -255,38 +261,39 @@ Contoh kodenya dapat dilihat [di sini](./4_logical_operator.php).
 
 ## Operator Bitwise
 
-*Bitwise* operator adalah Operator yang disediakan oleh PHP untuk pengolahan, evalusai dan manipulasi logika dari bilangan binner (*Binary*).
-Bilangan binner adalah bilangan yang hanya terdisi dari 2 angka yaitu angka `0` dan `1` sebagai contoh angka 7 dalam bilangan binner di tulis sebagai `0111` dalam 4 bits data.
-bilangan binner pada dasarnya bahasa yang paling cepat dipahami mesin. pada dasarnya mesin atau komputer kamu menerima perintah atau data dalam bentuk *Binary* (Binner)
+*Bitwise* operator adalah operator yang disediakan oleh PHP untuk pengolahan, evaluasi dan manipulasi logika dari bilangan biner (*Binary*).
+Bilangan biner adalah bilangan yang hanya terdisi dari 2 angka yaitu angka `0` dan `1` sebagai contoh angka 7 dalam bilangan biner di tulis sebagai `0111` dalam 4 bits data.
 
-Bilamana bilangan yang di eksekusi tidak berbentuk bilangan binner maka secara default PHP akan mengkonversi bilangan tersebut menjadi bilangan binner.
+Bilangan biner pada dasarnya bahasa yang paling cepat dipahami mesin. Pada dasarnya mesin atau komputer kamu menerima perintah atau data dalam bentuk *Binary* (Binner)
 
-Operator bilangan binner ini sangat jarang digunakan, kecuali kamu menulis program khusus untuk memproses bilangan binner.
+Bilamana bilangan yang di eksekusi tidak berbentuk bilangan biner maka secara default PHP akan mengkonversi bilangan tersebut menjadi bilangan biner.
+
+Operator bilangan biner ini sangat jarang digunakan, kecuali kamu menulis program khusus untuk memproses bilangan biner.
 
 Pembagian operator *bitwise* sebagai berikut :
 
-| Symbol | Nama           |    Contoh    | Keterangan                                                                                                                                                                                                         |
-| :----: | -------------- | :----------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|   &    | And            | 0001 & 0011  | Menghasilkan bilangan binner baru dari penggabungan dua bilangan binner di mana data yang di ambil adalah bit 1 dalam barisan yang sama, sedangkan yang lainnya di anggap 0 pada contoh 3 & 1 mengasilkan 1 (0001) |
-|   \|   | OR (inclusive) | 0001 \| 0011 | Menghasilak bilangan binner baru dari penggabungan dua bilangan binner dimana bits yang di ambil adalah semua bits dalam barisan yang bernilai 1, dalam contoh 1 \| 3 menghasilakan 3 (0011)                       |
-|   ^    | OR (exclusive) | 0001 ^ 0011  | Menghasilkan bilangan binner dengan mengambil bits dalam barisan yang tidak bernilai sama, dalam contoh 1 ^ 3 menghasilkan 2 (0010).                                                                               |
-|   ~    | Not            |    ~ 0001    | Menghasilkan bilangan binner berupa semua bits dalam barisan kecuali bits yang terdapat pada variabel, pada contoh menghasilkan -2 (1111111111111111111111111111111111111111111111111111111111111110) 64bits       |
-|  <<=   | Shift Left     |  0001 <<= 2  | Menghasilkan bilangan biner dengan menggeser bit unit ke arah kiri sebanyak nilai(operand) yang ditetapkan disebelah kanan Operator, pada contoh 1(0001) <<= 2 menghasilkan 4 (0100).                              |
-|  >>=   | Shift Right    |  0001 >>= 1  | menghasilkan bilangan biner dengan menggeser bit pada baris kearah kanan sebanyak nilai (operand) yang ditetapkan disebelah kanan Operator, pada contoh 1(0001) >>= 1 menghasilkan 0 (0000).                       |
+| Symbol | Nama           |    Contoh    | Keterangan                                                                                                                                                                                                     |
+| :----: | -------------- | :----------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|   &    | And            | 0001 & 0011  | Menghasilkan bilangan biner baru dari penggabungan dua bilangan biner di mana data yang diambil adalah bit 1 dalam barisan yang sama, sedangkan yang lainnya dianggap 0 pada contoh 3 & 1 mengasilkan 1 (0001) |
+|   \|   | OR (inclusive) | 0001 \| 0011 | Menghasilkan bilangan biner baru dari penggabungan dua bilangan biner di mana bits yang diambil adalah semua bits dalam barisan yang bernilai 1, dalam contoh 1 \| 3 menghasilkan 3 (0011)                     |
+|   ^    | OR (exclusive) | 0001 ^ 0011  | Menghasilkan bilangan biner dengan mengambil bits dalam barisan yang tidak bernilai sama, dalam contoh 1 ^ 3 menghasilkan 2 (0010).                                                                            |
+|   ~    | Not            |    ~ 0001    | Menghasilkan bilangan biner berupa semua bits dalam barisan kecuali bits yang terdapat pada variabel, pada contoh menghasilkan -2 (1111111111111111111111111111111111111111111111111111111111111110) 64bits    |
+|  <<=   | Shift Left     |  0001 <<= 2  | Menghasilkan bilangan biner dengan menggeser bit unit ke arah kiri sebanyak nilai(operand) yang ditetapkan disebelah kanan operator, pada contoh 1(0001) <<= 2 menghasilkan 4 (0100).                          |
+|  >>=   | Shift Right    |  0001 >>= 1  | Menghasilkan bilangan biner dengan menggeser bit pada baris ke arah kanan sebanyak nilai (operand) yang ditetapkan disebelah kanan operator, pada contoh 1(0001) >>= 1 menghasilkan 0 (0000).                  |
 
 Berdasarkan table di atas dapat dijabarkan sebagai berikut :
 
 ### Bitwise And
 
-*Bitwise and* merupakan operator penggabungan bilangan biner dimana nilai bit yang di ambil adalah `1 & 1 = 1`, `1 & 0 = 0` dan `0 & 0 = 0`, untuk lebih jelasnya kita perhatingan perhitungan di bawah ini :
+*Bitwise and* merupakan operator penggabungan bilangan biner dimana nilai bit yang diambil adalah `1 & 1 = 1`, `1 & 0 = 0` dan `0 & 0 = 0`, untuk lebih jelasnya kita perhatikan perhitungan di bawah ini :
 
 ```php
-$a =(integer) 1; // Dalam binner (0001) 4bits
-$b =(integer) 3; // Dalam binner (0011) 4bits
+$a =(integer) 1; // Dalam biner (0001) 4bits
+$b =(integer) 3; // Dalam biner (0011) 4bits
 
 $c = $a & $b
 
-// Dalam perhitungan binner
+// Dalam perhitungan biner
 // $a = 1      0 0 0 1    4bits
 // $b = 3      0 0 1 1    4bits
 //            --------- & (and)
@@ -295,17 +302,17 @@ $c = $a & $b
 // Atau $c dalam bentuk desimal = 1
 ```
 
-Pada contoh perhitungan di atas dapat kita ambil dapat disimpulkan bahwa operator bitwise and menggabungan 2 bilangan binner dengan cara mengambil bit yang identik, selain bits yang identik di isi oeh nilai `0`.
+Pada contoh perhitungan di atas dapat kita simpulkan bahwa operator `bitwise AND` menggabungkan 2 bilangan biner dengan cara mengambil bit yang identik, selain bits yang identik diisi oeh nilai `0`.
 
 ### Bitwise OR
 
-Operator *Bitwise inclusive OR* (`|`) merupakan operator untuk menggabungan bilangan binner dengan mengambil bit bit dalam barisan yang mengandung nilai 1, barisan yang tidak terdapat nilai 1 akan di isi oleh nilai `0`
+Operator *Bitwise inclusive OR* (`|`) merupakan operator untuk menggabungkan bilangan biner dengan mengambil bit-bit dalam barisan yang mengandung nilai 1, barisan yang tidak terdapat nilai 1 akan diisi oleh nilai `0`
 
 Contoh perhitungannya sebagai berikut :
 
 ```php
-$a = 3;     // Dalam bentuk binner (0011) 4bits
-$b = 4;     // Dalam bentuk binner (0100) 4bits
+$a = 3;     // Dalam bentuk biner (0011) 4bits
+$b = 4;     // Dalam bentuk biner (0100) 4bits
 
 $c = $a | $b       // Operator OR bitwise
 
@@ -321,14 +328,14 @@ Dari contoh di atas dapat kita lihat bahwa barisan yang mengandung nilai 1 akan 
 
 ### Bitwise XOR
 
-Operator *Bitwise exclusive OR ~ XOR* (`^`) merupakan operator penggabungan bilangan binner di mana hasil di dapat berdasarkan pencocokan (*comparison*) barisan bilangan biner dimana barisan yang indentik akan mendapat nilai 0 sedangkan yang tidak sama mendapat nilai 0.
+Operator *Bitwise exclusive OR ~ XOR* (`^`) merupakan operator penggabungan bilangan biner di mana hasil didapat berdasarkan pencocokan (*comparison*) barisan bilangan biner dimana barisan yang identik akan mendapat nilai 0 sedangkan yang tidak sama mendapat nilai 0.
 
 Contoh perhitungan :
 
 ```php
 
-$a = 1;     // Dalam bentuk binner (0001) 4bits
-$b = 3;     // Dalam bentuk binner (0011) 4bits
+$a = 1;     // Dalam bentuk biner (0001) 4bits
+$b = 3;     // Dalam bentuk biner (0011) 4bits
 
 $c = $a ^ $b        // XOR bitwise
 
@@ -348,7 +355,7 @@ Dari perhitungan di atas dapat kita simpulkan bahwa operator *Bitwise Xor* akan 
 
 *Operator Not* akan membalikan nilai bit sebuah variabel dari 0 menjadi 1, dan 1 menjadi 0
 
-Dalam hal ini PHP membalikan semua bit dalam kasus sistem 64 bits. PHP menjadikan variabel dalam bentuk binner 64 bits (digit). Sehingga bila kita membalikan nilai dari 8 akan terjadi perhitungan sebagai berikut.
+Dalam hal ini PHP membalikan semua bit dalam kasus sistem 64 bits. PHP menjadikan variabel dalam bentuk biner 64 bits (digit). Sehingga bila kita membalikan nilai dari 8 akan terjadi perhitungan sebagai berikut.
 
 ```php
 $a = ~ 8;       // Bitwise Not
@@ -363,12 +370,12 @@ $a = ~ 8;       // Bitwise Not
 
 ### Bitwise Shift
 
-*Bitwise shift* terdiri dari 2 yaitu shift ke kiri dan shift ke kana, operator ini akan menggeser nilai binner dari variabel ke arah yang ditentukan sebanyak nilai (*operand*) yang terdapat pada bagian kanan operator.
+*Bitwise shift* terdiri dari 2 yaitu shift ke kiri dan shift ke kanan, operator ini akan menggeser nilai biner dari variabel ke arah yang ditentukan sebanyak nilai (*operand*) yang terdapat pada bagian kanan operator.
 
 Untuk pemahaman kita perhatikan perhitungan di bawah ini :
 
 ```php
-$a = 2;         // dalam bentuk binner (0010) 4bits
+$a = 2;         // dalam bentuk biner (0010) 4bits
 
 $b = $a <<= 2;  // Shift Left
 $c = $a >>= 1;  // Shift Right
@@ -384,7 +391,7 @@ $c = $a >>= 1;  // Shift Right
 // Atau dalam desimal nilai $b = 8 dan nilai $c = 1
 ```
 
-Dari perhitungan di atas kita lihat bahwa operator *shift* ini menggeser bilangan binner ke kiri maupun ke kanan sesuai arah yang ditentukan sebanyak nilai opreand bagian kanan operator dengan aturan setiap pergeseran ke kiri nilai paling kanan akan diisi oleh 0, dan setiap pergeseran kanan nilai paling kanan akann dihapus.
+Dari perhitungan di atas kita lihat bahwa operator *shift* ini menggeser bilangan biner ke kiri maupun ke kanan sesuai arah yang ditentukan sebanyak nilai operand bagian kanan operator dengan aturan setiap pergeseran ke kiri nilai paling kanan akan diisi oleh 0, dan setiap pergeseran kanan nilai paling kanan akan dihapus.
 
 Demo code dapat dilihat [disini](./5_bitwise_operator.php)
 
@@ -407,9 +414,9 @@ PHP mendukung *C-style pre* dan *post-increment* dan *decrement operator*
 | Operator | Nama           | Keterangan                                                |
 | :------: | -------------- | --------------------------------------------------------- |
 |   ++$a   | pre-Increment  | Menaikan nilai $a sebanyak 1, kemudian menghasilkan $a.   |
-|   $a++   | post-Increment | menghasilkan $a, kemudian menaikan nilai $a sebanyak 1.   |
-|   --$a   | pre-Decrement  | menurunkan nilai $a sebanyak 1, kemudian menghasilkan $a. |
-|   $a--   | post-Decrement | menghasilkan $a, kemudian menurunkan nilai $a sebanyak 1. |
+|   $a++   | post-Increment | Menghasilkan $a, kemudian menaikan nilai $a sebanyak 1.   |
+|   --$a   | pre-Decrement  | Menurunkan nilai $a sebanyak 1, kemudian menghasilkan $a. |
+|   $a--   | post-Decrement | Menghasilkan $a, kemudian menurunkan nilai $a sebanyak 1. |
 
 Sebagai contoh :
 
@@ -437,11 +444,11 @@ echo $a         // Hasil $a setelah decrement (5)
 
 ```
 
-PHP mengikuti sistem Bahasa Perl's dalam melakukan operasi aritmatika terhadap vaeriabel karakter/huruf, bukan seperti yang di jalan oleh Bahasa C.
+PHP mengikuti sistem Bahasa Perl's dalam melakukan operasi aritmatika terhadap variabel karakter/huruf, bukan seperti yang dijalankan oleh Bahasa C.
 
-Sebagaimana dalam ekspresi `$a = 'Z' ; $a++;` pada PHP dan Perl's akan menghasilkan 'AA', sedangan Bahasa C akan mengkonversi menjadi nilai ASCII dari huruf `Z` ( yaitu 90 ), dan kemudian menambahkan 1 sehingga menghasilkan nilai `'` (ASCII 91).
+Sebagaimana dalam ekspresi `$a = 'Z' ; $a++;` pada PHP dan Perl's akan menghasilkan 'AA', sedangkan Bahasa C akan mengkonversi menjadi nilai ASCII dari huruf `Z` ( yaitu 90 ), dan kemudian menambahkan 1 sehingga menghasilkan nilai `'` (ASCII 91).
 
-Untuk contoh dapat di lihat [disini](./7_increment_decrement_operator.php)
+Untuk contoh dapat dilihat [disini](./7_increment_decrement_operator.php)
 
 ## Operator String
 
@@ -469,18 +476,18 @@ Untuk selengkapnya dapat dipelajari di materi [String Manipulation](../6_manipul
 
 ## Operator Array
 
-Operator *Array* kebanyakan adalah operator perbandingan (*Comparison Operator*) yang menghasilakn nilai boolean.
+Operator *Array* kebanyakan adalah operator perbandingan (*Comparison Operator*) yang menghasilkan nilai boolean.
 
 Operator *Array* dikelompokkan sebagaimana terdapat dalam tabel berikut:
 
-| Contoh    | Nama          | Keterangan                                                                                                             |
-| --------- | ------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| $a + $b   | Union         | Menggabungkan data Array $a dengan data Array $b                                                                       |
-| $a == $b  | Equlity       | Menghasilkan nilai `true` jika Array $a dan $b memiliki key/value yang sama                                            |
-| $a === $b | Identity      | Menghasilkan nilai `true` jika Array $a dan $b memiliki key/value yang sama serta urutan dan type yang sama (indentik) |
-| $a != $b  | Inequality    | Menghasilkan nilai `true` jika Array $a tidak sama dengan Array $b                                                     |
-| $a <> $b  | Ineguality    | Sama dengan penjelasan di atas                                                                                         |
-| $ !== $b  | Non-Indetical | Menghasilkan nilai `true` jika $a dan $b tidak identik                                                                 |
+| Contoh    | Nama          | Keterangan                                                                                                            |
+| --------- | ------------- | --------------------------------------------------------------------------------------------------------------------- |
+| $a + $b   | Union         | Menggabungkan data Array $a dengan data Array $b                                                                      |
+| $a == $b  | Equlity       | Menghasilkan nilai `true` jika Array $a dan $b memiliki key/value yang sama                                           |
+| $a === $b | Identity      | Menghasilkan nilai `true` jika Array $a dan $b memiliki key/value yang sama serta urutan dan type yang sama (identik) |
+| $a != $b  | Inequality    | Menghasilkan nilai `true` jika Array $a tidak sama dengan Array $b                                                    |
+| $a <> $b  | Ineguality    | Sama dengan penjelasan di atas                                                                                        |
+| $ !== $b  | Non-Indetical | Menghasilkan nilai `true` jika $a dan $b tidak identik                                                                |
 
 > **Catatan :**
 >
@@ -617,9 +624,9 @@ if(isset($data['name'])){
 }
 ```
 
-Dalam contoh di atas expresi akan mengecek apakah $data['name'] tersedia dan memiliki nilai, jika tersedia maka variabel $name di set dengan nilai $data['name'], bila tidak tersedia maka data $name di set default dengan nilai (string) "Kondiak".
+Dalam contoh di atas expresi akan mengecek apakah $data['name'] tersedia dan memiliki nilai, jika tersedia maka variabel $name diset dengan nilai $data['name'], bila tidak tersedia maka data $name diset default dengan nilai (string) "Kondiak".
 
-Contoh kode di atas dapat di tuliskan dalam bentuk operator *Null Coalesce* sebagai berikut :
+Contoh kode di atas dapat dituliskan dalam bentuk operator *Null Coalesce* sebagai berikut :
 
 ```php
 <?php
@@ -632,7 +639,7 @@ Contoh di atas `(var) = (expr1) ?? (expr2)` menghasilkan `(var) = (expr2)` jika 
 > **Catatan**
 >
 > - Operator *Null Coalesce* merupakan sebuah ekspresi, jadi tidak meng-evaluasi suatu variabel, tetapi meng-evaluasi suatu ekspresi
-> - Operator *Null Coalesce* digunakan untuk mepersingkat penulisan code
+> - Operator *Null Coalesce* digunakan untuk mempersingkat penulisan code
 >
 > ```php
 > <?php

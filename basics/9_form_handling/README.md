@@ -11,7 +11,7 @@ Pada materi ini kamu akan belajar tentang penanganan formulir sekaligus belajar 
 
 > **INFO:**
 >
-> Untuk melajutkan materi ini kami sarankan kamu untuk melakukan ***clone*** atau **mengunduh** repositori ini, lalu mejalankannya di server lokal milikmu agar kamu tidak hanya bisa melihat skrip, namu kamu juga bisa menjalankan dan melihat hasil dari skrip PHP yang ada di sini.
+> Untuk melajutkan materi ini kami sarankan kamu untuk melakukan ***clone*** atau **mengunduh** repositori ini, lalu menjalankannya di server lokal milikmu agar kamu tidak hanya bisa melihat skrip, namun kamu juga bisa menjalankan dan melihat hasil dari skrip PHP yang ada di sini.
 >
 > Lihat [Cara Membuat dan Menjalankan skrip PHP di Server Lokal](../1_hello_world/README.md)
 
@@ -59,9 +59,9 @@ if (isset($_POST['kirim'])) {
 
 Coba perhatikan
 
-- Elemen `form` di atas memiliki atribut `action` dengan nilai `""` (kosong) dan atribut `method="post"`. Ini menujukan bahwa data formulir akan dikirim ke satu halaman yang sama dengan metode `POST`.
-- Elemen `button` di atas hanya memiliki atribut `name` dengan value `kirim` dan tidak memiliki atribut `value` (tidak ada data yg dikirim). Namun ini juga akan dikirim sebagai data yg kosong.
-- Pengondisian `if` di atas akan mengecek apakah ada data yang dikirim dengan key `kirim` (dalam hal ini adalah nama nilai dari atribut `name` yg ada di elemen `button`).
+- Elemen `form` di atas memiliki atribut `action` dengan nilai `""` (kosong) dan atribut `method="post"`. Ini menunjukan bahwa data formulir akan dikirim ke satu halaman yang sama dengan metode `POST`.
+- Elemen `button` di atas hanya memiliki atribut `name` dengan value `kirim` dan tidak memiliki atribut `value` (tidak ada data yang dikirim). Namun ini juga akan dikirim sebagai data yang kosong.
+- Pengkondisian `if` di atas akan mengecek apakah ada data yang dikirim dengan key `kirim` (dalam hal ini adalah nama nilai dari atribut `name` yang ada di elemen `button`).
 - Jika hasilnya YA (`true`) maka tampilkan kalimat `Hello World!`.
 
 ## 2. Input Berdasarkan Teks *([2_text_based_input.php](2_text_based_input.php))*
@@ -220,4 +220,4 @@ if (isset($_POST['btn_contoh2'])) {
 
 [![](https://img.shields.io/static/v1?&label=Demo&message=%3e&color)](3_select.php#L40-L61)
 
-Dengan melihat kedua contoh di atas, kamu dapat ketahui bahwa menggunakan tag `option` tanpa atribut `value` pada input `select` juga dapat dikirim.
+Dengan melihat kedua contoh di atas, kamu dapat mengetahui bahwa menggunakan tag `option` tanpa atribut `value` pada input `select` juga dapat dikirim.
