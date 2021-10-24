@@ -1,97 +1,116 @@
 # Array Mendalam
+
 Dalam materi ini kita bahas mengenai Array lebih lanjut.
-1. [Array](#1-array)
+
+- [Array Mendalam](#array-mendalam)
+  - [1. Array](#1-array)
     - [Apa itu Array](#apa-itu-array)
-    - [Bagaimana membuat Array](#bagaimana-membuat-array)
-    - [Mengakses elemen Array](#mengakses-elemen-array)
-2. [Jenis Array](#2-jenis-array)
-    - [Array Index](#1-array-index)
-    - [Array Asosiatif](#2-array-asosiatif)
-3. [Array Multi Dimensi](#3-array-multi-dimensi)
-4. [Manipulasi Array](#4-manipulasi-array)
+    - [Bagaimana Membuat Array](#bagaimana-membuat-array)
+    - [Mengakses Elemen Array](#mengakses-elemen-array)
+  - [2. Jenis Array](#2-jenis-array)
+    - [1. Array Index](#1-array-index)
+    - [2. Array Asosiatif](#2-array-asosiatif)
+  - [3. Array Multi Dimensi](#3-array-multi-dimensi)
+  - [4. Manipulasi Array](#4-manipulasi-array)
     - [Menghitung ukuran array](#menghitung-ukuran-array)
-        - [sizeof](#a-sizeof)
-        - [count](#b-count)
+      - [a. sizeof](#a-sizeof)
+      - [b. count](#b-count)
     - [Mendapatkan nilai dari array](#mendapatkan-nilai-dari-array)
-        - [array_keys](#a-arraykeys)
-        - [array_values](#b-arrayvalues)
-    - [Mengubah element pada array](#mengubah-element-pada-array)
-        - [array_push](#a-arraypush)
-        - [array_pop](#b-arraypop)
-        - [array_shift](#c-arrayshift)
-        - [array_unshift](#d-arrayunshift)
+      - [a. array_keys](#a-array_keys)
+      - [b. array_values](#b-array_values)
+    - [Mengubah elemen pada array](#mengubah-elemen-pada-array)
+      - [a. array_push](#a-array_push)
+      - [b. array_pop](#b-array_pop)
+      - [c. array_shift](#c-array_shift)
+      - [d. array_unshift](#d-array_unshift)
     - [Membandingkan array](#membandingkan-array)
-        - [array_diff](#a-arraydiff)
-        - [array_splice](#b-arraysplice)
+      - [a. array_diff](#a-array_diff)
+      - [b. array_splice](#b-array_splice)
     - [Menggabungkan array](#menggabungkan-array)
-        - [array_merge](#a-arraymerge)
+      - [a. array_merge](#a-array_merge)
     - [Pengacakan pada array](#pengacakan-pada-array)
-        - [array_flip](#a-arrayflip)
-        - [array_reverse](#b-arrayreverse)
-        - [array_rand](#c-arrayrand)
-        - [array_slice](#d-arrayslice)
+      - [a. array_flip](#a-array_flip)
+      - [b. array_reverse](#b-array_reverse)
+      - [c. array_rand](#c-array_rand)
+      - [d. array_slice](#d-array_slice)
     - [Pengurutan pada array](#pengurutan-pada-array)
-        - [sort](#a-sort)
-        - [rsort](#b-rsort)
-        - [asort](#c-asort)
-        - [arsort](#d-arsort)
-        - [ksort](#e-ksort)
-        - [krsort](#f-krsort)
+      - [a. sort](#a-sort)
+      - [b. rsort](#b-rsort)
+      - [c. asort](#c-asort)
+      - [d. arsort](#d-arsort)
+      - [e. ksort](#e-ksort)
+      - [f. krsort](#f-krsort)
 
 ## 1. Array
+
 ### Apa itu Array
+
 Pada [materi](../2_variable_datatype) sebelumnya kita sudah berkenalan dengan tipe data berbentuk Array, jadi apa itu Array?.
-Sebuah Array adalah data struktur yang dapat menyimpan beberapa atau lebih elemen(parameter/nilai/variable) dalam satu variable, dan elemen ini tersimpan dalam bentuk pasangan key-value yang saling terhubung satu sama lain. Dalam pelaksanaan nya kita dapat menggunakan array kapan saja saat kita ingin menyimpan daftar elemen(tabel elemen).
+
+Sebuah Array adalah data struktur yang dapat menyimpan beberapa atau lebih elemen (parameter/nilai/variabel) dalam satu variabel, dan elemen ini tersimpan dalam bentuk pasangan key-value yang saling terhubung satu sama lain. Dalam pelaksanaannya kita dapat menggunakan array kapan saja saat kita ingin menyimpan daftar elemen (tabel elemen).
 
 Array dapat menampung hampir semua tipe data dan bisa menampung berbagai macam tipe data dalam satu array, walaupun demikian dalam pelaksanaannya penggunaan Array memiliki elemen dengan tipe data yang sama.
 
-Bahasa Pemograman PHP tidak memproses atau meng-alokasikan memori sebagai mana pada bahasa pemograman lain memproses memori untuk array, sehingga array dalam php hampir tidak memiliki keterbatasan kecuali maksimum memori yang dapat digunakan oleh php itu sendiri. sebagai contoh dalam bahasa pemograman lain array memiliki alokasi memori saat di deklarsikan dan array tersebut memiliki ukuran tetap, tidak dapat di tambahkan atau dikurangi (array bertipe statis), berbeda dengan array dalam PHP bersifat dinamis, dimana kita dapat menambah dan mengurangi ukuran dari array tersebut, dan memiliki kebebasan penuh dalam menetukan key dari elemen array.
->** Catatan **
->Key dari array bertipe Integer atau string, untuk tipe decimal otomatis di konversi kedalam integer oleh php
+Bahasa Pemograman PHP tidak memproses atau meng-alokasikan memori sebagaimana pada bahasa pemograman lain memproses memori untuk array, sehingga array dalam PHP hampir tidak memiliki keterbatasan kecuali maksimum memori yang dapat digunakan oleh PHP itu sendiri. Sebagai contoh dalam bahasa pemrograman lain array memiliki alokasi memori saat di dideklarsikan dan array tersebut memiliki ukuran tetap, tidak dapat ditambahkan atau dikurangi (array bertipe statis), berbeda dengan array dalam PHP yang bersifat dinamis, di mana kita dapat menambah dan mengurangi ukuran dari array tersebut, dan memiliki kebebasan penuh dalam menetukan key dari elemen array.
+
+> **Catatan :**
+>
+> Key dari array bertipe Integer atau string, untuk tipe *decimal* otomatis di konversi ke dalam *integer* oleh php
 
 Array sering di-sinonim-kan sebagai tabel, walaupun bukan, tetapi tabel sering di-implementasikan dalam bentuk array.
 
-sebagai contoh kita memiliki parameter berisi beberapa nama kota di indonesia, jika tidak memiliki array maka kita akan mebuat begitu banyak variable, di mana setiap kota memiliki variable sendiri, dengan array kita hanya butuh mendeklarasikan satu variable, contoh :
+Sebagai contoh kita memiliki parameter berisi beberapa nama kota di Indonesia, jika tidak memiliki array maka kita akan membuat begitu banyak variabel, di mana setiap kota memiliki variabel sendiri, dengan array kita hanya butuh mendeklarasikan satu variabel, contoh :
+
 ```php
 <?php
-    $kota = array('Padang','Payakumbuh','Solok','Batu Sangkar','Pariaman');
-?>
-``` 
-Seperti kita lihat dalam contoh kita telah memiliki sebuah varibale `$kota` yang berisi beberapa nama kota, dan array ini dapat kita tambahkan elemen baru di waktu lain.
 
-Kita dapat menggunakan berbagai macam cara untuk berinteraksi dengan array dan hal ini akan kita perlajari bersama pada materi berikutnya.
+$kota = array('Padang', 'Payakumbuh', 'Solok', 'Batu Sangkar', 'Pariaman');
+```
 
+Seperti kita lihat dalam contoh, kita telah memiliki sebuah variabel `$kota` yang berisi beberapa nama kota, dan array ini dapat kita tambahkan elemen baru di waktu lain.
+
+Kita dapat menggunakan berbagai macam cara untuk berinteraksi dengan array dan hal ini akan kita pelajari bersama pada materi berikutnya.
 
 ### Bagaimana Membuat Array
-Setelah kita mengenal apa itu Array, sekarang kita akan mencoba membuat atau menginialisasikan sebuah Array.
-Ada beberapa macam cara untuk membuat array, pada umumnya array di buat dengan fungsi `array()` yang akan menugaskan suatu variable menjadi sebuah Array.
-```php
-<?php
-    $data = array();
-?>
-```
-Dari kode diatas dapat kita lihat variable `$data` ditugaskan sebagai sebuah Array dengan nilai Kosong. Kemudian sejak PHP 5.4 diperkenalkan penggunaan kurung siku dalam mendeklarasikan sebuah Array
-```php
-<?php
-    $variable = [];
-?>
-```
-kedua syntax diatas memiliki fungsi yang sama, kemudian mari kita tambahkan elemen kedalam Array.
-```php
-<?php
-    $variable = [];     //membuat sebuah variable array dengan nama variable
-    
-    // Menambahkan elemen
-    $variable[] = 'Padang';
-    $variable[] = 'Batu Sangkar';
-    $variable[] = 'Payahkumbuh';
 
-    //Tampilkan elemen array
-    echo '<pre>';
-    print_r($variable);
-?>
+Setelah kita mengenal apa itu Array, sekarang kita akan mencoba membuat atau menginisialisasikan sebuah Array.
+
+Ada beberapa macam cara untuk membuat array, pada umumnya array dibuat dengan fungsi `array()` yang akan menugaskan suatu variabel menjadi sebuah Array.
+
+```php
+<?php
+
+$data = array();
 ```
+
+Dari kode di atas dapat kita lihat variabel `$data` ditugaskan sebagai sebuah Array dengan nilai Kosong. Kemudian sejak PHP 5.4 diperkenalkan penggunaan kurung siku dalam mendeklarasikan sebuah Array
+
+```php
+<?php
+
+$variable = [];
+```
+
+Kedua *syntax* di atas memiliki fungsi yang sama, kemudian mari kita tambahkan elemen ke dalam Array.
+
+```php
+<?php
+
+$variable = [];     // Membuat sebuah variable array dengan nama variable
+
+// Menambahkan elemen
+$variable[] = 'Padang';
+$variable[] = 'Batu Sangkar';
+$variable[] = 'Payahkumbuh';
+
+// Tampilkan elemen array
+echo '<pre>';
+print_r($variable);
+echo '</pre>';
+```
+
 Baris kode di atas akan menghasilkan data di bawah ini:
+
 ```html
 Array
 (
@@ -100,67 +119,85 @@ Array
     [2] => Payahkumbuh
 )
 ```
-Kode diatas juga bisa ganti dengan syntax yang lebih pendek dengan mendeklarasikan array dan nilainya sekaligus
+
+Kode di atas juga bisa diganti dengan syntax yang lebih pendek dengan mendeklarasikan array dan nilainya sekaligus
+
 ```php
 <?php
-    $variable = ['Padang', 'Batu Sangkar', 'Payahkumbuh'];
-?>
+
+$variable = ['Padang', 'Batu Sangkar', 'Payahkumbuh'];
 ```
+
 [![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](1_array.php#L10-L28)
 
 ### Mengakses Elemen Array
-Setelah membuat dan menyimpan array, tentunya kita akan mengakses elemen pada array pada saat dibutuhkan, untuk mengakses kita dapat mengguakan syntax sebagai berikut :
+
+Setelah membuat dan menyimpan array, tentunya kita akan mengakses elemen pada array pada saat dibutuhkan, untuk mengaksesnya kita dapat menggukan syntax sebagai berikut :
+
 ```php
 <?php
-    $var[index];        //Array Index
-    $var['key'];        //Array Asosiatif
-?>
+$var[index];        //Array Index
+$var['key'];        //Array Asosiatif
 ```
-Pada materi [`Bagaimana Membuat Array`](#bagaimana-membuat-array), kita telah membuat sebuat array yang berisi nama kota yaitu 'Padang', 'Batu Sangkar', 'Payakumbuh'. Sekarang kita ingin menggunakan nilai 'Batu Sangkar' dan melakukan echo ke tampilan. Array di atas berupa array linear dengan key berupa index yang dimulai dari `0`, nilai 'Batu Sangkar' terdapat di barisan kedua sehingga memiliki index `1`, untuk mengakses nya kita gunakan syntax sebagai berikut :
+
+Pada materi [`Bagaimana Membuat Array`](#bagaimana-membuat-array), kita telah membuat sebuat array yang berisi nama kota yaitu 'Padang', 'Batu Sangkar', 'Payakumbuh'. Sekarang kita ingin menggunakan nilai 'Batu Sangkar' dan melakukan echo ke tampilan. Array di atas berupa array linear dengan key berupa index yang dimulai dari `0`, nilai 'Batu Sangkar' terdapat di barisan kedua sehingga memiliki index `1`, untuk mengaksesnya kita gunakan syntax sebagai berikut :
+
 ```php
 <?php
-    echo $kota[1];
-?>
-``` 
-dengan demikian kita telah bisa membuat dan mengakses sebuah Array.
+
+echo $kota[1];
+```
+
+Dengan demikian kita telah bisa membuat dan mengakses sebuah Array.
 
 [![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](1_array.php#L29-L34)
 
 ## 2. Jenis Array
-Berdasarkan Jenis Key yang terdapat dalam elemen Array, Array dapat dikelompokan menjadi 2 yaitu :
-### 1. Array Index
-Array yang memiliki Key/Index berupa angka/bilangan integer akan tergabung dalam Array jenis ini atau disebut Numerical Index Array, array yang kita buat pada contoh-contoh di atas termasuk kedalam jenis Array Index, dimana index nya berupa integer yang dibuat secara otomotis oleh sistem dengan nilai pertama dari index adalah `0`.
 
-Untuk Array Index yang key awalnya tidak kita definisikan maka secara otomatis menjadi `0`, sebagai contoh :
+Berdasarkan jenis *key* yang terdapat dalam elemen Array, Array dapat dikelompokan menjadi 2 yaitu :
+
+### 1. Array Index
+
+Array yang memiliki Key/Index berupa angka/bilangan *integer* akan tergabung dalam Array jenis ini atau disebut *Numerical Index Array*, array yang kita buat pada contoh-contoh di atas termasuk ke dalam jenis *Array Index*, di mana index nya berupa integer yang dibuat secara otomotis oleh sistem dengan nilai pertama dari index adalah `0`.
+
+Untuk *Array Index* yang *key* awalnya tidak kita definisikan maka secara otomatis menjadi `0`, sebagai contoh :
+
 ```php
 <?php
-    $kota = ['Padang', 'Batu Sangkar', 'Payakumbuh'];
-?>
-```
-Karena tidak ditemukan key yang didefinisikan maka sistem secara otomotis membuat index key berupa `Integer` yang di mulai dari `0`, sehinga menghasilkan
 
-| Key | Nilai                                   |
-|:---:| ----------------------------------------|
-| [`0`] | Padang                                  |
-| [`1`] | Batu Sangkar                            |
-| [`2`] | Payakumbuh                              |
+$kota = ['Padang', 'Batu Sangkar', 'Payakumbuh'];
+```
+
+Karena tidak ditemukan key yang didefinisikan maka sistem secara otomotis membuat index key berupa `Integer` yang di mulai dari `0`, sehingga menghasilkan
+
+|  Key  | Nilai        |
+| :---: | ------------ |
+| [`0`] | Padang       |
+| [`1`] | Batu Sangkar |
+| [`2`] | Payakumbuh   |
 
 kita juga bisa mendifinisikan index pertama dari Array tersebut, sebagai contoh :
-```php
-<?php
-    $kota = [5 => 'Padang', 'Batu Sangkar', 'Payakumbuh'];
-?>
-```
-maka index dari array tersebut dimulai dari 5 yaitu : `5` = Padang, `6` = Batu Sangkar, `7` = Payakumbuh. Berbeda dengan beberapa bahasa pemograman lain bukan, dimana index sebuah array harus dimulai dari `0`.
-Dan hal ini berlaku bila index yang di definisikan adalah index pertama, bagai mana jika index yang kita definisikan bukan index pertama, ini tetap bisa dilakukan, PHP akan mengenali dimana saat index terdefinisi, tetapi sebelum ditemukan index yang terdefinisi PHP secara otomotis tetap membuat index yang dimulai dari `0`, sebagai contoh:
-```php
-<?php
-    $kota ['Padang', 'Bukit Tinggi', 8 => 'Batu Sangkar', 'Payakumbuh', 'Padang Panjang'];    //Nilai Kedua memiliki index berupa Integer
 
-    print_r($kota);                                         //Menampilkan Hasil
-?>
+```php
+<?php
+
+$kota = [5 => 'Padang', 'Batu Sangkar', 'Payakumbuh'];
 ```
-Syntax di atas secara otomotis PHP mengenali bahwa pada index ketiga key terdefinisikan sebagai (`integer`) `8`, dengan demikian PHP tidak memulai index dari `8` tetapi tetap dari `0` untuk elemen yang terdapat sebelum key `8` ditemukan dan melajutkan key `8` untuk elemen yang terdapat setelahnya, sehingga hasil `print_r` diatas akan menghasilkan,
+
+Maka index dari array tersebut dimulai dari 5 yaitu : `5` = Padang, `6` = Batu Sangkar, `7` = Payakumbuh. Berbeda dengan beberapa bahasa pemrograman lain bukan, di mana index sebuah array harus dimulai dari `0`.
+
+Dan hal ini berlaku bila index yang didefinisikan adalah index pertama, bagaimana jika index yang kita definisikan bukan index pertama, ini tetap bisa dilakukan, PHP akan mengenali di mana saat index terdefinisi, tetapi sebelum ditemukan index yang terdefinisi PHP secara otomotis tetap membuat index yang dimulai dari `0`, sebagai contoh:
+
+```php
+<?php
+
+$kota ['Padang', 'Bukit Tinggi', 8 => 'Batu Sangkar', 'Payakumbuh', 'Padang Panjang'];      // Nilai Kedua memiliki index berupa Integer
+
+print_r($kota);     // Menampilkan Hasil
+```
+
+*Syntax* di atas secara otomotis PHP mengenali bahwa pada index ketiga key terdefinisikan sebagai (`integer`) `8`, dengan demikian PHP tidak memulai index dari `8` tetapi tetap dari `0` untuk elemen yang terdapat sebelum key `8` ditemukan dan melajutkan key `8` untuk elemen yang terdapat setelahnya, sehingga hasil `print_r` di atas akan menghasilkan,
+
 ```html
 Array
 (
@@ -171,27 +208,35 @@ Array
     [10] => Padang Panjang
 )
 ```
+
 Wah.. cukup dinamis bukan!!!
-> ** Penting **
+
+> **Penting**
 >
-> Kesimpulan : dalam PHP Array Index adalah array yang memiliki key berupa angka Integer, bilangan desimal atau lainnya akan di konversi menjadi integer oleh php dan data bertipe boolean akan di konversi menjadi integer dengan nilai `0` dan `1`.
+> **Kesimpulan** : Dalam PHP *Array Index* adalah array yang memiliki key berupa angka Integer, bilangan desimal atau lainnya akan di konversi menjadi integer oleh php dan data bertipe boolean akan di konversi menjadi integer dengan nilai `0` dan `1`.
 
 Untuk memahami lebih lanjut kita dapat pelajari contoh kode.
 
 [![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](2_jenis_array.php#L11-L22)
 
 ### 2. Array Asosiatif
-Array Asosiatif tidak jauh beda dengan array index, yang membedakan hanya key array asosiatif berupa `string`. jadi kita tidak akan membahas lebih lanjut.
-Inti nya semua Array yang key nya telah di definisikan berupa `string` termasuk dalam array asosiatif ini.
-contoh membuat array asosiatif:
+
+Array Asosiatif tidak jauh beda dengan array index, yang membedakan hanya *key* array asosiatif berupa `string`. jadi kita tidak akan membahas lebih lanjut.
+
+Inti nya semua Array yang *key* nya telah di definisikan berupa `string` termasuk dalam array asosiatif ini.
+
+Contoh membuat array asosiatif:
+
 ```php
 <?php
-    $propinsi = ['nama' => 'Sumatera Barat', 'ibukota' => 'Padang'];        //Membuat Array
 
-    print_r($propinsi);                                                     //Menampilkan Array
-?>
+$propinsi = ['nama' => 'Sumatera Barat', 'ibukota' => 'Padang'];``// Membuat Array
+
+print_r($propinsi);     // Menampilkan Array
 ```
-dari contoh di atas kita memiliki sebuah array dengan dua elemen, dimana elemen pertama memiliki key berupa `string` yang bernilai `nama` dan elemen kedua key juga berupa `string` yang bernilai `ibukota`. Sehingga hasil dari perintah `print_r` yang kita buat akan menampilkan.
+
+Dari contoh di atas kita memiliki sebuah array dengan dua elemen, di mana elemen pertama memiliki key berupa `string` yang bernilai `nama` dan elemen kedua *key*-nya juga berupa `string` yang bernilai `ibukota`. Sehingga hasil dari perintah `print_r` yang kita buat akan menampilkan.
+
 ```html
 Array
 (
@@ -199,24 +244,32 @@ Array
     [ibukota] => Padang
 )
 ```
+
 Untuk mengakses data tersebut sama caranya dengan Array index hanya key yang tadi berupa index kita rubah menjadi string contoh kita ingin memanggil data Padang.
+
 ```php
 <?php
-    echo $kota['ibukota'];          //tampilkan elemen array dengan key ibukota
-?>
+
+echo $kota['ibukota'];  // Tampilkan elemen array dengan key ibukota
 ```
+
 [![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](1_jenis_array.php#L24-L29)
 
-** TAMBAHAN **
+**TAMBAHAN**
 
 Array Index dan Array Asosiatif dapat digabungkan menjadi satu, dengan aturan sama yang terdapat dalam *Array Index* bagi elemen yang key nya tidak terdefinisikan.
 contoh :
-```php
-    $data = ['mangga', 'apel', 'sayur' => 'bayam', 'lauk' => 'daging', 8 => 'jeruk', 'markisa'];
 
-    print_r($data);
+```php
+<?php
+
+$data = ['mangga', 'apel', 'sayur' => 'bayam', 'lauk' => 'daging', 8 => 'jeruk', 'markisa'];
+
+print_r($data);
 ```
-perintah `print_r` diatas akan menapilkan hasil
+
+Perintah `print_r` di atas akan menampilkan hasil:
+
 ```html
 Array
 (
@@ -228,83 +281,95 @@ Array
     [9] => markisa
 )
 ```
+
 [![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](1_array.php#L31-L45)
 
-Akhirnya kita sudah mengenal apa itu array index dan array asosiasif.
+Akhirnya kita sudah mengenal apa itu **array index** dan **array asosiasif**.
 
 ## 3. Array Multi Dimensi
-Pada pembahasan diatas kita sudah membuat dan mengkases data array dengan nilai elemennya berupa integer dan string, dan kita juga sudah mengetahui bahwa array dapat menampung tipe data hampir apa saja, termasuk data array itu sendiri.
 
-Bila terdapat data Array dalam nilai elemen sebuah Array maka Array itu disebut Array Multi Dimensi(*Multidimensional Array*), Array yang telah kita pelajari sebelumnya adalah Array Linear (Array Satu Dimensi).
+Pada pembahasan di atas kita sudah membuat dan mengkases data array dengan nilai elemennya berupa integer dan string, dan kita juga sudah mengetahui bahwa array dapat menampung tipe data hampir apa saja, termasuk data array itu sendiri.
 
-Dalam pelajaran matematika di sekolah kita pernah mempelajari yang namanya matrix, nah Array Dua dimensi juga dikenal sebagi Array Matrix (*matrice array*). dimana Array Dua Dimensi(*note :* Termasuk kedalam Multi Dimensi Array) memiliki Kolom dan Baris seperti tabel. dan Table sering di implementasikan kedalam Array Dua Dimensi ini.
+Bila terdapat data Array dalam nilai elemen sebuah Array maka Array itu disebut Array Multi Dimensi (*Multidimensional Array*), Array yang telah kita pelajari sebelumnya adalah Array Linear (Array Satu Dimensi).
+
+Dalam pelajaran matematika di sekolah kita pernah mempelajari yang namanya matrix, nah Array Dua dimensi juga dikenal sebagi Array Matrix (*matrice array*). di mana Array Dua Dimensi(*note :* Termasuk ke dalam Multi Dimensi Array) memiliki Kolom dan Baris seperti tabel. dan Table sering di implementasikan ke dalam Array Dua Dimensi ini.
 
 sebagai contoh :
+
 ```php
 <?php
-    $data = [
-        ['AA','AB'],
-        ['BA','BB']
-    ];
-?>
+
+$data = [
+    ['AA','AB'],
+    ['BA','BB']
+];
 ```
-Maka array diatas akan membentuk matrix berukuran 2x2 seperti ilustrasi
+
+Maka array di atas akan membentuk matrix berukuran 2x2 seperti ilustrasi.
+
 <p align="center">
     <img src="../../assets/content/basics/7_array_mendalam/memori_array.png">
 </p>
 
-untuk mengakses nilai array tersebut kita memakai syntax <code> $data[baris][kolom] </code> atau dengan metode perulangan [Nested Foreach](../5_perulangan/#nested-foreach).
+Untuk mengakses nilai array tersebut kita memakai sintaks `$data[baris][kolom]` atau dengan metode perulangan [Nested Foreach](../5_perulangan/#nested-foreach).
+
 ```php
 <?php
-    echo $data[1][0];   //hasil BA
-?>
+
+echo $data[1][0];   // Hasil BA
 ```
+
 [![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](3_1_array_multidimensi.php)
 
-untuk lebih memahami coba kita implementasikan sebuah tabel kedalam array.
+Untuk lebih memahami coba kita implementasikan sebuah tabel ke dalam array.
 
-* ### tabel 1. contoh
+- ### tabel 1. contoh
 
-| No |username| nama |status          |
-|:--:|:-------|:-----|:---------------|
-| 1 |wildanie12|Badar Wildani|Member, Owner|
-| 2 |mhaikalla|M Haikal Anatam|Member, Contributor|
-| 3 |adhywiranto44|Adhy Wiranto|Member, Admin|
-| 4 |nomadkode|Ramset|Member, Admin|
-| 5 |kondiak|Ricky Hadinata|Contributor|
+|  No   | Username      | Nama            | Status              |
+| :---: | :------------ | :-------------- | :------------------ |
+|   1   | wildanie12    | Badar Wildani   | Member, Owner       |
+|   2   | mhaikalla     | M Haikal Anatam | Member, Contributor |
+|   3   | adhywiranto44 | Adhy Wiranto    | Member, Admin       |
+|   4   | nomadkode     | Ramset          | Member, Admin       |
+|   5   | kondiak       | Ricky Hadinata  | Contributor         |
 
-Tabel di atas kita simpan kedalam satu variable data bertipe array dengan cara :
+Tabel di atas kita simpan ke dalam satu variabel data bertipe array dengan cara :
+
 ```php
 <?php
-    $tabelcontoh = [
-        1 => ['username' => 'wildanie12', 'nama' => 'Badar Wildani', 'status' => ['Member', 'Owner']],          //Baris pertama dari tabel
-        2 => ['username' => 'mhaikalla', 'nama' => 'M Haikal Anatam', 'status' => ['Member', 'Contributor']],   //Baris kedua dari tabel
-        3 => ['username' => 'adhywiranto44', 'nama' => 'Adhy Wiranto', 'status' => ['Member', 'Admin']],        //Baris ketiga dari tabel
-        4 => ['username' => 'nomadkode', 'nama' => 'Ramset', 'status' => ['Member', 'Admin']],                  //Baris keempat dari tabel
-        5 => ['username' => 'kondiak', 'nama' => 'Ricky Hadinata', 'status' => 'contributor']                   //Baris kelima dari tabel
-    ];
-?>
+
+$tabelcontoh = [
+    1 => ['username' => 'wildanie12', 'nama' => 'Badar Wildani', 'status' => ['Member', 'Owner']],          // Baris pertama dari tabel
+    2 => ['username' => 'mhaikalla', 'nama' => 'M Haikal Anatam', 'status' => ['Member', 'Contributor']],   // Baris kedua dari tabel
+    3 => ['username' => 'adhywiranto44', 'nama' => 'Adhy Wiranto', 'status' => ['Member', 'Admin']],        // Baris ketiga dari tabel
+    4 => ['username' => 'nomadkode', 'nama' => 'Ramset', 'status' => ['Member', 'Admin']],                  // Baris keempat dari tabel
+    5 => ['username' => 'kondiak', 'nama' => 'Ricky Hadinata', 'status' => 'contributor']                   // Baris kelima dari tabel
+];
 ```
-kode diatas telah menyimpan data [tabel 1. Contoh](#tabel-1-contoh) kedalam Multi Dimensi Array (tepatnya tiga dimensi array), saat kita melakukan perintah `print_r` terhadap array tersebut akan menghasilkan tampilan seperti ini
+
+Kode di atas telah menyimpan data [tabel 1. Contoh](#tabel-1-contoh) ke dalam Multi Dimensi Array (tepatnya tiga dimensi array), saat kita melakukan perintah `print_r` terhadap array tersebut akan menghasilkan tampilan seperti ini.
 
 [![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](3_2_implementasi_table_array.php)
 
-Untuk mengakses data tabel tersebut kedalam tabel kita dapat menggunaan beberapa metode perulangan. [![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](3_3_array_kedalam_table.php)
+Untuk mengakses data tabel tersebut ke dalam tabel kita dapat menggunakan beberapa metode perulangan.
+
+[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](3_3_array_kedalam_table.php)
 
 > **Dimensi Array**
+>
 > Walaupun Array memiliki dimensi yang tidak terbatas, tetapi array yang memiliki 4 dimensi dan lebih akan sulit dikelola, sehingga akan lebih efisien menggunakan array berdimensi sebatas 3.
 
 Untuk contoh penggunaan matrix Array kita bisa pelajari implementasi [Algoritma BackTracking pada PathFinding](../../algorithms/BackTracking/PathFinding) atau [algoritma Sorting](../../algorithms/Sorting) untuk linear Array.
 
 ## 4. Manipulasi Array
 
-Disaat menggunakan array kita akan dihadapkan dengan berbagai skenario yang mengharuskan kita melakukan manipulasi pada array, seperti menambah value, menghapus value, dan lainnya.
+Disaat menggunakan array kita akan dihadapkan dengan berbagai skenario yang mengharuskan kita melakukan manipulasi pada array, seperti menambah *value*, menghapus *value*, dan lainnya.
 
 Terdapat berbagai macam manipulasi array yang dapat kita lakukan, yaitu :
 
 ### Menghitung ukuran array
 
-Untuk menghitung elemen yang terdapat didalam sebuah Array dapat menggunakan dua fungsi yaitu `sizeof()` dan `count()`, kedua syntax tersebut memiliki tujuan dan fungsi yang sama, dimana `sizeof()` adalah nama lain dari `count()`. dengan penggunaan syntax sebagai berikut
+Untuk menghitung elemen yang terdapat di dalam sebuah Array dapat menggunakan dua fungsi yaitu `sizeof()` dan `count()`, kedua syntax tersebut memiliki tujuan dan fungsi yang sama, di mana `sizeof()` adalah nama lain dari `count()`. dengan penggunaan sintaks sebagai berikut
 
 #### a. sizeof
 
@@ -315,17 +380,19 @@ sizeof(array $arr, int $mode = 0) : int
 **Parameter**
 
 - `$arr` Diisi dengan variable array yang akan dicari jumlah elementnya _(wajib diisi)_
-- `$mode` Diisi dengan nilai **0** atau **1** _(opsional)_
-    - **0** atau **COUNT_NORMAL** - Default, tidak akan menghitung element dari array multidimensi di dalamnya _(linear)_.
-    - **1** atau **COUNT_RECURSIVE** - Akan menghitung jumlah element dari array multidimensi di dalamnya _(recursive)_.
+- `$mode` Diisi dengan nilai `0` atau `1` _(opsional)_
+  - `0` atau `COUNT_NORMAL` - Default, tidak akan menghitung elemen dari array multidimensi di dalamnya _(linear)_.
+  - `1` atau `COUNT_RECURSIVE` - Akan menghitung jumlah elemen dari array multidimensi di dalamnya _(recursive)_.
 
 **Hasil**
 
-- Jumlah element pada array
- 
+- Jumlah elemen pada array
+
 **Contoh penggunaan**
 
 ```php
+<?php
+
 $creators = ['taylor otwell', 'caleb porzio', 'evan you'];
 
 echo sizeof($creators);  // 3
@@ -333,9 +400,11 @@ echo sizeof($creators);  // 3
 
 [![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_sizeof_1.php)
 
-atau 
+Atau
 
 ```php
+<?php
+
 $tools = [
     [
         'author' => 'taylor otwell',
@@ -365,17 +434,19 @@ count(array $arr, int $mode = 0) : int
 **Parameter**
 
 - `$arr` Diisi dengan variable array yang akan dicari jumlah elementnya _(wajib diisi)_
-- `$mode` Diisi dengan nilai **0** atau **1** _(opsional)_
-    - **0** atau **COUNT_NORMAL** - Default, tidak akan menghitung element dari array multidimensi di dalamnya _(linear)_.
-    - **1** atau **COUNT_RECURSIVE** - Akan menghitung jumlah element dari array multidimensi di dalamnya _(recursive)_.
+- `$mode` Diisi dengan nilai `0` atau `1` _(opsional)_
+  - `0` atau `COUNT_NORMAL` - Default, tidak akan menghitung elemen dari array multidimensi di dalamnya _(linear)_.
+  - `1` atau `COUNT_RECURSIVE` - Akan menghitung jumlah elemen dari array multidimensi di dalamnya _(recursive)_.
 
 **Hasil**
 
-- Jumlah element pada array
+- Jumlah elemen pada array
 
 **Contoh Penggunaan**
 
 ```php
+<?php
+
 $array = [
     ['sepeda', 'motor', 'mobil'],
     ['gantole', 'helikopter', 'pesawat'],
@@ -410,6 +481,8 @@ array_keys(array $arr, ?string $value = null, ?bool $strict) : array
 **Contoh Penggunaan**
 
 ```php
+<?php
+
 $cars = [
     'japan' => 'toyota',
     'germany' => 'bmw',
@@ -441,6 +514,8 @@ array_values(array $arr) : array
 **Contoh Penggunaan**
 
 ```php
+<?php
+
 $cars = [
     'japan' => 'toyota',
     'germany' => 'bmw',
@@ -451,19 +526,21 @@ print_r(array_values($cars));   // ['toyota', 'bmw']
 
 [![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_array_values.php)
 
-### Mengubah element pada array
+### Mengubah elemen pada array
 
 #### a. array_push
 
-Untuk menambahkan element pada bagian **akhir** array.
+Untuk menambahkan elemen pada bagian **akhir** array.
 
 <p align="center">
-    Sebelum <code>array_push</code> :<br>
+    Sebelum <code>array_push</code> :<br><br>
     <img src="../../assets/content/basics/7_array_mendalam/array push __sebelum_push.svg" alt="Sebelum array push">
 </p>
 
+<br>
+
 <p align="center">
-    Setelah <code>array_push</code> :<br>
+    Setelah <code>array_push</code> :<br><br>
     <img src="../../assets/content/basics/7_array_mendalam/array push __setelah_push.svg" alt="Setelah array push">
 </p>
 
@@ -471,21 +548,30 @@ Untuk menambahkan element pada bagian **akhir** array.
 array_push(array &$arr, mixed ...$values) : int
 ```
 
-> **mixed** berarti bertipe data campuran <br>
-> **...$values** berarti dapat diisi nilai `1,2,3`, contoh: `array_push($letters, 'a', 'b')`
+> **Mixed** berarti bertipe data campuran.
+>
+> `...$values` berarti dapat diisi nilai `1,2,3`
+>
+> Contoh:
+>
+> ```php
+> array_push($letters, 'a', 'b')
+> ```
 
 **Parameter**
 
 - `$arr` array tujuan
-- `$values` nilai element baru, yang akan ditambahkan
+- `$values` nilai elemen baru, yang akan ditambahkan
 
 **Hasil**
 
-- Jumlah element setelah ditambahkan
+- Jumlah elemen setelah ditambahkan
 
 **Contoh Penggunaan**
 
 ```php
+<?php
+
 $cars = ['bmw', 'toyota'];
 
 array_push($cars, 'daihatsu');          // 3
@@ -498,15 +584,17 @@ array_push($cars, 'mitsubisi', 'audi'); // 5
 
 #### b. array_pop
 
-Untuk mengeluarkan element bagian **akhir** pada array.
+Untuk mengeluarkan elemen bagian **akhir** pada array.
 
 <p align="center">
-    Sebelum <code>array_pop</code> :<br>
+    Sebelum <code>array_pop</code> :<br><br>
     <img src="../../assets/content/basics/7_array_mendalam/array pop __sebelum_pop.svg" alt="Sebelum array pop">
 </p>
 
+<br>
+
 <p align="center">
-    Setelah <code>array_pop</code> :<br>
+    Setelah <code>array_pop</code> :<br><br>
     <img src="../../assets/content/basics/7_array_mendalam/array pop __setelah_pop.svg" alt="Setelah array pop">
 </p>
 
@@ -516,7 +604,7 @@ array_pop(array &$arr) : mixed
 
 **Parameter**
 
-- `$arr` array yang akan dikeluarkan element terakhirnya.
+- `$arr` array yang akan dikeluarkan elemen terakhirnya.
 
 **Hasil**
 
@@ -525,6 +613,8 @@ array_pop(array &$arr) : mixed
 **Contoh Pengunaan**
 
 ```php
+<?php
+
 $cars = ['bmw', 'toyota'];
 
 array_pop($cars);   // 'toyota'
@@ -536,15 +626,17 @@ array_pop($cars);   // 'toyota'
 
 #### c. array_shift
 
-Untuk mengeluarkan element **pertama** pada array.
+Untuk mengeluarkan elemen **pertama** pada array.
 
 <p align="center">
-    Sebelum <code>array_shift</code> :<br>
+    Sebelum <code>array_shift</code> :<br><br>
     <img src="../../assets/content/basics/7_array_mendalam/array shift __sebelum_shift.svg" alt="Sebelum array shift">
 </p>
 
+<br>
+
 <p align="center">
-    Setelah <code>array_shift</code> :<br>
+    Setelah <code>array_shift</code> :<br><br>
     <img src="../../assets/content/basics/7_array_mendalam/array shift __setelah_shift.svg" alt="Setelah array shift">
 </p>
 
@@ -552,12 +644,13 @@ Untuk mengeluarkan element **pertama** pada array.
 array_shift(array &$arr) : mixed
 ```
 
-> **mixed** berarti bertipe data campuran. <br>
-> tanda **&** pada `$arr` berarti akan mengubah nilai dari `$arr`
+> **Mixed** berarti bertipe data campuran.
+>
+> Tanda `&` pada `$arr` berarti akan mengubah nilai dari `$arr`
 
 **Parameter**
 
-- `$arr` array yang akan dikeluarkan element pertamanya.
+- `$arr` array yang akan dikeluarkan elemen pertamanya.
 
 **Hasil**
 
@@ -566,6 +659,8 @@ array_shift(array &$arr) : mixed
 **Contoh Penggunaan**
 
 ```php
+<?php
+
 $cars = ['bmw', 'toyota'];
 
 array_shift($cars);   // 'bmw'
@@ -577,15 +672,17 @@ array_shift($cars);   // 'bmw'
 
 #### d. array_unshift
 
-Untuk menambahkan element di posisi **pertama** pada array.
+Untuk menambahkan elemen di posisi **pertama** pada array.
 
 <p align="center">
-    Sebelum <code>array_unshift</code> :<br>
+    Sebelum <code>array_unshift</code> :<br><br>
     <img src="../../assets/content/basics/7_array_mendalam/array unshift __sebelum_unshift.svg" alt="Sebelum array unshift">
 </p>
 
+<br>
+
 <p align="center">
-    Setelah <code>array_unshift</code> :<br>
+    Setelah <code>array_unshift</code> :<br><br>
     <img src="../../assets/content/basics/7_array_mendalam/array unshift __setelah_unshift.svg" alt="Setelah array unshift">
 </p>
 
@@ -593,22 +690,25 @@ Untuk menambahkan element di posisi **pertama** pada array.
 array_unshift(array &$arr, mixed ...$values) : int
 ```
 
-> **mixed** berarti bertipe data campuran. <br>
-> tanda **&** pada `$arr` berarti akan mengubah nilai dari `$arr`. <br>
+> **Mixed** berarti bertipe data campuran. <br>
+>
+> Tanda `&` pada `$arr` berarti akan mengubah nilai dari `$arr`. <br>
 > **...$values** berarti dapat diisi nilai `1,2,3`, contoh: `array_push($letters, 'a', 'b')`
 
 **Parameter**
 
-- `$arr` array yang akan ditambahkan element pertamanya.
-- `$values` nilai element baru, yang akan ditambahkan.
+- `$arr` array yang akan ditambahkan elemen pertamanya.
+- `$values` nilai elemen baru, yang akan ditambahkan.
 
 **Hasil**
 
-- Jumlah element setelah ditambahkan
+- Jumlah elemen setelah ditambahkan
 
 **Contoh Penggunaan**
 
 ```php
+<?php
+
 $cars = ['bmw', 'toyota'];
 
 array_push($cars, 'daihatsu');          // 3
@@ -623,15 +723,17 @@ array_push($cars, 'mitsubisi', 'audi'); // 5
 
 #### a. array_diff
 
-Berfungsi untuk membandingkan 1 atau lebih array, dan akan menghasilkan element yang tidak terdapat pada tiap array
+Berfungsi untuk membandingkan 1 atau lebih array, dan akan menghasilkan elemen yang tidak terdapat pada tiap array
 
 <p align="center">
-    Sebelum <code>array_diff</code> :<br>
+    Sebelum <code>array_diff</code> :<br><br>
     <img src="../../assets/content/basics/7_array_mendalam/array diff __sebelum_diff.svg" alt="Sebelum array diff">
 </p>
 
+<br>
+
 <p align="center">
-    Setelah <code>array_diff</code> :<br>
+    Setelah <code>array_diff</code> :<br><br>
     <img src="../../assets/content/basics/7_array_mendalam/array diff __setelah_diff.svg" alt="Setelah array diff">
 </p>
 
@@ -639,7 +741,13 @@ Berfungsi untuk membandingkan 1 atau lebih array, dan akan menghasilkan element 
 array_diff(array $arr, array ...$arrs) : array
 ```
 
-> **...$arrs** berarti dapat diisi nilai `[1],[2],[3]`, contoh: `array_diff($arr1, $arr2, $arr3)`
+> `...$arrs` berarti dapat diisi nilai `[1],[2],[3]`
+>
+> Contoh:
+>
+> ```php
+> array_diff($arr1, $arr2, $arr3)
+> ```
 
 **Parameter**
 
@@ -648,41 +756,45 @@ array_diff(array $arr, array ...$arrs) : array
 
 **Hasil**
 
-- Element-element yang tidak terdapat di array pembanding.
+- Elemen-elemen yang tidak terdapat di array pembanding.
 
 **Contoh Penggunaan**
 
 ```php
-$myHobies = ['coding', 'gaming'];
-$yourHobies = ['reading', 'gaming'];
+<?php
 
-echo array_diff($myHobies, $yourHobies); // ['coding']
+$my_hobbies = ['coding', 'gaming'];
+$your_hobbies = ['reading', 'gaming'];
+
+echo array_diff($my_hobbies, $your_hobbies); // ['coding']
 ```
 
 [![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_array_diff.php)
 
 #### b. array_splice
 
-Berfungsi untuk menghapus element pada array dimulai dari nilai `offset` sebanyak nilai `length` dari array, dan dimungkinkan juga digantikan dengan array `replacement` jika ada.
+Berfungsi untuk menghapus elemen pada array dimulai dari nilai `offset` sebanyak nilai `length` dari array, dan dimungkinkan juga digantikan dengan array `replacement` jika ada.
 
 ```php
 array_splice(array &$arr, int $offset, ?int $length = null, mixed $replacement = []) : array
 ```
 
-> **mixed** berarti bertipe data campuran. <br>
-> tanda **&** pada `$arr` berarti akan mengubah nilai dari `$arr`. <br>
-> tanda **?** pada `int $length` berarti boleh kosong / null.
+> **Mixed** berarti bertipe data campuran.
+>
+> Tanda `&` pada `$arr` berarti akan mengubah nilai dari `$arr`.
+>
+> Tanda `?` pada `int $length` berarti boleh kosong / *null*.
 
 **Parameter**
 
 - `$arr` array yang akan dihapus elementnya
-- `$offset` urutan awal element yang akan dihapus
-    - Jika _positive_ maka `offset` akan dihitung dari **awal** array
-    - Jika _negative_ maka `offset` akan dihitung dari **akhir** array
-- `$length` banyaknya element yang akan dihapus
-    - Jika _null_ maka dimulai dari `offset` hingga akhir array
-    - Jika _positive_ maka dihapus sesuai `$length`
-    - Jika _negative_ maka akhir dari bagian yang dihapus akan menjadi element dari array
+- `$offset` urutan awal elemen yang akan dihapus
+  - Jika _positive_ maka `offset` akan dihitung dari **awal** array
+  - Jika _negative_ maka `offset` akan dihitung dari **akhir** array
+- `$length` banyaknya elemen yang akan dihapus
+  - Jika _null_ maka dimulai dari `offset` hingga akhir array
+  - Jika _positive_ maka dihapus sesuai `$length`
+  - Jika _negative_ maka akhir dari bagian yang dihapus akan menjadi elemen dari array
 - `$replacement` array yang akan menggantikan array yang dihapus
 
 **Hasil**
@@ -692,6 +804,8 @@ array_splice(array &$arr, int $offset, ?int $length = null, mixed $replacement =
 **Contoh Penggunaan**
 
 ```php
+<?php
+
 $arr1 = ['a', 'b', 'c', 'd'];
 array_splice($arr1, 2);     // ['c', 'd']
 // $arr1 = ['a', 'b']
@@ -717,7 +831,13 @@ Berfungsi untuk menggabungkan 2 atau lebih array menjadi 1 array.
 array_merge(array ...$arrs) : array
 ```
 
-> **...$arrs** berarti dapat diisi nilai `[1],[2],[3]`, contoh: `array_merge($arr1, $arr2, $arr3)`
+> `...$arrs` berarti dapat diisi nilai `[1],[2],[3]`
+>
+> Contoh:
+>
+> ```php
+> array_merge($arr1, $arr2, $arr3)
+> ```
 
 **Parameter**
 
@@ -730,6 +850,8 @@ array_merge(array ...$arrs) : array
 **Contoh Penggunaan**
 
 ```php
+<?php
+
 $arr1 = ['a', 'b'];
 $arr2 = ['c', 'd'];
 
@@ -759,6 +881,8 @@ array_flip(array $arr) : array
 **Contoh Penggunaan**
 
 ```php
+<?php
+
 $arr = [
     'senin' => 'dota 2',
     'selasa' => 'apex',
@@ -777,7 +901,7 @@ $fliped = array_flip($arr);
 
 #### b. array_reverse
 
-Berfungsi untuk membalikan urutan element pada array.
+Berfungsi untuk membalikan urutan elemen pada array.
 
 ```php
 array_reverse(array $arr, bool $preverse_keys = false) : array
@@ -795,6 +919,8 @@ array_reverse(array $arr, bool $preverse_keys = false) : array
 **Contoh Penggunaan**
 
 ```php
+<?php
+
 $arr = ['a', 'b', 'c'];
 
 array_reverse($arr);    // ['c', 'b', 'a']
@@ -804,26 +930,28 @@ array_reverse($arr);    // ['c', 'b', 'a']
 
 #### c. array_rand
 
-Berfungsi untuk mengambil satu atau lebih element array secara acak _(random)_.
+Berfungsi untuk mengambil satu atau lebih elemen array secara acak _(random)_.
 
 ```php
 array_rand(array $arr, int $num = 1) : int|string|array
 ```
 
-> tanda **|** berarti "atau"
+> Tanda `|` berarti "atau"
 
 **Parameter**
 
 - `$arr` array yang akan diambil elementnya
-- `$num` jumlah element yang akan diambil
+- `$num` jumlah elemen yang akan diambil
 
 **Hasil**
 
-- Key dari element yang diambil secara acak
+- Key dari elemen yang diambil secara acak
 
 **Contoh Penggunaan**
 
 ```php
+<?php
+
 $games = ['apex', 'tetris', 'zuma'];
 
 array_rand($games);
@@ -834,25 +962,25 @@ array_rand($games, 2);
 
 #### d. array_slice
 
-Berfungsi untuk mendapatkan element dari urutan yang ditentukan, dan banyaknya sesuai nilai `length`.
+Berfungsi untuk mendapatkan elemen dari urutan yang ditentukan, dan banyaknya sesuai nilai `length`.
 
 ```php
 array_slice(array $arr, int $offset, ?int $length = null, bool $preserve_keys = false) : array
 ```
 
-> tanda **?** pada `int $length` berarti boleh kosong / null.
+> Tanda `?` pada `int $length` berarti boleh kosong / *null*.
 
 **Parameter**
 
 - `$arr` array yang akan diambil elementnya
-- `$offset` urutan awal element yang akan diambil
-    - Jika _positive_ maka urutan akan dihitung dari **awal** `offset` tersebut
-    - Jika _negative_ maka urutan akan dari **akhir** array hingga `offset` tersebut
-- `$length` banyaknya element yang akan dihapus
-    - Jika _null_ maka diambil dari `offset` hingga akhir array
-    - Jika _positive_ maka diambil sesuai `length`
-    - Jika _negative_ maka akan berhenti sesuai `length` dari akhir array
-- `$preserve_keys` jika _true_ akan mempertahankan key / tidak mengubah key pada element
+- `$offset` urutan awal elemen yang akan diambil
+  - Jika _positive_ maka urutan akan dihitung dari **awal** `offset` tersebut
+  - Jika _negative_ maka urutan akan dari **akhir** array hingga `offset` tersebut
+- `$length` banyaknya elemen yang akan dihapus
+  - Jika _null_ maka diambil dari `offset` hingga akhir array
+  - Jika _positive_ maka diambil sesuai `length`
+  - Jika _negative_ maka akan berhenti sesuai `length` dari akhir array
+- `$preserve_keys` jika _true_ akan mempertahankan key / tidak mengubah key pada elemen
 
 **Hasil**
 
@@ -861,6 +989,8 @@ array_slice(array $arr, int $offset, ?int $length = null, bool $preserve_keys = 
 **Contoh Penggunaan**
 
 ```php
+<?php
+
 $fruits = ['orange', 'grape', 'banana', 'avocado'];
 
 array_slice($fruits, 2);            // ['grape', 'banana', 'avocado']
@@ -872,7 +1002,7 @@ array_slice($fruits, 2, 2, true);   // ['1' => 'grape', '2' => 'banana']
 
 ### Pengurutan pada array
 
-Ketika menggunakan array seringkali element pada array tersebut memiliki urutan yang acak, maka untuk merapihkannya kita memerlukan fungsi untuk pengurutan _(order)_, seperti berikut :
+Ketika menggunakan array seringkali elemen pada array tersebut memiliki urutan yang acak, maka untuk merapihkannya kita memerlukan fungsi untuk pengurutan _(order)_, seperti berikut :
 
 #### a. sort
 
@@ -882,18 +1012,18 @@ Berfungsi untuk mengurutkan array secara _ascending_ atau **A-Z**.
 sort(array &$arr, int $flags = SORT_REGULAR) : bool
 ```
 
-> tanda **&** pada `$arr` berarti akan mengubah nilai dari `$arr`
+> Tanda `&` pada `$arr` berarti akan mengubah nilai dari `$arr`
 
 **Parameter**
 
 - `$arr` array yang akan diurutkan
 - `$flags` ketentuan dari pengurutan yang akan dilakukan
-    - **SORT_REGULAR** melakukan pengurutan secara normal
-    - **SORT_NUMERIC** melakukan pengurutan secara angka / numerik
-    - **SORT_STRING** melakukan pengurutan secara huruf
-    - **SORT_LOCALE_STRING** melakukan pengurutan secara huruf, tetapi berdasarkan lokal / lokasinya, yang dapat ditentukan dengan `setlocale()`
-    - **SORT_NATURAL** melakukan pengurutan secara huruf menggunakan pengurutan natural
-    - **SORT_FLAG_CASE** dapat menggabungkan SORT_STRING atau SORT_NATURAL
+  - `SORT_REGULAR` melakukan pengurutan secara normal
+  - `SORT_NUMERIC` melakukan pengurutan secara angka / numerik
+  - `SORT_STRING` melakukan pengurutan secara huruf
+  - `SORT_LOCALE_STRING` melakukan pengurutan secara huruf, tetapi berdasarkan lokal / lokasinya, yang dapat ditentukan dengan `setlocale()`
+  - `SORT_NATURAL` melakukan pengurutan secara huruf menggunakan pengurutan natural
+  - `SORT_FLAG_CASE` dapat menggabungkan `SORT_STRING` atau `SORT_NATURAL`
 
 **Hasil**
 
@@ -902,6 +1032,8 @@ sort(array &$arr, int $flags = SORT_REGULAR) : bool
 **Contoh Penggunaan**
 
 ```php
+<?php
+
 $fruits = ['orange', 'grape', 'banana', 'avocado', 1213, '32', 32, 2213];
 
 sort($fruits);                  // ["32",32,1213,2213,"avocado","banana","grape","orange"]
@@ -925,12 +1057,12 @@ rsort(array &$arr, int $flags = SORT_REGULAR) : bool
 
 - `$arr` array yang akan diurutkan
 - `$flags` ketentuan dari pengurutan yang akan dilakukan
-    - **SORT_REGULAR** melakukan pengurutan secara normal
-    - **SORT_NUMERIC** melakukan pengurutan secara angka / numerik
-    - **SORT_STRING** melakukan pengurutan secara huruf
-    - **SORT_LOCALE_STRING** melakukan pengurutan secara huruf, tetapi berdasarkan lokal / lokasinya, yang dapat ditentukan dengan `setlocale()`
-    - **SORT_NATURAL** melakukan pengurutan secara huruf menggunakan pengurutan natural
-    - **SORT_FLAG_CASE** dapat menggabungkan SORT_STRING atau SORT_NATURAL
+  - `SORT_REGULAR` melakukan pengurutan secara normal
+  - `SORT_NUMERIC` melakukan pengurutan secara angka / numerik
+  - `SORT_STRING` melakukan pengurutan secara huruf
+  - `SORT_LOCALE_STRING` melakukan pengurutan secara huruf, tetapi berdasarkan lokal / lokasinya, yang dapat ditentukan dengan `setlocale()`
+  - `SORT_NATURAL` melakukan pengurutan secara huruf menggunakan pengurutan natural
+  - `SORT_FLAG_CASE` dapat menggabungkan `SORT_STRING` atau `SORT_NATURAL`
 
 **Hasil**
 
@@ -939,6 +1071,8 @@ rsort(array &$arr, int $flags = SORT_REGULAR) : bool
 **Contoh Penggunaan**
 
 ```php
+<?php
+
 $fruits = ['orange', 'grape', 'banana', 'avocado', 1213, '32', 32, 2213];
 
 rsort($fruits);                  // ["orange","grape","banana","avocado",2213,1213,"32",32]
@@ -950,24 +1084,24 @@ rsort($fruits, SORT_STRING);     // ["orange","grape","banana","avocado","32",32
 
 #### c. asort
 
-Sama seperti [sort](#a-sort) berfungsi untuk mengurutkan array secara _ascending_ atau **A-Z** tetapi dengan **mempertahankan nilai dari key tiap element**.
+Sama seperti [sort](#a-sort) berfungsi untuk mengurutkan array secara _ascending_ atau **A-Z** tetapi dengan **mempertahankan nilai dari key tiap elemen**.
 
 ```php
 asort(array &$arr, int $flags = SORT_REGULAR) : bool
 ```
 
-> tanda **&** pada `$arr` berarti akan mengubah nilai dari `$arr`
+> Tanda `&` pada `$arr` berarti akan mengubah nilai dari `$arr`
 
 **Parameter**
 
 - `$arr` array yang akan diurutkan
 - `$flags` ketentuan dari pengurutan yang akan dilakukan
-    - **SORT_REGULAR** melakukan pengurutan secara normal
-    - **SORT_NUMERIC** melakukan pengurutan secara angka / numerik
-    - **SORT_STRING** melakukan pengurutan secara huruf
-    - **SORT_LOCALE_STRING** melakukan pengurutan secara huruf, tetapi berdasarkan lokal / lokasinya, yang dapat ditentukan dengan `setlocale()`
-    - **SORT_NATURAL** melakukan pengurutan secara huruf menggunakan pengurutan natural
-    - **SORT_FLAG_CASE** dapat menggabungkan SORT_STRING atau SORT_NATURAL
+  - `SORT_REGULAR` melakukan pengurutan secara normal
+  - `SORT_NUMERIC` melakukan pengurutan secara angka / numerik
+  - `SORT_STRING` melakukan pengurutan secara huruf
+  - `SORT_LOCALE_STRING` melakukan pengurutan secara huruf, tetapi berdasarkan lokal / lokasinya, yang dapat ditentukan dengan `setlocale()`
+  - `SORT_NATURAL` melakukan pengurutan secara huruf menggunakan pengurutan natural
+  - `SORT_FLAG_CASE` dapat menggabungkan `SORT_STRING` atau `SORT_NATURAL`
 
 **Hasil**
 
@@ -976,6 +1110,8 @@ asort(array &$arr, int $flags = SORT_REGULAR) : bool
 **Contoh Penggunaan**
 
 ```php
+<?php
+
 $fruits = [
     'a' => 'orange',
     'b' => 'manggo',
@@ -994,24 +1130,24 @@ asort($fruits);
 
 #### d. arsort
 
-Sama seperti [rsort](#b-rsort) berfungsi untuk mengurutkan array secara _descending_ atau **Z-A** tetapi dengan **mempertahankan nilai dari key tiap element**.
+Sama seperti [rsort](#b-rsort) berfungsi untuk mengurutkan array secara _descending_ atau **Z-A** tetapi dengan **mempertahankan nilai dari key tiap elemen**.
 
 ```php
 arsort(array &$arr, int $flags = SORT_REGULAR) : bool
 ```
 
-> tanda **&** pada `$arr` berarti akan mengubah nilai dari `$arr`
+> Tanda `&` pada `$arr` berarti akan mengubah nilai dari `$arr`
 
 **Parameter**
 
 - `$arr` array yang akan diurutkan
 - `$flags` ketentuan dari pengurutan yang akan dilakukan
-    - **SORT_REGULAR** melakukan pengurutan secara normal
-    - **SORT_NUMERIC** melakukan pengurutan secara angka / numerik
-    - **SORT_STRING** melakukan pengurutan secara huruf
-    - **SORT_LOCALE_STRING** melakukan pengurutan secara huruf, tetapi berdasarkan lokal / lokasinya, yang dapat ditentukan dengan `setlocale()`
-    - **SORT_NATURAL** melakukan pengurutan secara huruf menggunakan pengurutan natural
-    - **SORT_FLAG_CASE** dapat menggabungkan SORT_STRING atau SORT_NATURAL
+  - `SORT_REGULAR` melakukan pengurutan secara normal
+  - `SORT_NUMERIC` melakukan pengurutan secara angka / numerik
+  - `SORT_STRING` melakukan pengurutan secara huruf
+  - `SORT_LOCALE_STRING` melakukan pengurutan secara huruf, tetapi berdasarkan lokal / lokasinya, yang dapat ditentukan dengan `setlocale()`
+  - `SORT_NATURAL` melakukan pengurutan secara huruf menggunakan pengurutan natural
+  - `SORT_FLAG_CASE` dapat menggabungkan `SORT_STRING` atau `SORT_NATURAL`
 
 **Hasil**
 
@@ -1020,6 +1156,8 @@ arsort(array &$arr, int $flags = SORT_REGULAR) : bool
 **Contoh Penggunaan**
 
 ```php
+<?php
+
 $fruits = [
     'a' => 'orange',
     'b' => 'manggo',
@@ -1038,24 +1176,24 @@ arsort($fruits);
 
 #### e. ksort
 
-Sama seperti [sort](#a-sort) berfungsi untuk mengurutkan array secara _ascending_ atau **A-Z** tetapi berdasarkan key dari element.
+Sama seperti [sort](#a-sort) berfungsi untuk mengurutkan array secara _ascending_ atau **A-Z** tetapi berdasarkan key dari elemen.
 
 ```php
 ksort(array &$arr, int $flags = SORT_REGULAR) : bool
 ```
 
-> tanda **&** pada `$arr` berarti akan mengubah nilai dari `$arr`
+> Tanda `&` pada `$arr` berarti akan mengubah nilai dari `$arr`
 
 **Parameter**
 
 - `$arr` array yang akan diurutkan
 - `$flags` ketentuan dari pengurutan yang akan dilakukan
-    - **SORT_REGULAR** melakukan pengurutan secara normal
-    - **SORT_NUMERIC** melakukan pengurutan secara angka / numerik
-    - **SORT_STRING** melakukan pengurutan secara huruf
-    - **SORT_LOCALE_STRING** melakukan pengurutan secara huruf, tetapi berdasarkan lokal / lokasinya, yang dapat ditentukan dengan `setlocale()`
-    - **SORT_NATURAL** melakukan pengurutan secara huruf menggunakan pengurutan natural
-    - **SORT_FLAG_CASE** dapat menggabungkan SORT_STRING atau SORT_NATURAL
+  - `SORT_REGULAR` melakukan pengurutan secara normal
+  - `SORT_NUMERIC` melakukan pengurutan secara angka / numerik
+  - `SORT_STRING` melakukan pengurutan secara huruf
+  - `SORT_LOCALE_STRING` melakukan pengurutan secara huruf, tetapi berdasarkan lokal / lokasinya, yang dapat ditentukan dengan `setlocale()`
+  - `SORT_NATURAL` melakukan pengurutan secara huruf menggunakan pengurutan natural
+  - `SORT_FLAG_CASE` dapat menggabungkan `SORT_STRING` atau `SORT_NATURAL`
 
 **Hasil**
 
@@ -1064,6 +1202,8 @@ ksort(array &$arr, int $flags = SORT_REGULAR) : bool
 **Contoh Penggunaan**
 
 ```php
+<?php
+
 $fruits = [
     'a' => 'orange',
     'c' => 'grape',
@@ -1082,24 +1222,24 @@ ksort($fruits);
 
 #### f. krsort
 
-Sama seperti [rsort](#b-rsort) berfungsi untuk mengurutkan array secara _descending_ atau **Z-A** tetapi berdasarkan key dari element.
+Sama seperti [rsort](#b-rsort) berfungsi untuk mengurutkan array secara _descending_ atau **Z-A** tetapi berdasarkan key dari elemen.
 
 ```php
 krsort(array &$arr, int $flags = SORT_REGULAR) : bool
 ```
 
-> tanda **&** pada `$arr` berarti akan mengubah nilai dari `$arr`
+> Tanda `&` pada `$arr` berarti akan mengubah nilai dari `$arr`
 
 **Parameter**
 
 - `$arr` array yang akan diurutkan
 - `$flags` ketentuan dari pengurutan yang akan dilakukan
-    - **SORT_REGULAR** melakukan pengurutan secara normal
-    - **SORT_NUMERIC** melakukan pengurutan secara angka / numerik
-    - **SORT_STRING** melakukan pengurutan secara huruf
-    - **SORT_LOCALE_STRING** melakukan pengurutan secara huruf, tetapi berdasarkan lokal / lokasinya, yang dapat ditentukan dengan `setlocale()`
-    - **SORT_NATURAL** melakukan pengurutan secara huruf menggunakan pengurutan natural
-    - **SORT_FLAG_CASE** dapat menggabungkan SORT_STRING atau SORT_NATURAL
+  - `SORT_REGULAR` melakukan pengurutan secara normal
+  - `SORT_NUMERIC` melakukan pengurutan secara angka / numerik
+  - `SORT_STRING` melakukan pengurutan secara huruf
+  - `SORT_LOCALE_STRING` melakukan pengurutan secara huruf, tetapi berdasarkan lokal / lokasinya, yang dapat ditentukan dengan `setlocale()`
+  - `SORT_NATURAL` melakukan pengurutan secara huruf menggunakan pengurutan natural
+  - `SORT_FLAG_CASE` dapat menggabungkan `SORT_STRING` atau `SORT_NATURAL`
 
 **Hasil**
 
@@ -1108,6 +1248,8 @@ krsort(array &$arr, int $flags = SORT_REGULAR) : bool
 **Contoh Penggunaan**
 
 ```php
+<?php
+
 $fruits = [
     'a' => 'orange',
     'c' => 'grape',
