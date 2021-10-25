@@ -13,6 +13,7 @@
 use BackTracking\PathFinding;
 use Sorting\BubbleSort\BubbleSort;
 use Sorting\PopSort\PopSort;
+use Searching\Linear\LinearSeacrh;
 
 // Melakukan autoload pada kelas yang digunakan di halaman ini
 require_once 'autoload.php';
