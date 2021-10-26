@@ -15,14 +15,14 @@ Closes <!-- mention issue yang ingin kamu tutup dengan PR ini -->
 
 ## Contributor Requirements (Syarat Kontributor)
 
-- [ ] saya sudah membaca _(i have read)_ [CONTRIBUTING](https://github.com/bellshade/PHP/blob/main/CONTRIBUTING.md) dan sudah menyetujui semua
+- [ ] saya sudah membaca _(I have read)_ [CONTRIBUTING](https://github.com/bellshade/PHP/blob/main/CONTRIBUTING.md) dan sudah menyetujui semua
 - [ ] saya telah menambahkan docstring yang memberikan penjelasan maksud dari kode yang saya buat
 - [ ] saya sudah membuat artikel `README.md` tentang materi yang saya buat
 - [ ] saya menggunakan bahasa indonesia untuk memberikan penjelasan dari kode yang saya buat
 
 ## Environment
 
-saya menggunakan (im used):
+saya menggunakan (I am using):
 
 - `os` = `linux / windows / macOS`
 
