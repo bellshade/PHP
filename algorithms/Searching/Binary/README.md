@@ -230,7 +230,7 @@ Contoh kode diatas dapat dilihat disini :
 
 ### Kelebihan
 
-Kelebihan dari algoritma ini pencarian dapat diselesaikan lebih cepat, mengurangi banyak perulangan yang terjadi, dalam setiap sirkulasi perulangan, mengurangi setengah dari total elemen dalam sirkulasi tersebut sehingga dapat menghemat memory.
+Kelebihan dari algoritma ini pencarian dapat diselesaikan lebih cepat, mengurangi banyak perulangan yang terjadi, dalam setiap sirkulasi perulangan, mengurangi setengah dari total elemen dalam sirkulasi tersebut sehingga dapat menghemat waktu dan sumber daya.
 
 ### Kekurangan
 
@@ -243,3 +243,11 @@ Kekurangan dari algoritma ini, data array yang akan dicari nilainya harus memili
 
 ---
 \*\*\* Terima kasih \*\*\*
+
+### Referensi
+
+- Programiz. *"Binary Search C, C++, Java, Python"*. [Pranala Luar](https://www.programiz.com/dsa/binary-search).
+- Kela Casey, *"Let Us Understand Searching Algorithms"*. [Codersera](https://codersera.com/blog/let-us-understand-searching-algorithms/). 2020
+- Edy Budiman. *"Belajar Dasar: Algoritma dan Pemograman"*. Repository Unmul.
+- Udy Manber. *Using Mathematical Induction to Design Computer Algorithms*, Computer Science Technical Report#660. 1986.
+- PHP net. *"PHP Manual - Class and Object"*. [Pranala Luar](https://www.php.net/manual/en/language.oop5.php)
