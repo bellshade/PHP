@@ -3,8 +3,8 @@
 namespace Searching\Binary;
 
 /**
- * Class BinaruSearch
- * class berisi algoritma pencarian secara binari
+ * Class BinarySearch
+ * class berisi algoritma pencarian secara binary
  *
  * @package Searching\Binary
  */
@@ -64,7 +64,7 @@ class BinarySearch
         //Algoritma
         while ($atas >= $bawah) {
             //cari index tengah, antara index terendah dan tertinggi
-            $tengah = floor($bawah + ($atas - $bawah) / 2);
+            $tengah = floor(($atas + $bawah) / 2);
 
             //Abaikan : Log
             $catatan .= 'Index Atas : ' . $atas . ', Index Bawah : ' . $bawah . PHP_EOL;
@@ -105,46 +105,4 @@ class BinarySearch
         //Kembalikan nilai null karena data tidak ditemukan
         return null;
     }
-}
-
-/**
- * Fungsi untuk menjalankan contoh
- * fungsi dibawah ini hanya untuk menguji algoritma yang telah dibuat di atas
- * Untuk menghindari pengujian berjalan otomatis.
- * sehigga sampah hasil pengujian tidak terbawa saat class/file dipanggil dari class/file lain
- * @return void
- */
-function run()
-{
-    $array = [6, 7, 10, 11, 14, 17, 18, 19, 23, 26, 38, 42, 78, 79, 82, 84, 85];
-    $key = 20;
-
-    $binary = new BinarySearch($array, $key);
-    $hasil = $binary->getHasil();
-
-    echo '<pre>';
-    echo '=============================================================================================' . PHP_EOL;
-    echo '                                       <b>Binary Search</b>                                         ' . PHP_EOL;
-    echo '=============================================================================================' . PHP_EOL;
-    echo '<H4>DATA : </H4>' . PHP_EOL;
-    print_r($array);
-    echo 'Nilai dicari : ' . $key . PHP_EOL;
-    echo '============================================================================================' . PHP_EOL;
-    echo PHP_EOL . '<H4>PROGRESS_LOG :</H4>' . PHP_EOL;
-    echo PHP_EOL . $binary->history;
-    echo PHP_EOL . '<H3>HASIL PENCARIAN :</H3>' . PHP_EOL;
-    if (!empty($hasil)) {
-        echo '<H4>Data ditemukan pada index : ' . $hasil . '</H4>';
-    } else {
-        echo '<H4>Data tidak ditemukan</H4>';
-    }
-}
-
-/**
- * Pemanggilan fungsi untuk menjalankan contoh
- * penggunakan dengan menambahkan  parameter 'run' pada url
- * tujuan untuk menghidari sampah log saat class dipanggil oleh halaman lain
- */
-if (isset($_GET['run'])) {
-    run();
 }
