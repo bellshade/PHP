@@ -23,11 +23,11 @@ Dibawah ini dapat kita liat diagram alur kerja dari algoritma tersebut.
 
 ![charbinary](../../../assets/content/algorithms/searching/binary/binary.svg)
 
-Pada diagram ada satu proses yang saya tambahkan diluar algoritma pencarian secara binary pada umumnya yaitu pengecekan nilai dicari apakah berada dalam range (jangkau) dari nilai elemen array, ini bertujuan mengurangi proses yang tidak diperlukan. Dimana kita ketahui bahwa nilai dari elemen array telah diurutkan sehingga bila nilai yang kita cari berada dibawah nilai elemen terendah atau diatas nilai elemen tertinggi maka dapat kita pastikan nilai tersebut tidak akan ditemukan dalam pencarian, sehingga penggunaan sumber daya seperti memory dapat berkurang untuk hal-hal yang tidak perlu dilakukan.
+Pada diagram ada satu proses yang saya tambahkan diluar algoritma pencarian secara binary pada umumnya yaitu pengecekan nilai dicari apakah berada dalam range (jangkauan) dari nilai elemen array, ini bertujuan mengurangi proses yang tidak diperlukan. Dimana kita ketahui bahwa nilai dari elemen array telah diurutkan sehingga bila nilai yang kita cari berada dibawah nilai elemen terendah atau diatas nilai elemen tertinggi maka dapat kita pastikan nilai tersebut tidak akan ditemukan dalam pencarian, sehingga penggunaan sumber daya seperti memory dapat berkurang untuk hal-hal yang tidak perlu dilakukan.
 
-Ada baiknya sebelum menulis baris kode dalam bahasa pemograman kita susun dulu rencana baris kode dalam dalam bahasa pseudo, sehingga kita dapat menilai baris kode yang kita tulis nanti sesuai dengan yang kita inginkan.
+Ada baiknya sebelum menulis baris kode dalam bahasa pemograman kita susun dulu rencana baris kode dalam dalam bahasa pseudo, sehingga kita dapat menilai baris kode yang kita tulis nanti apakah sesuai dengan yang kita inginkan.
 
-Dari ilustrasi dan diagram alur dapat kita susun pernyatan dalam bahasa pseudo kira-kira seperti berikut
+Dari ilustrasi dan diagram alur dapat kita susun pernyataan dalam bahasa pseudo kira-kira seperti berikut:
 
 ```text
 ALGORITMA BINARY SEARCH
@@ -89,7 +89,7 @@ Dari bahasa pseudo diatas kita sudah bisa menuliskan baris kode untuk algoritma 
     //Lakukan pengecekan terhadap nilai elemen dengan perulangan
     while ($bawah < $atas)
     {
-      //Tentutakan index tengah dari array
+      //Tentukan index tengah dari array
       $tengah = floor($bawah + $atas) / 2     //pembulatan kebawah
 
       //cek nilai index tengah apakah nilai yang dicari
@@ -213,7 +213,7 @@ require_once './BinarySearch.php';
 
 $data = [6,7,10,11,14,17,18,19,23,26,38,42,78,79,82,84,85];
 $cari = 42;
-$binary = new BinarySearch($data, $cari);
+$binary = new BinarySearch($data, $cari);         //instansiasi class
 
 echo (!empty($binary->getHasil())) ? 'Data ditemukan pada index ' . $binary->getHasil() : 'Data tidak ditemukan';
 ?>
