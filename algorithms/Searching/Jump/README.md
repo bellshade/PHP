@@ -18,7 +18,7 @@ Langkah kerja dari algoritma ini sebagai berikut :
 
 Untuk lebih jelas bisa kita lihat ilustrasi dibawah ini :
 
-![jumpsearch](../../../assets/content/algorithms/searching/jump/jump.gif)
+![jumpsearch](../../../assets/content/algorithms/Searching/Jump/jump.gif)
 
 Dari ilustrasi diatas dapat kita lihat bahwa pencarian akan dilakukan hanya pada beberapa titak, tidak semua elemen akan dicocokan. sampai nilai lebih besar ditemukan, sehingga linear search akan dilakukan dari titik lompatan sekarang sampai titik lompatan sebelumnya.
 
@@ -104,7 +104,7 @@ dimana `y` adalah panjang elemen.
 
 Setelah kita perhitungkan jarak lompatan, maka kita bisa membuat diagram dan pseudo code. Diagram alur seperti dibawah ini :
 
-![chartjump](../../../assets/content/algorithms/searching/jump/jump.svg)
+![chartjump](../../../assets/content/algorithms/Searching/Jump/Jump.svg)
 
 ### Pseudo
 

@@ -11,7 +11,7 @@ Ulangi hal diatas terus sampai nilai ditemukan atau index bawah dan index atas s
 
 Untuk lebih jelas coba kita pelajari ilustrasi dibawah ini:
 
-![binarysearch](../../../assets/content/algorithms/searching/binary/binary.gif)
+![binarysearch](../../../assets/content/algorithms/Searching/Binary/Binary.gif)
 
 Ilustrasi diatas dapat dilihat bahwa array yang akan diperiksa elemennya dalam kondisi telah terurut, karena ini salah satu sarat dalam menggunakan algoritma ini. Jika array yang akan kita periksa memiliki elemen dengan nilai tidak berurutan maka algoritma ini tidak akan dapat bekerja.
 
@@ -21,7 +21,7 @@ Untuk mempermudah kita dalam menyusun baris kode sebaik kita susun alur kerja da
 
 Dibawah ini dapat kita liat diagram alur kerja dari algoritma tersebut.
 
-![charbinary](../../../assets/content/algorithms/searching/binary/binary.svg)
+![charbinary](../../../assets/content/algorithms/Searching/Binary/Binary.svg)
 
 Pada diagram ada satu proses yang saya tambahkan diluar algoritma pencarian secara binary pada umumnya yaitu pengecekan nilai dicari apakah berada dalam range (jangkauan) dari nilai elemen array, ini bertujuan mengurangi proses yang tidak diperlukan. Dimana kita ketahui bahwa nilai dari elemen array telah diurutkan sehingga bila nilai yang kita cari berada dibawah nilai elemen terendah atau diatas nilai elemen tertinggi maka dapat kita pastikan nilai tersebut tidak akan ditemukan dalam pencarian, sehingga penggunaan sumber daya seperti memory dapat berkurang untuk hal-hal yang tidak perlu dilakukan.
 
