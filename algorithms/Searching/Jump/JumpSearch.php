@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * Algoritma Pencarian JUMPSEARCH
+ */
+
 namespace Searching\Jump;
 
 /**
@@ -7,6 +11,7 @@ namespace Searching\Jump;
  * class berisi algoritma pencarian dengan lompatan index elemen
  *
  * @package Searching\Jump
+ * kondiak
  */
 class JumpSearch
 {
