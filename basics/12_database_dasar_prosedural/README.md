@@ -181,3 +181,25 @@ Setelah kamu menjalankan demo diatas, coba cek ke software admin tool kamu _(php
     <img width="90%" src="../../assets/content/basics/12_database_dasar_prosedural/7_insert.png">
 </p>
 
+
+### Contoh query UPDATE
+
+Jika sebelumnya adalah contoh untuk menambahkan data, terkadang sebuah data yang sudah dimasukkan kedalam sistem perlu untuk diedit / diupdate. Untuk mengupdate data dengan menggunakan SQL, bisa menggunakan perintah `UPDATE`
+seperti berikut: 
+
+```php
+$query = mysqli_query($connect, 'UPDATE tabelnya SET judul = "Judul yang lain" WHERE id = 1');
+```
+Seperti SQL pada umumnya, penulisan kode didalam parameter kedua `mysqli_query` sama persis dengan penggunakan bahasa SQL seperti biasa. Tentunya dalam bentuk string yang dapat kamu tambahkan, rubah atau manipulasi.
+
+Berikut contoh demo melakukan UPDATE dengan PHP, didalam demo ini sebuah baris data dengan `id = 1` dirubah judulnya menjadi `Belajar pemrograman PHP dengan mudah`
+<a href='3_query_update.php' target='_blank'>
+    <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
+</a>
+> Pastikan sudah ada beberapa baris data didalam tabel untuk dirubah. Kamu juga dapat menjalankan demo insert diatas untuk memasukkan beberapa sampel data.
+
+Jika kamu sudah menjalankan demonya, coba cek isi dari tabel `12_database_dasar_prosedural_buku`. Jika kamu lihat pada baris yang mempunyai `ID = 1`, judul dari baris tersebut berubah menjadi `Belajar pemrograman PHP dengan mudah`
+
+<p align="center">
+    <img width="90%" src="../../assets/content/basics/12_database_dasar_prosedural/8_update.png">
+</p>
