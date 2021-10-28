@@ -17,7 +17,6 @@ class BinarySearch
     protected $key;
     protected $atas;
     protected $bawah;
-    // public $history;
 
     /** Method dari Class */
 
@@ -51,9 +50,9 @@ class BinarySearch
         $bawah = $this->bawah ?? (int) 0;
 
         //Cek apakah nilai yang dicari termasuk dalam range data pencarian, jika tidak hentikan pencarian
-        //hal ini bertujuan untuk menghemat memory dari pencarian yang sia-sia
+        //hal ini bertujuan untuk menghemat memory dari pencarian yang sia-sia, early return
         if ($this->key > $this->array[$atas] || $this->key < $this->array[$bawah]) {
-            return -1;
+            return null;
         }
 
         //Algoritma
@@ -78,7 +77,7 @@ class BinarySearch
         }
 
         //Kembalikan nilai null karena data tidak ditemukan
-        return -1;
+        return null;
     }
 
     /**
@@ -136,6 +135,6 @@ echo "Yang di cari: " . $key, PHP_EOL;
 echo "-------------------------------------------------", PHP_EOL;
 print_r($binary->getLog());
 echo PHP_EOL;
-echo "Apakah ditemukan?: " . ($output >= 0 ? 'Ya' : 'Tidak'), PHP_EOL;
-echo "Posisi ditemukan: " . ($output >= 0 ? $output : 'Tidak ditemukan'), PHP_EOL;
+echo "Apakah ditemukan?: " . ($output === null ? 'Tidak' : 'Ya'), PHP_EOL;
+echo "Posisi ditemukan: " . ($output ?? 'Tidak ditemukan'), PHP_EOL;
 echo "</pre>", PHP_EOL;
