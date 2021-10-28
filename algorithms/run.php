@@ -13,14 +13,9 @@
 use BackTracking\PathFinding;
 use Sorting\BubbleSort\BubbleSort;
 use Sorting\PopSort\PopSort;
+use Searching\Linear\LinearSeacrh;
+use Searching\Binary\BinarySearch;
+use Searching\Jump\JumpSearch;
 
 // Melakukan autoload pada kelas yang digunakan di halaman ini
 require_once 'autoload.php';
-
-
-
-
-/**
- * Pop Sort (Sorting)
- * ---------------------------
- */
