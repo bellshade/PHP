@@ -108,25 +108,25 @@ Ada beberapa cara untuk menulis sebuah string, berikut adalah cara yang bisa dil
 
 String yang diawali dan diakhiri dengan tanda petik satu (`'`)
 
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](1_data_type.php#L9-L19)
+[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](1_data_type.php#L10-L21)
 
 #### 2. Petik Dua
 
 String yang diawali dan diakhriri dengan tanda petik dua (`"`)
 
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](1_data_type.php#L22-L27)
+[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](1_data_type.php#L24-L29)
 
 #### 3. Sintaks *Heredoc*
 
 String yang diawali dengan tanda `<<<LABEL` dan diakhiri dengan `LABEL`
 
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](1_data_type.php#L30-L71)
+[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](1_data_type.php#L32-L76)
 
 #### 4. Sintaks *Nowdoc*
 
 String yang diawali dengan tanda `<<<'LABEL'` dan diakhiri dengan `LABEL`
 
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](1_data_type.php#L74-L87)
+[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](1_data_type.php#L79-L93)
 
 > Penulisan string menggunakan sintaks *heredoc* dan *nowdoc* dapat digunakan untuk menulis string yang terdiri atas beberapa baris.
 
@@ -136,7 +136,7 @@ Sesuai dengan deskripsi yang ada pada tabel di atas, **integer adalah** tipe dat
 
 Tipe data ini sering digunakan untuk perhitungan.
 
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](1_data_type.php#L91-L100)
+[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](1_data_type.php#L97-L108)
 
 ### Float
 
@@ -144,13 +144,13 @@ Float adalah tipe data yang berupa bilangan dengan titik (desimal).
 
 > Dalam bahasa pemrograman, titik digunakan sebagai pengganti dari koma untuk bilangan desimal.
 
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](1_data_type.php#L14-L113)
+[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](1_data_type.php#L112-L117)
 
 ### Boolean
 
 Boolean merupakan tipe data yang isinya ada dua pilihan yaitu `true` dan `false`, ini seperti **YA** dan **TIDAK** atau **BENAR** dan **SALAH**.
 
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](1_data_type.php#L117-L128)
+[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](1_data_type.php#L127-L141)
 
 Boolean biasa digunakan pada suatu pengondisian, yang mana boolean digunakan untuk menyatakan apakah kondisi yang dimaksud telah terpenuhi/benar.
 
@@ -188,11 +188,11 @@ NULL adalah tipe data khusus yang hanya memiliki satu nilai yaitu: `NULL`
 
 Jika ada variabel yang dibuat tanpa nilai, maka otomatis akan di isi `NULL`
 
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](1_data_type.php#L132-L141)
+[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](1_data_type.php#L145-L160)
 
 Variabel yang sebelumnya telah memiliki nilai juga dapat dikososngkan dengan menggunakan NULL.
 
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](1_data_type.php#L144-L149)
+[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](1_data_type.php#L163-L168)
 
 > **CATATAN:**
 >
@@ -204,7 +204,7 @@ Resouce (sumber daya) bukanlah tipe data yang sebenarnya. Ini adalah penyimpanan
 
 Klik tombol berikut untuk melihat contoh sederhana penggunaan resource.
 
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](1_data_type.php#L153-L167)
+[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](1_data_type.php#L172-L188)
 
 ## 3. Variabel dalam String *([2_variable_in_string.php](2_variable_in_string.php))*
 
@@ -217,15 +217,15 @@ Berikut ini aturan untuk menulis variabel dalam string
 
 ### Variabel Dalam String Petik Satu
 
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](2_variable_in_string.php#L3-L25)
+[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](2_variable_in_string.php#L5-L28)
 
 ### Variabel Dalam Sting Petik Dua
 
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](2_variable_in_string.php#L28-L61)
+[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](2_variable_in_string.php#L31-L64)
 
 ### Variabel Dalam String Sintaks *Heredoc*
 
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](2_variable_in_string.php#L64-L94)
+[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](2_variable_in_string.php#L67-L98)
 
 ## 4. Array *([3_array.php](3_array.php))*
 
@@ -258,7 +258,7 @@ Nah, dengan melihat contoh di atas, dapat kita ketahui bahwa penulisan array dap
 1. Menggunakan tanda kurung siku, yang dimana tanda `[` sebagai pembuka dan tanda `]` sebagai penutup (direkomendasikan).
 2. Menggunakan $function$ `array()`, yang dimana `array(` sebagai pembuka dan `)` sebagai penutup.
 
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](3_array.php#L3-L38)
+[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](3_array.php#L5-L40)
 
 > Jika kamu bingung apa itu $function$, kamu jangan khawatir, karna kamu akan mempelajarinya di meteri berikutnya.
 
@@ -268,29 +268,29 @@ Dalam PHP, array terbagi menjadi 2 jenis, yaitu:
 
 1. Array numerik (array yang memiliki index dan nilai). Array numerik selalu memiliki index yang dimulai dari nol (0).
 
-   [![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](3_array.php#L40-L44)
+   [![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](3_array.php#L43-L47)
 
 2. Array asosiatif (array yang memiliki key dan nilai). Key digunakan sebagi pengganti dari index.
 
-   [![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](3_array.php#L47-L54)
+   [![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](3_array.php#L50-L57)
 
 > **INFO:**
 >
 > Array numerik dan array asosiatif dapat digabung.
 >
-> [![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](3_array.php#L57-L65)
+> [![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](3_array.php#L60-L69)
 
 ### Menambah Data ke Dalam Array
 
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](3_array.php#L68-L85)
+[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](3_array.php#L72-L89)
 
 ### Mengubah Data Array
 
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](3_array.php#L88-L122)
+[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](3_array.php#L92-L127)
 
 ### Menghapus Data Array
 
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](3_array.php#L125-L155)
+[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](3_array.php#L130-L161)
 
 ## 5. Konstanta *([4_constant_variable.php](4_constant_variable.php))*
 
@@ -307,14 +307,14 @@ Dalam bahasa pemrograman PHP, pembuatan konstanta berbeda dengan pembuatan varia
 >
 > Nama konstanta bersifat sensitif terhadap huruf besar dan kecil.
 
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_constant_variable.php#L3-L25)
+[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_constant_variable.php#L5-L28)
 
 Deklarasi variabel konstanta pada PHP juga dapat dilakukan dengan menggunakan kata kunci `const` disusul dengan `NAMA_KONSTANTA` beserta `nilai` dari konstanta yang dibuat.
 > **INFO:**
 >
 > Deklarasi variabel konstanta ini seperti deklarasi variabel konstanta pada bahasa pemrograman JavaScript
 
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_constant_variable.php#L28-L41)
+[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_constant_variable.php#L21-L46)
 
 ## 6. Variabel telah Ditetapkan
 
