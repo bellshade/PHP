@@ -82,7 +82,7 @@ Dari bahasa pseudo diatas kita sudah bisa menuliskan baris kode untuk algoritma 
     $bawah = 0;
 
     //Cek apakah nilai pencarian berada dalam jangkauan data array
-    if ($key < $array[$bawah] || $array[$atas] < $key){
+    if (($key < $array[$bawah]) || ($array[$atas] < $key)){
       return null;
     }
 
