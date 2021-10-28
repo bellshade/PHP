@@ -113,3 +113,54 @@ if (!$connect) {
 
 
 
+## 3. Menjalankan Query
+
+### Gambaran singkat
+Disaat menjalankan kode perintah SQL, pasti ada kembalian berupa data atau pesan hasil dari operasi perintah yang dilakukan. Tentunya kita ingin aplikasi PHP kita yang melakukan operasi database ini dan secara otomatis menerjemahkan hasil eksekusinya menjadi informasi yang bermanfaat.  
+
+Untuk menjalankan query, perlu dilakukan koneksi terlebih dahulu. Karena kita sudah membuat koneksi sebelumnya, kita cukup memanggil file koneksi tersebut dengan menggunakan perintah `require_once(filenya)`. PHP sudah menyediakan beberapa fungsi untuk melakukan operasi database, salah satunya adalah 
+```php
+mysqli_query($connect, "kode MySQL")
+```
+perhatikan pada parameter pertama dibutuhkan instance dari `mysqli_connect()` agar `mysqli_query()` mengetahui database mana yang akan dilakukan operasi. Itulah kenapa kita perlu memanggil file koneksi sebelumnya.
+
+kemudian untuk melihat berapa baris yang terpengaruh oleh perintah yang dijalankan, dapat meggunakan fungsi berikut
+```php
+mysqli_affected_rows($connect);
+```
+Sama seperti `mysqli_query()`, fungsi ini memerlukan parameter berupa koneksi mysqli.
+<br/>
+<br/>
+
+### Membuat Tabel (Buku)
+<br>
+1. **Buat tabel terlebih dahulu dengan nama `12_database_dasar_prosedural_buku` di database `bellshade_php` yang dibuat tadi**
+
+Berikut struktur tabel untuk materi ini
+```
+id INT AUTO_INCREMENT NOT NULL PRIMARY KEY
+judul VARCHAR(255)
+deskripsi TEXT
+penulis VARCHAR(255)
+penerbit VARCHAR(255)
+```
+
+- Buka `phpMyAdmin` > pilih database `bellshade_php` > lalu tuliskan nama tabelnya dan masukkan jumlah kolomnya > klik **Go**
+
+<p align="center">
+    <img width="90%" src="../../assets/content/basics/12_database_dasar_prosedural/4_table_1.png">
+</p>
+<p align="center">
+    <img width="90%" src="../../assets/content/basics/12_database_dasar_prosedural/5_table_2.png">
+</p>
+<p align="center">
+    <img width="90%" src="../../assets/content/basics/12_database_dasar_prosedural/6_table_3.png">
+</p>
+<br>
+
+### Contoh query INSERT
+
+INSERT adalah salah satu perintah kode SQL yang bertujuan untuk menambahkan baris data pada tabel. Kita bisa melakukan query INSERT dengan menggunakan perintah seperti berikut
+
+```php
+```
