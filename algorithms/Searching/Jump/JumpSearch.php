@@ -21,7 +21,8 @@ class JumpSearch
      */
     private $array;
     private $key;
-    public $ProgressLog;
+
+    /** Metode */
     public function __construct(array $array, int $key)
     {
         $this->array = $array;
@@ -42,7 +43,7 @@ class JumpSearch
 
         //Bila nilai terbesar dari elemen lebih kecil dari nilai dicari hentikan pencarian, karena hanya membebani memori
         if (($this->array[$panjang - 1] < $this->key) || ($this->array[$index] > $this->key)) {
-            return -1;
+            return null;
         }
 
         //Perulangan untuk menukan nilai, dengan melakukan lompatan index data, selama nilai elemen lebih kecil dari nilai yang dicari
@@ -64,7 +65,7 @@ class JumpSearch
             $index--;
         }
 
-        return -1;
+        return null;
     }
 
     /**
@@ -135,7 +136,7 @@ class JumpSearch
 }
 
 $data = [1, 3, 4, 6, 7, 8, 9, 12, 15, 17, 19, 29, 31, 35, 38, 52, 58, 64, 67, 80, 99, 100];
-$key = 0;
+$key = 64;
 
 $jump = new JumpSearch(key: $key, array: $data);
 $output = $jump->getHasil();
@@ -147,6 +148,6 @@ echo "Yang di cari: " . $key, PHP_EOL;
 echo "-------------------------------------------------", PHP_EOL;
 print_r($jump->getLog());
 echo PHP_EOL;
-echo "Apakah ditemukan?: " . ($output >= 0 ? 'Ya' : 'Tidak'), PHP_EOL;
-echo "Posisi ditemukan: " . ($output >= 0 ? $output : 'Tidak ditemukan'), PHP_EOL;
+echo "Apakah ditemukan?: " . ($output === null ? 'Tidak' : 'Ya'), PHP_EOL;
+echo "Posisi ditemukan: " . ($output ?? 'Tidak ditemukan'), PHP_EOL;
 echo "</pre>", PHP_EOL;
