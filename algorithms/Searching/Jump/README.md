@@ -52,17 +52,17 @@ Perulangan pada lompatan :
 Perulangan yang terjadi untuk panjang elemen = `y`, jarak lompatan =`x`, dan nilai di cari  =`z`
 
 linear search di lakukan pada elemen antara lompatan kedua dan ketiga, karena nilai elemen pada lompatan ke 2 lebih kecil dari nilai dicari tetapi nilai elemen pada lompatan ke 3 lebih besar dari nilai dicari.
-untuk index elemen setiap lompatan dari kita ketahui dari contoh ilustrasi yaitu :
-&#9755; index awal = array[0];
-&#9758; index lompatan 1 = array[(0 + 4) - 1];
-&#9758; index lompatan 2 = array[(0 + 8) - 1];
-&#9758; index lompatan 3 = array[(0 + 12) - 1];
-&#9758; jika lompatan sebanyak 4 elemen maka index dapat kita buat persaman sebagai berikut.
-&#9758; lompatan 1 = array[0 + (1&#215;4) - 1] atau array[(1&#215;4) - 1];
-&#9758; lompatan 2 = array[0 + (2&#215;4) - 1] atau array[(2&#215;4) - 1];
+untuk index elemen setiap lompatan dari kita ketahui dari contoh ilustrasi yaitu :  
+&#9755; index awal = array[0];  
+&#9758; index lompatan 1 = array[(0 + 4) - 1];  
+&#9758; index lompatan 2 = array[(0 + 8) - 1];  
+&#9758; index lompatan 3 = array[(0 + 12) - 1];  
+&#9758; jika lompatan sebanyak 4 elemen maka index dapat kita buat persaman sebagai berikut.  
+&#9758; lompatan 1 = array[0 + (1&#215;4) - 1] atau array[(1&#215;4) - 1];  
+&#9758; lompatan 2 = array[0 + (2&#215;4) - 1] atau array[(2&#215;4) - 1];  
 dan terus selanjut nya, sampai lompatan ke `i` maka index array = array [i&#215;4 - 1] dimana 4 adalah panjang lompatan (`x`).
 
-maka dapat kita tulis dalam persamaan :
+maka dapat kita tulis dalam persamaan :  
 array[(`i` &#215; `x`) - 1] < c < array[((`i`+ 1) &#215; `x`) - 1];
 
 dalam skenario terburuk nilai `z` berada pada akhir lompatan atau nilai `z` lebih besar dari index terakhir(`y` - 1).
@@ -72,7 +72,7 @@ maka lompatan yang terjadi  = panjang elemen/panjang lompatan
 banyaknya lompatan = y/x.
 ```
 
-Karena setiap lompatan merupakan perulangan maka banyaknya perulangan yang terjadi adalah = `<sup>y``</sup>`/`<sub>x``</sub>`
+Karena setiap lompatan merupakan perulangan maka banyaknya perulangan yang terjadi adalah = <sup>`y`</sup>/<sub>`x`</sub>
 
 Maka total perulangan yang terjadi dapat kita hitung sebagai berikut :
 Perulangan pada Linear Search +  Perulangan pada Lompatan.
@@ -81,7 +81,16 @@ dimana panjang elemen dari linear adalah sepanjang nilai lompatan.
 
 penyelesaian :
 
-banyak perulangan&#10149; = (x) + (y/x)perulangan akan minimum jika :perulangan pada linear search = 1perulangan pada lompatan = 1sehingga :perulangan pada linear search = perulangan pada lompatan
+banyak perulangan
+
+&#10149; = (x) + (y/x)
+
+perulangan akan minimum jika :  
+perulangan pada linear search = 1  
+perulangan pada lompatan = 1  
+
+sehingga :  
+perulangan pada linear search = perulangan pada lompatan
 
 > Dasar Pemikiran
 > jika lompatan = 0 algoritam ini tidak pernah terjadi, jadi tidak bisa dijadikan minimum
@@ -89,10 +98,9 @@ banyak perulangan&#10149; = (x) + (y/x)perulangan akan minimum jika :perulangan 
 
 berdasarkan persamaan dapat kita buat sebuah solusi
 
-&#10149; x = `<sup>`y`</sup>`&#8725;`<sub>`x`</sub>`
-&#10149; x&#178; = y
-&#10149; x = &#8730;y
-dimana `y` adalah panjang elemen.
+&#10149; x = <sup>`y`</sup>&#8725;<sub>`x`</sub>  
+&#10149; x&#178; = y  
+&#10149; x = &#8730;y dimana `y` adalah panjang elemen.
 
 ### Diagram Alur
 
@@ -238,11 +246,8 @@ Class diatas sudah bisa kita eksekusi seperti contoh baris kode dibawah ini :
 ?>
 ```
 
-log hasil pencarian dari algoritma ini dapat dilihat pada link dibawah ini :
-
-
 untuk kode lengkapnya dapat dilihat pada link dibawah ini :
-
+[![Contoh Kode](https://img.shields.io/static/v1?&label=Contoh%20Kode&message=%3e&color)](JumpSearch.php)
 
 ---
 
