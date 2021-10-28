@@ -52,8 +52,9 @@ class BinarySearch
 
         //Cek apakah nilai yang dicari termasuk dalam range data pencarian, jika tidak hentikan pencarian
         //hal ini bertujuan untuk menghemat memory dari pencarian yang sia-sia
-        if ($this->key > $this->array[$atas] || $this->key < $this->array[$bawah])
+        if ($this->key > $this->array[$atas] || $this->key < $this->array[$bawah]) {
             return -1;
+        }
 
         //Algoritma
         while ($atas >= $bawah) {
@@ -84,7 +85,7 @@ class BinarySearch
      * TRACKING LOG
      * Metode ini hanya untuk demonstrasi
      * berfungsi untuk mencatat proses pencarian yang nantinya akan di tampilkan pada halam demo kode
-     * 
+     *
      * @return string History dari pencarian
      */
     public function getLog(): string
