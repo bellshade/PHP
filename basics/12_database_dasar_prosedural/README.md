@@ -163,4 +163,21 @@ penerbit VARCHAR(255)
 INSERT adalah salah satu perintah kode SQL yang bertujuan untuk menambahkan baris data pada tabel. Kita bisa melakukan query INSERT dengan menggunakan perintah seperti berikut
 
 ```php
+$kolom1 = 'Nilai kolom 1';
+$kolom2 = 'Nilai kolom 2';
+$query = mysqli_query($connect, "INSERT INTO nama_tabel (kolom_1, kolom_2) VALUES ('$kolom1', '$kolom2')");
 ```
+Perhatikan pada contoh kode diatas, kita dapat memasukkan variabel yang sejatinya bersifat dinamis dan dapat berubah-ubah. Selain itu variabel `$connect` berasal dari file koneksi yang berupa sebuah instance dari `mysqli_connect()`. Karena kita sudah membuat file koneksinya, kita cukup panggil dengan `require_once('file_koneksinya.php')`. 
+
+Hal ini dapat diartikan, _statement_ query tersebut adalah untuk menambahkan baris data pada tabel tertentu dengan koneksi yang diinginkan (`$connect`)
+
+<a href='3_query_insert.php' target='_blank'>
+    <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
+</a>
+
+Setelah kamu menjalankan demo diatas, coba cek ke software admin tool kamu _(phpMyAdmin jika memakai XAMPP)_ kemudian lihat isi dari tabel `12_database_dasar_prosedural_buku`. Kamu akan menemukan beberapa baris data baru yang dimasukkan oleh file demo diatas.
+
+<p align="center">
+    <img width="90%" src="../../assets/content/basics/12_database_dasar_prosedural/7_insert.png">
+</p>
+
