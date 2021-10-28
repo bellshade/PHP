@@ -13,6 +13,16 @@ Database dibutuhkan untuk menyimpan data pada sistem. Dengan menggunakan databas
   - [Database Administration / Management Tool](#database-administration-management-tool)
   - [Apa selanjutnya?](#apa-selanjutnya)
 - [2. Koneksi database](#2-koneksi-database)
+- [3. Menjalankan Query](#3-menjalankan-query)
+  - [Gambaran singkat](#gambaran-singkat)
+  - [Membuat Tabel (Buku)](#membuat-tabel-buku)
+  - [Contoh query INSERT](#contoh-query-insert)
+  - [Contoh query UPDATE](#contoh-query-update)
+  - [contoh query DELETE](#contoh-query-delete)
+
+
+
+
 
 
 ## 1. Pengenalan
@@ -202,4 +212,26 @@ Jika kamu sudah menjalankan demonya, coba cek isi dari tabel `12_database_dasar_
 
 <p align="center">
     <img width="90%" src="../../assets/content/basics/12_database_dasar_prosedural/8_update.png">
+</p>
+
+
+### contoh query DELETE
+
+Sebuah manajemen data, tidak lengkap rasanya jika tidak ada fitur hapus. Pada MySQL, kita cukup gunakan perintah `DELETE` untuk menghapus data. Dan seperti sebelumnya, kode SQL ini dapat dijalankan menggunakan `mysqli_query()`
+
+```php
+$query = mysqli_query($connect, "DELETE FROM tabelnya WHERE id = 6");
+```
+Jika kode diatas diartikan bakal menjadi: Hapus baris data dari tabel bernama `tabelnya` yang memiliki `id = 6`. Tentunya karena paramter kedua berupa string yang berisi kode SQL, kamu dapat memanipulasi sesuai yang kamu inginkan.
+
+Berikut contoh demo untuk menghapus sebuah id dari tabel `12_database_dasar_prosedural_buku` yang memiliki `id = 6`
+<a href='3_query_delete.php' target='_blank'>
+    <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
+</a>
+> Pastikan sudah ada beberapa baris data didalam tabel untuk dirubah. Kamu juga dapat menjalankan demo insert sebelumnya untuk memasukkan beberapa sampel data.
+
+Setelah melakukan demo diatas, coba cek isi dari tabel `12_database_dasar_prosedural_buku`. Baris data yang memiliki `id = 6` akan terhapus. 
+
+<p align="center">
+    <img width="80%" src="../../assets/content/basics/12_database_dasar_prosedural/9_delete.png">
 </p>
