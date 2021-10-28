@@ -23,6 +23,15 @@ class JumpSearch
     private $key;
 
     /** Metode */
+
+    /**
+     * Konstruksi
+     * Class Jump Search
+     *
+     * @param array $array Data yang akan diperiksa
+     * @param int $key Data yang akan dicari
+     * @return void class build
+     */
     public function __construct(array $array, int $key)
     {
         $this->array = $array;
@@ -138,7 +147,7 @@ class JumpSearch
 $data = [1, 3, 4, 6, 7, 8, 9, 12, 15, 17, 19, 29, 31, 35, 38, 52, 58, 64, 67, 80, 99, 100];
 $key = 64;
 
-$jump = new JumpSearch(key: $key, array: $data);
+$jump = new JumpSearch($data, $key);
 $output = $jump->getHasil();
 
 echo "<pre>";
