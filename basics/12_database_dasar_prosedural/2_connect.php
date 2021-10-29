@@ -22,6 +22,14 @@ if (!$connect) {
     echo 'Tidak dapat terhubung dengan database: ' . mysqli_connect_error();
     die;
 }
+echo 'Terhubung dengan sistem database ... ', PHP_EOL;
+echo '--------------------------------------', PHP_EOL;
+echo "host\t: " . $host, PHP_EOL;
+echo "user\t: " . $user, PHP_EOL;
+echo "pass\t: " . $pass, PHP_EOL;
+echo "db\t: " . $db, PHP_EOL;
+echo "port\t: " . $port, PHP_EOL;
+echo '--------------------------------------', PHP_EOL;
 
 /**
  * Opsional: Jika ingin berpindah database dalam
