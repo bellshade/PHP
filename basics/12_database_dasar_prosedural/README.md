@@ -16,7 +16,9 @@ Database dibutuhkan untuk menyimpan data pada sistem. Dengan menggunakan databas
   - [Contoh query INSERT](#contoh-query-insert)
   - [Contoh query UPDATE](#contoh-query-update)
   - [Contoh query DELETE](#contoh-query-delete)
-
+- [4. Mengambil data dari query](#4-mengambil-data-dari-query)
+  - [Mysqli Fetch](#mysqli-fetch)
+  - [Menampilkan banyak data](#menampilkan-banyak-data)
 ## 1. Pengenalan
 
 Dalam pemrograman, database digunakan sebagai media penyimpanan data. Jika diibaratkan, database adalah lemari yang mampu digunakan untuk menyimpan banyak barang, kemudian rak pada lemari adalah tabel-tabel/collection yang ada pada database. pada materi ini kita akan mempelajari tentang database mysql, salah satu database yang sering digunakan dalam berbagai kondisi.
