@@ -133,3 +133,37 @@ echo "Kolom 5 (penerbit)\t: " . $row->penerbit, PHP_EOL;
 
 
 echo '</pre>';
+
+
+/**
+ * Menampilkan banyak data sekaligus
+ * --------------------------
+ * Untuk menampilkan data, perlu dilakukan perulangan
+ * yang dapat menjalankan kembali `mysqli_fetch` selama
+ * ada baris data yang tersisa
+ */
+echo '<h2 id="table">Menampilkan seluruh isi tabel buku ke tabel</h2>', PHP_EOL;
+
+$query = mysqli_query($connect, "SELECT * FROM $tabel");
+
+echo "<table border=1 style='border-collapse: collapse'>";
+
+echo "<tr>";
+echo "<td>ID</td>";
+echo "<td>JUDUL</td>";
+echo "<td>DESKRIPSI</td>";
+echo "<td>PENULIS</td>";
+echo "<td>PENERBIT</td>";
+echo "</tr>";
+
+while ($row = mysqli_fetch_array($query)) {
+    echo "<tr>";
+    echo "<td>" . $row['id'] . "</td>";
+    echo "<td>" . $row['judul'] . "</td>";
+    echo "<td>" . $row['deskripsi'] . "</td>";
+    echo "<td>" . $row['penulis'] . "</td>";
+    echo "<td>" . $row['penerbit'] . "</td>";
+    echo "<tr/>";
+}
+
+echo '</table>';

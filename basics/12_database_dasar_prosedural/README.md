@@ -253,6 +253,8 @@ Fitur `mysqli` pada PHP tidak hanya dapat mengeksekusi query SQL untuk melakukan
 
 Sebagai contoh skenario, jika kita melakukan query `SELECT`, bagaimana cara mendapatkan hasil keluaran dari query tersebut dan menempatkannya pada variabel array?. `mysqli` sudah menyediakan `mysqli_fetch` untuk melayani hal tersebut. Hasil keluaran itu ditempatkan pada variabel agar dapat dimanfaatkan lebih lanjut untuk menerjemahkan informasi yang berbentuk baris data database menjadi sebuah informasi yang lebih mudah dipahami yaitu misalnya ditampilkan pada halaman web. 
 
+### Mysqli Fetch
+
 Ada beberapa kemungkinan bentuk baris data yang dapat diterima dari database. Berikut bentuk-bentuk dan sekaligus fungsi yang digunakan.
 
 - `mysqli_fetch_row()`
@@ -322,3 +324,42 @@ Seperti kode diatas, jika ingin mengakses sebuah data dari kolom, perlu diakses 
     <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
 </a>
 
+
+### Menampilkan banyak data
+
+Jika kamu perhatikan contoh kode diatas hanya mengambil satu baris saja dari sebuah query yang dijalankan oleh `mysqli_query()`. Bagaimanakah caranya untuk menampilkan seluruh baris data yang dihasilkan dari query?
+
+Untuk itu, kita perlu memahami bagaimana cara kerja `mysqli_fetch` terlebih dahulu. Jika kamu menjalankan salah satu `mysqli_fetch` misalnya `mysqli_fetch_assoc()` maka kamu mengambil baris pertama dari database. Jika kamu menjalankan `mysqli_fetch_assoc()` lagi maka bukan baris pertama lagi yang diambil melainkan baris berikutnya yang akan diambil dan diterjemahkan menjadi array asosiatif. `mysqli` dalam PHP sudah dapat mengetahui jika sebuah fungsi `mysqli_fetch` sudah digunakan untuk mengambil baris sebelumnya dan akan mengambil baris berikutnya.
+
+```php
+$query = mysqli_query($connect, "SELECT * FROM tabel");
+$row = mysqli_fetch_assoc($query); // Mengambil baris pertama
+$row = mysqli_fetch_assoc($query); // Mengambil baris kedua
+```
+
+Hal ini juga berlaku jika kamu menggunakan beberapa jenis fungsi `mysqli_fetch` lain secara bersamaan dan berurutan
+
+```php
+$query = mysqli_query($connect, "SELECT * FROM tabel");
+$row = mysqli_fetch_assoc($query); // Mengambil baris pertama dalam bentuk array asosiatif
+$row = mysqli_fetch_assoc($query); // Mengambil baris kedua dalam bentuk array asosiatif
+$row = mysqli_fetch_object($query); // Mengambil baris ketiga dalam bentuk objek
+```
+
+Untuk mengambil seluruh data, kita bisa manfaatkan perulangan `while()`. Jika selama `mysqli_fetch` berhasil mengambil baris data dan tidak kosong, maka tampilkan data tersebut. Perulangan akan terjadi sehingga `mysqli_fetch` dijalankan lagi untuk mengambil baris data berikutnya sampai pada baris terakhir yang akan mengakhiri perulangan karena baris data kosong.
+
+Berikut contoh kodenya:
+
+```php
+$query = mysqli_query($connect, "SELECT * FROM tabel");
+while ($row = mysqli_fetch_assoc($query)) {
+    echo 'id: ' . $row['id'];
+    echo 'judul: ' . $row['judul'];
+}
+```
+Contoh kode kecil diatas jika diartikan adalah sebagai berikut: selagi `mysqli_fetch_assoc` bernilai valid (dan tidak kosong) nilai tersebut di berikan kepada variabel `$row` untuk bisa diakses didalam perulangan. Jika masih ada baris berikutnya, perulangan akan tetap berjalan dan `mysqli_fetch_assoc()` akan dijalankan lagi dan memberikan nilai datanya ke variabel `$row` lagi dan siklusnya akan berjalan terus menerus. Perulangan akan berakhir jika baris berikutnya tidak sudah tidak ada lagi.
+
+Kamu dapat memanfaatkan ini untuk menampilkan semua baris data kedalam tabel, seperti pada demo berikut ini:
+<a href='4_mysqli_fetch.php#table' target='_blank'>
+    <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
+</a>
