@@ -146,15 +146,21 @@ Sama seperti `mysqli_query()`, fungsi ini memerlukan parameter berupa koneksi my
 <br>
 1. **Buat tabel terlebih dahulu dengan nama `12_database_dasar_prosedural_buku` di database `bellshade_php` yang dibuat tadi**
 
-Berikut struktur tabel untuk materi ini
-```
-id INT AUTO_INCREMENT NOT NULL PRIMARY KEY
-judul VARCHAR(255)
-deskripsi TEXT
-penulis VARCHAR(255)
-penerbit VARCHAR(255)
+Ada banyak cara untuk membuat tabel, yaitu salah satunya adalah dengan langsung menjalankan kode SQL atau kamu juga dapat menggunakan db admin tool seperti _phpMyAdmin_ untuk membuat tabel secara GUI.
+
+Berikut struktur tabel untuk materi ini sekaligus jika kamu ingin membuat database menggunakan perintah SQL. 
+```sql
+CREATE TABLE `12_database_dasar_prosedural_buku`
+(
+    id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    judul VARCHAR(255),
+    deskripsi TEXT,
+    penulis VARCHAR(255),
+    penerbit VARCHAR(255)
+);
 ```
 
+Jika kamu ingin membuat tabel dengan menggunakan _phpMyAdmin_, kamu bisa ikuti langkah-langkah berikut: 
 - Buka `phpMyAdmin` > pilih database `bellshade_php` > lalu tuliskan nama tabelnya dan masukkan jumlah kolomnya > klik **Go**
 
 <p align="center">
