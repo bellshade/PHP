@@ -5,10 +5,10 @@ Dalam pengembangan aplikasi kita sering kali membuat lagi baris kode yang sama, 
 Daftar Isi
 
 1. [Fungsi Dasar](#1-fungsi-dasar)
-2. Parameter dan Return
-3. Scope Variabel Dalam Fungsi
-4. Variable Statis Dalam Fungsi
-5. Fungsi Tanpa Nama
+2. [Parameter dan Return](#2-parameter-dan-return)
+3. [Scope Variabel Dalam Fungsi](#3-scoper-variabel-dalam-fungsi)
+4. [Variable Statis Dalam Fungsi](#4-variabel-statis-dalam-fungsi)
+5. [Fungsi Tanpa Nama](#5-fungsi-tanpa-nama)
 
 ## 1. Fungsi Dasar
 
@@ -38,9 +38,163 @@ Untuk memanggil fungsi tersebut kita menuliskan nama fungsi dan menambahkan tand
 Harus diperhatikan bahwa fungsi tidak akan secara otomatis berjalan saat kita meng-akses halaman php tersebut, selama fungsi itu tidak dipanggil.
 
 >Secara umum penulisan fungsi PHP dalam pseudo :
+>
 >```php
 >   function NamaFungsi($param_1, $param_2,.....,$param_n)
 >   {
 >       Argumen yang akan dijalakan
 >   }
 >```
+
+## 2. Parameter dan Return
+
+Fungsi dapat menerima variabel atau parameter untuk diproses dan dapat mengembalikan nilai hasil processing.
+
+### 2.1 Parameter
+
+Dalam penggunaan fungsi kita dapat mengirimkan parameter yang akan digunakan oleh fungsi, sebagai contoh dibawah fungsi yang tidak menerima parameter dan yang dapat menerima parameter:
+
+```php
+    #fungsi tidak menerima parameter
+    function nonParameter()
+    {
+        echo "saya fungsi tanpa parameter"
+    }
+
+    #fungsi menerima parameter
+    function withParameter($param)
+    {
+        echo "saya fungsi, menerima parameter " . $param;
+    }
+
+    #driven
+    nonParamater();             //saya fungsi tanpa parameter
+    withParameter("Contoh");    //saya fungsi, menerima parameter Contoh
+```
+
+Fungsi diatas kita lihat bahwa fungsi dapat menerima parameter dari luar dengan syarat kita sudah siapkan parameter lokal-`local` pada fungsi untuk menampung nilai yang dikirimkan tersebut, fungsi yang tidak menerima parameter tetap bisa kita kirimkan parameter, tetapi tidak akan dapat ditampung dan digunakan oleh fungsi.
+
+Parameter yang diterima oleh fungsi dapat kita tentukan tipe datanya dengan cara mendeklarasikan type datanya, sebagai contoh pada baris kode dibawah ini :
+
+```php
+<?php
+    function WithParameter(string $str, array $data, int $nomor, float $num, bool $boolean){
+        argument
+    }
+?>
+```
+
+Dan berbagai macam tipe data lainnya, hal ini untuk mencegah terjadinya error saat fungsi berjalan menggunakan parameter yang tidak sesuai.  
+Untuk PHP sebelum PHP versi 8, maka pengiriman parameter harus berurutan sesuai dengan yang telah dibuat pada parameter penerima, sebagai contoh :
+
+```php
+<?php
+    function person(string $firstname, string $lastname, int $age)
+    {
+        echo 'Hallo ' . $firstname . ' ' . $lastname . '<br>';
+        echo 'Umur anda ' . $age . ' Tahun<br>';
+    }
+
+    #driven
+    person('Foo', 'Bar', 17);
+    #jika terbalik
+    person('Bar', 'Foo', 17);
+
+?>
+```
+
+Baris kode diatas akan menghasilkan :
+
+```text
+Hallo Foo Bar
+Umur anda 17 Tahun
+Hallo Bar Foo
+Umur anda 17 Tahun
+```
+
+Pada pemanggilan fungsi untuk kedua kalinya akan menghasilkan nilai terbalik, untuk parameter penerima memiliki tipe data `string`  tetap menerima data bertipe `integer`, karena secara otomatis PHP akan mengkonversi data tersebut menjadi string, tetapi tidak berlaku untuk sebaliknya. Pada PHP ^8 telah disediakan fitur untuk mengirimakan parameter dengan tidak berurutan dengan cara menyatakan nama parameter tujuan, contoh sebagi berikut:
+
+```php
+<?php
+    function person(string $firstname, string $lastname, int $age)
+    {
+        echo 'Hallo ' . $firstname . ' ' . $lastname . '<br>';
+        echo 'Umur anda ' . $age . ' Tahun';
+    }
+
+    #driven
+    person(lastname: `Bar`, age: 17, firstname: `Foo`);
+
+    #hasil
+    //Hallo Foo Bar
+    //Umur anda 17 Tahun
+?>
+```
+
+Maka hasil dari pengiriman fungsi akan tetap sesuai dengan yang urutkan pada fungsi.
+
+>Penting :
+>Fitur ini hanya tersedia pada PHP 8 keatas, jika rekan - rekan mencoba hal tersebut menghasilkan error, harap periksa versi PHP rekan - rekan sekalian.
+
+Selain dari itu kita juga dapat memberikan nilai awal (deafult value) pada parameter penerima kita, berguna bila parameter ini berupa opsional, contoh :
+
+```php
+<?php
+    function contoh(string $nama, int $age = 18){
+        echo 'Saya bernama ' . $nama . ', saat ini berumur ' . $age . ' tahun';
+    }
+
+    contoh('Bellshade');
+    //Hasil : Saya bernama Bellshade, saat ini berumur 18 tahun
+?>
+```
+
+Parameter didalam fungsi berstatus lokal-`local` parameter, parameter ini dapat kita gunakan selama didalam fungsi dan tidak akan dapat digunakan diluar fungsi jika kita ingin menggukan variabel tersebut diluar fungsi maka kita harus menjadikan variabel tersebut menjadi global parameter(akan kita bahas pada materi scope).  
+Sebagai contoh :
+
+```php
+<?php
+    function coba($data)
+    {
+        $hasil = $data;
+    }
+
+    //driven
+    coba("saya");           //set $hasil dalam fugsi
+    echo $hasil;            //error variable undefined
+?>
+```
+
+Kode diatas akan membuat parameter `$hasil` bernilai `"saya"`, namun nilai tersebut tidak dapat diakses secara langsung dari fungsi. dimana baris kode diatas menghasilkan pesan error berupa *undefined variable $name*, karena variabel tersebut merupakan parameter local pada fungsi `coba`.  
+
+**Tips :**  
+Ada baiknya kita memberikan komen tag pada fungsi yang kita buat dan mejelaskan parameter yang dibutuhkan, sehingga *intelisense* dapat dengan mudah membatu kita saat menggunakan fungsi tersebut, sebagai contoh:
+
+```php
+<?php
+
+    /**
+     * Fungsi Contoh
+     *
+     * Fungsi ini hanya sebagai contoh
+     * @param string $nama nama yang akan disampaikan
+     * @param int $umur umur yang bersangkutan
+     * @return void echo nilai yang dikirim
+     */
+    function contoh(string $nama, int $umur){
+        echo "Saya " . $nama . ", Berumur " . $umur;
+    }
+?>
+```
+
+Maka saat kita akan memakai fungsi tersebut php intelisense akan membatu kita untuk mengetahui parameter apa dan untuk apa parameter tersebut. contoh seperti gambar dibawah :
+
+![Intelisens](../../assets/content/basics/8_fungsi_dasar/comment.png)
+
+### 2.2 Return
+
+## 3. Scoper Variabel dalam Fungsi
+
+## 4. Variabel Statis dalam Fungsi
+
+## 5. Fungsi Tanpa Nama
