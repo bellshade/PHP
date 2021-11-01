@@ -16,7 +16,9 @@ Database dibutuhkan untuk menyimpan data pada sistem. Dengan menggunakan databas
   - [Contoh query INSERT](#contoh-query-insert)
   - [Contoh query UPDATE](#contoh-query-update)
   - [Contoh query DELETE](#contoh-query-delete)
-
+- [4. Mengambil data dari query](#4-mengambil-data-dari-query)
+  - [Mysqli Fetch](#mysqli-fetch)
+  - [Menampilkan banyak data](#menampilkan-banyak-data)
 ## 1. Pengenalan
 
 Dalam pemrograman, database digunakan sebagai media penyimpanan data. Jika diibaratkan, database adalah lemari yang mampu digunakan untuk menyimpan banyak barang, kemudian rak pada lemari adalah tabel-tabel/collection yang ada pada database. pada materi ini kita akan mempelajari tentang database mysql, salah satu database yang sering digunakan dalam berbagai kondisi.
@@ -245,3 +247,121 @@ Setelah melakukan demo di atas, coba cek isi dari tabel `12_database_dasar_prose
 <p align="center">
     <img width="80%" src="../../assets/content/basics/12_database_dasar_prosedural/9_delete.png">
 </p>
+
+
+## 4. Mengambil data dari query
+
+Fitur `mysqli` pada PHP tidak hanya dapat mengeksekusi query SQL untuk melakukan operasi database, melainkan juga dapat mengambil hasil keluaran dari query SQL dan dapat menerjemahkannya menjadi informasi yang berguna bagi pengguna. 
+
+Sebagai contoh skenario, jika kita melakukan query `SELECT`, bagaimana cara mendapatkan hasil keluaran dari query tersebut dan menempatkannya pada variabel array?. `mysqli` sudah menyediakan `mysqli_fetch` untuk melayani hal tersebut. Hasil keluaran itu ditempatkan pada variabel agar dapat dimanfaatkan lebih lanjut untuk menerjemahkan informasi yang berbentuk baris data database menjadi sebuah informasi yang lebih mudah dipahami yaitu misalnya ditampilkan pada halaman web. 
+
+### Mysqli Fetch
+
+Ada beberapa kemungkinan bentuk baris data yang dapat diterima dari database. Berikut bentuk-bentuk dan sekaligus fungsi yang digunakan.
+
+- `mysqli_fetch_row()`
+
+Yaitu menerjemahkan hasil query dari `mysqli_query()` menjadi sebuah array asosiatif yang hanya memiliki 1 baris saja. Bentuk array asosiatif yang dihasilkan memiliki key berupa angka yang merepresentasikan index kolom. Kemudian pada _value_ nya berisi data kolom yang sebenarnya dari baris data yang diambil. 
+berikut contoh penerapan kodenya.
+
+```php
+$query = mysqli_query($connect, "SELECT * FROM $tabel");
+$data = mysqli_fetch_row($query);
+echo $data[0]; // menampilkan isi dari kolom pertama
+echo $data[1]; // menampilkan isi dari kolom kedua
+```
+Pada contoh kode diatas, yang ditampilkan adalah hanya satu baris pertama dari hasil keluaran query. Kemudian seperti yang dijelaskan sebelumnya, untuk mengakses data sebenarnya dari sebuah kolom perlu dimasukkan **indeks kolom** sebagai keynya.
+
+<a href='4_mysqli_fetch.php#mysqli-fetch-row' target='_blank'>
+    <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
+</a>
+
+
+- `mysqli_fetch_assoc`
+
+Sama seperti `mysqli_fetch_row` yaitu menerjemahkan hasil query dari eksekusi query SQL menjadi array asosiatif yang kolomnya direpresentasikan dengan nama kolom sebenarnya sebagai key untuk mengakses isi dari kolom yang diinginkan.
+
+```php
+$query = mysqli_query($connect, "SELECT * FROM $tabel");
+$data = mysqli_fetch_row($query);
+echo $data['id']; // menampilkan isi dari kolom id
+echo $data['judul']; // menampilkan isi dari kolom judul
+```
+Alih-alih menggunakan urutan index kolom, kamu dapat menggunakan nama kolomnya langsung untuk mengakses nilai dari kolom tersebut.
+
+<a href='4_mysqli_fetch.php#mysqli-fetch-assoc' target='_blank'>
+    <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
+</a>
+
+- `mysqli_fetch_array`
+
+`mysqli_fetch_array()` adalah gabungan dari kedua fungsi diatas (`mysqli_fetch_row` dan `mysqli_fetch_assoc`). Yaitu dengan fungsi ini, yang dikembalikan adalah sebuah array asosiatif yang kolom-kolomnya direpresentasikan dengan urutan index **dan** nama kolomnya sekaligus. Ini dapat bermanfaat kamu memiliki scope kode yang tidak mengetahui nama kolom tabelnya.
+
+```php
+$query = mysqli_query($connect, "SELECT * FROM $tabel");
+$data = mysqli_fetch_row($query);
+echo $data['id']; // menampilkan isi dari kolom id
+echo $data['judul']; // menampilkan isi dari kolom judul
+echo $data[3]; // menampilkan isi dari kolom deskripsi (kolom ketiga)
+```
+Dengan `mysqli_fetch_array()` kamu dapat menggunakan kedua cara untuk mengakses data kolom didalamnya.
+
+<a href='4_mysqli_fetch.php#mysqli-fetch-array' target='_blank'>
+    <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
+</a>
+
+- `mysqli_fetch_object`
+
+Berbeda dengan fungsi `mysqli_fetch` yang lain, `mysqli_fetch_object` mengembalikan sebuah baris data dalam bentuk objek yang memiliki atribut berupa nama kolomnya dan didalamnya berisi data dari kolom tersebut. 
+
+```php
+$query = mysqli_query($connect, "SELECT * FROM $tabel");
+$data = mysqli_fetch_row($query);
+echo $data->id; // menampilkan isi dari kolom id
+echo $data->judul; // menampilkan isi dari kolom judul
+```
+Seperti kode diatas, jika ingin mengakses sebuah data dari kolom, perlu diakses atribut kolomnya dengan simbol `->`, hal yang lumrah digunakan dalam lingkungan pemrograman berorientasi objek. Fungsi ini mungkin dapat membantu kamu dalam konsistensi penulisan pemrograman dengan paradigma pemrograman berorientasi objek.
+
+<a href='4_mysqli_fetch.php#mysqli-fetch-object' target='_blank'>
+    <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
+</a>
+
+
+### Menampilkan banyak data
+
+Jika kamu perhatikan contoh kode diatas hanya mengambil satu baris saja dari sebuah query yang dijalankan oleh `mysqli_query()`. Bagaimanakah caranya untuk menampilkan seluruh baris data yang dihasilkan dari query?
+
+Untuk itu, kita perlu memahami bagaimana cara kerja `mysqli_fetch` terlebih dahulu. Jika kamu menjalankan salah satu `mysqli_fetch` misalnya `mysqli_fetch_assoc()` maka kamu mengambil baris pertama dari database. Jika kamu menjalankan `mysqli_fetch_assoc()` lagi maka bukan baris pertama lagi yang diambil melainkan baris berikutnya yang akan diambil dan diterjemahkan menjadi array asosiatif. `mysqli` dalam PHP sudah dapat mengetahui jika sebuah fungsi `mysqli_fetch` sudah digunakan untuk mengambil baris sebelumnya dan akan mengambil baris berikutnya.
+
+```php
+$query = mysqli_query($connect, "SELECT * FROM tabel");
+$row = mysqli_fetch_assoc($query); // Mengambil baris pertama
+$row = mysqli_fetch_assoc($query); // Mengambil baris kedua
+```
+
+Hal ini juga berlaku jika kamu menggunakan beberapa jenis fungsi `mysqli_fetch` lain secara bersamaan dan berurutan
+
+```php
+$query = mysqli_query($connect, "SELECT * FROM tabel");
+$row = mysqli_fetch_assoc($query); // Mengambil baris pertama dalam bentuk array asosiatif
+$row = mysqli_fetch_assoc($query); // Mengambil baris kedua dalam bentuk array asosiatif
+$row = mysqli_fetch_object($query); // Mengambil baris ketiga dalam bentuk objek
+```
+
+Untuk mengambil seluruh data, kita bisa manfaatkan perulangan `while()`. Jika selama `mysqli_fetch` berhasil mengambil baris data dan tidak kosong, maka tampilkan data tersebut. Perulangan akan terjadi sehingga `mysqli_fetch` dijalankan lagi untuk mengambil baris data berikutnya sampai pada baris terakhir yang akan mengakhiri perulangan karena baris data kosong.
+
+Berikut contoh kodenya:
+
+```php
+$query = mysqli_query($connect, "SELECT * FROM tabel");
+while ($row = mysqli_fetch_assoc($query)) {
+    echo 'id: ' . $row['id'];
+    echo 'judul: ' . $row['judul'];
+}
+```
+Contoh kode kecil diatas jika diartikan adalah sebagai berikut: selagi `mysqli_fetch_assoc` bernilai valid (dan tidak kosong) nilai tersebut di berikan kepada variabel `$row` untuk bisa diakses didalam perulangan. Jika masih ada baris berikutnya, perulangan akan tetap berjalan dan `mysqli_fetch_assoc()` akan dijalankan lagi dan memberikan nilai datanya ke variabel `$row` lagi dan siklusnya akan berjalan terus menerus. Perulangan akan berakhir jika baris berikutnya tidak sudah tidak ada lagi.
+
+Kamu dapat memanfaatkan ini untuk menampilkan semua baris data kedalam tabel, seperti pada demo berikut ini:
+<a href='4_mysqli_fetch.php#table' target='_blank'>
+    <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
+</a>
