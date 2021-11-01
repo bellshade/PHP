@@ -46,6 +46,8 @@ Harus diperhatikan bahwa fungsi tidak akan secara otomatis berjalan saat kita me
 >   }
 >```
 
+[![Contoh Kode](../../assets/content/cekhere.svg)](1_Basic_Function.php)
+
 ## 2. Parameter dan Return
 
 Fungsi dapat menerima variabel atau parameter untuk diproses dan dapat mengembalikan nilai hasil processing.
@@ -192,6 +194,54 @@ Maka saat kita akan memakai fungsi tersebut php intelisense akan membatu kita un
 ![Intelisens](../../assets/content/basics/8_fungsi_dasar/comment.png)
 
 ### 2.2 Return
+
+Jika kita ingin fungsi mengirimkan kembali nilai dari hasil proses kepada baris kode yang kita buat, kita dapat menggunakan perintah `return` dalam fungsi tersebut. nilai tersebut dapat kita tampung dalam sebuah variabel atau langsung kita gunakan.
+
+Perintah `return` ini akan mengembalikan nilai hasil proses dari fungsi dan sekaligus menghentikan fungsi tersebut, baris kode didalam fungsi yang terdapat dibawah perintah `return` tidak akan di eksekusi bila perintah `return` ini berhasil di eksekusi. Secara umum perintah `return` ditulis seperti ini :
+
+```php
+return nilai;
+```
+
+Sebagai contoh penggunaan perintah `return` untuk mengembalikan nilai dalam sebuah fungsi :
+
+```php
+<?php
+function perkalian(int $num1, int $num2){
+    $hasil = (int) $num1 * $num2;
+    return $hasil;
+}
+
+$nilai = perkalian(25, 24);         //menyimpan hasil dari fungsi pada variabel $nilai
+echo $nilai;                        //hasil 600
+?>
+```
+
+Fungsi diatas akan mengembalikan nilai hasil perkalian dari 25 dan 24, nilai tersebut akan ditampung kedalam variabel nilai.  
+Nilai kembalian dari sebuah fungsi juga dapat berupa pemanggilan fungsi lain, sebagai contoh :
+
+```php
+<?php
+function nama($depan, $belakang){
+    $nama = $depan . ' ' . $belakang;
+    return halo($nama);
+}
+
+function halo($data){
+    $hasil = 'hallo, nama saya ' . ucwords($data);
+    return $hasil;
+
+    echo $data;             //baris kode ini tidak akan pernah dijalankan
+}
+
+$nilai = nama('asep', 'suherman');
+echo $nilai;                //hasil : hallo, nama saya Asep Suherman
+?>
+```
+
+Fungsi `nama` akan mengembalikan nilai berupa fungsi lain yaitu fungsi `halo`, dan nilai fungsi `halo` ini yang akan dikembalikan kedalam variabel yang kita siapkan untuk menampung nilai hasil fungsi, sedangkan perintah `echo` pada fungsi `nama` tidak akan pernah dieksekusi disebabkan perintah ini berada setelah perintah `return`.
+
+[![Contoh Kode](../../assets/content/cekhere.svg)](2_Parameter_Return.php)
 
 ## 3. Scoper Variabel dalam Fungsi
 
