@@ -1,0 +1,45 @@
+pull_request_rules:
+  - name: ci testing kalo sukses ke squash dengan label
+    conditions:
+      - check-success=build
+      - base=main
+      - label=ready-to-merge
+    actions:
+      label:
+        add:
+            - sudah direview !
+      comment:
+        message: terima kasih atas kontribusinya @{{author}} !
+      merge:
+        method: squash
+  - name: php label
+    conditions:
+      - files~=\.php$
+    actions:
+      label:
+        add:
+          - php files
+          - request tim php untuk review
+  - name: markdown label
+    conditions:
+      - files~=\.md$
+    actions:
+      label:
+        add:
+          - markdown files
+          - request docs team untuk review
+  - name: review docs team untuk file markdown
+    conditions:
+      - label=markdown files
+    actions:
+      request_reviews:
+        teams:
+          - "@bellshade/docs-team"
+
+  - name: review php team untuk file markdown
+    conditions:
+      - label=php files
+    actions:
+      request_reviews:
+        teams:
+          - "@bellshade/php-team"
