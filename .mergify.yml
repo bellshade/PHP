@@ -1,10 +1,15 @@
 pull_request_rules:
   - name: ci testing kalo sukses ke squash dengan label
     conditions:
-      - check-success=CI PHP PSR-12 Linting
+      - check-success=build
       - base=main
       - label=ready-to-merge
     actions:
+      label:
+        add:
+            - sudah direview !
+      comment:
+        message: terima kasih atas kontribusinya @{{author}} !
       merge:
         method: squash
   - name: php label
@@ -31,7 +36,7 @@ pull_request_rules:
         teams:
           - "@bellshade/docs-team"
 
-  - name: review docs team untuk file markdown
+  - name: review php team untuk file markdown
     conditions:
       - label=php files
     actions:
