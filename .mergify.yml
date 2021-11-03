@@ -1,7 +1,12 @@
+# bot pull request untuk bellshade python
+# command untuk refresh mergify jika ada perubahan pada file config
+# @Mergifyio refresh
+# gunakan dengan cara comment pada pull request
 pull_request_rules:
   - name: ci testing kalo sukses ke squash dengan label
     conditions:
       - check-success=build
+      - "#approved-reviews-by>=2"
       - base=main
       - label=ready-to-merge
     actions:
