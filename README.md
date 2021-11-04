@@ -46,7 +46,7 @@ Ada 2 cara yang dapat kamu gunakan untuk menjadikan repositori ini sebagai refer
 
 ### Dengan secara langsung di Github
 
-kamu dapat langsung menjelajahi direktori-direktori yang ada di repositori ini, dan karena artikel penjelasannya berupa markdown `README.md`, kamu dapat membacanya saat berada di direktori yang berkaitan. Namun kamu tidak dapat menjalankan demo file PHP-nya secara langsung.
+Kamu dapat langsung menjelajahi direktori-direktori yang ada di repositori ini, dan karena artikel penjelasannya berupa markdown `README.md`, kamu dapat membacanya saat berada di direktori yang berkaitan. Namun kamu tidak dapat menjalankan demo file PHP-nya secara langsung.
 
 ### Dengan clone di web server kamu di _local_
 
@@ -104,7 +104,7 @@ Di repositori Bellshade PHP terdapat kategori basic yang berisi tentang kumpulan
 
 > kategori pembelajaran (basic learning) ini bisa kamu ditemukan pada direktori `/basics`
 
-di dalam folder `/basics` terdapat folder-folder materi yang di dalam tiap folder materi tersebut terdapat file `README.md` yang mana file ini adalah artikel penjelasan dari materinya. Dan tentunya, di dalam tiap folder materi juga terdapat file demo PHP berisi contoh kode implementasi dari materinya yang dapat dijalankan di local jika sudah di clone dan ditempatkan di web-server.
+Di dalam folder `/basics` terdapat folder-folder materi yang di dalam tiap folder materi tersebut terdapat file `README.md` yang mana file ini adalah artikel penjelasan dari materinya. Dan tentunya, di dalam tiap folder materi juga terdapat file demo PHP berisi contoh kode implementasi dari materinya yang dapat dijalankan di local jika sudah di clone dan ditempatkan di web-server.
 
 ### Komponen kegunaan _(utilities)_
 
