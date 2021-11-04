@@ -23,6 +23,6 @@ for($i = 1 ; $i < 100 ; $i++) {
         echo "<p>Buzz</p>";
     } else {
         echo "<p>$i</p>";
-    }
-}
+    };
+};
 ?>
