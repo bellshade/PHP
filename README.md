@@ -1,7 +1,7 @@
 <p align="center">
     <img width="20%" src="./assets/images/logo.png"><br/><br/>
-    Part of Bellshade Project, managed by [WPU Discord Community](http://discord.gg/S4rrXQU) <br>
-    WPU Community is the fastest growing software developer forum initiated by [Mr. Sandhika Galih](https://www.youtube.com/c/WebProgrammingUNPAS) <br>
+    Part of Bellshade Project, managed by <a href="http://discord.gg/S4rrXQU"> WPU Discord Community</a> <br>
+    WPU Community is the fastest growing software developer forum initiated by <a href="https://www.youtube.com/c/WebProgrammingUNPAS"> Mr. Sandhika Galih</a> <br>
     <a href="http://discord.gg/S4rrXQU"><img src="https://img.shields.io/discord/722002048643497994?logo=discord&logoColor=white&style=for-the-badge"></a>
     <img src="https://img.shields.io/github/workflow/status/bellshade/PHP/CI%20PHP%20PSR-12%20Linting?style=for-the-badge">
     <img src="https://img.shields.io/github/license/bellshade/PHPAlgorithm?style=for-the-badge">
@@ -14,7 +14,7 @@
 - [Panduan penggunaan](#panduan-penggunaan)
 - [Kategori yang tersedia](#kategori-yang-tersedia)
   - [Pembelajaran _(basics)_](#pembelajaran-basics)
-  - [Komponen Kegunaan _(utilities)_](#komponen-kegunaan-keperluan-utilities)
+  - [Komponen Kegunaan _(utilities)_](#komponen-kegunaan-utilities)
   - [Algoritma _(algorithms)_](#algoritma-algorithms)
 - [Berkontribusi](#berkontribusi)
 
@@ -106,7 +106,7 @@ Di repositori Bellshade PHP terdapat kategori basic yang berisi tentang kumpulan
 
 di dalam folder `/basics` terdapat folder-folder materi yang di dalam tiap folder materi tersebut terdapat file `README.md` yang mana file ini adalah artikel penjelasan dari materinya. Dan tentunya, di dalam tiap folder materi juga terdapat file demo PHP berisi contoh kode implementasi dari materinya yang dapat dijalankan di local jika sudah di clone dan ditempatkan di web-server.
 
-### Komponen kegunaan / keperluan _(utilities)_
+### Komponen kegunaan _(utilities)_
 
 Kategori _utilities_ adalah kumpulan referensi dan contoh penggunaan komponen-komponen / fitur-fitur umum yang mungkin diperlukan oleh para web developer untuk diterapkan pada proyek aplikasi web-nya. Di dalam kategori ini, kamu dapat menjelajahi berbagai macam kebutuhan umum untuk pengembangan web umum dan mempelajari bagaimana cara mengimplementasikannya.
 
