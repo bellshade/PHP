@@ -135,8 +135,10 @@ Pada pemanggilan fungsi untuk kedua kalinya akan menghasilkan nilai terbalik, un
 
 Maka hasil dari pengiriman fungsi akan tetap sesuai dengan yang urutkan pada fungsi.
 
->Penting :
->Fitur ini hanya tersedia pada PHP 8 keatas, jika rekan - rekan mencoba hal tersebut menghasilkan error, harap periksa versi PHP rekan - rekan sekalian.
+> Penting :
+> Fitur ini hanya tersedia pada PHP 8 keatas,  
+> jika rekan - rekan mencoba hal tersebut menghasilkan error,  
+> harap periksa versi PHP rekan - rekan sekalian.
 
 Selain dari itu kita juga dapat memberikan nilai awal (deafult value) pada parameter penerima kita, berguna bila parameter ini berupa opsional, contoh :
 
@@ -241,9 +243,13 @@ echo $nilai;                //hasil : hallo, nama saya Asep Suherman
 
 Fungsi `nama` akan mengembalikan nilai berupa fungsi lain yaitu fungsi `halo`, dan nilai fungsi `halo` ini yang akan dikembalikan kedalam variabel yang kita siapkan untuk menampung nilai hasil fungsi, sedangkan perintah `echo` pada fungsi `nama` tidak akan pernah dieksekusi disebabkan perintah ini berada setelah perintah `return`.
 
+Sebuah fungsi hanya bisa mengembalikan satu nilai, tetapi fungsi dapat mengembalikan nilai dalam berbagai macam tipe data, untuk mengembalikan nilai lebih dari satu kita dapat menggunakan tipe data array sebagai solusinya.
+
 [![Contoh Kode](../../assets/content/cekhere.svg)](2_Parameter_Return.php)
 
 ## 3. Scoper Variabel dalam Fungsi
+
+
 
 ## 4. Variabel Statis dalam Fungsi
 
