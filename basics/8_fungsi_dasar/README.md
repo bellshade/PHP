@@ -18,7 +18,7 @@ Fungsi dalam PHP di tulis seperti di bawah ini:
 
 ```php
 <?php
-    function ContohFungsi()
+    function contoh_fungsi()
     {
         echo 'Fungsi Pertama Saya';
     }
@@ -31,7 +31,7 @@ Untuk memanggil fungsi tersebut kita menuliskan nama fungsi dan menambahkan tand
 
 ```php
 
-    ContohFungsi();
+    contoh_fungsi();
 ?>
 ```
 
@@ -40,7 +40,7 @@ Harus di perhatikan bahwa fungsi tidak akan secara otomatis berjalan saat kita m
 >Secara umum penulisan fungsi PHP dalam pseudo :
 >
 >```php
->   function NamaFungsi($param_1, $param_2,.....,$param_n)
+>   function nama_fungsi($param_1, $param_2,.....,$param_n)
 >   {
 >       Argumen yang akan di jalakan
 >   }
@@ -57,21 +57,20 @@ Fungsi dapat menerima variabel atau parameter untuk diproses dan dapat mengembal
 Dalam penggunaan fungsi kita dapat mengirimkan parameter yang akan digunakan oleh fungsi, sebagai contoh di bawah fungsi yang tidak menerima parameter dan yang dapat menerima parameter:
 
 ```php
-    #fungsi tidak menerima parameter
-    function nonParameter()
+    // fungsi tidak menerima parameter
+    function non_parameter()
     {
         echo "saya fungsi tanpa parameter"
     }
 
-    #fungsi menerima parameter
-    function withParameter($param)
+    // fungsi menerima parameter
+    function with_parameter($param)
     {
         echo "saya fungsi, menerima parameter " . $param;
     }
 
-    #driven
-    nonParamater();             //saya fungsi tanpa parameter
-    withParameter("Contoh");    //saya fungsi, menerima parameter Contoh
+    non_paramater();             //saya fungsi tanpa parameter
+    with_parameter("Contoh");    //saya fungsi, menerima parameter Contoh
 ```
 
 Fungsi diatas kita lihat bahwa fungsi dapat menerima parameter dari luar dengan syarat kita sudah siapkan parameter lokal-`local` pada fungsi untuk menampung nilai yang dikirimkan tersebut, fungsi yang tidak menerima parameter tetap bisa kita kirimkan parameter, tetapi tidak akan dapat di tampung dan di gunakan oleh fungsi.
@@ -80,7 +79,7 @@ Parameter yang di terima oleh fungsi dapat kita tentukan tipe datanya dengan car
 
 ```php
 <?php
-    function WithParameter(string $str, array $data, int $nomor, float $num, bool $boolean){
+    function with_parameter(string $str, array $data, int $nomor, float $num, bool $boolean){
         argument
     }
 ?>
@@ -97,9 +96,9 @@ Untuk PHP sebelum PHP versi 8, maka pengiriman parameter harus berurutan sesuai 
         echo 'Umur anda ' . $age . ' Tahun<br>';
     }
 
-    #driven
+    // Pemanggilan Fungsi
     person('Foo', 'Bar', 17);
-    #jika terbalik
+    // Jika parameter terbalik
     person('Bar', 'Foo', 17);
 
 ?>
@@ -124,12 +123,12 @@ Pada pemanggilan fungsi untuk kedua kalinya akan menghasilkan nilai terbalik, un
         echo 'Umur anda ' . $age . ' Tahun';
     }
 
-    #driven
+    // Pemanggilan fungsi
     person(lastname: `Bar`, age: 17, firstname: `Foo`);
 
-    #hasil
-    //Hallo Foo Bar
-    //Umur anda 17 Tahun
+    // Hasil eksekusi fungsi
+    // Hallo Foo Bar
+    // Umur anda 17 Tahun
 ?>
 ```
 
@@ -163,7 +162,6 @@ Sebagai contoh :
         $hasil = $data;
     }
 
-    //driven
     coba("saya");           //set $hasil dalam fungsi
     echo $hasil;            //error variable undefined
 ?>
@@ -233,11 +231,11 @@ function halo($data){
     $hasil = 'hallo, nama saya ' . ucwords($data);
     return $hasil;
 
-    echo $data;             //baris kode ini tidak akan pernah di jalankan
+    echo $data;             // baris kode ini tidak akan pernah di jalankan
 }
 
 $nilai = nama('asep', 'suherman');
-echo $nilai;                //hasil : hallo, nama saya Asep Suherman
+echo $nilai;                // hasil : hallo, nama saya Asep Suherman
 ?>
 ```
 
@@ -249,8 +247,59 @@ Sebuah fungsi hanya bisa mengembalikan satu nilai, tetapi fungsi dapat mengembal
 
 ## 3. Scope Variabel dalam Fungsi
 
+Scope atau Ruang Lingkup sebuah variabel mencangkup di mana variabel tersebut di buat, variabel PHP pada umumnya hanya memiliki satu cangkupan ruang lingkup. Jika sebuah variabel global di buat dalam suatu file maka variabel ini tersedia untuk file itu sendiri dan file-file yang di panggil oleh file tersebut, namun tidak dapat digunakan oleh fungsi-fungsi yang terdapat dalam file tersebut, karena secara bawaan fungsi menggunakan variabel terbatas pada variabel yang terdapat pada ruang lingkup fungsi itu sendiri (local scope variabel) sebagai contoh :
 
+```php
+<?php
+    $contoh = 'ini contoh variabel global';
+
+    fungsi scope_variabel(){
+        print_r($contoh);
+    }
+?>
+```
+
+Hasil print_r tidak akan menghasilkan nilai dari variabel `$contoh` tapi sebuah pesan kesalahan berupa peringatan bahwa variabel `$contoh` tidak di temukan walaupun sebelumnya kita telah membuat variabel `$contoh` pada ruang lingkup file, ini terjadi karena variabel yang di gunakan oleh fungsi `scope_variabel()` adalah variabel `$contoh` yang di buat di dalam fungsi itu sendiri, sedangkan variabel tersebut belum pernah kita buat di dalam fungs, tujuan dari PHP adalah untuk mencegah secara tidak sengaja kita merubah dari nilai variabel global tersebut saat mengeksekusi sebuah fungsi.
+
+Untuk dapat menggunakan variabel tersebut kita harus memberi tahu fungsi bahwa variabel yang kita gunakan adalah variabel yang tersedia pada file (global), sebagai berikut :
+
+```php
+<?php
+    $contoh = 'Saya Variabel pada File PHP';
+
+    function contoh_param(){
+        global $contoh;         // Nyatakan bahwa variabel ruang lingkup global
+        print_r($contoh);
+    }
+
+    contoh_param();     // Hasil 'Saya Variabel pada File PHP'
+?>
+```
+
+Pada baris kode ini kita membuat sebuah global variabel `$contoh` pada file, dan kemudian membuat variabel lagi pada fungsi dengan cangkupan ruang lingkup global, karena variabel `$contoh` pada ruang lingkup global sudah ada maka fungsi tidak membuat baru atau merubah variabel tersebut, tetapi mereferensikan variabel tersebut kedalam fungsi, bila tidak ditemukan variabel tersebut pada ruang lingkup global maka fungsi akan membuat variabel baru dengan nama tersebut, dan variabel ini tersedia secara dalam cangkupan file walaupun fungsi telah berakhir, penting di ingat saat kita memberikan nilai baru pada variabel `$contoh` tersebut di dalam fungsi, maka selanjutnya nilai variabel `$contoh` pada fungsi akan menggunakan nilai baru.
+
+Selain cara di atas kita dapat menggunakan variable `$GLOBALS` yang berupa array untuk menggunakan variabel yang tersedia pada ruang lingkup global, seperti contoh baris kode di bawah ini:
+
+```php
+<?php
+    $x = 2;
+    $y = 5;
+
+    function sum(){
+        $GLOBALS['hasil'] = $GLOBALS['x'] + $GLOBALS['y'];
+    }
+
+    sum();
+    print_r($hasil);    //hasil 7
+?>
+```
+
+Kita bisa perhatikan bahwa variabel `$GLOBALS` tersedia pada PHP merupakan sebuah array asosiatif dengan variabel dengan ruang lingkup global sebagai elemen nya, dan kita juga dapat membuat elemen baru yang akan menjadi sebuah variabel dengan ruang lingkup global yang nilai nya tersedia di luar fungsi, variabel `$GLOBALS` ini tersedia dimana saja karena variabel ini memiliki status `superglobal` dimana salah satu contoh lainnya adalah `$_POST`.
+
+Untuk fungsi bersarang variable global harus di nyatakan/deklasikan di dalam fungsi bersarang tersebut untuk dapat enggunakan variabel tersebut.
 
 ## 4. Variabel Statis dalam Fungsi
 
 ## 5. Fungsi Tanpa Nama
+
+### Referensi
