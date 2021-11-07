@@ -296,9 +296,96 @@ Selain cara di atas kita dapat menggunakan variable `$GLOBALS` yang berupa array
 
 Kita bisa perhatikan bahwa variabel `$GLOBALS` tersedia pada PHP merupakan sebuah array asosiatif dengan variabel dengan ruang lingkup global sebagai elemen nya, dan kita juga dapat membuat elemen baru yang akan menjadi sebuah variabel dengan ruang lingkup global yang nilai nya tersedia di luar fungsi, variabel `$GLOBALS` ini tersedia dimana saja karena variabel ini memiliki status `superglobal` dimana salah satu contoh lainnya adalah `$_POST`.
 
-Untuk fungsi bersarang variable global harus di nyatakan/deklasikan di dalam fungsi bersarang tersebut untuk dapat enggunakan variabel tersebut.
+Untuk fungsi bersarang variable global harus di nyatakan/deklasikan di dalam fungsi bersarang tersebut untuk dapat menggunakan variabel tersebut.
 
+[![Contoh Scope](../../assets/content/cekhere.svg)](3_Scope_Variable.php)
 ## 4. Variabel Statis dalam Fungsi
+
+Variabel lainnya dalam fungsi PHP yang juga sangat penting adalah variabel statis, ruang lingkup variabel ini hanya sebatas cangkupan fungsi itu sendiri, umumnya variabel pada fungsi akan hilang sesaat setelah fungsi selesai di eksekusi, saat fungsi di panggil kembali variabel akan di bentuk ulang dengan nilai dasar yang telah ditetapkan sebelumya.
+
+Seperti contoh di bawah ini:
+
+```php
+<?php
+    function contoh(){
+        $i = 0;         // variabel statis
+        echo $i;        // 0
+        $i++;           // increment $i
+    }
+?>
+```
+
+Pada fungsi ini variabel `$i` memiliki nilai awal yaitu `0`, dimana kemudian meningkat dan akhirnya menghilang saat fungsi selesai di eksekusi, saat kita memanggil fungsi ini kembali maka nilai `$i` kembali menjadi `0` maka dengan itu variabel `$i`.
+
+Nah bila suatu saat kita bertemu dengan kondisi untuk memanggil fungsi ini kembali dengan nilai variabel terakhir maka setiap memnaggil fungsi ini kita harus menyimpan nilai variabel ini untuk kemudian kita kirimkan kembali kedalam fungsi, untuk itu PHP menyediakan sebuah solusi berupa statis variabel, dimana saat fungsi selesai di eksekusi nilai variabel ini masih tersimpan di sementara dalam memori sampai file php di muat ulang (reload), dan saat fungsi ini di panggil kembali maka nilai yang terakhir tersimpan yang digunakan.
+
+Sebagai contoh baris kode di bawah ini:
+
+```php
+<?php
+    // tanpa variabel statis
+    function tambah($a){
+        $b = 0;
+        $b += $a;
+        echo $b;
+    }
+
+    // dengan variabel statis
+    function tambah_statis($a){
+        static $b = 0;
+        $b += $a;
+        print_r($b);
+    }
+
+    tambah(3);              //3
+    tambah(3);              //3
+    tambah(3);              //3
+
+    tambah_statis(3);       //3
+    tambah_statis(3);       //6
+    tambah_statis(3);       //9
+?>
+```
+
+Pada contoh baris kode di atas terdapat dua fungsi yang bentuknya hampir sama, dimana fungsi pertama tidak menggunakan variabel statis dan fungsi kedua menggunakan variabel statis, hasil dari kedua fungsi pun berbeda saat di lakukan pemanggilan ulang.
+
+Pada fungsi pertama setiap pemanggilan ulang akan menghasilkan nilai yang sama karena variabel dalam fungsi dibentuk kembali dengan nilai default, sedangkan pada fungsi kedua setiap pemanggilan fungsi akan menghasilkan nilai berbeda karena variabel dalam fungsi dibentuk kembali dengan nilai terakhir.
+
+Kenapa begitu penting variabel ini?, variabel statis sangat berguna saat kita melakukan metode rekursif pada sebuah fungsi, yaitu memanggil kembali fungsi yang sedang berjalan selama kondisi terpenuhi, sebagai contoh penggunaan variabel statis dalam fungsi rekursif untuk menulis nilai 1 s/d 10 :
+
+```php
+<?php
+    function contoh(){
+        static $a = 0;      // deklarasi variabel
+
+        $a++;               // increment variabel $a
+        echo $a;            // print $a
+        if($a < 10){
+            contoh();       // Panggil fungsi kembali
+        }
+    }
+?>
+```
+
+Pada contoh di atas akan menghasilkan tampilan urutan angka dari 1 sampai 10, sebagai mana telah di jelaskan di atas.
+
+Bila variabel `$a` pada fungsi di atas bukan variabel statis maka rekursif pada fungsi ini tidak akan pernah berhenti, dan akan menghasilkan nilai 11111111....., hal ini terjadi karena setiap siklus dari rekursif akan menggunakan variabel `$a` yang bernilai `0`, sehingga pengkondisian untuk memanggil ulang fungsi ini akan selalu bernilai `true`.
+
+Untuk mendeklarasikan variabel statis sama dengan mendeklarasikan variabel lainnya, kita cukup menambahkan tanda `static` pada variabel tersebut, nilai dari variabel statis bisa berupa nilai ataupun ekspresi tetap, bukan ekspresi dinamis maupun sebuah fungsi.
+
+Contoh mendeklarasikan variabel statis:
+
+```php
+<?php
+    function variabel_statis(){
+        statis $a = 10;         // Benar
+        statis $a = 3 + 4;      // Benar
+        statis $a = sqrt(9);    // Salah
+    }
+?>
+```
+
+[![Contoh Static Variable](../../assets/content/cekhere.svg)](4_Static_Variable.php)
 
 ## 5. Fungsi Tanpa Nama
 
