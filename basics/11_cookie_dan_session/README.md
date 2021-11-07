@@ -12,21 +12,19 @@ Oke, selanjutnya pada kesempatan kali ini kita akan membahas tentang dua variabe
 
 ## ⚡ Daftar Isi
 
-- [📂 SESSION dan COOKIE](#-session-dan-cookie)
-  - [⚡ Daftar Isi](#-daftar-isi)
-  - [✨ SESSION](#-session)
-    - [📝 Membuat Session](#-membuat-session)
-    - [📝 Mengambil Session](#-mengambil-session)
-      - [Contoh 1 - Mengambil/Menampilkan Session di Satu Halaman yang Sama](#contoh-1---mengambilmenampilkan-session-di-satu-halaman-yang-sama)
-      - [Contoh 2 - Mengambil/Menampilkan Session di Halaman yang Berbeda](#contoh-2---mengambilmenampilkan-session-di-halaman-yang-berbeda)
-    - [📝 Mengubah Session](#-mengubah-session)
-    - [📝 Menghapus Session](#-menghapus-session)
-      - [Contoh 1 - Menghapus Semua Sesi](#contoh-1---menghapus-semua-sesi)
-      - [Contoh 2 - Menghapus Sesi Tertentu](#contoh-2---menghapus-sesi-tertentu)
-  - [✨ COOKIE](#-cookie)
-    - [📝 Membuat Cookie](#-membuat-cookie)
-    - [📝 Mengubah Session](#-mengubah-session-1)
-    - [📝 Menghapus Cookie](#-menghapus-cookie)
+- [✨ SESSION](#-session)
+  - [📝 Membuat Session](#-membuat-session)
+  - [📝 Mengambil Session](#-mengambil-session)
+    - [Contoh 1 - Mengambil/Menampilkan Session di Satu Halaman yang Sama](#contoh-1---mengambilmenampilkan-session-di-satu-halaman-yang-sama)
+    - [Contoh 2 - Mengambil/Menampilkan Session di Halaman yang Berbeda](#contoh-2---mengambilmenampilkan-session-di-halaman-yang-berbeda)
+  - [📝 Mengubah Session](#-mengubah-session)
+  - [📝 Menghapus Session](#-menghapus-session)
+    - [Contoh 1 - Menghapus Semua Sesi](#contoh-1---menghapus-semua-sesi)
+    - [Contoh 2 - Menghapus Sesi Tertentu](#contoh-2---menghapus-sesi-tertentu)
+- [✨ COOKIE](#-cookie)
+  - [📝 Membuat Cookie](#-membuat-cookie)
+  - [📝 Mengubah Session](#-mengubah-session-1)
+  - [📝 Menghapus Cookie](#-menghapus-cookie)
 
 ## ✨ SESSION
 
