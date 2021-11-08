@@ -81,7 +81,7 @@ Oke, lanjut!
 ### 📝 Mengambil Session
 
 Nah, seperti yang telah dijelaskan di atas bahwa, session dapat digunakan di semua halaman dalam satu aplikasi. Maka selanjutnya kita akan mempelajari bagaimana cara mengambil informasi yang tersimpan pada session **di satu halaman yang sama** dan **di halaman yang berbeda**.
-
+ 
 > 🤔 Bagimana cara mengambil data dari session?
 
 Untuk mengambil data/informasi yang berada di sesi (*session*) cukup mudah, silakan perhatikan kedua contoh di bawah ini.
