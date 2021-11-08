@@ -48,7 +48,7 @@ Oke selanjutnya.
 
 Nah, untuk membuat *session*, pertama-tama kamu perlu menjalankan web server milikmu, seperti **XAMPP** atau web server lainnya. Kalau belum tau caranya, kamu bisa melihatnya [di sini](../1_hello_world/README.md#2-hello-world-2_hello_worldphp)
 
-Oke, dalam bahasa pemrograman PHP, *session* disimpan ke dalam variabel *supergrlobal* yaitu `$_SESSION` dalam bentuk [Array Asosiatif](../7_array_mendalam#2-array-asosiatif) yang mana terdapat *key* dan *value*
+Oke, dalam bahasa pemrograman PHP, *session* disimpan ke dalam variabel *superglobal* yaitu `$_SESSION` dalam bentuk [Array Asosiatif](../7_array_mendalam#2-array-asosiatif) yang mana terdapat *key* dan *value*
 
 Jadi, untuk membuat session dalam bahasa pemrograman PHP cukup mudah, silakan perhatikan contoh berikut:
 
@@ -80,7 +80,7 @@ Oke, lanjut!
 
 ### 📝 Mengambil Session
 
-Nah, seperti yang telah di jelaskan di atas bahwa, session dapat digunakan di semua halaman dalam satu aplikasi. Maka selanjutnya kita akan mempelajari bagaimana cara mengambil informasi yang tersimpan pada session **di satu halaman yang sama** dan **di halaman yang berbeda**.
+Nah, seperti yang telah dijelaskan di atas bahwa, session dapat digunakan di semua halaman dalam satu aplikasi. Maka selanjutnya kita akan mempelajari bagaimana cara mengambil informasi yang tersimpan pada session **di satu halaman yang sama** dan **di halaman yang berbeda**.
 
 > 🤔 Bagimana cara mengambil data dari session?
 
@@ -144,7 +144,7 @@ Setelah itu, coba buka kembali file `1_set_session.php` lalu file `2_get_session
 Feri irawan
 ```
 
-Jadi dengan melihat contoh di atas, kamu dapat ketahui bahwa untuk manampilkan informasi yang sudah dibuat di halaman lain, lalu ditampilkan di halaman lain pula dapat dilakkukan seperti berikut:
+Jadi dengan melihat contoh di atas, kamu dapat ketahui bahwa untuk manampilkan informasi yang sudah dibuat di halaman lain, lalu ditampilkan di halaman lain pula dapat dilakukan seperti berikut:
 
 - *Session* sudah dibuat di halaman/file lain (`1_set_session.php`)
 - Setelah itu memulai *session* dengan fungsi `session_start()` di halaman yang akan menampilkan data *session* (`2_get_session.php`)
@@ -154,7 +154,7 @@ Nah, cukup mudah bukan?
 
 ### 📝 Mengubah Session
 
-Nah, karna session disimpan dalam bentuk [Array Asosiatif](../7_array_mendalam#2-array-asosiatif),maka untuk mengubah data yang berada di sesi bisa dilakukan seperti halnya dengan mengubah data pada [Array Asosiatif](../7_array_mendalam#2-array-asosiatif), Contoh:
+Nah, karena session disimpan dalam bentuk [Array Asosiatif](../7_array_mendalam#2-array-asosiatif), maka untuk mengubah data yang berada di sesi bisa dilakukan seperti halnya dengan mengubah data pada [Array Asosiatif](../7_array_mendalam#2-array-asosiatif), contoh:
 
 ```php
 <?php
@@ -175,8 +175,8 @@ echo $_SESSION["judul_materi"]; // Hasil: Hello World
 Nah dengan melihat contoh di atas dapat diketahui bahwa, untuk mengubah *session* dapat dilakukan dengan cara:
 
 - Memulai *session*
-- Membuat *session* (jika sebelumnnya *session* masih kosong)
-- Lalu membuat *session* dengan *key* yang sama dengan *key* *session* sebelumnnya.
+- Membuat *session* (jika sebelumnya *session* masih kosong)
+- Lalu membuat *session* dengan *key* yang sama dengan *key* *session* sebelumnya.
 
 > Mengubah session sama halnya dengan menimpa nilai variabel sebelumnya dengan nilai lainnya
 
@@ -233,7 +233,7 @@ Cookie bisa digunakan di halaman manapun seperti session.
 
 Mungkin di beberapa web atau aplikasi kamu pernah melihat fitur bernama "Ingat saya" yang biasanya digunakan untuk mengingat data yang di inputkan pengguna saat login ke aplikasi tersebut.
 
-Tujuannya agar saat pengguna menggunakan aplikasi itu lagi di lain waktu, pengguna sudah tidak pelu masuk dengan akun mereka lagi, akan tetapi langkah tersebut langsung dilewati atau dilompati oleh aplikasi. Nah, dengan *cookie*, kamu bisa membuat fitur seperti itu diaplikasi/web milikmu *lho*
+Tujuannya agar saat pengguna menggunakan aplikasi itu lagi di lain waktu, pengguna sudah tidak perlu masuk dengan akun mereka lagi, akan tetapi langkah tersebut langsung dilewati atau dilompati oleh aplikasi. Nah, dengan *cookie*, kamu bisa membuat fitur seperti itu di aplikasi/web milikmu *lho*
 
 > Jadi, bagaimana cara membuat *cookie* di PHP?
 
@@ -247,7 +247,7 @@ Untuk membuat cookie, PHP telah menyediakan fungsi `setcookie()` dan kamu bisa m
 setcookie(
     string $name,               // Nama cookie
     string $value    = "",      // Nilai cookie
-    int    $expires  = 0,       // Tanggal kedaluarsa (timestamp)
+    int    $expires  = 0,       // Tanggal kedaluwarsa (timestamp)
     string $path     = "",      // Lokasi cookie itu berlaku
     string $domain   = "",      // Domain cookie itu berlaku
     bool   $secure   = false,   // Koneksi cookie itu berlaku (HTTP/HTTPS)
@@ -257,11 +257,11 @@ setcookie(
 
 Keterangan:
 
-- `string` artinya parameter tersebut harus di isi tipe data *string*
-- `int` artinya parameter tersebut harus di isi *integer*
-- `bool` artinya parameter tersebut harus di isi *boolean*
+- `string` artinya parameter tersebut harus diisi tipe data *string*
+- `int` artinya parameter tersebut harus diisi *integer*
+- `bool` artinya parameter tersebut harus diisi *boolean*
 
-Nah, dengan melihat struktur fungsi `setcookie()` di atas, maka kita tahu bahwa cookie memiliki umur atau tanggal kedaluarsa. Jadi, cookie yang tidak diset waktu kedaluarsanya akan bertahan pada saat itu juga.
+Nah, dengan melihat struktur fungsi `setcookie()` di atas, maka kita tahu bahwa cookie memiliki umur atau tanggal kedaluwarsa. Jadi, cookie yang tidak diset waktu kedaluwarsanya akan bertahan pada saat itu juga.
 
 Contoh:
 
@@ -333,7 +333,7 @@ Nah, dengan melihat contoh di atas dapat kamu ketahui bahwa, cara mengubah cooki
 
 ### 📝 Menghapus Cookie
 
-Cara yang bisa dilakukan untuk menghapus data cookie yang tersimpan adalah dengan **menyetel nilai dari cookie itu sendiri menjadi *string* kosong** dan **menyetel waktu kedaluarsa menjadi `0` atau kurang dari `0`**.
+Cara yang bisa dilakukan untuk menghapus data cookie yang tersimpan adalah dengan **menyetel nilai dari cookie itu sendiri menjadi *string* kosong** dan **menyetel waktu kedaluwarsa menjadi `0` atau kurang dari `0`**.
 
 Contoh:
 
@@ -341,7 +341,7 @@ Contoh:
 <?php
 
 // Menyetel nilai cookie jadi string kosong
-// Dan menyetel waktu kedaluarsa jadi (-3600) (kedaluarsa 1 jam yang lalu)
+// Dan menyetel waktu kedaluwarsa jadi (-3600) (kedaluarsa 1 jam yang lalu)
 setcookie("buah_masam", "", time() - 3600);
 ```
 
@@ -351,7 +351,7 @@ Sangat mudah bukan?
 
 Oke sepertinya materi tentang kedua variabel *superglobal*, yaitu SESSION dan COOKIE cukup sampai di sini. Semoga penjelasan di atas mudah untuk dibaca dan dipahami.
 
-> Agar lebih mahir, sering-seringlah mengimplementasikan skrip-skrip yang ada di atas. Jika ada yg tidak dimengerti kamu bisa bergabung di Server Discord WPU untuk menanyakannya, atau kamu bisa googling juga untuk itu.
+> Agar lebih mahir, sering-seringlah mengimplementasikan skrip-skrip yang ada di atas. Jika ada yg tidak dimengerti kamu bisa bergabung di Server [Discord WPU](http://discord.gg/S4rrXQU) untuk menanyakannya, atau kamu bisa juga cari di mesin pencari untuk itu.
 
 | Sebelumnya                                 | Berikutnya                                                       |
 | ------------------------------------------ | ---------------------------------------------------------------- |
