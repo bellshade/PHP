@@ -23,7 +23,7 @@ Oke, selanjutnya pada kesempatan kali ini kita akan membahas tentang dua variabe
     - [Contoh 2 - Menghapus Sesi Tertentu](#contoh-2---menghapus-sesi-tertentu)
 - [✨ COOKIE](#-cookie)
   - [📝 Membuat Cookie](#-membuat-cookie)
-  - [📝 Mengubah Session](#-mengubah-session-1)
+  - [📝 Mengubah Cookie](#-mengubah-cookie)
   - [📝 Menghapus Cookie](#-menghapus-cookie)
 
 ## ✨ SESSION
@@ -81,7 +81,7 @@ Oke, lanjut!
 ### 📝 Mengambil Session
 
 Nah, seperti yang telah dijelaskan di atas bahwa, session dapat digunakan di semua halaman dalam satu aplikasi. Maka selanjutnya kita akan mempelajari bagaimana cara mengambil informasi yang tersimpan pada session **di satu halaman yang sama** dan **di halaman yang berbeda**.
- 
+
 > 🤔 Bagimana cara mengambil data dari session?
 
 Untuk mengambil data/informasi yang berada di sesi (*session*) cukup mudah, silakan perhatikan kedua contoh di bawah ini.
@@ -309,23 +309,26 @@ Bagaimana cukup mudah, bukan?
 
 Oke, selanjutnya.
 
-### 📝 Mengubah Session
+### 📝 Mengubah Cookie
 
 Cara mengubah cookie mirip dengan membuat cookie, kamu hanya perlu melakukannya seperti berikut:
 
 ```php
 <?php
 
-// Mengubah nilai cookie dengan key `buah_manis`
+// Mengubah nilai cookie dengan key `tim`
 // Yang awalnya adalah:
-// setcookie('buah_manis', 'Rambutan', time() + 3600, "/basics/11_cookie_dan_session", "localhost");
+// setcookie('tim', 'PHP', time() + 3600);
 
-// Menjadi
-// Cookie dengan nilai semangka, bertahan selama 30 menit
-setcookie("buah_manis", "Semangka", time()+ 1800);
+// Menjadi cookie dengan nilai JavaScript, bertahan selama 30 menit
+setcookie("tim", "JavaScript", time()+ 1800);
 
-echo $_COOKIE["buah_manis"]; // Hasil: Semangka
+echo $_COOKIE["tim"]; // Hasil: JavaScript
 ```
+
+Dengan skrip PHP di atas, kamu sudah bisa mengubah nilai dari sebuah cookie, coba perhatikan gambar di bawah ini.
+
+![Mengubah Cookie](https://user-images.githubusercontent.com/57158078/140916298-2abd4bf4-40e4-4153-90c9-ba409200dab9.png)
 
 [![Demo](https://img.shields.io/static/v1?&label=Lihat%20Demo&message=%3e&color)](6_update_cookie.php#L10-L21)
 

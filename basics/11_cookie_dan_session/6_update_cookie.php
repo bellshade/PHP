@@ -6,25 +6,18 @@
 
 echo "<pre>";
 
-// Mengecek apakah user sudah memiliki cookie dengan key `buah_manis`
-if (!isset($_COOKIE['buah_manis'])) {
-    // Jika tidak, maka tampilkan teks berikut
-    echo "Silahkan buka file <a href='5_set_cookie.php'>5_set_cookie.php</a> terlebih dahulu untuk membuat cookie. Setelah itu kembali ke demo ini lagi.";
+// // Mengecek apakah user sudah memiliki cookie dengan key `tim`
+if (!isset($_COOKIE['tim'])) {
+    echo "Oops, harap buka file <a href='5_set_cookie.php'>5_set_cookie.php</a> terlebih dahulu untuk membuat cookie.\nSetelah itu kembali ke halaman ini dan refresh!";
 } else {
-    // Jika cookie sudah ada
-    echo "\n\n<h1>Mengubah Cookie dengan key `buah_manis`</h1>";
-    echo "Cookie dengan key `buah_manis` saat ini memiliki nilai <b>{$_COOKIE['buah_manis']}</b>\n\n";
+    // Jika sudah ada cookie `tim`
+    echo "<h1>Mengubah Cookie dengan key `tim`</h1>";
+    echo "Cookie yang awalnya tim <b>PHP</b> diubah jadi tim <b>JavaScript</b>";
 
-    // Cek apakah cookie masih memiliki nilai Rambutan (nilai sebelumnnya)
-    if ($_COOKIE["buah_manis"] !== "Semangka") {
-        // Jika tidak, maka ubah dulu
-
-        // Mengubah cookie jadi semangka, bertahan selama 30 menit, pada direktori "/", di domain localhost
-        setcookie("buah_manis", "Semangka", time() + 1800);
-
-        // Lalu tampilkan teks
-        echo "Cookie `buah_manis` dengan nilai <b>{$_COOKIE["buah_manis"]}</b> berhasil diubah jadi <b>Semangka</b>, silakan refresh halaman ini";
-    }
+    // Mengubah nilai cookie `tim` = `PHP` menjadi `tim` = `JavaScript`
+    // Dan mengubah waktu kedaluwarsa yang awalnya 1 jam jadi 30 menit
+    setcookie('tim', 'JavaScript', time() + 1800);
 }
+
 
 echo "</pre>";
