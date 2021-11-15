@@ -2,6 +2,30 @@
 
 PHP menyediakan berbagai fungsi dan fitur untuk memanipulasi _string_ agar suatu teks dapat sesuai dengan yang kita inginkan. Berikut adalah contoh-contoh dari beberapa fungsi ini
 
+## Daftar Isi
+
+- [1. Mengambil Properti String](#1-mengambil-properti-string)
+  - [Menghitung Banyaknya Karakter](#menghitung-banyaknya-karakter)
+  - [Menghitung Banyaknya Kata](#menghitung-banyaknya-kata)
+  - [Mencari Posisi Kata Dari Sebuah Teks](#mencari-posisi-kata-dari-sebuah-teks)
+  - [Menghitung Banyaknya Kata Tertentu](#menghitung-banyaknya-kata-tertentu)
+- [2. Pemotongan String](#2-pemotongan-string)
+  - [Memotong Dari Kiri, Kanan dan Keduanya](#memotong-dari-kiri-kanan-dan-keduanya)
+- [3. Kapitalisasi String](#3-kapitalisasi-string)
+  - [Mengubah Karakter Menjadi Huruf Kecil](#mengubah-karakter-menjadi-huruf-kecil)
+  - [Mengubah Karakter Menjadi Huruf Besar](#mengubah-karakter-menjadi-huruf-besar)
+  - [Mengubah Karakter Pertama Menjadi Huruf Besar](#mengubah-karakter-pertama-menjadi-huruf-besar)
+  - [Mengubah Karakter Pertama Setiap Kata Menjadi Huruf Besar](#mengubah-karakter-pertama-setiap-kata-menjadi-huruf-besar)
+  - [Mengubah Karakter Pertama Menjadi Huruf Kecil](#mengubah-karakter-pertama-menjadi-huruf-kecil)
+- [4. String Array](4-string-array)
+  - [implode()](#implode)
+  - [explode()](#explode)
+  - [str_split()](#str-split)
+  - [join()](#join)
+- [5. Escape & Formatting](#5-escape-and-formatting)
+  - [addslashes](#addslashes)
+
+
 ## 1. Mengambil Properti String
 
 ### Menghitung Banyaknya Karakter
@@ -329,66 +353,73 @@ echo $string_buah;
     <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
 </a>
 
-## ADD SLASHES
 
-### Apa itu add slashes?
+## 5. Escape & Formatting
+
+
+### addslashes()
 
 Add slashes adalah sebuah function yang digunakan untuk menambahkan slash `\` pada sebuah string.
 Jika ingin membuatnya diharuskan untuk memasukkan string di function `addslashes()`
 
-Ada beberapa cara untuk memunculkan slash yaitu (optional)
+Mengapa dalam sebuah string perlu ditambahkan simbol `\`?, karena string selalu diawali dengan tanda petik `'` atau `"`. Bagaimana jika ingin menambahkan petik didalam sebuah string? misalnya `Jum'at`, salah satu caranya bisa dimasukkan kedalam identifier string petik 2 seperti ini `"Jum'at"` atau misalnya jika penggunaan petik dua `"` tidak dimungkinkan, maka harus di _"escape"_ dengan tanda `\`. Sehingga menjadi seperti ini `'Jum\'at'`
 
-1. String harus terdapat `''`
-2. String harus terdapat `""`
-3. String harus terdapat `\\`
+Ada beberapa kegunaan mengapa perlu adanya escape menggunakan slash yaitu: 
 
-### Langsung saja ke demonya
+1. String yang terdapat `''`
+2. String yang terdapat `""`
+3. String yang terdapat `\\`
 
-### menggunakan `''`.
+Langsung saja ke demonya, 
+
+<strong>Demo #1</strong><br/>
+berikut jika sebuah string menggunakan petik `'`.
 
 ```php
-$text = addslashes("Ayo belajar di bellshade");
+$text = addslashes("Ayo belajar di 'bellshade'");
 echo "$text";
 ```
 
-### Output
+_output:_
 
 <img  src="../../assets/content/basics/5_string_manipulation/kutip''.png" >
 
-### Demo ke 2
+<a href='5_add_slashes.php#menghitung-banyaknya-kata' target='_blank'>
+    <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
+</a>
 
----
-
-### Menggunakan `""`
+<br/>
+<br/>
+<strong>Demo #2</strong><br/>
+berikut contoh kegunaan sebuah string yang menggunakan petik dua `"`.
 
 ```php
 $text = addslashes('Ayo belajar di "bellshade"');
 echo "$text";
 ```
 
-### Output
+_output:_
 
 <img  src="../../assets/content/basics/5_string_manipulation/kutip2''.png" >
 
-### Demo ke 3
+<a href='5_add_slashes.php#menghitung-banyaknya-kata' target='_blank'>
+    <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
+</a>
 
----
-
-### Menggunakan `\`
-
+<br/>
+<br/>
+<strong>Demo #3</strong><br/>
+berikut contoh kegunaan sebuah string yang menggunakan backslash `\`.
 ```php
 $text = addslashes(" Ayo belajar di \bellshade\ ");
 echo "$text";
 ```
 
-### Output
-
+_output:_
 <img  src="../../assets/content/basics/5_string_manipulation/slash''.png" >
 
----
+<a href='5_add_slashes.php#menghitung-banyaknya-kata' target='_blank'>
+    <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
+</a>
 
-## NOTE
-
-Pilihlah salah satu bentuk yang disukai untuk menambahkan slash pada string di php.
-
-### Referensi https://www.w3schools.com/php/func_string_addslashes.asp
+> _Referensi:_ https://www.w3schools.com/php/func_string_addslashes.asp
