@@ -361,13 +361,13 @@ echo $string_buah;
 
 Add slashes adalah sebuah function yang digunakan untuk menambahkan backslash `\` pada sebuah string, untuk melakukannya kita harus memasukkan string ke dalam function `addslashes()`.
 
-Mengapa dalam sebuah string perlu ditambahkan backslash `\`?, karena string selalu diawali dengan tanda petik `'` atau `"`. Bagaimana jika ingin menambahkan petik didalam sebuah string? misalnya `Jum'at`, salah satu caranya bisa dimasukkan kedalam identifier string petik 2 seperti ini `"Jum'at"` atau misalnya jika penggunaan petik dua `"` tidak dimungkinkan, maka harus di _"escape"_ dengan tanda `\`. Sehingga menjadi seperti ini `'Jum\'at'`
-
-Ada beberapa kegunaan mengapa perlu adanya escape menggunakan slash yaitu: 
+Ada beberapa kegunaan mengapa perlu adanya escape menggunakan backslash yaitu saat: 
 
 1. String yang terdapat `''`
 2. String yang terdapat `""`
 3. String yang terdapat `\\`
+
+Mengapa dalam sebuah string perlu ditambahkan backslash `\`?, karena string selalu diawali dengan tanda petik `'` atau `"`. Bagaimana jika ingin menambahkan petik didalam sebuah string? misalnya `Jum'at`, salah satu caranya bisa dimasukkan kedalam identifier string petik 2 seperti ini `"Jum'at"` atau misalnya jika penggunaan petik dua `"` tidak dimungkinkan, maka harus di _"escape"_ dengan tanda `\`. Sehingga menjadi seperti ini `'Jum\'at'`
 
 Langsung saja ke demonya, 
 
