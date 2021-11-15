@@ -30,7 +30,7 @@ PHP menyediakan berbagai fungsi dan fitur untuk memanipulasi _string_ agar suatu
 
 ### Menghitung Banyaknya Karakter
 
-Untuk menghitung jumlah banyaknya karakter yang terkandung dalam sebuah _string_ kamu bisa menggunakan `strlen()`
+Untuk menghitung jumlah karakter yang terdapat dalam sebuah _string_ kamu bisa menggunakan `strlen()`
 
 Berikut contohnya :
 
@@ -64,7 +64,7 @@ echo 'Jumlah kata: ' . str_word_count($text), PHP_EOL;  // Output: 7
 
 ### Mencari Posisi Kata Dari Sebuah Teks
 
-Manfaat yang lebih nyata adalah dapat melihat apakah suatu teks tertentu ada dalam string. <br/>
+Manfaat yang lebih nyata adalah dapat mengecek suatu teks tertentu ada dalam sebuah string. <br/>
 Untuk itu kamu bisa gunakan `strpos($string, $apayangdicari)`
 
 fungsi `strpos()` akan mengembalikan nilai index posisi dari string yang akan dicari.
@@ -359,10 +359,10 @@ echo $string_buah;
 
 ### addslashes()
 
-Add slashes adalah sebuah function yang digunakan untuk menambahkan slash `\` pada sebuah string.
-Jika ingin membuatnya diharuskan untuk memasukkan string di function `addslashes()`
+Add slashes adalah sebuah function yang digunakan untuk menambahkan backslash `\` pada sebuah string.
+Untuk melakukannya kita harus memasukkan string ke dalam function `addslashes()`
 
-Mengapa dalam sebuah string perlu ditambahkan simbol `\`?, karena string selalu diawali dengan tanda petik `'` atau `"`. Bagaimana jika ingin menambahkan petik didalam sebuah string? misalnya `Jum'at`, salah satu caranya bisa dimasukkan kedalam identifier string petik 2 seperti ini `"Jum'at"` atau misalnya jika penggunaan petik dua `"` tidak dimungkinkan, maka harus di _"escape"_ dengan tanda `\`. Sehingga menjadi seperti ini `'Jum\'at'`
+Mengapa dalam sebuah string perlu ditambahkan backslash `\`?, karena string selalu diawali dengan tanda petik `'` atau `"`. Bagaimana jika ingin menambahkan petik didalam sebuah string? misalnya `Jum'at`, salah satu caranya bisa dimasukkan kedalam identifier string petik 2 seperti ini `"Jum'at"` atau misalnya jika penggunaan petik dua `"` tidak dimungkinkan, maka harus di _"escape"_ dengan tanda `\`. Sehingga menjadi seperti ini `'Jum\'at'`
 
 Ada beberapa kegunaan mengapa perlu adanya escape menggunakan slash yaitu: 
 
