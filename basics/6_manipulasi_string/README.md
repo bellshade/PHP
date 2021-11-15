@@ -1,12 +1,36 @@
 # Manipulasi String
 
-PHP menyediakan berbagai fungsi dan fitur untuk memanipulasi *string* agar suatu teks dapat sesuai dengan yang kita inginkan. Berikut adalah contoh-contoh dari beberapa fungsi ini
+PHP menyediakan berbagai fungsi dan fitur untuk memanipulasi _string_ agar suatu teks dapat sesuai dengan yang kita inginkan. Berikut adalah contoh-contoh dari beberapa fungsi ini
+
+## Daftar Isi
+
+- [1. Mengambil Properti String](#1-mengambil-properti-string)
+  - [Menghitung Banyaknya Karakter](#menghitung-banyaknya-karakter)
+  - [Menghitung Banyaknya Kata](#menghitung-banyaknya-kata)
+  - [Mencari Posisi Kata Dari Sebuah Teks](#mencari-posisi-kata-dari-sebuah-teks)
+  - [Menghitung Banyaknya Kata Tertentu](#menghitung-banyaknya-kata-tertentu)
+- [2. Pemotongan String](#2-pemotongan-string)
+  - [Memotong Dari Kiri, Kanan dan Keduanya](#memotong-dari-kiri-kanan-dan-keduanya)
+- [3. Kapitalisasi String](#3-kapitalisasi-string)
+  - [Mengubah Karakter Menjadi Huruf Kecil](#mengubah-karakter-menjadi-huruf-kecil)
+  - [Mengubah Karakter Menjadi Huruf Besar](#mengubah-karakter-menjadi-huruf-besar)
+  - [Mengubah Karakter Pertama Menjadi Huruf Besar](#mengubah-karakter-pertama-menjadi-huruf-besar)
+  - [Mengubah Karakter Pertama Setiap Kata Menjadi Huruf Besar](#mengubah-karakter-pertama-setiap-kata-menjadi-huruf-besar)
+  - [Mengubah Karakter Pertama Menjadi Huruf Kecil](#mengubah-karakter-pertama-menjadi-huruf-kecil)
+- [4. String Array](4-string-array)
+  - [implode()](#implode)
+  - [explode()](#explode)
+  - [str_split()](#str-split)
+  - [join()](#join)
+- [5. Escape & Formatting](#5-escape-and-formatting)
+  - [addslashes](#addslashes)
+
 
 ## 1. Mengambil Properti String
 
 ### Menghitung Banyaknya Karakter
 
-Untuk menghitung jumlah banyaknya karakter yang terkandung dalam sebuah *string* kamu bisa menggunakan `strlen()`
+Untuk menghitung jumlah karakter yang terdapat dalam sebuah _string_ kamu bisa menggunakan `strlen()`
 
 Berikut contohnya :
 
@@ -24,7 +48,7 @@ echo 'Jumlah karakter: ' . strlen($text), PHP_EOL;  // Output: 37
 
 ### Menghitung Banyaknya Kata
 
-PHP menyediakan fungsi `str_word_count($text)`. Cukup tambahkan *text* pada parameternya
+PHP menyediakan fungsi `str_word_count($text)`. Cukup tambahkan _text_ pada parameternya
 
 ```php
 <?php
@@ -40,7 +64,7 @@ echo 'Jumlah kata: ' . str_word_count($text), PHP_EOL;  // Output: 7
 
 ### Mencari Posisi Kata Dari Sebuah Teks
 
-Manfaat yang lebih nyata adalah dapat melihat apakah suatu teks tertentu ada dalam string. <br/>
+Manfaat yang lebih nyata adalah dapat mengecek suatu teks tertentu ada dalam sebuah string. <br/>
 Untuk itu kamu bisa gunakan `strpos($string, $apayangdicari)`
 
 fungsi `strpos()` akan mengembalikan nilai index posisi dari string yang akan dicari.
@@ -117,9 +141,9 @@ Kamu dapat menggunakan `ltrim($string, 'karakternya')` untuk memotong dari kiri 
 <?php
 
 $text = "ini adalah ini contoh teks yang saya buat";
-$ltrim = ltrim($text, 'inibuat'); 
-$rtrim = rtrim($text, 'inibuat'); 
-$trim = trim($text, 'inibuat'); 
+$ltrim = ltrim($text, 'inibuat');
+$rtrim = rtrim($text, 'inibuat');
+$trim = trim($text, 'inibuat');
 ```
 
 <a href='2_pemotongan_string.php' target='_blank'>
@@ -128,11 +152,11 @@ $trim = trim($text, 'inibuat');
 
 ## 3. Kapitalisasi String
 
-Kapitalisasi *string* akan sangat dibutuhkan dalam pengembangan web. Contoh kasusnya adalah ketika menyamakan format nama dari *user* yang sering berbeda beda dan kebutuhkan lainnya.
+Kapitalisasi _string_ akan sangat dibutuhkan dalam pengembangan web. Contoh kasusnya adalah ketika menyamakan format nama dari _user_ yang sering berbeda beda dan kebutuhkan lainnya.
 
 ### Mengubah Karakter Menjadi Huruf Kecil
 
-Untuk mengubah karakter menjadi huruf kecil semua yang berada pada sebuah *string*, kamu bisa menggunakan fungsi `strtolower()`. Berikut contohnya :
+Untuk mengubah karakter menjadi huruf kecil semua yang berada pada sebuah _string_, kamu bisa menggunakan fungsi `strtolower()`. Berikut contohnya :
 
 ```php
 <?php
@@ -164,7 +188,7 @@ echo 'Hasilnya: ' . strtoupper($text), PHP_EOL;  // Output: INI ADALAH CONTOH TE
 
 ### Mengubah Karakter Pertama Menjadi Huruf Besar
 
-Untuk mengubah karakter pertama menjadi huruf besar yang berada pada sebuah *string*, kamu bisa menggunakan fungsi `ucfirst()`. Berikut contohnya :
+Untuk mengubah karakter pertama menjadi huruf besar yang berada pada sebuah _string_, kamu bisa menggunakan fungsi `ucfirst()`. Berikut contohnya :
 
 ```php
 <?php
@@ -206,9 +230,9 @@ echo 'Hasilnya: ' . lcfirst($text), PHP_EOL;  // Output: iNI ADALAH CONTOH TEKS 
     <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
 </a>
 
-## 4. *String Array*
+## 4. _String Array_
 
-*String array* merupakan fungsi/fitur yang disediakan oleh PHP untuk melakukan manipulasi `string` menjadi `array` ataupun sebaliknya.
+_String array_ merupakan fungsi/fitur yang disediakan oleh PHP untuk melakukan manipulasi `string` menjadi `array` ataupun sebaliknya.
 
 ### implode()
 
@@ -304,7 +328,7 @@ print_r($teks_array);
 
 ### join()
 
-Fungsi `join()` merupakan *alias* atau nama lain dari fungsi `implode()`.
+Fungsi `join()` merupakan _alias_ atau nama lain dari fungsi `implode()`.
 
 **Cara Penggunaan :**
 
@@ -328,3 +352,73 @@ echo $string_buah;
 <a href='4_string_array.php#L112-L135' target='_blank'>
     <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
 </a>
+
+
+## 5. Escape & Formatting
+
+
+### addslashes()
+
+Add slashes adalah sebuah function yang digunakan untuk menambahkan backslash `\` pada sebuah string, untuk melakukannya kita harus memasukkan string ke dalam function `addslashes()`.
+
+Ada beberapa kegunaan mengapa perlu adanya escape menggunakan backslash yaitu saat: 
+
+1. String yang terdapat `''`
+2. String yang terdapat `""`
+3. String yang terdapat `\\`
+
+Mengapa dalam sebuah string perlu ditambahkan backslash `\`?, karena string selalu diawali dengan tanda petik `'` atau `"`. Bagaimana jika ingin menambahkan petik didalam sebuah string? misalnya `Jum'at`, salah satu caranya bisa dimasukkan kedalam identifier string petik 2 seperti ini `"Jum'at"` atau misalnya jika penggunaan petik dua `"` tidak dimungkinkan, maka harus di _"escape"_ dengan tanda `\`. Sehingga menjadi seperti ini `'Jum\'at'`
+
+Langsung saja ke demonya, 
+
+<strong>Demo #1</strong><br/>
+Berikut jika sebuah string menggunakan petik `'`.
+
+```php
+$text = addslashes("Ayo belajar di 'bellshade'");
+echo "$text";
+```
+
+_output:_
+
+<img  src="../../assets/content/basics/5_string_manipulation/kutip''.png" >
+
+<a href='5_add_slashes.php#menghitung-banyaknya-kata' target='_blank'>
+    <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
+</a>
+
+<br/>
+<br/>
+<strong>Demo #2</strong><br/>
+Berikut contoh kegunaan sebuah string yang menggunakan petik dua `"`.
+
+```php
+$text = addslashes('Ayo belajar di "bellshade"');
+echo "$text";
+```
+
+_output:_
+
+<img  src="../../assets/content/basics/5_string_manipulation/kutip2''.png" >
+
+<a href='5_add_slashes.php#menghitung-banyaknya-kata' target='_blank'>
+    <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
+</a>
+
+<br/>
+<br/>
+<strong>Demo #3</strong><br/>
+Berikut contoh kegunaan sebuah string yang menggunakan backslash `\`.
+```php
+$text = addslashes(" Ayo belajar di \bellshade\ ");
+echo "$text";
+```
+
+_output:_
+<img  src="../../assets/content/basics/5_string_manipulation/slash''.png" >
+
+<a href='5_add_slashes.php#menghitung-banyaknya-kata' target='_blank'>
+    <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
+</a>
+
+> _Referensi:_ https://www.w3schools.com/php/func_string_addslashes.asp
