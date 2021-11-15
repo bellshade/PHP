@@ -1,4 +1,5 @@
 <?php
+
 echo '<pre>';
 
 
@@ -11,7 +12,7 @@ echo "<h2> addslashes() </h2>";
 echo "Text sebelum menggunakan addslashes():",PHP_EOL;
 $text = '-Ayo belajar di bellshade';
 echo "$text";
-// ------------------------------------------- 
+// -------------------------------------------
 echo "<br></br>";
 
 echo "Text sesudah menggunakan addslashes(): ",PHP_EOL;
@@ -41,9 +42,3 @@ $text3 = addslashes("-Ayo belajar di \bellshade\ ");
 echo "$text3";
 
 echo '</pre>';
-
-
-
-
-
-?>
