@@ -5,7 +5,10 @@
     <a href="http://discord.gg/S4rrXQU"><img src="https://img.shields.io/discord/722002048643497994?logo=discord&logoColor=white&style=for-the-badge"></a>
     <img src="https://img.shields.io/github/workflow/status/bellshade/PHP/CI%20PHP%20PSR-12%20Linting?style=for-the-badge">
     <img src="https://img.shields.io/github/license/bellshade/PHPAlgorithm?style=for-the-badge">
-
+    <br/>
+    <a href="https://www.codacy.com/gh/bellshade/PHP/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=bellshade/PHP&amp;utm_campaign=Badge_Grade">
+      <img src="https://app.codacy.com/project/badge/Grade/52656fff53f946a6afced54aaf0c5c67" alt="Codacy Badge">
+    </a>
 </p>
 
 ## Daftar isi
