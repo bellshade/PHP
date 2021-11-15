@@ -137,6 +137,8 @@ if (!is_dir(rewritePath($pageUrl))) {
                             '.',
                             '.git',
                             '.github',
+                            '.mergify.yml',
+                            'renovate.json',
                             'assets',
                             'backup',
                             'vendor',
