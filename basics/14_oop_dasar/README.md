@@ -3,94 +3,57 @@
 <h1 align="center">Object Oriented Programing (OOP)</h1>
 </p>
 
-Object Oriented Programing atau pemograman berorientasi terhadap objek lebih sering disebut sebagai OOP adalah salah satu paradigma dalam pemogram untuk memudahkan dalam pengembangan sebuah aplikasi. Materi kali ini kita akan coba mempelajari mengenai paradigma OOP dalam bahasa pemograman PHP.
+Object Oriented Programing atau pemrograman berorientasi terhadap objek lebih sering disebut sebagai OOP adalah salah satu paradigma dalam pemrograman untuk memudahkan pengembangan sebuah aplikasi. Pada Materi kali ini kita akan coba mempelajari mengenai paradigma OOP dan implementasinya menggunakan bahasa pemrograman PHP.
 
 ## Daftar isi
 
-1. [Pengenalan OOP.](#1-pengenalan-pemograman-berorientasi-objek)
-    - [Apa itu OOP.](#11-apa-itu-oop)
-    - [Perbedaan antara Prosedural dan ber-Orientasi Objek](#12-perbedaan-pemograman-prosedural-dan-pemograman-objek)
+- [Pengenalan Pemrograman Berorientasi Objek (OOP)](#1-pengenalan-pemrograman-berorientasi-objek-oop)
+    - [Apa itu?](#apa-itu)
+    - [Perbedaannya OOP dengan metode prosedural biasa](#perbedaannya-oop-dengan-metode-prosedural-biasa)
 
 
-## 1. Pengenalan Pemograman Berorientasi Objek
+## 1. Pengenalan Pemrograman Berorientasi Objek (OOP)
 
-Dalam materi sebelumnya kita sudah mencoba membuat contoh-contoh baris kode yang rata-rata baris kode tersebut merupakan pola kerja pemograman prosedural atau pemograman terstruktur. dalam pemograman ada yang disebut sebagai Paradigma Pemograman yaitu sudut padang seorang programer dalam menyelesaikan suatu kasus atau masalah dengan cara pemograman. Hal ini penting bagi seorang programer untuk mengidentifikasi permasalahan dan menyusun sebuah solusi dalam bentuk pemograman.
+Pada materi sebelumnya kita sudah mencoba membuat contoh-contoh baris kode yang kebanyakan merupakan pola kerja pemrograman prosedural atau pemrograman terstruktur. Dalam pemrograman ada yang disebut sebagai paradigma Pemrograman yang artinya sudut padang seorang programmer dalam menyelesaikan suatu kasus atau masalah dengan cara pemrograman. Hal ini penting bagi seorang programmer untuk mengidentifikasi permasalahan dan menyusun sebuah solusi dalam bentuk pemrograman.
 
-Ada beberapa paradigma pemograman sebagai contoh paradigma prosedural yang sudah sering kita gunakan dalam materi sebelumnya, dan paradigma object oriented programing(OOP) atau Pemograman Berorientasi Objek.
+Ada beberapa paradigma pemrograman sebagai contoh paradigma prosedural yang sudah sering kita gunakan dalam materi sebelumnya, dan paradigma _object oriented programing_ (OOP) atau Pemrograman Berorientasi Objek.
 
-### 1.1 Apa itu OOP
+### Apa itu?
 
-OOP bukan hanya sekedar tentang merubah cara menuliskan baris kode, tapi akan mempermudah dalam pengembangan aplikasi kita. sebagai contoh kita analogikan dalam kehidupan sehari-hari kita melakukann komukasi jarak jauh, berbelanja, main game dan lain sebagainya. untuk mempermudahkan semua itu akhirnya kita mengenal yang namanya smartphone. Nah dalam OOP smartphone dapat diartikan sebagai kelas(class) dan Samaun S11 atau iPun X sebagai objek (object), dan fitur-fitur didalamnya berupa metode (method), type, imei, simcard dan lainnya sebagai properti(property). smartphone tersebut dapat mempermudah kita dalam melakukan sesuatu. Contoh bila kita mau pergi kesuatu tempat dari pada antri menuggu kendaraan umum kita dapat menggunakan aplikasi ngabjek atau ngabtaksi, mau main game tinggal buka aplikasi gaming, mau internetan bisa buka aplikasi nomad browser, dan lain sebagainya.
+OOP singkatan dari _Object Oriented Programming_. OOP bukan hanya sekedar tentang merubah cara menuliskan baris kode, tapi juga mempermudah dalam pengembangan aplikasi kita. OOP adalah model pemrograman yang mengolah desain software menggunakan data dan objek daripada menggunakan fungsi dan logika prosedural.
 
-Kesimpulan OOP paradigma pemograman dengan cara menyediakan objek-objek sebagai solusi dalam penyelesaikan masalah pemograman. objek ini biasanya terdiri dari properti dan metode yang saling berkaitan yang digabungkan menjadi satu variabel untuk menyelesaiakan permasalahan sendiri, dan dapat bekerja sama dengan objek lain untuk menyelesaikan permasalahan pemograman yang lebih rumit.
+Pada dasarnya paradigma pemrograman berorioentasi objek adalah metode pemrograman yang memecah bagian-bagian dari aplikasi menjadi 1 bagian yang memiliki 1 fungsionalitas utama. Dari bagian-bagian ini dikorelasikan satu sama lain berdasarkan fungsinya masing-masing sehingga membentuk aplikasi yang utuh. Akibatnya, sebuah aplikasi dapat terdiri dari bagian-bagian yang rapi terstruktur, _scalable_ dan _reusable_ sehingga paradigma ini bagus sekali untuk diterapkan pada project berskala besar.
 
-Objek merupakan sebuah variabel instansiasi dari sebuah kelas, atau dapat kita bayangakan sebuah array yang didalam elemennya terdapat bukan hanya data tetapi juga fungsi-fungsi yang disebut metode(method).
+Jika kita analogikan pada kehidupan sehari-hari, bayangkan ada sebuah restoran makanan. Agar usaha restoran tersebut dapat berjalan, semua aktifitas dalam restoran tersebut terbagi menjadi beberapa bagian. Ada bagian yang khusus melayani penjualan, ada bagian lain yang melakukan aktifitas dapur, ada bagian lain yang bertugas di gudang, dsb. Jika kamu perhatikan, pecahan bagian-bagian ini mempunyai tugasnya sendiri-sendiri dan memiliki prosedur masing-masing. Akan tetapi satu bagian harus tetap berkorelasi dengan bagian-bagian lainnya agar restoran bisa berjalan dengan lancar secara keseluruhan.
+<br/>
+<br/>
 
-Demikian gambaran singkat mengenai Pemograman Berorientasi Objek, untuk lebih memahami kita pelajari lebih lanjut pada materi dibawah ini.
+### Perbedaannya OOP dengan metode prosedural biasa
 
->tips :  
->siapkan secangkir kopi walaupun anda bukan seorang yang suka minum kopi, dan putar musik kegemaran anda, hal ini dapat membatu kita dalam mempelajari materi selanjutnya.
+Pemrograman dengan paradigma prosedural bekerja secara urut dan sistematis, sedangkan OOP bekerja dengan sebuah objek yang  fleksibel, dapat dikembangkan _(scalable)_, dan dapat digunakan ulang _(reusable)_
 
-### 1.2 Perbedaan Pemograman Prosedural dan Pemograman Objek
+<ins>Analogi Singkat</ins>
 
-Pemograman Prosedural bekerja secara terstruktur dan sitematis, sedangkan OOP bekerja secara flexsible dengan menggunakan objek, atau dapat kita gunakan analogi seperti sebelumnya.
-Dimana sebuah pemogram prosedural adalah kita tanpa smartphone dan OOP kita dengan smartphone, keduanya dapat mengerjakan hal yang sama tapi dengan cara yang berbeda, contoh saat kita ingin kesekolah atau kekantor dengan ojek dalam pemograman prosedural kita akan menjalankan prosedur siapkan uang tunai pergi ke pangkalan ojek, jika ojek tidak ada tunggu, jika tidak bisa menunggu pergi ke pangakalan lain, jika sudah ketemu ojeknya sampaikan ke abang ojek tujuan kita dan tanya biayanya, jika sudah oke berangkat ketujuan dengan abang ojek dan lakukan pembayaran. Nah dalam pemograman OOP kita cukup menggunakan smartphone dengan membuka aplikasi ngabjek tadi masukan tujuan kita, maka aplikasi tadi akan menemukan ojeknya serta menginformasikan biaya yang harus kita keluarkan, kita bisa pilih motode pembayaran secara tunai atau dengan nomad pay, jika kita setuju tinggal pilih oke dan menunggu jemputan dari abang ojeknya sambil mendengar musik dan menyeruput kopi yang kita buat tadi.
+Jika kita menggunakan kembali analogi sebelumnya, pemrograman dengan cara prosedural dapat diibaratkan dengan melakukan pelayanan makanan secara berurutan mulai menerima pesanan, memasak di dapur sampai memberikan makanan ke pelanggan. Perbedaanya disini pada alur prosedural berurutan tidak mempunyai _standar operational procedure_ (SOP) yang baik, sehingga jika ada pelanggan lagi, alur pelayanan tadi dijalankan lagi tanpa adanya standar yang jelas. Misalnya ada kemungkinan untuk kasir terlibat dalam bagian dapur karena hal tertentu. Situasi yang kacau seperti ini dapat menimbulkan konsistensi yang buruk. 
 
-Nah diatas kita melakukan hal yang sama dengan cara yang berbeda dan tentu memiliki kelebihan dan kekurangan sendiri.
+Di samping itu, paradigma pemrograman berorientasi objek telah mendefinisikan semua langkah-langkahnya dengan baik. Satu bagian kasir fokus mengerjakan pekerjaannya sesuai dengan prosedur yang jelas dan sudah ditentukan sehingga kasir tidak perlu mengurusi bagian dapur namun tetap berinteraksi dengannya secara rapi dan teratur. Akibatnya setiap bagian (objek) dapat fokus mengerjakan bagiannya masing-masing dengan lebih teratur. Selain itu jika ada masalah dengan alur layanannya, bisa mudah untuk dicari letak kesalahannya dan dapat diterapkan solusi yang mudah untuk diintegrasikan.
 
-Dari analogi diatas pemograman prosedural berisi perintah dan tugas tugas yang terstruktur secara sitematis sehingga permasalahan dapat diselesaikan, sedangkan dalam OOP pemograman menggunakan sebuah objek yang dapat menyelesaikan masalah dengan solusi yang telah ditanamkan kepadanya dan bisa kita lihat metode-metode didalam objek dapat bekerja sama untuk menyelesaikan masalah seperti contoh diatas ngabjek dapat bekerja sama dengan nomad pay untuk menyelesaikan masalah pembayaran.
+<ins>Gambaran pemrograman</ins>
 
-Secara umum Pemograman Prosedural berkerja secara terstruktur dengan cara memanggil prosedur-prosedur, prosedure ini berupa fungsi, rutinitas dan sub rutinitas, melakukan pendekatan tahap demi tahap terhapat masalah komputasi, untuk memecahkan masalah tersebut menjadi variabel dan rutinitas melalui perintah-perintah terstruktur dan berurutan.
+Sama halnya dengan pemrograman sebenarnya. Misalnya pada implementasi form tambah data barang, hal-hal yang diimplementasikan pastinya dimulai dengan: menampilkan form, mempopulasikan data barang, melakukan validasi dan menambahkan rekam data ke database. Jika menggunakan metode prosedural, biasanya semua itu dilakukan seluruhnya secara berurutan dalam satu file sehingga jika misalnya kita ingin membuat edit data barang yang sejatinya memiliki banyak kesamaan dengan tambah data barang harus membuat ulang dan melakukan hal yang sama berulang kali sehingga terjadi duplikasi.
 
-Dengan demikian pemograman prosedural melakukan pendekatan dari atas dengan memecah sebuah program besar menjadi bagian bagian kecil berupa fungsi. ini bekerja secara langsung secara logika megikuti alur. data akan berpindah dari satu fungsi ke fungsi yang lain secara bebas.
+<p align="center">
+    <img src="../../assets/content/basics/14_oop_dasar/1-prosedural.png" width="50%" />
+</p>
 
-Sedangkan pemograman berorientasi terhadap objek semua hal dalam komputasi akan di ibaratkan sebagai sebuah objek yang terorganisir bertujuan membantu dalam menyelesaikan masalah komputasi. sehingga apapun dapat di gambarkan kedalam objek ini. Objek berisikan fungsi-fungsi dan atribute-atribute, dimana objek dapat di gandakan dengan nilai dari atribut berbeda-beda tetapi dapat menjalankan fungsi yang sama. Karena bersifat modular objek dapat digunakan kembali. sehingga pengembangan dan perawatan sebuah aplikasi menjadi lebih mudah. Data dalam properti dan metode objek dapat diproteksi dengan encapsulasi dan pemberikan batas hak akses modifikasi dimana dalam OOP dibagi 3 kelompok yaitu, private, protected, public dengan demikian data dirasa "lebih aman" dari pada pemograman prosedural.
+Sedangkan pada pemrograman berorientasi objek, setiap fungsi _use case_ dipecah pada tiap-tiap objek yang nantinya berkorelasi satu sama lain membentuk sebuah fungsi aplikasi yang sebenarnya. Misalnya, objek `Barang` dibuat untuk mempopulasikan data barang. Di objek ini bisa dilakukan hal-hal seperti memastikan data barang tetap pada format dan bentuk yang ditentukan. Begitu pula dengan validasinya, bisa juga dibuat objek seperti `BarangRequest` yang menangani validasi saat sebuah form dikirimkan, memastikan semua inputan sudah sesuai yang diinginkan. Dan begitu pula untuk _use case_ yang lain seperti `BarangModel` khusus untuk interaksi dengan database.
 
-Dibawah ini sebuah contoh sederhana baris kode menggunakan pendekatan prosedural dan pendekatan secara objek untuk membuat sebuah array, menambahkan nilai kedalam array kemudian memanggil nilai tersebut.
+Perhatikan disini karena setiap _use case_ disendirikan pada tiap-tiap objek, developer bisa fokus menuliskan apapun **khusus** untuk _use case_ tersebut. Developer bisa leluasa menuliskan kode-kode yang kompleks hanya untuk _use case_ objek tertentu secara terstruktur. Berbeda dengan prosedural yang prakteknya menumpuk semua kode menjadi satu sehingga susah dibaca dan tidak terstruktur. Ini sangat penting sekali karena dapat memudahkan kinerja programmer dalam memanajemen kode-kodenya. Selain itu, yang paling dirasa keuntungannya yaitu pada saat kerja tim yang mengharuskan kode terstruktur agar dapat dimengerti oleh semua anggota tim.
 
-contoh Prosedural :
+<p align="center">
+    <img src="../../assets/content/basics/14_oop_dasar/2-oop.png" width="50%" />
+</p>
 
-```php
-<?php
-function newContoh(){
-    retrun array();
-}
 
-function SetContoh(&$contoh, $nama, $nilai){
-    return $contoh[$nama] = $nilai;
-}
+Semua hal _use case_ diibaratkan sebagai sebuah objek yang terorganisir bertujuan membantu dalam menyelesaikan sesuai _use case_nya. sehingga apapun dapat di gambarkan kedalam objek ini. Objek berisikan fungsi-fungsi dan atribute-atribute, dimana objek dapat di gandakan dengan nilai dari atribut berbeda-beda tetapi dapat menjalankan fungsi yang sama. Karena bersifat modular objek dapat digunakan kembali. sehingga pengembangan dan perawatan sebuah aplikasi menjadi lebih mudah. Data dalam properti dan metode objek dapat diproteksi dengan encapsulasi dan pemberikan batas hak akses modifikasi _(yang akan dibahas nanti)_. Dengan demikian data dirasa "lebih aman" dari pada pemrograman prosedural.
 
-function getContoh($contoh, $nama){
-    return isset($contoh[$nama]) ? $contoh[$nama] : null;
-}
-
-#driven
-$contoh = newContoh();
-setContoh($contoh, 'nama', 'Bellshade');
-echo getContoh($contoh, 'nama');        //hasil Bellshade
-?>
-```
-
-contoh OOP :
-
-```php
-<?php
-class Contoh
-{
-    private $param = array();
-
-    public function set($nama, $nilai){
-        $this->param[$nama] = $nilai;
-    }
-
-    public function get($nama){
-        return isset($this->param[$nama]) ? $this->param[$nama] : null;
-    }
-}
-
-#driven
-$contoh = new Contoh();
-$contoh->set('nama', 'Bellshade');
-echo $contoh->get('nama')       //Hasil Bellshade
-?>
-```
