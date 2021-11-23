@@ -38,8 +38,9 @@ pull_request_rules:
       - label=markdown files
     actions:
       request_reviews:
-        teams:
-          - "@bellshade/docs-team"
+        users:
+          - ikr4mm
+          - azqilana
 
   - name: review php team untuk file markdown
     conditions:
