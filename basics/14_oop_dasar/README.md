@@ -24,7 +24,7 @@ OOP singkatan dari _Object Oriented Programming_. OOP bukan hanya sekedar tentan
 
 Pada dasarnya paradigma pemrograman berorientasi objek adalah metode pemrograman yang memecah bagian-bagian dari aplikasi menjadi 1 bagian yang memiliki 1 fungsionalitas utama. Dari bagian-bagian ini dihubungkan satu sama lain berdasarkan fungsinya masing-masing sehingga membentuk aplikasi yang utuh. Akibatnya, sebuah aplikasi dapat terdiri dari bagian-bagian yang rapi terstruktur, _scalable_ dan _reusable_ sehingga paradigma ini bagus sekali untuk diterapkan pada project berskala besar.
 
-Jika kita analogikan pada kehidupan sehari-hari, bayangkan ada sebuah restoran makanan. Agar usaha restoran tersebut dapat berjalan, semua aktifitas dalam restoran tersebut terbagi menjadi beberapa bagian. Ada bagian yang khusus melayani penjualan, ada bagian lain yang melakukan aktifitas dapur, ada bagian lain yang bertugas di gudang, dsb. Jika kamu perhatikan, pecahan bagian-bagian ini mempunyai tugasnya sendiri-sendiri dan memiliki prosedur masing-masing. Akan tetapi satu bagian harus tetap berkorelasi dengan bagian-bagian lainnya agar restoran bisa berjalan dengan lancar secara keseluruhan.
+Jika kita analogikan pada kehidupan sehari-hari, bayangkan ada sebuah restoran makanan. Agar pelayanan pada restoran tersebut dapat berjalan dengan efisien, semua aktifitas dalam restoran tersebut dibagi menjadi beberapa bagian. Ada yang jadi pelayan, ada yang di kasir, ada yang memasak di dapur,dsb. Jika kamu perhatikan, pecahan bagian-bagian ini mempunyai tugasnya sendiri-sendiri dan memiliki prosedur masing-masing. Akan tetapi satu bagian harus tetap berhubungan dengan bagian-bagian lainnya agar restoran bisa berjalan dengan lancar dan efisien.
 <br/>
 <br/>
 
