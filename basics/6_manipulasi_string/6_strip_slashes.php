@@ -20,4 +20,3 @@ echo "$text1";
 echo "<hr>";
 
 echo "</pre>";
-?>
