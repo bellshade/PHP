@@ -425,10 +425,10 @@ _output:_
 
 ### stripslashes()
 
-Apa kegunaan `stripslashes()`?
+Apa fungsi `stripslashes()`?
 <br>
 
-`stripslashes()` digunakan untuk menghilangkan slash dalam sebuah string.
+`stripslashes()` digunakan untuk menghilangkan backslash dalam sebuah string.
 
 #### Mengapa perlu mengahapus slash dalam sebuah string?
 
@@ -439,7 +439,7 @@ jika kita ingin membuat sistem registrasi, maka di haruskan user untuk memasukka
 ### Sebelum menggunakan stripslashes()
 
 ```php
-$text = "Ayo belajar \  di bellshade";
+$text = "Ayo belajar \ di bellshade";
 echo "$text";
 ```
 
