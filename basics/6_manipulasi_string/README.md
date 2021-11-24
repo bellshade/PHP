@@ -25,7 +25,6 @@ PHP menyediakan berbagai fungsi dan fitur untuk memanipulasi _string_ agar suatu
 - [5. Escape & Formatting](#5-escape-and-formatting)
   - [addslashes](#addslashes)
 
-
 ## 1. Mengambil Properti String
 
 ### Menghitung Banyaknya Karakter
@@ -353,15 +352,13 @@ echo $string_buah;
     <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
 </a>
 
-
 ## 5. Escape & Formatting
-
 
 ### addslashes()
 
 Add slashes adalah sebuah function yang digunakan untuk menambahkan backslash `\` pada sebuah string, untuk melakukannya kita harus memasukkan string ke dalam function `addslashes()`.
 
-Ada beberapa kegunaan mengapa perlu adanya escape menggunakan backslash yaitu saat: 
+Ada beberapa kegunaan mengapa perlu adanya escape menggunakan backslash yaitu saat:
 
 1. String yang terdapat `''`
 2. String yang terdapat `""`
@@ -369,7 +366,7 @@ Ada beberapa kegunaan mengapa perlu adanya escape menggunakan backslash yaitu sa
 
 Mengapa dalam sebuah string perlu ditambahkan backslash `\`?, karena string selalu diawali dengan tanda petik `'` atau `"`. Bagaimana jika ingin menambahkan petik didalam sebuah string? misalnya `Jum'at`, salah satu caranya bisa dimasukkan kedalam identifier string petik 2 seperti ini `"Jum'at"` atau misalnya jika penggunaan petik dua `"` tidak dimungkinkan, maka harus di _"escape"_ dengan tanda `\`. Sehingga menjadi seperti ini `'Jum\'at'`
 
-Langsung saja ke demonya, 
+Langsung saja ke demonya,
 
 <strong>Demo #1</strong><br/>
 Berikut jika sebuah string menggunakan petik `'`.
@@ -409,6 +406,7 @@ _output:_
 <br/>
 <strong>Demo #3</strong><br/>
 Berikut contoh kegunaan sebuah string yang menggunakan backslash `\`.
+
 ```php
 $text = addslashes(" Ayo belajar di \bellshade\ ");
 echo "$text";
@@ -422,3 +420,45 @@ _output:_
 </a>
 
 > _Referensi:_ https://www.w3schools.com/php/func_string_addslashes.asp
+
+---
+
+### stripslashes()
+
+Apa kegunaan `stripslashes()`?
+<br>
+
+`stripslashes()` digunakan untuk menghilangkan slash dalam sebuah string.
+
+#### Mengapa perlu mengahapus slash dalam sebuah string?
+
+jika kita ingin membuat sistem registrasi, maka di haruskan user untuk memasukkan username sesuai yang dia inginkan, kegunaan `stripslashes()` string akan memaksa untuk menampilkan string tanpa `\` jika ada slash `\` .
+
+### DEMO
+
+### Sebelum menggunakan stripslashes()
+
+```php
+$text = "Ayo belajar \  di bellshade";
+echo "$text";
+```
+
+#### Output
+
+<img  src="../../assets/content/basics/5_string_manipulation/stripslashes.png" >
+
+### Sesudah menggunakan stripslashes()
+
+```php
+$text1 = stripslashes("Ayo belajar \ di bellshade");
+echo "$text1";
+```
+
+### Output
+
+<img  src="../../assets/content/basics/5_string_manipulation/stripslashes0.png" >
+
+---
+
+> Referensi
+> https://www.w3schools.com/php/func_string_stripslashes.asp
