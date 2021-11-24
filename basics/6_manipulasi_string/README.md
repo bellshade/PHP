@@ -428,11 +428,11 @@ _output:_
 Apa fungsi `stripslashes()`?
 <br>
 
-`stripslashes()` digunakan untuk menghilangkan backslash dalam sebuah string.
+`stripslashes()` berfungsi untuk menghilangkan backslash dalam sebuah string.
 
 #### Mengapa perlu mengahapus slash dalam sebuah string?
 
-jika kita ingin membuat sistem registrasi, maka di haruskan user untuk memasukkan username sesuai yang dia inginkan, kegunaan `stripslashes()` string akan memaksa untuk menampilkan string tanpa `\` jika ada slash `\` .
+jika kita ingin membuat sistem registrasi, maka di haruskan user untuk memasukkan username sesuai yang dia inginkan, fungsi `stripslashes()` ialah akan memaksa string untuk menghapus backslash `\` pada string jika ada.
 
 ### DEMO
 
