@@ -12,8 +12,8 @@
     - [2.1 Nested Foreach](#21-nested-foreach)
     - [List sebagai Pengganti Nested Foreach](#list-sebagai-pengganti-nested-foreach)
   - [3. Perulangan While](#3-perulangan-while)
-  - [4. Perulangan Do While](#4-perulangan-do-while)
-    - [Referensi](#referensi)
+  - [4. Perulangan Do While](#4-perulangan-do-while)  
+  - [5. Perulangan Tak Terbatas](#5-perulangan-tak-terbatas)
 
 ## Jenis-Jenis Perulangan
 
@@ -303,7 +303,7 @@ Dari diagram alur di atas bisa kita lihat bahwa *while* hampir sama dengan *for*
 // Deklarasi parameter $i sesuai diagram bernilai 0
 $i = 0;
 // Perulangan while dengan ekspresi selama $i lebih kecil dari 5
-while($ < 5){
+while($i < 5){
     // echo nilai $i dan kemudian $i ditambah 1 (post increment)
     echo $i++;
 }
@@ -373,6 +373,87 @@ while($i < 5){
 end:
 return $i;
 ```
+
+## 5. Perulangan Tak Terbatas
+
+Kita bisa saja suatu saat membuat sebuah perulangan yang tidak pernah berhenti. Perulangan ini disebut sebagai perulangan tak terbatas (infinite loop). perulangan ini akan terus bekerja selamanya, bagaimanapun setiap programer bisa saja melakukan kesalahan ini, karena sedikit perubahan atau salah meletakan suatu ekspresi akan menyebabkan nilai dari ekspresi akan selalu bernilai benar-`true`. sebagai contoh dari baris kode perulangan while diatas kita salah memposisikan variable dari $i, coba perhatikan baris kode dibawah ini :
+
+```php
+<?php
+    $i = 0;
+    while ($i < 5)
+    {
+        echo $i++;
+    }
+?>
+```
+
+Maka kode di atas akan melakukan print dari angka 0 sampai angka 4, tapi jika tanpa sengaja variabel $i kita posisikan seperti ini :
+
+```php
+    while($i < 5)
+    {
+        $i = 0;
+        echo $i++;
+    }
+```
+
+Maka baris kode di akan akan selalu melakukan print nilai `0` tanpa henti, karena setiap perlungan dilakukan nilai dari variable $i akan kembali menjadi `0` sehingga menyebabkan ekspresi 1 < 5 adalah benar-`true`.
+
+Jika hal ini terjadi saat kita melakukan testing atau debugging terhadap baris kode kita, jangan jadi panik coba lakukan salah satu dari metode ini :
+
+1. Jika testing kita berjalan dalam webpage.
+    Tunggu saja beberapa detik, biasa settingan php mempunyai masa time out selama 30 detik, bila dalam 30 detik tidak berhenti, kemungkian konfigurasi ini telah diganti, kita dapat menggunakan tombol stop pada browser kita untuk menghentikan perulangan ini.
+2. Jika PHP kita jalankan dalam mode Command Line Interface (CLI).
+    Kita dapat menekan tombol CTRL+C, maka script PHP akan berhenti, terkadang script akan terus berjalan beberapa saat lagi, tapi pasti akan berhenti secepat nya.
+
+Dalam pengebangan aplikasi ada kalanya kita akan melakukan loop yang sangat banyak seperti dalam pencarian, jika kita ragu terhadap perulangan yang kita lakukan kita dapat menyelipkan fungsi `break` dalam perulangan kita yang kemudian dapat kita hilangkan jika kita rasa perulangan tersebut telah berjalan dengan benar, sebagai contoh baris kode dibawah ini :
+
+```php
+<?php
+$data = false;
+$i = 1;                 //variable untuk mengecek banyak nya loop
+while ($data = true)    //Seharunya kita mengecek apakah data ini benar tetapi kita malah mengeset data ini menjadi benar
+{
+    echo 'Data Benar<br>';
+    $data = false;
+
+    #pencegahan sementara agar tidak terjadi infinite loop
+    $i++;
+    if ($i > 5)
+    {
+        #hentikan perulangan
+        break;
+    }
+}
+
+?>
+```
+
+Hasil dari perulangan di atas akan menjadi seperti ini :
+
+```text
+data benar
+data benar
+data benar
+data benar
+data benar 
+```
+
+Dimana kita seharusnya menggunakan operator pembanding(`==`,`===`) tapi tanpa sengaja kita menggukan operator penugasan(`=`). Kemudian kita dapat memperbaiki perulangan yang kita buat.
+
+Setelah kita jalankan script PHP tersebut dan kita merasa bahwa perulangan yang terjadi sudah benar, kita dapat menghapus baris kode dari pencegahan perulangan tersebut. atau dengan cara lain jika menggukan operator persaman dalam ekspresi, kita dapat membalik posisi variabel dan nilai, jika kita salah memasukan operator hal ini hanya akan menimbulkan pesan kesalahan. contoh :
+
+```php
+    $data = true;
+    while (true = $data)
+    {
+        lakukan sesuatu;
+        $data = false;
+    }
+```
+
+Baris kode diatas tidak akan melakukan perulangan tetapi akan memunculkan pesan kesalahan. Hal ini tidak berlaku untuk penggunaan operator lebih besar atau lebih kecil.
 
 ### Referensi
 
