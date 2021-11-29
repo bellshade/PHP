@@ -426,13 +426,10 @@ _output:_
 ### stripslashes()
 
 Apa fungsi `stripslashes()`?
-<br>
+> `stripslashes()` merupakan fungsi dalam php yang digunakan untuk  untuk menghilangkan backslash dalam sebuah kalimat atau string.
 
-`stripslashes()` berfungsi untuk menghilangkan backslash dalam sebuah string.
-
-#### Mengapa perlu mengahapus slash dalam sebuah string?
-
-jika kita ingin membuat sistem registrasi, maka di haruskan user untuk memasukkan username sesuai yang dia inginkan, fungsi `stripslashes()` ialah akan memaksa string untuk menghapus backslash `\` pada string jika ada.
+ Mengapa perlu mengahapus slash dalam sebuah string?
+> jika kita ingin membuat sistem registrasi, maka user bebas untuk memasukkan username sesuai yang dia inginkan, tapi tidak menutup kemungkinan bisa saja user itu menambahkan backslash `\` pada form nya dan itu dapat mengganggu proses query bahkan mengagalkan proses tersebut, fungsi `stripslashes()` disini ialah akan memaksa untuk menghapus backslash `\` pada string jika ada agar tidak menganggu proses query tersebut.
 
 ### DEMO
 
