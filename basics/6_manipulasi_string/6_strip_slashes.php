@@ -14,7 +14,7 @@ echo "$text",PHP_EOL;
 echo "<br>";
 //-----------------
 echo "Sesudah menggunakan stripslashes(): ",PHP_EOL;
-$text = "Ayo belajar \di bellshade";
+$text = "Sandi: \"Hai, apa kabar semuanya?\"";
 $text1 = stripslashes($text);
 echo "$text1";
 
