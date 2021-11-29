@@ -447,9 +447,9 @@ echo "$text";
 ### Sesudah menggunakan stripslashes()
 
 ```php
-$text = "Ayo belajar \di bellshade";
+$text = "Sandi: \"Hai, apa kabar semuanya?\"";
 $text1 = stripslashes($text);
-echo "$text1";
+echo $text1;
 ```
 
 ### Output
