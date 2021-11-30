@@ -86,7 +86,7 @@ class PathFinding
         $this->map = $map;
         // Set properti map visited, yaitu sama dengan map tapi kosong
         foreach ($map as $xIndex => $xArray) {
-            foreach ($xArray as $yIndex => $yValue) {
+            foreach (array_keys($xArray) as $yIndex) {
                 $this->mapVisited[$xIndex][$yIndex] = 0;
             }
         }

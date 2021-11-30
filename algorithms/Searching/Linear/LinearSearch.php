@@ -28,21 +28,21 @@ class LinearSearch
             return $this->hasil;
         }
 
-        $i = 0;
+        $index = 0;
         //perulangan untuk setiap array
         do {
-            if ($array[$i] == $key) {
+            if ($array[$index] == $key) {
                 //jika data ditemukan
                 $this->hasil = true;
                 //hentikan perulangan
                 break;
             }
             //pencarian secara recursive
-            if (is_array($array[$i])) {
-                $this->cari($array[$i], $key);
+            if (is_array($array[$index])) {
+                $this->cari($array[$index], $key);
             }
-            $i++;
-        } while ($i < $length);
+            $index++;
+        } while ($index < $length);
 
         //kembalikan hasil keluaran
         return $this->hasil;

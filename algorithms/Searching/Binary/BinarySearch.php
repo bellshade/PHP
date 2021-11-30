@@ -2,8 +2,6 @@
 
 namespace Searching\Binary;
 
-use function PHPUnit\Framework\isNull;
-
 /**
  * Class BinarySearch
  * class berisi algoritma pencarian secara binary
@@ -107,11 +105,15 @@ class BinarySearch
                 $log .= '<b>Benar</b>' . PHP_EOL . 'DATA DITEMUKAN' . PHP_EOL;
                 return $log;
             }
+
+            //Jika data tidak ditemukan
             if ($this->array[$tengah] > $this->key) {
                 $log .= 'Salah, Terlalu Besar.' . PHP_EOL;
                 $log .= 'Hapus Kanan, cari kebagian kiri' . PHP_EOL;
                 $atas = $tengah - 1;
-            } else {
+            }
+
+            if ($this->array[$tengah] < $this->key) {
                 $log .= 'Salah, Terlalu Kecil' . PHP_EOL;
                 $log .= 'Hapus Kiri, cari kebagian Kanan' . PHP_EOL;
                 $bawah = $tengah + 1;

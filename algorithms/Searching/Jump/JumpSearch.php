@@ -86,38 +86,38 @@ class JumpSearch
      */
     public function getLog()
     {
-        $p = count($this->array);
-        $l = floor(sqrt($p));
-        $i = 0;
+        $panjang = count($this->array);
+        $lompatan = floor(sqrt($panjang));
+        $index = 0;
 
         $log = 'Tentukan parameter awal ' . PHP_EOL;
-        $log .= 'index : ' . $i . ', Banyak Elemen : ' . $p . ', Buffer antar elemen : ' . $l . PHP_EOL;
+        $log .= 'index : ' . $index . ', Banyak Elemen : ' . $panjang . ', Buffer antar elemen : ' . $lompatan . PHP_EOL;
         $log .= '----------------------------------' . PHP_EOL;
-        if (($this->array[$p - 1] < $this->key) || ($this->array[$i] > $this->key)) {
+        if (($this->array[$panjang - 1] < $this->key) || ($this->array[$index] > $this->key)) {
             return 'Nilai yang dicari tidak berada dalam jangkauan barisan data';
         }
 
-        while ($this->array[$i] < $this->key) {
-            $i += $l;
-            $log .= 'index : ' . $i . ', nilai : ' . $this->array[$i] . ', Hasil : ';
-            $log .= ($this->array[$i] < $this->key) ? 'Terlalu Kecil' . PHP_EOL : 'Terlalu Besar' . PHP_EOL;
-            if ($i >= $p - 1) {
-                $i = $p - 1;
+        while ($this->array[$index] < $this->key) {
+            $index += $lompatan;
+            $log .= 'index : ' . $index . ', nilai : ' . $this->array[$index] . ', Hasil : ';
+            $log .= ($this->array[$index] < $this->key) ? 'Terlalu Kecil' . PHP_EOL : 'Terlalu Besar' . PHP_EOL;
+            if ($index >= $panjang - 1) {
+                $i = $panjang - 1;
             }
         }
-        if ($this->array[$i] > $this->key) {
+        if ($this->array[$index] > $this->key) {
             $log .= '----------------------------------' . PHP_EOL;
             $log .= 'Menjalankan Linear Search' . PHP_EOL;
             $log .= '----------------------------------' . PHP_EOL;
         }
-        while ($this->array[$i] >= $this->key) {
-            $log .= 'index : ' . $i . ', nilai : ' . $this->array[$i] . ', Hasil : ';
-            if ($this->array[$i] == $this->key) {
+        while ($this->array[$index] >= $this->key) {
+            $log .= 'index : ' . $index . ', nilai : ' . $this->array[$index] . ', Hasil : ';
+            if ($this->array[$index] == $this->key) {
                 $log .= '<b>Data Ditemukan</b>' . PHP_EOL;
                 return $log;
             }
             $log .= 'Data tidak Cocok' . PHP_EOL;
-            $i--;
+            $index--;
         }
         $log .= 'Data Tidak Ditemukan';
         return $log;
@@ -151,7 +151,7 @@ $jump = new JumpSearch($data, $key);
 $output = $jump->getHasil();
 
 echo "<pre>";
-echo "<h1>Jump Search Search</h1>";
+echo "<h1>JumpSearch Search</h1>";
 echo "Deretan data: " . implode(', ', $data), PHP_EOL;
 echo "Yang di cari: " . $key, PHP_EOL;
 echo "-------------------------------------------------", PHP_EOL;
