@@ -5,6 +5,13 @@
 pull_request_rules:
   - name: ci testing kalo sukses ke squash dengan label
     conditions:
+      # rule ketika auto merge dijalankan
+      # jika workflow passed maka akan dicentang
+      # jika pull request di approve dari 2 maintainer akan di centang
+      # jika pull request pada branch main maka akan dicentang
+      # jika diberikan label 'ready-to-merge' akan dicentang
+
+      # jika semua rule sudah di centang maka fungsi automerge akan dijalankan
       - check-success=build
       - "#approved-reviews-by>=2"
       - base=main
@@ -12,11 +19,20 @@ pull_request_rules:
     actions:
       label:
         add:
+            # ketika sudah di merge maka akan menambahkan label
+            # 'sudah direview!'
             - sudah direview !
       comment:
+        # ketika semua rule diatas sudah djalankan maka bot akan memberikan komentar
+        # pada kontributor yang melakukan pull request
         message: terima kasih atas kontribusinya @{{author}} !
       merge:
-        method: squash
+        # metode yang digunakan pada bot automerge
+        method: merge
+    
+    # menambhkan label php
+    # kita pull request terdapat file php
+    # maka akan menambahkan file php
   - name: php label
     conditions:
       - files~=\.php$
@@ -25,6 +41,9 @@ pull_request_rules:
         add:
           - php files
           - request tim php untuk review
+
+    # kita pull request terdapat file markdown
+    # maka akan menambahkan file markdown
   - name: markdown label
     conditions:
       - files~=\.md$
@@ -33,6 +52,9 @@ pull_request_rules:
         add:
           - markdown files
           - request docs team untuk review
+
+    # me mention maintainer yang ketika file markdown
+    # tedapat pada pull request
   - name: review docs team untuk file markdown
     conditions:
       - label=markdown files
@@ -42,6 +64,8 @@ pull_request_rules:
           - ikr4mm
           - azqilana
 
+    # me mention maintainer yang ketika file php
+    # terdapat pada pull request
   - name: review php team untuk file markdown
     conditions:
       - label=php files
