@@ -59,8 +59,8 @@ class TernarySearchTest extends TestCase
     public function testKeySearchNull()
     {
         $this->generateArray(10);
+        sort($this->array);
         $this->ternary = new TernarySearch(array: $this->array);
-        $this->ternary->setDoSort(true);
         $result = $this->ternary->cari();
         $expected = 'Key pencarian tidak boleh null';
         $msg = 'Ternary Search : Test key pencarian gagal, hasil yang diharapkan "';
@@ -84,6 +84,26 @@ class TernarySearchTest extends TestCase
 
         $expected = "Data Bukan Array";
         $msg = 'Ternary Search : Test type data gagal, hasil yang diharapkan "';
+        $msg .= $expected . '" tidak sama dengan nilai hasil';
+
+        $this->assertEquals($expected, $result, $msg);
+    }
+
+    /**
+     * Test Searching Dengan Data Bukan Array
+     * 
+     * Melakukan Test dengan Data yang di cari bukan sebuah array
+     */
+    public function testNumericArray()
+    {
+        $this->ternary = new TernarySearch();
+        $this->ternary->setKey(79);
+        $this->ternary->setArray(['jambu', 'mangga', 'pepaya', 'bengkuang']);
+
+        $result = $this->ternary->cari();
+
+        $expected = "Data Bukan Array Numeric";
+        $msg = 'Ternary Search : Test numeric array gagal, hasil yang diharapkan "';
         $msg .= $expected . '" tidak sama dengan nilai hasil';
 
         $this->assertEquals($expected, $result, $msg);
@@ -122,8 +142,8 @@ class TernarySearchTest extends TestCase
     {
         $this->ternary = new TernarySearch();
         $this->generateArray(20);
+        sort($this->array);
         $this->ternary->setArray($this->array);
-        $this->ternary->setDoSort(true);
         $this->ternary->setKey($this->array[15]);
         $result = $this->ternary->cari();
 
@@ -134,8 +154,6 @@ class TernarySearchTest extends TestCase
      * Test With Range
      * 
      * Melakukan test terhadap class TernarySearch, dengan menggunakan range index
-     * 1. pencarian dalam range index
-     * 2. pencarian di luar range index
      */
     public function testWithRange()
     {

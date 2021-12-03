@@ -21,7 +21,7 @@ print_r($index1);
 echo '<br>';
 print_r($index2);
 
-/** Asosiatif Array 
+/** Asosiatif Array
  * Membuat Array Key String (Asosiatif Array)
  */
 $asos = ['origin' => 'bellshade', 'repo' => 'php', 'branch' => 'main'];

@@ -91,7 +91,8 @@ class JumpSearch
         $index = 0;
 
         $log = 'Tentukan parameter awal ' . PHP_EOL;
-        $log .= 'index : ' . $index . ', Banyak Elemen : ' . $panjang . ', Buffer antar elemen : ' . $lompatan . PHP_EOL;
+        $log .= 'index : ' . $index . ', Banyak Elemen : ' . $panjang;
+        $log .= ', Buffer antar elemen : ' . $lompatan . PHP_EOL;
         $log .= '----------------------------------' . PHP_EOL;
         if (($this->array[$panjang - 1] < $this->key) || ($this->array[$index] > $this->key)) {
             return 'Nilai yang dicari tidak berada dalam jangkauan barisan data';
@@ -102,7 +103,7 @@ class JumpSearch
             $log .= 'index : ' . $index . ', nilai : ' . $this->array[$index] . ', Hasil : ';
             $log .= ($this->array[$index] < $this->key) ? 'Terlalu Kecil' . PHP_EOL : 'Terlalu Besar' . PHP_EOL;
             if ($index >= $panjang - 1) {
-                $i = $panjang - 1;
+                $index = $panjang - 1;
             }
         }
         if ($this->array[$index] > $this->key) {
