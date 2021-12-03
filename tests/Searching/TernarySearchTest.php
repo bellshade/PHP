@@ -1,9 +1,7 @@
 <?php
 
-echo "<pre>";
 require_once 'algorithms/Searching/Ternary/TernarySearch.php';
 
-use PhpParser\Node\Expr\Ternary;
 use PHPUnit\Framework\TestCase;
 use Searching\Ternary\TernarySearch;
 

@@ -2,12 +2,6 @@
 
 namespace Searching\Ternary;
 
-/**
- * Class TernarySearch
- *
- * class berisi algoritma pencarian secara ternary
- * @package Searching\Ternary
- */
 class TernarySearch
 {
     protected $array;
@@ -251,6 +245,7 @@ $ternary = new TernarySearch($key, $data);
 $result =  $ternary->cari();
 
 echo "<pre>";
+echo "<h1>TernarySearch Search</h1>";
 echo $ternary->log();
 echo PHP_EOL . "============== Hasil Pencarian ===============" . PHP_EOL;
 $hasil =  "Data di temukan pada index = " . $result;
@@ -258,4 +253,4 @@ if ($result == null) {
     # code...
     $hasil = "<b>Data Tidak di Temukan</b>";
 }
-echo PHP_EOL . $hasil;
+echo PHP_EOL . $hasil . PHP_EOL;
