@@ -8,7 +8,7 @@
         "phpunit/phpunit": "^9.5"
     },
     "scripts": {
-        "phpcs": "phpcs . --warning-severity=0 -s --colors --standard=phpcs.xml",
+        "phpcs": "phpcs . -s --colors --standard=phpcs.xml",
         "phpcbf": "phpcbf . --standard=phpcs.xml",
         "phpunit": "phpunit tests/"
     },

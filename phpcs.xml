@@ -7,5 +7,17 @@
     <rule ref="PSR12">
         <exclude name="Generic.Files.LineEndings"/>
         <exclude name="Generic.WhiteSpace.ScopeIndent.IncorrectExact"/>
+
+        <exclude name="Generic.Files.LineLength.TooLong"/>
+        <exclude name="Generic.PHP.DisallowShortOpenTag.PossibleFound"/>
+        <exclude name="PSR1.Files.SideEffects.FoundWithSymbols"/>
+        <exclude name="Internal.NoCodeFound"/>
+        <exclude name="Internal.Tokenizer.Exception"/>
+    </rule>
+    <rule ref="Internal.NoCodeFound">
+        <severity>0</severity>
+    </rule>
+    <rule ref="Internal.Tokenizer.Exception">
+        <severity>0</severity>
     </rule>
 </ruleset>
