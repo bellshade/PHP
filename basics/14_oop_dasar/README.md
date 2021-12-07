@@ -8,9 +8,8 @@ Object Oriented Programing atau pemrograman berorientasi terhadap objek lebih se
 ## Daftar isi
 
 - [Pengenalan Pemrograman Berorientasi Objek (OOP)](#1-pengenalan-pemrograman-berorientasi-objek-oop)
-    - [Apa itu?](#apa-itu)
-    - [Perbedaannya OOP dengan metode prosedural biasa](#perbedaannya-oop-dengan-metode-prosedural-biasa)
-
+  - [Apa itu?](#apa-itu)
+  - [Perbedaannya OOP dengan metode prosedural biasa](#perbedaannya-oop-dengan-metode-prosedural-biasa)
 
 ## 1. Pengenalan Pemrograman Berorientasi Objek (OOP)
 
@@ -30,23 +29,24 @@ Jika kita analogikan pada kehidupan sehari-hari, bayangkan ada sebuah restoran m
 
 ### Perbedaannya OOP dengan metode prosedural biasa
 
-Pemrograman dengan paradigma prosedural bekerja secara urut dan sistematis, sedangkan OOP bekerja dengan sebuah objek yang  fleksibel, dapat dikembangkan _(scalable)_, dan dapat digunakan ulang _(reusable)_
+Pemrograman dengan paradigma prosedural bekerja secara urut dan sistematis, sedangkan OOP bekerja dengan sebuah objek yang fleksibel, dapat dikembangkan _(scalable)_, dan dapat digunakan ulang _(reusable)_
 
 <ins>Analogi Singkat</ins>
 
-Jika kita menggunakan kembali analogi sebelumnya, pemrograman dengan cara prosedural dapat diibaratkan dengan melakukan pelayanan makanan secara berurutan mulai menerima pesanan, memasak di dapur sampai memberikan makanan ke pelanggan. Analogi yang tepat untuk alur prosedural adalah tiap aktifitas restoran tidak mempunyai _standar operational procedure_ (SOP) yang baik. Misalnya ada kemungkinan untuk kasir terlibat dalam bagian dapur, cara pemesanan selalu berubah tiap kali ada pelanggan dan sebagainya. Situasi yang kacau seperti ini dapat menimbulkan konsistensi yang buruk. 
+Jika kita menggunakan kembali analogi sebelumnya, pemrograman dengan cara prosedural dapat diibaratkan dengan melakukan pelayanan makanan secara berurutan mulai menerima pesanan, memasak di dapur sampai memberikan makanan ke pelanggan. Analogi yang tepat untuk alur prosedural adalah tiap aktifitas restoran tidak mempunyai _standar operational procedure_ (SOP) yang baik. Misalnya ada kemungkinan untuk kasir terlibat dalam bagian dapur, cara pemesanan selalu berubah tiap kali ada pelanggan dan sebagainya. Situasi yang kacau seperti ini dapat menimbulkan konsistensi yang buruk.
 
 Di samping itu, paradigma pemrograman berorientasi objek telah mendefinisikan semua langkah-langkahnya dengan baik. Satu bagian kasir fokus mengerjakan pekerjaannya sesuai dengan prosedur yang jelas dan sudah ditentukan sehingga kasir tidak perlu mengurusi bagian dapur namun tetap berinteraksi dengannya secara rapi dan teratur. Akibatnya setiap bagian (objek) dapat fokus mengerjakan bagiannya masing-masing dengan lebih teratur. Selain itu jika ada masalah dengan alur layanannya, bisa mudah untuk dicari letak kesalahannya dan dapat diterapkan solusi yang mudah untuk diintegrasikan.
 
 <ins>Gambaran pemrograman</ins>
 
-Sama halnya dengan pemrograman sebenarnya. Misalnya pada implementasi form tambah data barang, hal-hal yang diimplementasikan pastinya dimulai dengan: 
+Sama halnya dengan pemrograman sebenarnya. Misalnya pada implementasi form tambah data barang, hal-hal yang diimplementasikan pastinya dimulai dengan:
+
 - menampilkan form
 - mempopulasikan data barang
-- melakukan validasi dan 
-- menambahkan rekam data ke database. 
+- melakukan validasi dan
+- menambahkan rekam data ke database.
 
-Jika menggunakan metode prosedural, biasanya semua itu dilakukan seluruhnya secara berurutan dalam satu file sehingga jika kita ingin membuat edit data barang yang sejatinya memiliki banyak kesamaan dengan tambah data barang harus membuat ulang dan melakukan hal yang sama berulang kali sehingga terjadi duplikasi. Perhatikan juga, hal ini bisa mengakibatkan konsistensi yang buruk seperti misalnya jika ada perubahan pada halaman tambah data, seringkali ada perbedaan kode dengan halaman edit data karena harus ada duplikasi yang dilakukan. 
+Jika menggunakan metode prosedural, biasanya semua itu dilakukan seluruhnya secara berurutan dalam satu file sehingga jika kita ingin membuat edit data barang yang sejatinya memiliki banyak kesamaan dengan tambah data barang harus membuat ulang dan melakukan hal yang sama berulang kali sehingga terjadi duplikasi. Perhatikan juga, hal ini bisa mengakibatkan konsistensi yang buruk seperti misalnya jika ada perubahan pada halaman tambah data, seringkali ada perbedaan kode dengan halaman edit data karena harus ada duplikasi yang dilakukan.
 
 <p align="center">
     <img src="../../assets/content/basics/14_oop_dasar/1-prosedural.png" width="50%" />
@@ -60,7 +60,66 @@ Perhatikan disini karena setiap _use case_ disendirikan pada tiap-tiap objek, de
     <img src="../../assets/content/basics/14_oop_dasar/2-oop.png" width="50%" />
 </p>
 
+Semua hal _use case_ diibaratkan sebagai sebuah objek yang terorganisir bertujuan membantu dalam menyelesaikan sesuai _use case_nya. Sehingga apapun dapat di gambarkan kedalam objek ini. Objek berisikan fungsi-fungsi dan atribute-atribute, dimana objek dapat di gandakan dengan nilai dari atribut berbeda-beda tetapi dapat menjalankan fungsi yang sama. Karena bersifat modular objek dapat digunakan kembali. Sehingga pengembangan dan perawatan sebuah aplikasi menjadi lebih mudah. Data dalam properti dan metode objek dapat diproteksi dengan encapsulasi dan memberikan batas hak akses modifikasi _(yang akan dibahas nanti)\_. Dengan demikian data dirasa "lebih aman" dari pada pemrograman prosedural.
 
-Semua hal _use case_ diibaratkan sebagai sebuah objek yang terorganisir bertujuan membantu dalam menyelesaikan sesuai _use case_nya. Sehingga apapun dapat di gambarkan kedalam objek ini. Objek berisikan fungsi-fungsi dan atribute-atribute, dimana objek dapat di gandakan dengan nilai dari atribut berbeda-beda tetapi dapat menjalankan fungsi yang sama. Karena bersifat modular objek dapat digunakan kembali. Sehingga pengembangan dan perawatan sebuah aplikasi menjadi lebih mudah. Data dalam properti dan metode objek dapat diproteksi dengan encapsulasi dan memberikan batas hak akses modifikasi _(yang akan dibahas nanti)_. Dengan demikian data dirasa "lebih aman" dari pada pemrograman prosedural.
+## CLASS AND OBJECT
 
+### Apa itu class dan object?
 
+`Class` adalah sebuah tempelate / blueprint yang menyimpak banyak object.
+`Object`adalah sebuah bagian didalam class
+
+#### Begini Penjelasannya
+
+Saya punya sebuah buku untuk membuat sebuah HandPhone,
+Buku tersebut akan digunakan untuk membuat semua HandPhone.
+Dari sini bisa dibilang bahwa `buku` adalah sebuah class dan `HandPhone` Adalah sebuah objectnya,
+
+### Cara Membuat Class
+
+Cara membuat class adalah dengan menaruh keyword `class` didepan nya, Untuk penamaannya bebas
+
+#### Contoh
+
+```php
+class namaClassNya {
+
+}
+```
+
+```php
+class Kelas {
+
+}
+```
+
+### Cara Membuat Object
+
+Cara membuat objectnya adalah dengan membuat sebuah variable dengan yang diisi dengan
+
+```php
+new namaClassNya();
+```
+
+#### Contoh
+
+```php
+$kelas1 = new Kelas();
+$kelas2 = new Kelas();
+```
+
+---
+
+#### `Hasil`
+
+#### Variable kelas1
+
+<img src="../../assets/content/basics/14_oop_dasar/object1.png"  />
+
+#### Variable kelas2
+
+<img src="../../assets/content/basics/14_oop_dasar/object2.png"  />
+
+## NOTE
+
+Untuk membuat sebuah variable untuk object, maka nama variable-nya harus berbeda tidak boleh sama,dan ` Isi variable boleh sama`
