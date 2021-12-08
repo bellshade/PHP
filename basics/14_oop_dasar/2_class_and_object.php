@@ -1,4 +1,5 @@
 <?php
+
 echo '<pre>';
 
 echo '<h1>Membuat class di PHP</h1>';
@@ -6,7 +7,8 @@ echo '<h1>Membuat class di PHP</h1>';
 echo 'class Kelas {
 
 }';
-class Kelas {
+class Kelas
+{
 
 }
 echo '<br>';
@@ -25,5 +27,3 @@ var_dump($kelas1);
 var_dump($kelas2);
 
 echo '</pre>';
-
-?>
