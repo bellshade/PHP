@@ -123,3 +123,138 @@ $kelas2 = new Kelas();
 ## NOTE
 
 Untuk membuat sebuah variable untuk object, maka nama variable-nya harus berbeda tidak boleh sama,dan ` Isi variable boleh sama`
+
+---
+
+## PROPERTY AND METHOD
+
+### Apa itu property dan method?
+
+#### `Analogi property dan method`
+
+Di sebuah mobil terdapat property yaitu ada
+
+1. nama
+2. warna
+3. merek
+4. kecepatan maksimal
+5. jumlah penumpang
+
+dan di sebuah mobil pasti ada
+
+1. Gas
+2. Rem
+3. Belok Ke kanan
+4. Belok Ke kiri
+
+Dari sini kita bisa tau bahwa property adalah sebuah component
+dan method adalah sebuah perilaku
+
+### Cara membuat property dan method
+
+### `Property`
+
+Cara membuatnya dengan cara membuat
+didepannya juga di tambahkan `public`
+
+```php
+public $namaVariable,
+       $namaVariable2;
+```
+
+Bisa juga di berikan default jadi
+
+```php
+public $namaVariable = "value",
+       $namaVariable2 = "value";
+```
+
+di dalam class
+
+---
+
+#### Contoh
+
+```php
+class Kelas {
+  public $nama,
+         $warna,
+}
+$nama1 = new Kelas();
+```
+
+Untuk menimpa object dengan value yang ingin kita tentukan maka lalukan
+
+```php
+$namaInstance->namaProperty = "value";
+// value bebas diisikan
+```
+
+Jadi maka akan seperti berikut
+
+```php
+$nama1->nama = "Kuro";
+$nama1->warna = "Hitam";
+
+// Lalu di echo
+echo "Nama : $nama1->nama";
+echo "<br>";
+echo " Warna : $nama1->warna";
+```
+
+#### `Output`
+
+<img src="../../assets/content/basics/14_oop_dasar/property.png"  />
+
+---
+
+### `Method`
+
+Cara membuat method adalah
+
+1. Membuat property terlebih dahulu
+2. Membuat function yang didepannya harus `public`
+3. menggunakan {`this`} untuk mengambil variable dari property
+
+#### Contohnya
+
+```php
+class namaClass {
+  // membuat property terlebih dahulu
+  public $namaVariable,
+         $namaVariable2;
+
+  // membuat function
+  public function namaFunction (){
+    return "{$this->namaVariable} {$this->namaVariable2}";
+  }
+}
+```
+
+#### Demo
+
+```php
+class Kelas {
+  // property
+  public $nama,
+         $warna;
+
+  // method
+  public function siswa () {
+    return "{$this->nama} {$this->warna}";
+  }
+}
+$nama1 = new Kelas();
+$nama1->nama = "Kuro";
+$nama1->warna = "Hitam";
+// ambil method yaitu siswa
+
+// cara kerja
+// dibagian funtion siswa, di situ sudah ada value nama dan warna
+// jika di panggil maka akan mengambil data dari $nama1->nama dan $nama1->warna
+echo $nama1->siswa();
+```
+
+`Output`
+
+<img src="../../assets/content/basics/14_oop_dasar/method.png"  />
