@@ -62,7 +62,7 @@ Perhatikan disini karena setiap _use case_ disendirikan pada tiap-tiap objek, de
 
 Semua hal _use case_ diibaratkan sebagai sebuah objek yang terorganisir bertujuan membantu dalam menyelesaikan sesuai _use case_nya. Sehingga apapun dapat di gambarkan kedalam objek ini. Objek berisikan fungsi-fungsi dan atribute-atribute, dimana objek dapat di gandakan dengan nilai dari atribut berbeda-beda tetapi dapat menjalankan fungsi yang sama. Karena bersifat modular objek dapat digunakan kembali. Sehingga pengembangan dan perawatan sebuah aplikasi menjadi lebih mudah. Data dalam properti dan metode objek dapat diproteksi dengan encapsulasi dan memberikan batas hak akses modifikasi _(yang akan dibahas nanti)\_. Dengan demikian data dirasa "lebih aman" dari pada pemrograman prosedural.
 
-## CLASS AND OBJECT
+## Class dan Object
 
 ### Apa itu class dan object?
 
