@@ -7,7 +7,8 @@
     <rule ref="PSR12">
         <exclude name="Generic.Files.LineEndings"/>
         <exclude name="Generic.WhiteSpace.ScopeIndent.IncorrectExact"/>
-
+        <exclude name="PSR1.Classes.ClassDeclaration.MissingNamespace"/>
+        <exclude name="PSR2.Classes.PropertyDeclaration.Multiple"/>
         <exclude name="Generic.Files.LineLength.TooLong"/>
         <exclude name="Generic.PHP.DisallowShortOpenTag.PossibleFound"/>
         <exclude name="PSR1.Files.SideEffects.FoundWithSymbols"/>
