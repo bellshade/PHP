@@ -5,7 +5,7 @@
 
 ## Jump Search
 
-Algoritma Jump Search termasuk salah satu algoritma pencarian, berdasarkan namanya Jump Search dapat diartikan cari dan melompat. Algoritma ini bekerja dengan cara melopatti index dari elemen array, jadi tidak mengecek satu persatu tetapi mengecek satu elemen kemudian melompati beberapa elemen yang lebih tinggi untuk mengecek nilai elemennya sampai nilai dari elemen lebih besar dari pada nilai yang dicari, jika ini terjadi maka akan dilakukan linear search.
+Algoritma Jump Search termasuk salah satu algoritma pencarian, berdasarkan namanya Jump Search dapat diartikan cari dan melompat. Algoritma ini bekerja dengan cara melompati index dari elemen array, jadi tidak mengecek satu persatu tetapi mengecek satu elemen kemudian melompati beberapa elemen yang lebih tinggi untuk mengecek nilai elemennya sampai nilai dari elemen lebih besar dari pada nilai yang dicari, jika ini terjadi maka akan dilakukan linear search.
 
 ### Langkah
 

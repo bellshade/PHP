@@ -8,10 +8,9 @@ function rekursif(int $angka)
     if ($angka <= 10) {
         echo "<br>$angka";
         rekursif($angka + 1);
-    } else {
-        return "$angka";
     }
+    return $angka;
 }
 //Sintaks Call Function
-echo rekursif(1);
+rekursif(1);
 //============================================

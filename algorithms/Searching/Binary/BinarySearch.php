@@ -103,18 +103,23 @@ class BinarySearch
             $log .= ', Hasil : ';
 
             //Jika data ditemukan
-            if ($this->array[$tengah] == $this->key) {
-                $log .= '<b>Benar</b>' . PHP_EOL . 'DATA DITEMUKAN' . PHP_EOL;
-                return $log;
-            }
-            if ($this->array[$tengah] > $this->key) {
-                $log .= 'Salah, Terlalu Besar.' . PHP_EOL;
-                $log .= 'Hapus Kanan, cari kebagian kiri' . PHP_EOL;
-                $atas = $tengah - 1;
-            } else {
-                $log .= 'Salah, Terlalu Kecil' . PHP_EOL;
-                $log .= 'Hapus Kiri, cari kebagian Kanan' . PHP_EOL;
-                $bawah = $tengah + 1;
+            switch ($this->array[$tengah]) {
+                case $this->array[$tengah] > $this->key:
+                    $log .= 'Salah, Terlalu Besar.' . PHP_EOL;
+                    $log .= 'Hapus Kanan, cari kebagian kiri' . PHP_EOL;
+                    $atas = $tengah - 1;
+                    break;
+
+                case $this->array[$tengah] < $this->key:
+                    $log .= 'Salah, Terlalu Kecil' . PHP_EOL;
+                    $log .= 'Hapus Kiri, cari kebagian Kanan' . PHP_EOL;
+                    $bawah = $tengah + 1;
+                    break;
+
+                default:
+                    $log .= '<b>Benar</b>' . PHP_EOL . 'DATA DITEMUKAN' . PHP_EOL;
+                    return $log;
+                    break;
             }
         }
         $log .= 'Pencarian Selesai.' . PHP_EOL . 'DATA TIDAK DITEMUKAN' . PHP_EOL;

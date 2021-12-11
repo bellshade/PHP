@@ -9,6 +9,7 @@ Daftar Isi
 3. [Scope Variabel Dalam Fungsi](#3-scope-variabel-dalam-fungsi)
 4. [Variable Statis Dalam Fungsi](#4-variabel-statis-dalam-fungsi)
 5. [Fungsi Tanpa Nama](#5-fungsi-tanpa-nama)
+6. [Fungsi Rekursif](#6-fungsi-rekursif)
 
 ## 1. Fungsi Dasar
 
@@ -389,4 +390,27 @@ Contoh mendeklarasikan variabel statis:
 
 ## 5. Fungsi Tanpa Nama
 
+Fungsi tanpa nama (anonymous function) atau lebih dikenal dengan nama `closure function` diperkenalkan oleh PHP pada versi 5.3 dan terus digunakan sampai versi php saat ini (pada saat dokumen ini ditulis PHP berada pada versi 8.1). `closure` function bisa ditulis tanpa mendapat nama secara spesifik untuk fungsi tersebut sebagaimana sebuah fungsi di tulis dalam PHP secara umum.
+
+sebagai contoh penulisan `closure function` dengan `regular function` seperti di bawah ini:
+
+```php
+    //Regular Function
+    function welcome(){
+        echo "Hello, Welcome to PHP";
+    }
+
+    //Closure Function
+    $welcome = function(){
+        echo "Hello, Welcome to PHP";
+    };
+
+    //Memanggil Regular Function
+    welcome();      //Hello, Welcome to PHP
+
+    //Memanggil Closure Function
+    $welcome();     //Hello, Welcome to PHP
+```
+
+## 6. Fungsi Rekursif
 ### Referensi
