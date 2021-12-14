@@ -11,6 +11,7 @@
         <exclude name="Generic.Files.LineLength.TooLong"/>
         <exclude name="Generic.PHP.DisallowShortOpenTag.PossibleFound"/>
         <exclude name="PSR1.Files.SideEffects.FoundWithSymbols"/>
+        <exclude name="PSR1.Classes.ClassDeclaration.MissingNamespace"/>
         <exclude name="Internal.NoCodeFound"/>
         <exclude name="Internal.Tokenizer.Exception"/>
     </rule>
