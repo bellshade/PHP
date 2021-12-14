@@ -18,7 +18,6 @@ namespace Sorting\BubbleSort;
 
 class BubbleSort
 {
-
     /**
      * Fungsi bubbleSort
      *
