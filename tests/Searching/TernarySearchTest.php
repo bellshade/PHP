@@ -59,7 +59,7 @@ class TernarySearchTest extends TestCase
     {
         $this->generateArray(10);
         sort($this->array);
-        $this->ternary = new TernarySearch(array: $this->array);
+        $this->ternary = new TernarySearch(null, $this->array);
         $result = $this->ternary->cari();
         $expected = 'Key pencarian tidak boleh null';
         $msg = 'Ternary Search : Test key pencarian gagal, hasil yang diharapkan "';
