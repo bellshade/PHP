@@ -70,8 +70,7 @@ Semua hal _use case_ diibaratkan sebagai sebuah objek yang terorganisir bertujua
 `Class` adalah sebuah tempelate / blueprint yang menyimpak banyak object.
 `Object`adalah sebuah bagian didalam class
 
-
-
+Sebagai contoh, kita akan menggunakan studi kasus seperti ini:
 Saya punya sebuah buku untuk membuat sebuah HandPhone,
 Buku tersebut akan digunakan untuk membuat semua HandPhone.
 Dari sini bisa dibilang bahwa `buku` adalah sebuah class dan `HandPhone` Adalah sebuah objectnya,
