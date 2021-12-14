@@ -9,7 +9,6 @@ echo "class Kelas {
 }";
 class Kelas
 {
-
 }
 echo "<br>";
 
