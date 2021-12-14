@@ -300,6 +300,7 @@ Kita bisa perhatikan bahwa variabel `$GLOBALS` tersedia pada PHP merupakan sebua
 Untuk fungsi bersarang variable global harus di nyatakan/deklasikan di dalam fungsi bersarang tersebut untuk dapat menggunakan variabel tersebut.
 
 [![Contoh Scope](../../assets/content/cekhere.svg)](3_Scope_Variable.php)
+
 ## 4. Variabel Statis dalam Fungsi
 
 Variabel lainnya dalam fungsi PHP yang juga sangat penting adalah variabel statis, ruang lingkup variabel ini hanya sebatas cangkupan fungsi itu sendiri, umumnya variabel pada fungsi akan hilang sesaat setelah fungsi selesai di eksekusi, saat fungsi di panggil kembali variabel akan di bentuk ulang dengan nilai dasar yang telah ditetapkan sebelumya.
@@ -388,29 +389,4 @@ Contoh mendeklarasikan variabel statis:
 
 [![Contoh Static Variable](../../assets/content/cekhere.svg)](4_Static_Variable.php)
 
-## 5. Fungsi Tanpa Nama
-
-Fungsi tanpa nama (anonymous function) atau lebih dikenal dengan nama `closure function` diperkenalkan oleh PHP pada versi 5.3 dan terus digunakan sampai versi php saat ini (pada saat dokumen ini ditulis PHP berada pada versi 8.1). `closure` function bisa ditulis tanpa mendapat nama secara spesifik untuk fungsi tersebut sebagaimana sebuah fungsi di tulis dalam PHP secara umum.
-
-sebagai contoh penulisan `closure function` dengan `regular function` seperti di bawah ini:
-
-```php
-    //Regular Function
-    function welcome(){
-        echo "Hello, Welcome to PHP";
-    }
-
-    //Closure Function
-    $welcome = function(){
-        echo "Hello, Welcome to PHP";
-    };
-
-    //Memanggil Regular Function
-    welcome();      //Hello, Welcome to PHP
-
-    //Memanggil Closure Function
-    $welcome();     //Hello, Welcome to PHP
-```
-
-## 6. Fungsi Rekursif
 ### Referensi

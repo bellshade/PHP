@@ -53,25 +53,6 @@ class TernarySearch
     }
 
     /**
-     * Cek Nilai Array
-     *
-     * Melakukan Cek Sort Array
-     * @return boolean true jika sorted array
-     */
-    public function arrayCek()
-    {
-        $nilaiCek = $this->array[0];
-        foreach ($this->array as $value) {
-            if ($nilaiCek > $value) {
-                return false;
-                break;
-            }
-            $nilaiCek = $value;
-        }
-        return true;
-    }
-
-    /**
      * Validate
      *
      * Melakukan terhadap validasi terhadap property
@@ -89,7 +70,19 @@ class TernarySearch
         }
 
         // Cek apakah array sudah diurutkan
-        if (!$this->arrayCek()) {
+        $cek = function () {
+            $nilaiCek = $this->array[0];
+            foreach ($this->array as $val) {
+                if ($nilaiCek > $val) {
+                    return false;
+                    break;
+                }
+                $nilaiCek = $val;
+            }
+            return true;
+        };
+
+        if (!$cek()) {
             return "Array tidak terurut, disarankan menggunakan linear search";
         }
 
@@ -241,13 +234,13 @@ class TernarySearch
 }
 
 $data = array();
-// foreach (range(1, 25) as $key) {
-//     $data[$key - 1] = rand(-100, 100);
-// }
-$data = [6, 7, 10, 11, 14, 17, 18, 19, 23, 26, 38, 42, 78, 79, 82, 84];
-// sort($data);
-// $key = $data[rand(0, 19)];
-$key = 26;
+foreach (range(1, 25) as $key) {
+    $data[$key - 1] = rand(-100, 100);
+}
+// $data = [6, 7, 10, 11, 14, 17, 18, 19, 23, 26, 38, 42, 78, 79, 82, 84];
+sort($data);
+$key = $data[rand(0, 19)];
+// $key = 26;
 $ternary = new TernarySearch($key, $data);
 $result =  $ternary->cari();
 

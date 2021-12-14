@@ -44,7 +44,8 @@ class TernarySearchTest extends TestCase
         $expected = "Array tidak terurut, disarankan menggunakan linear search";
 
         $msg = 'Ternary Search : Test pengecekan urutan array gagal, ';
-        $msg .= 'hasil diharapkan "' . $expected . '" tidak sama dengan nilai hasil';
+        $msg .= 'hasil diharapkan "' . $expected . '" tidak sama dengan nilai "' . $result . '"';
+        // $msg .= 'hasil diharapkan "' . $expected . '" tidak sama dengan nilai hasil';
         $this->assertEquals($expected, $result, $msg);
     }
 
