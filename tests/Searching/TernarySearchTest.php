@@ -71,7 +71,7 @@ class TernarySearchTest extends TestCase
     /**
      * Test Searching Dengan Data Bukan Array
      * 
-     * Melakukan Test dengan Data yang di cari bukan sebuah array
+     * Melakukan Test dengan Data yang dicari bukan sebuah array
      */
     public function testNotArray()
     {
@@ -91,7 +91,7 @@ class TernarySearchTest extends TestCase
     /**
      * Test Searching Dengan Data Bukan Array
      * 
-     * Melakukan Test dengan Data yang di cari bukan sebuah array
+     * Melakukan Test dengan Data yang dicari bukan sebuah array
      */
     public function testNumericArray()
     {
@@ -124,7 +124,7 @@ class TernarySearchTest extends TestCase
         $this->ternary->setKey(102);
 
         $result = $this->ternary->cari();
-        $expected = "Data tidak di temukan, Nilai dicari diluar range dari nilai array";
+        $expected = "Data tidak ditemukan, Nilai dicari di luar range dari nilai array";
         $msg = 'Ternary Search : Test OutOfRange gagal, hasil yang diharapkan "';
         $msg .= $expected . '" tidak sama dengan nilai hasil';
 

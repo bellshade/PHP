@@ -93,7 +93,7 @@ class TernarySearch
 
         // Cek nilai di cari berada dalam range nilai array
         if ($this->value < min($this->array) || max($this->array) < $this->value) {
-            return "Data tidak di temukan, Nilai dicari diluar range dari nilai array";
+            return "Data tidak ditemukan, Nilai dicari di luar range dari nilai array";
         }
 
         // Jika Property sesuai

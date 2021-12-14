@@ -18,10 +18,10 @@ Agar Algoritma ini dapat berjalan ada beberapa persyaratan yang harus terpenuhi,
 
 Pola kerja dari pencarian ternary yaitu dengan menggukan 2 cursor pencarian dimana 2 cursor ini akan membagi panjang array menjadi 3 bagian yang hampir sama panjang, untuk itu harus dilakukan perhitungan posisi cursor pada index array agar dapat membagi array tersebut dengan baik.
 
-Secara matematika dapat di hitung dengan membuat sebuah konstanta bernilai panjang array di bagi 3, sehingga diperoleh posisi cursor sebagai berikut:
+Secara matematika dapat dihitung dengan membuat sebuah konstanta bernilai panjang array dibagi 3, sehingga diperoleh posisi cursor sebagai berikut:
 
 - Cursor Pertama berada pada Index Pertama array ditambah konstanta,
-- Cursor kedua berada pada Index terakhir array dikurangi konstanta, atau Cursor Pertama ditambah konstanta.
+- Cursor kedua berada pada Index terakhir array dikurang konstanta, atau Cursor Pertama ditambah konstanta.
 
 Jika pada kedua index ini tidak ditemukan nilai yang kita cari maka kita akan memprediksi posisi nilai ini berada di antara 3 bagian yang terbetuk oleh cursor tadi, yaitu:
 
@@ -31,7 +31,7 @@ Jika pada kedua index ini tidak ditemukan nilai yang kita cari maka kita akan me
 
 Bagian-bagian yang tidak memiliki kemungkinan terdapat nilai yang dicari kita keluarkan dari pencarian, kemudian mengulangi langkah-langkah pencarian sampai cursor satu dan dua bertemu di index yang sama. Jika index tempat cursor ini bertemu tidak sama dengan nilai dicari maka, disimpulkan bahwa nilai yang dicari tidak terdapat dalam kumpulan data ini.
 
-untuk lebih jelas kita susun dalam bentuk alur kerja dibawah ini.
+untuk lebih jelas kita susun dalam bentuk alur kerja di bawah ini.
 
 ![chartjump](../../../assets/content/algorithms/Searching/Ternary/Ternary.svg)
 
@@ -77,9 +77,9 @@ LOOP
 RETURN Null
 ```
 
-Dari pseudo code di atas kita mulai menyusun code kita kedalam PHP, dalam hal ini agar lebih flexibel kita akan menerapkan paradigma OOP dalam penulisan code ini seperti algoritma-algoritma sebelumnya.
+Dari pseudo code di atas kita mulai menyusun code kita ke dalam PHP, dalam hal ini agar lebih flexibel kita akan menerapkan paradigma OOP dalam penulisan code ini seperti algoritma-algoritma sebelumnya.
 
-Tahap awal kita buat sebuah class `TernarySearch` yang memiliki beberapa property seperti dibawah ini:
+Tahap awal kita buat sebuah class `TernarySearch` yang memiliki beberapa property seperti di bawah ini:
 
 ```php
   <?php
@@ -104,7 +104,7 @@ Tahap awal kita buat sebuah class `TernarySearch` yang memiliki beberapa propert
   ?>
 ```
 
-`class` TernarySearch telah kita bentuk dengan beberapa property, langkah selanjutkan kita akan lakukan validasi terhadap parameter yang di kirim kedalam class, agar method pencarian berjalan dengan baik, untuk validasi data berupa array dan nilai pencarian berupa numerik tidak perlu lagi kita lakukan validasi karena saat menginstanisasi `class` ini kedalam object telah kita tetap parameter key harus berupa `integer` dan kumpulan data harus berupa `array` atau `object` ini akan gagal dibentuk. Sehingga tinggal 2 validasi yang akan kita lakukan dapat parameter yang di kirim kedalam class.
+`class` TernarySearch telah kita bentuk dengan beberapa property, langkah selanjutkan kita akan lakukan validasi terhadap parameter yang dikirim ke dalam class, agar method pencarian berjalan dengan baik, untuk validasi data berupa array dan nilai pencarian berupa numerik tidak perlu lagi kita lakukan validasi karena saat menginstanisasi `class` ini ke dalam object telah kita tetap parameter key harus berupa `integer` dan kumpulan data harus berupa `array` atau `object` ini akan gagal dibentuk. Sehingga tinggal 2 validasi yang akan kita lakukan dapat parameter yang dikirim ke dalam class.
 
 1. Kumpulan data array memiliki element bertipe numerik,
 2. Element Array harus tersusun secara berurutan.
@@ -130,7 +130,7 @@ untuk hal tersebut kita buatkan sebuat method bernama validasi di dalam class Te
 
 ```
 
-Dalam method tersebut kita buat dua validasi, yang pertama kita pastikan array nya memiliki nilai numerik dengan cara kita hitung panjang array keseluruhan dan panjang array yang hanya numerik dan kita bandingkan jumlah kedua nya, jika nilai sama maka dapat di pastikan bahwa array tersebut array numerik, kita tambahkan code ini ke dalam method validasi tadi :
+Dalam method tersebut kita buat dua validasi, yang pertama kita pastikan array nya memiliki nilai numerik dengan cara kita hitung panjang array keseluruhan dan panjang array yang hanya numerik dan kita bandingkan jumlah kedua nya, jika nilai sama maka dapat dipastikan bahwa array tersebut array numerik, kita tambahkan code ini ke dalam method validasi tadi :
 
 ```php
 //Validasi array numerik
@@ -177,7 +177,7 @@ public function cari()
 
   //cek range dari array
   if($this->array[$this->indexAwal] > $this->nilai || $this->array[$this->indexAkhir] < $this->nilai>){
-    return "Data tidak di temukan, Nilai dicari diluar range dari nilai array";
+    return "Data tidak ditemukan, Nilai dicari diluar range dari nilai array";
   }
 
   //Lakukan pencarian jika semua unsur terpenuhi
@@ -280,7 +280,7 @@ Dengan demikian algoritma ternary search kita telah selesai, untuk baris code se
 
       //cek range dari array
       if($this->array[$this->indexAwal] > $this->nilai || $this->array[$this->indexAkhir] < $this->nilai>){
-        return "Data tidak di temukan, Nilai dicari diluar range dari nilai array";
+        return "Data tidak ditemukan, Nilai dicari diluar range dari nilai array";
       }
 
       //Lakukan pencarian jika semua unsur terpenuhi
@@ -350,7 +350,7 @@ echo $tenary2->cari() // Array tidak terurut, disarankan menggunakan linear sear
 
 ```
 
-atau dapat kita gunakan phpunit dalam melakukan pengujian terhadap baris code yang telah kita buat, disini kita akan mentransformasikan baris kode pengujian diatas kedalam phpunit test.
+atau dapat kita gunakan phpunit dalam melakukan pengujian terhadap baris code yang telah kita buat, disini kita akan mentransformasikan baris kode pengujian di atas ke dalam phpunit test.
 
 Pertama kita buat class turunan dari php test unit berupa test case dan data array yang akan digunakan dalam pengujian.
 
@@ -385,7 +385,7 @@ Baris kode sebagai berikut:
   }
 ```
 
-kemudian kita buat tiga test tadi kedalam method di dalam class Test ini.
+kemudian kita buat tiga test tadi ke dalam method di dalam class Test ini.
 
 ```php
 /**
@@ -437,7 +437,7 @@ public function testNumericArray()
   sort($data);
   $nilai = $data[6];
 
-  //kita masukan non string elemen kedalam array
+  //kita masukan non string elemen ke dalam array
   $data[10] = 'Mangga';
   $data[4] = 'Jambu';
   $data[18] = 'Sirsak';
@@ -454,7 +454,7 @@ public function testNumericArray()
 }
 ```
 
-Setelah unit test kita susun, test dapat kita lakukan melalui terminal dengan perintah seperti dibawah ini.
+Setelah unit test kita susun, test dapat kita lakukan melalui terminal dengan perintah seperti di bawah ini.
 
 ```text
 $ phpunit
@@ -473,7 +473,7 @@ OK (3 tests, 3 assertions)
 
 Dengan demikian algoritam ternary search kita telah selesai. Semoga dapat menambah wawasan saya dan rekan-rekan mengenai bahasa pemograman PHP.
 
-Untuk kode lengkapnya dapat dilihat pada link dibawah ini :
+Untuk kode lengkapnya dapat dilihat pada link di bawah ini :
 
 [![Contoh Kode](https://img.shields.io/static/v1?&label=Contoh%20Kode&message=%3e&color)](../../algorithms/searching/ternary/ternarysearch.php)
 
