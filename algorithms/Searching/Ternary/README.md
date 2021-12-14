@@ -7,7 +7,7 @@
 
 Ternary Search dari namanya algoritma ini termasuk ke dalam algoritma pencarian, algoritma ini melakukan pencarian dengan menggunakan 2 cursor atau 2 tempat sekaligus, dimana kedua tempat ini akan membagi array menjadi 3 bagian yang hampir sama panjang, kemudian akan membuang 2 bagian yang jangkauan nya tidak mengandung nilai dicari, untuk lebih memahami dapat kita lihat animasi pola kerja algoritma Ternary Search sebagai berikut.
 
-<img>
+![ternarysearch](../../../assets/content/algorithms/Searching/Ternary/Ternary.png)
 
 Agar Algoritma ini dapat berjalan ada beberapa persyaratan yang harus terpenuhi, yaitu:
 
