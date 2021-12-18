@@ -86,7 +86,7 @@ class PathFinding
         $this->map = $map;
         // Set properti map visited, yaitu sama dengan map tapi kosong
         foreach ($map as $xIndex => $xArray) {
-            foreach ($xArray as $yIndex => $yValue) {
+            foreach (array_keys($xArray) as $yIndex) {
                 $this->mapVisited[$xIndex][$yIndex] = 0;
             }
         }
@@ -102,40 +102,40 @@ class PathFinding
      * @param int $n jumlah index maksimum pada array untuk mendapatkan cell pojok (indeks terakhir) sebagai tujuan
      * @return bool
      */
-    public function pathFind($x, $y)
+    public function pathFind($xIndex, $yIndex)
     {
         // Mengambil total panjang dari sebuah array dan dikurangi 1 untuk acuan indeks terakhir
         $indexTerakhir = count($this->map) - 1;
         // Mengecek apakah sudah sampai di tujuan
-        if ($x == $indexTerakhir && $y == $indexTerakhir) {
+        if ($xIndex == $indexTerakhir && $yIndex == $indexTerakhir) {
             // Mengecek apakah tempat tujuan bisa dipijaki
             if ($this->map[$indexTerakhir][$indexTerakhir] == 0) {
                 $this->setLog("Sudah sampai tujuan");
-                $this->mapVisited[$x][$y] = 1;
+                $this->mapVisited[$xIndex][$yIndex] = 1;
                 return 1;
             }
             return 0;
         }
         // Mengecek apakah posisi sekarang masih didalam map
-        if (isset($this->map[$x][$y])) {
+        if (isset($this->map[$xIndex][$yIndex])) {
             // Mengecek apakah posisi sekarang boleh dipijaki (tidak ada rintangan)
-            if ($this->map[$x][$y] == 0) {
-                $this->setLog("Berpijak di [$x, $y] boleh");
-                $this->mapVisited[$x][$y] = 1;
+            if ($this->map[$xIndex][$yIndex] == 0) {
+                $this->setLog("Berpijak di [$xIndex, $yIndex] boleh");
+                $this->mapVisited[$xIndex][$yIndex] = 1;
                 // Mencoba bergerak kekanan
                 $this->setLog("Mencoba kekanan...   ", false);
-                if ($this->pathFind($x, $y + 1)) {
+                if ($this->pathFind($xIndex, $yIndex + 1)) {
                     // Jika kekanan berhasil dan sudah sampai ditujuan, tandai sebagai jalan yang tepat
                     return 1;
                 }
                 // Mencoba Kebawah
                 $this->setLog("Mencoba kebawah...   ", false);
-                if ($this->pathFind($x + 1, $y)) {
+                if ($this->pathFind($xIndex + 1, $yIndex)) {
                     // Jika kebawah berhasil dan sudah sampai ditujuan, tandai sebagai jalan yang tepat
                     return 1;
                 }
                 $this->setLog("Jalan buntu, <strong>Pendalaman rekursi berhenti, backtracking... </strong><br/>");
-                $this->mapVisited[$x][$y] = 2;
+                $this->mapVisited[$xIndex][$yIndex] = 2;
             }
             return 0;
         }

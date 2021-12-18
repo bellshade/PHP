@@ -9,6 +9,7 @@ Daftar Isi
 3. [Scope Variabel Dalam Fungsi](#3-scope-variabel-dalam-fungsi)
 4. [Variable Statis Dalam Fungsi](#4-variabel-statis-dalam-fungsi)
 5. [Fungsi Tanpa Nama](#5-fungsi-tanpa-nama)
+6. [Fungsi Rekursif](#6-fungsi-rekursif)
 
 ## 1. Fungsi Dasar
 
@@ -299,6 +300,7 @@ Kita bisa perhatikan bahwa variabel `$GLOBALS` tersedia pada PHP merupakan sebua
 Untuk fungsi bersarang variable global harus di nyatakan/deklasikan di dalam fungsi bersarang tersebut untuk dapat menggunakan variabel tersebut.
 
 [![Contoh Scope](../../assets/content/cekhere.svg)](3_Scope_Variable.php)
+
 ## 4. Variabel Statis dalam Fungsi
 
 Variabel lainnya dalam fungsi PHP yang juga sangat penting adalah variabel statis, ruang lingkup variabel ini hanya sebatas cangkupan fungsi itu sendiri, umumnya variabel pada fungsi akan hilang sesaat setelah fungsi selesai di eksekusi, saat fungsi di panggil kembali variabel akan di bentuk ulang dengan nilai dasar yang telah ditetapkan sebelumya.
@@ -386,7 +388,5 @@ Contoh mendeklarasikan variabel statis:
 ```
 
 [![Contoh Static Variable](../../assets/content/cekhere.svg)](4_Static_Variable.php)
-
-## 5. Fungsi Tanpa Nama
 
 ### Referensi
