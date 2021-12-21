@@ -27,27 +27,27 @@ class PopSort
      */
     public function start(bool $verbose = false): array
     {
-        echo !$verbose ? '' : '<h1>Pop Sort (Sorting)</h1><hr>';
+        $log = '<h1>Pop Sort (Sorting)</h1><hr>';
 
         // Registrasi semua arraynya
-        $a = $this->array;
-        $b = [];
-        $c = [];
-        echo !$verbose ? '' : '<pre>Data sebelum disort: ' . json_encode($a) . '</pre>';
+        $arrA = $this->array;
+        $arrB = [];
+        $arrC = [];
+
+        $log .= '<pre>Data sebelum disort: ' . json_encode($arrA) . '</pre>';
+        $log .= '<pre> </pre>';
 
         // Kita loop hingga data di $a kosong
-        while (count($a) != 0) {
+        while (count($arrA) != 0) {
             // Keluarkan nilai paling atas dari array $a
-            $atasA = array_pop($a);
+            $atasA = array_pop($arrA);
 
-            if ($verbose) {
-                echo '<pre>Data yang diambil: ' . $atasA . '</pre>';
-                echo '<pre>Array A: ' . json_encode($a) . '</pre>';
-            }
+            $log .= '<pre>Data yang diambil: ' . $atasA . '</pre>';
+            $log .= '<pre>Array A: ' . json_encode($arrA) . '</pre>';
 
-            // Apabila array B ada isinya dan isi paling atas dari array B
-            // lebih kecil dari array A, kita pindahkan semua nilai-nilai yang
-            // cocok dengan kondisi tersebut ke array C
+            // Apabila array arrB ada isinya dan isi paling atas dari array arrB
+            // lebih kecil dari array arrA, kita pindahkan semua nilai-nilai yang
+            // cocok dengan kondisi tersebut ke array arrC
             //
             // Pada bagian statement kedua, anda dapat mengganti "<" menjadi ">"
             // sesuai keinginan anda.
@@ -55,29 +55,32 @@ class PopSort
             // Catatan:
             // Kita harus menghitung isi array terlebih dahulu sebelum mengambil
             // data array lebih utama agar menghindari error "Undefined index"
-            while (count($b) > 0 && $atasA > $b[count($b) - 1]) {
-                // Pindahkan data dari $b ke $c
-                array_push($c, array_pop($b));
+            while (count($arrB) > 0 && $atasA > $arrB[count($arrB) - 1]) {
+                // Pindahkan data dari $arrB ke $arrC
+                array_push($arrC, array_pop($arrB));
             }
 
-            // Setelah aman, kita masukkan data dari $a ke $b
-            array_push($b, $atasA);
+            // Setelah aman, kita masukkan data dari $arrA ke $arrB
+            array_push($arrB, $atasA);
 
-            if ($verbose) {
-                echo '<pre>Array B: ' . json_encode($b) . '</pre>';
-                echo '<pre>Array C: ' . json_encode($c) . '</pre>';
+            $log .= '<pre>Array B: ' . json_encode($arrB) . '</pre>';
+            $log .= '<pre>Array C: ' . json_encode($arrC) . '</pre>';
+
+            // Apabila isi $arrC ada, kita balikkan lagi ke $b secara berurutan.
+            while (count($arrC) > 0) {
+                array_push($arrB, array_pop($arrC));
             }
 
-            // Apabila isi $c ada, kita balikkan lagi ke $b secara berurutan.
-            while (count($c) > 0) {
-                array_push($b, array_pop($c));
-            }
-
-            echo !$verbose ? '' : '<pre>Hasil sementara: ' . json_encode($b) . '</pre>';
+            $log .= '<pre>Hasil sementara: ' . json_encode($arrB) . '</pre>';
+            $log .= '<pre> </pre>';
         }
 
-        echo !$verbose ? '' : '<pre>Hasil setelah disort: ' . json_encode($b) . '</pre>';
-        return $b;
+        $log .= '<pre>Hasil setelah disort: ' . json_encode($arrB) . '</pre>';
+
+        if ($verbose)
+            echo $log;
+
+        return $arrB;
     }
 }
 
