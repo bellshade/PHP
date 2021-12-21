@@ -225,16 +225,19 @@ class PathFinding
             echo "<tr>";
             echo "<td style='padding:8px'>$x</td>";
             foreach ($xArray as $y => $value) {
+                switch ($value) {
+                    case 0:
+                        $color = "white";
+                        break;
+                    case 1:
+                        $color = "yellow";
+                        break;
+                    case 2:
+                        $color = "red";
+                        break;
+                }
                 if ($this->map[$x][$y] == 1) {
                     $color = "black";
-                } else {
-                    if ($value == 0) {
-                        $color = "white";
-                    } elseif ($value == 1) {
-                        $color = "yellow";
-                    } elseif ($value == 2) {
-                        $color = "red";
-                    }
                 }
                 echo "<td style='padding: 16px; background-color: $color'></td>";
             }
