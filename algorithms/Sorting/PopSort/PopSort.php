@@ -77,8 +77,9 @@ class PopSort
 
         $log .= '<pre>Hasil setelah disort: ' . json_encode($arrB) . '</pre>';
 
-        if ($verbose)
+        if ($verbose) {
             echo $log;
+        }
 
         return $arrB;
     }
