@@ -57,7 +57,7 @@ Berikut ini adalah flowchart dari algoritma Selection Sort:
 Buatlah sebuah fungsi `selectionSort` yang menerima parameter berupa array dan panjang dari array tersebut.
 
 ```php
-public function selectionSort($arr, $n)
+public function selectionSort($arr, $len)
 {
     // Tulis Kode Disini
 }
@@ -66,10 +66,10 @@ public function selectionSort($arr, $n)
 Buatlah sebuah perulangan didalam fungsi tersebut dengan indeks `i = 0` dimana kondisi perulangan ini akan berjalan jika `i < n - 1`.
 
 ```php
-public function selectionSort($arr, $n)
+public function selectionSort($arr, $len)
 {
     // Mulai loop dari index ke 0 sampai index ke n-1
-    for ($i = 0; $i < $n - 1; $i++) {
+    for ($i = 0; $i < $len - 1; $i++) {
         // Tulis Kode Disini
     }
 }
@@ -78,10 +78,10 @@ public function selectionSort($arr, $n)
 Buat sebuah variable bernama `min` dimana variable tersebut diisi dengan nilai dari index `i` pada array di dalam perulangan.
 
 ```php
-public function selectionSort($arr, $n)
+public function selectionSort($arr, $len)
 {
     // Mulai loop dari index ke 0 sampai index ke n-1
-    for ($i = 0; $i < $n - 1; $i++) {
+    for ($i = 0; $i < $len - 1; $i++) {
         // Set nilai minimum dengan nilai dari index ke i
         $min = $i;
         // Tulis Kode Disini
@@ -92,14 +92,14 @@ public function selectionSort($arr, $n)
 Buat sebuah perulangan didalam perulangan tersebut dengan indeks `j = i + 1` dimana kondisi perulangan ini akan berjalan jika `j < n`.
 
 ```php
-public function selectionSort($arr, $n)
+public function selectionSort($arr, $len)
 {
     // Mulai loop dari index ke 0 sampai index ke n-1
-    for ($i = 0; $i < $n - 1; $i++) {
+    for ($i = 0; $i < $len - 1; $i++) {
         // Set nilai minimum dengan nilai dari index ke i
         $min = $i;
         // Mulai loop dari index ke i+1 sampai index ke n-1
-        for ($j = $i + 1; $j < $n; $j++) {
+        for ($j = $i + 1; $j < $len; $j++) {
             // Tulis Kode Disini
         }
     }
@@ -109,14 +109,14 @@ public function selectionSort($arr, $n)
 Buatlah sebuah kondisi didalam perulangan `j` dimana jika nilai `$arr[$j] < $arr[min]` maka nilai `$min` akan ditukan dengan `$j`.
 
 ```php
-public function selectionSort($arr, $n)
+public function selectionSort($arr, $len)
 {
     // Mulai loop dari index ke 0 sampai index ke n-1
-    for ($i = 0; $i < $n - 1; $i++) {
+    for ($i = 0; $i < $len - 1; $i++) {
         // Set nilai minimum dengan nilai dari index ke i
         $min = $i;
         // Mulai loop dari index ke i+1 sampai index ke n-1
-        for ($j = $i + 1; $j < $n; $j++) {
+        for ($j = $i + 1; $j < $len; $j++) {
             // Jika nilai index ke j lebih kecil dari nilai minimum,
             if ($arr[$j] < $arr[$min]) {
                 // Set nilai minimum dengan nilai index ke j
@@ -133,14 +133,14 @@ Proses tersebut berfungsi untuk mencari indeks dengan nilai terkecil dari array.
 Jika kita sudah menemukan indeks dengan nilai terkecil, maka kita akan melakukan penukaran nilai tersebut dengan nilai pada index `i`.
 
 ```php
-public function selectionSort($arr, $n)
+public function selectionSort($arr, $len)
 {
     // Mulai loop dari index ke 0 sampai index ke n-1
-    for ($i = 0; $i < $n - 1; $i++) {
+    for ($i = 0; $i < $len - 1; $i++) {
         // Set nilai minimum dengan nilai dari index ke i
         $min = $i;
         // Mulai loop dari index ke i+1 sampai index ke n-1
-        for ($j = $i + 1; $j < $n; $j++) {
+        for ($j = $i + 1; $j < $len; $j++) {
             // Jika nilai index ke j lebih kecil dari nilai minimum,
             if ($arr[$j] < $arr[$min]) {
                 // Set nilai minimum dengan nilai index ke j
@@ -164,14 +164,14 @@ Kita akan terus mengulang semua proses diatas hingga array yang kita miliki suda
 Jika array yang kita miliki sudah terurut maka kita akan mengembalikan nilai array tersebut.
 
 ```php
-public function selectionSort($arr, $n)
+public function selectionSort($arr, $len)
 {
     // Mulai loop dari index ke 0 sampai index ke n-1
-    for ($i = 0; $i < $n - 1; $i++) {
+    for ($i = 0; $i < $len - 1; $i++) {
         // Set nilai minimum dengan nilai dari index ke i
         $min = $i;
         // Mulai loop dari index ke i+1 sampai index ke n-1
-        for ($j = $i + 1; $j < $n; $j++) {
+        for ($j = $i + 1; $j < $len; $j++) {
             // Jika nilai index ke j lebih kecil dari nilai minimum,
             if ($arr[$j] < $arr[$min]) {
                 // Set nilai minimum dengan nilai index ke j
@@ -196,11 +196,11 @@ Fungsi Selection Sort sudah berhasil kita buat, kita dapat mencoba untuk menjala
 // Buat array yang akan diurutkan
 $items = [72, 14, 20, 11, 57, 63];
 // Hitung panjang array
-$len = count($items);
+$length = count($items);
 // Cetak array sebelum diurutkan
 echo "Data sebelum disort: " . json_encode($items) . "\n";
 // Panggil fungsi Selection Sort dengan array yang ingin diurutkan dan panjang array tersebut
-$sorted = selectionSort($items, $len);
+$sorted = selectionSort($items, $length);
 // Cetak hasil array setelah diurutkan
 echo "Data setelah disort: " . json_encode($sorted) . "\n";
 ```
