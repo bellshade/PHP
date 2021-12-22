@@ -14,14 +14,15 @@ namespace Sorting\SelectionSort;
 
 class SelectionSort
 {
-    public function selectionSort($arr, $n)
+    // Buat fungsi selection sort yang menerima input berupa array dan panjang array
+    public function selectionSort($arr, $len)
     {
         // Mulai loop dari index ke 0 sampai index ke n-1
-        for ($i = 0; $i < $n - 1; $i++) {
+        for ($i = 0; $i < $len - 1; $i++) {
             // Set nilai minimum dengan nilai dari index ke i
             $min = $i;
             // Mulai loop dari index ke i+1 sampai index ke n-1
-            for ($j = $i + 1; $j < $n; $j++) {
+            for ($j = $i + 1; $j < $len; $j++) {
                 // Jika nilai index ke j lebih kecil dari nilai minimum,
                 if ($arr[$j] < $arr[$min]) {
                     // Set nilai minimum dengan nilai index ke j
@@ -43,12 +44,12 @@ class SelectionSort
 // Buat array yang akan diurutkan
 $items = [72, 14, 20, 11, 57, 63];
 // Hitung panjang array
-$len = count($items);
+$length = count($items);
 echo PHP_EOL;
 echo "<h1>Selection Sort Algorithm</h1>" . PHP_EOL;
 // Cetak array sebelum diurutkan
 echo "Data sebelum disort: " . json_encode($items) . "\n";
 // Buat objek dari class SelectionSort
-$selectionSort = (new SelectionSort())->selectionSort($items, $len);
+$selectionSort = (new SelectionSort())->selectionSort($items, $length);
 // Cetak hasil
 echo "Data setelah disort: " . json_encode($selectionSort) . "\n";
