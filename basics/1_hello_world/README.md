@@ -15,16 +15,10 @@ Selain itu materi ini dibuat dengan secara runtut dan _beginner friendly_ sehing
 ## Daftar Isi
 
 - [Hello World](#hello-world)
-  - [Daftar Isi](#daftar-isi)
   - [Gambaran Singkat](#gambaran-singkat)
   - [1. Persiapan](#1-persiapan)
-    - [Web Server](#web-server)
-    - [PHP Compiler/Preprocessor](#php-compilerpreprocessor)
-    - [Database](#database)
-    - [Apa Yang Harus Diinstall Untuk Pengembangan PHP](#apa-yang-harus-diinstall-untuk-pengembangan-php)
-      - [XAMPP - < link untuk download >](#xampp----link-untuk-download-)
-  - [2. Hello World _(2_hello_world.php)_](#2-hello-world-2_hello_worldphp)
-  - [3. PHP dalam HTML _(3_php_html.php)_](#3-php-dalam-html-3_php_htmlphp)
+  - [2. Hello World](#2-hello-world-2_hello_worldphp)
+  - [3. PHP dalam HTML](#3-php-dalam-html-3_php_htmlphp)
 
 ## Gambaran Singkat
 
@@ -99,7 +93,7 @@ Kamu juga dapat menggunakan software stack yang lainnya.
 
 Setelah memasang software yang dibutuhkan, mari mulai untuk menulis kode PHP pertama kamu.
 
-> _Momen ini mungkin termasuk momen besar anda, potret momen ini jika diperlukan_
+> _Momen ini mungkin termasuk momen besar anda, potret momen ini jika diperlukan ;)_
 
 Mari mulai dengan hal-hal yang penting dalam pemrograman PHP :
 
@@ -127,6 +121,9 @@ Berikut contoh kode PHP untuk menampilkan teks "Hello World!"
 ```
 
 Seperti contoh pada file [2_hello_world.php](2_hello_world.php)
+<a href='2_hello_world.php' target='_blank'>
+    <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
+</a>
 
 Untuk melihat hasilnya, hidupkan web server apache pada XAMPP lalu buka browser ketikkan URL `localhost/path_ke_file_php_nya`.
 
@@ -136,11 +133,53 @@ Misalnya jika file indeks ada di `htdocs/belajar/index.php` maka kamu bisa menga
   <img src="https://lh3.googleusercontent.com/-xt0uLG7I4PQ/YVQvzhHB9MI/AAAAAAAAJnQ/PX8SxFbaAbAouwttKJEAKGsSukx0WfH1gCLcBGAsYHQ/image.png" />
 </p>
 
-## 3. PHP dalam HTML _([3_php_html.php](3_php_html.php))_
+## 3. PHP dalam HTML
 
 Kode PHP dieksekusi di server dan dikirimkan kembali ke Browser _client_ dalam bentuk HTML, di sini semua kode PHP sudah matang dan sudah dijalankan. Oleh karena itu, sangat natural jika kode PHP dan HTML bercampur satu sama lain.
 
 Untuk menambahkan tag HTML cukup tuliskan kode HTML pada file PHP, kode HTML ini harus di luar tag `<?php...?>`
 > **Perhatikan:** Kode HTML yang dimasukkan di dalam file `.php` bukan sebaliknya
 
-Contoh penggunaan ada di file [3_php_html.php](3_php_html.php)
+Contoh kode: 
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Ini adalah text yang di cetak oleh php = 
+        <?php
+            echo "hello world";
+        ?>
+    </h1>
+    <h4><?= "Teks ini juga dari PHP" ?></h4>
+    <div style="width: 200px; padding: 16px; border: 1px solid blue">
+        <p>
+            <?php
+                echo "Ini juga sama, text yang ditulis menggunakan PHP";
+            ?>
+        </p>
+    </div>
+</body>
+</html>
+```
+<a href='3_php_html.php' target='_blank'>
+    <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
+</a>
+
+
+<table>
+  <tr>
+    <th></th>
+    <th>Berikutnya</th>
+  </tr>
+  <tr>
+    <th></th>
+    <th><a href='../2_variable_datatype/'>Variabel dan Tipe Data</a></th>
+  </tr>
+</table>
