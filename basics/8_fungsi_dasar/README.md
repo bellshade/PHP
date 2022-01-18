@@ -2,14 +2,14 @@
 
 Dalam pengembangan aplikasi kita sering kali membuat lagi baris kode yang sama, karena aplikasi kita melakukan hal yang sama tetapi pada tempat dan waktu berbeda, dalam contoh dimana halaman web yang kita buat memiliki footer, maka kita akan membuat baris kode yang sama pada setiap halaman web untuk menampilkan footer tersebut. Hal ini dapat diminimalkan dengan melakukan penggunaan ulang script atau baris kode yang telah kita buat. Baris kode yang dapat digunakan ulang ini disebut Fungsi, dalam syntax PHP di tulis `function`.
 
-Daftar Isi
+## Daftar Isi
 
-1. [Fungsi Dasar](#1-fungsi-dasar)
-2. [Parameter dan Return](#2-parameter-dan-return)
-3. [Scope Variabel Dalam Fungsi](#3-scope-variabel-dalam-fungsi)
-4. [Variable Statis Dalam Fungsi](#4-variabel-statis-dalam-fungsi)
-5. [Fungsi Tanpa Nama](#5-fungsi-tanpa-nama)
-6. [Fungsi Rekursif](#6-fungsi-rekursif)
+- [Fungsi Dasar](#1-fungsi-dasar)
+- [Parameter dan Return](#2-parameter-dan-return)
+- [Scope Variabel Dalam Fungsi](#3-scope-variabel-dalam-fungsi)
+- [Variable Statis Dalam Fungsi](#4-variabel-statis-dalam-fungsi)
+- [Fungsi Tanpa Nama](#5-fungsi-tanpa-nama)
+- [Fungsi Rekursif](#6-fungsi-rekursif)
 
 ## 1. Fungsi Dasar
 
@@ -389,4 +389,15 @@ Contoh mendeklarasikan variabel statis:
 
 [![Contoh Static Variable](../../assets/content/cekhere.svg)](4_Static_Variable.php)
 
-### Referensi
+
+
+<table>
+  <tr>
+    <td align='center'><strong>Sebelumnya</strong></td>
+    <td align='center'><strong>Berikutnya</strong></td>
+  </tr>
+  <tr>
+    <td align='center'><a href='../7_array_mendalam/'>7. Array Mendalam</a></td>
+    <td align='center'><a href='../9_form_handling/'>9. Form Handling</a></td>
+  </tr>
+</table>
