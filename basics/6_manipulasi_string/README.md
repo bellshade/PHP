@@ -460,3 +460,15 @@ echo $text1;
 
 > Referensi
 > https://www.w3schools.com/php/func_string_stripslashes.asp
+
+
+<table>
+  <tr>
+    <td align='center'><strong>Sebelumnya</strong></td>
+    <td align='center'><strong>Berikutnya</strong></td>
+  </tr>
+  <tr>
+    <td align='center'><a href='../5_perulangan/'>5. Perulangan</a></td>
+    <td align='center'><a href='../7_array_mendalam/'>7. Array Mendalam</a></td>
+  </tr>
+</table>
