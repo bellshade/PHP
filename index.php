@@ -1,13 +1,9 @@
 <?php
 
-$actualDirectory = './';
-if (isset($currentDirectory)) {
-    $actualDirectory = $currentDirectory;
-}
-require_once $actualDirectory . '/vendor/autoload.php';
+// Memuat package composer
+require_once './vendor/autoload.php';
 
 use Dotenv\Dotenv;
-
 $dotenv = Dotenv::createImmutable(__DIR__);
 $dotenv->safeLoad();
 $base_url = rtrim(($_ENV['BASE_URL'] ?? 'http://localhost/php'), '/') . '/';
