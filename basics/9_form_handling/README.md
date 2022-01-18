@@ -19,15 +19,13 @@ Selanjutnya mari kita masuk ke materinya.
 
 ## Daftar Isi
 
-- [Penanganan Formulir (*Form Handling*)](#penanganan-formulir-form-handling)
-  - [Daftar Isi](#daftar-isi)
-  - [1. Tombol Kirim *(1_submit_button.php)*](#1-tombol-kirim-1_submit_buttonphp)
-  - [2. Input Berdasarkan Teks *(2_text_based_input.php)*](#2-input-berdasarkan-teks-2_text_based_inputphp)
+- [1. Tombol Kirim *(1_submit_button.php)*](#1-tombol-kirim-1_submit_buttonphp)
+- [2. Input Berdasarkan Teks *(2_text_based_input.php)*](#2-input-berdasarkan-teks-2_text_based_inputphp)
     - [Contoh 1 - Text dan Number](#contoh-1---text-dan-number)
     - [Contoh 2 - Email dan Password](#contoh-2---email-dan-password)
     - [Contoh 3 - Hidden](#contoh-3---hidden)
     - [Contoh 4 - Date](#contoh-4---date)
-  - [3. Input Select *(3_select.php)*](#3-input-select-3_selectphp)
+- [3. Input Select *(3_select.php)*](#3-input-select-3_selectphp)
 
 ## 1. Tombol Kirim *([1_submit_button.php](1_submit_button.php))*
 
@@ -221,3 +219,15 @@ if (isset($_POST['btn_contoh2'])) {
 [![](https://img.shields.io/static/v1?&label=Demo&message=%3e&color)](3_select.php#L40-L61)
 
 Dengan melihat kedua contoh di atas, kamu dapat mengetahui bahwa menggunakan tag `option` tanpa atribut `value` pada input `select` juga dapat dikirim.
+
+
+<table>
+  <tr>
+    <td align='center'><strong>Sebelumnya</strong></td>
+    <td align='center'><strong>Berikutnya</strong></td>
+  </tr>
+  <tr>
+    <td align='center'><a href='../8_fungsi_dasar/'>8. Fungsi dasar</a></td>
+    <td align='center'><a href='../10_file_handling/'>10. File Handling</a></td>
+  </tr>
+</table>
