@@ -223,7 +223,7 @@ if (!is_dir(rewritePath($pageUrl))) {
                         <div class="list-group">
                             <?php foreach ($directories as $dir) : ?>
                                 <?php if (is_dir($currentPath . '/' . $dir) && array_search($dir, $exception) == 0) : ?>
-                                    <a href="<?= $baseUrl . rewriteUrl($currentPath . '/' . $dir) ?>" class="list-group-item">
+                                    <a href="<?= $baseUrl . rewriteUrl($currentPath . '/' . $dir) . '/' ?>" class="list-group-item">
                                         <i class="fas fa-folder me-2"></i>
                                         <?= $dir ?>
                                     </a>
@@ -265,7 +265,7 @@ if (!is_dir(rewritePath($pageUrl))) {
                 <div class="list-group" style="max-height: 80vh; overflow-y: auto">
                     <?php foreach ($directories as $dir) : ?>
                         <?php if (is_dir($currentPath . '/' . $dir) && array_search($dir, $exception) == 0) : ?>
-                            <a href="<?= $baseUrl . rewriteUrl($currentPath . '/' . $dir) ?>" class="list-group-item">
+                            <a href="<?= $baseUrl . rewriteUrl($currentPath . '/' . $dir) . '/' ?>" class="list-group-item">
                                 <i class="fas fa-folder me-2"></i>
                                 <?= $dir ?>
                             </a>
