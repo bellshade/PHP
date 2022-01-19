@@ -6,18 +6,16 @@ Seperti halnya bahasa pemrograman lainnya, materi pengkondisian bisa dibilang "w
 
 ## Daftar Isi
 
-- [Pengkondisian](#pengkondisian)
-  - [Daftar Isi](#daftar-isi)
-  - [1. If, Else If dan Else (*1_if_elseif_else.php*)](#1-if-else-if-dan-else-1_if_elseif_elsephp)
-    - [Cara penggunaan If, Else If, dan Else](#cara-penggunaan-if-else-if-dan-else)
-      - [1. If](#1-if)
-      - [2. Else](#2-else)
-      - [3. Else If](#3-else-if)
-      - [4. If Else - Shorthand](#4-if-else---shorthand)
-  - [2. Switch (*2_switch.php*)](#2-switch-2_switchphp)
-    - [Cara penggunaan Switch](#cara-penggunaan-switch)
+- [1. If, Else If dan Else](#1-if-else-if-dan-else)
+  - [Cara penggunaan If, Else If, dan Else](#cara-penggunaan-if-else-if-dan-else)
+    - [1. If](#1-if)
+    - [2. Else](#2-else)
+    - [3. Else If](#3-else-if)
+    - [4. If Else - Shorthand](#4-if-else---shorthand)
+- [2. Switch](#2-switch)
+  - [Cara penggunaan Switch](#cara-penggunaan-switch)
 
-## 1. If, Else If dan Else ([*1_if_elseif_else.php*](1_if_elseif_else.php))
+## 1. If, Else If dan Else
 
 *If*, *Else If* dan *Else* adalah salah satu cara pengkondisian yang digunakan untuk satu atau lebih kondisi. Cara kerjanya adalah dengan melakukan *check* apakah hasil suatu ekspresi PHP (operasi artimatika, perbandingan, dll.) dinyatakan benar atau salah.
 
@@ -38,6 +36,7 @@ Ada beberapa hal yang harus diperhatikan dalam penggunaan *If*, *Else If*, dan *
 
 ### Cara penggunaan If, Else If, dan Else
 
+<br/>
 #### 1. If
 
 ```php
@@ -50,6 +49,7 @@ if (kondisi) {
 
 [![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](1_if_elseif_else.php#L17-L44)
 
+<br/>
 #### 2. Else
 
 ```php
@@ -64,6 +64,7 @@ if (kondisi) {
 
 [![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](1_if_elseif_else.php#L49-L82)
 
+<br/>
 #### 3. Else If
 
 ```php
@@ -80,6 +81,7 @@ if (kondisi_1) {
 
 [![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](1_if_elseif_else.php#L87-L113)
 
+<br/>
 #### 4. If Else - Shorthand
 
 ```php
@@ -90,7 +92,8 @@ if (kondisi_1) {
 
 [![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](1_if_elseif_else.php#L118-L140)
 
-## 2. Switch ([*2_switch.php*](2_switch.php))
+<br/>
+## 2. Switch
 
 Switch juga merupakan salah satu cara pengkondisian yang bisa digunakan untuk banyak kondisi. Cara kerjanya adalah dengan membandingkan ekspresi PHP (operasi aritmatika, perbandingan, dll.) yang diberikan dengan kondisi-kondisinya.
 
@@ -137,3 +140,14 @@ switch (ekspresi) {
 
 - *Untuk contoh kasus setiap materi yang ada di sini, kamu bisa kunjungi file php khusus masing-masing materi dengan cara klik link yang tertera di judul tiap materi atau klik tombol Lihat Contoh di cara penggunaan sintaksnya ya.*
 - *Jika kamu melihat materi ini menggunakan local web server, kamu bisa melihat setiap materi dengan cara klik link nama file.php khusus masing-masing materi di Demo Materi paling atas atau di kanan bawah, atau juga bisa klik tombol Lihat Contoh di cara penggunaan sintaksnya ya.*
+
+<table>
+  <tr>
+    <td align='center'><strong>Sebelumnya</strong></td>
+    <td align='center'><strong>Berikutnya</strong></td>
+  </tr>
+  <tr>
+    <td align='center'><a href='../3_operator/'>3. Operator</a></td>
+    <td align='center'><a href='../5_perulangan/'>5. Perulangan</a></td>
+  </tr>
+</table>

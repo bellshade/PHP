@@ -1,18 +1,13 @@
 # Variabel dan Tipe Data
 
 Sama seperti bahasa pemrograman lainnya, variabel digunakan sebagai tempat untuk menyimpan data sementara.
-
 Variabel bisa digunakan untuk menyimpan  berbagai jenis tipe data, seperti *integer*, *string*, *boolean* dan lainnya.
 
 ## Daftar Isi
 
-- [1. Penulisan Variabel](#1-penulisan-variabel)
-- [2. Tipe Data  *(1_data_type.php)*](#2-tipe-data--1_data_typephp)
+- [Penulisan Variabel](#1-penulisan-variabel)
+- [Tipe Data](#2-tipe-data)
   - [String](#string)
-    - [1. Petik Satu](#1-petik-satu)
-    - [2. Petik Dua](#2-petik-dua)
-    - [3. Sintaks *Heredoc*](#3-sintaks-heredoc)
-    - [4. Sintaks *Nowdoc*](#4-sintaks-nowdoc)
   - [Integer](#integer)
   - [Float](#float)
   - [Boolean](#boolean)
@@ -20,18 +15,18 @@ Variabel bisa digunakan untuk menyimpan  berbagai jenis tipe data, seperti *inte
   - [Object](#object)
   - [NULL](#null)
   - [Resource](#resource)
-- [3. Variabel dalam String *(2_variable_in_string.php)*](#3-variabel-dalam-string-2_variable_in_stringphp)
+- [Variabel dalam String](#3-variabel-dalam-string)
   - [Variabel Dalam String Petik Satu](#variabel-dalam-string-petik-satu)
   - [Variabel Dalam Sting Petik Dua](#variabel-dalam-sting-petik-dua)
   - [Variabel Dalam String Sintaks *Heredoc*](#variabel-dalam-string-sintaks-heredoc)
-- [4. Array *(3_array.php)*](#4-array-3_arrayphp)
+- [Array](#4-array)
   - [Membuat Array](#membuat-array)
   - [Jenis-Jenis Array](#jenis-jenis-array)
   - [Menambah Data ke Dalam Array](#menambah-data-ke-dalam-array)
   - [Mengubah Data Array](#mengubah-data-array)
   - [Menghapus Data Array](#menghapus-data-array)
-- [5. Konstanta *(4_constant_variable.php)*](#5-konstanta-4_constant_variablephp)
-- [6. Variabel telah Ditetapkan](#6-variabel-telah-ditetapkan)
+- [Konstanta](#5-konstanta)
+- [Variabel telah Ditetapkan](#6-variabel-telah-ditetapkan)
 
 ## 1. Penulisan Variabel
 
@@ -58,7 +53,7 @@ echo $umur; // output: 17
 > **CATATAN :**
 >
 > Nama variabel bersifat sensitif terhadap huruf besar dan kecil (*Case Sensitive*)
-> Jadi jika kamu menggunakannya, pastikan kamu menulisanya dengan memerhatikan huruf besar dan kecilnya.
+> Jadi jika kamu menggunakannya, pastikan kamu menulisnya dengan memperhatikan huruf besar dan kecilnya.
 
 Contoh:
 
@@ -73,8 +68,12 @@ echo $UMUR; // output:
 ```
 
 Nah, dengan melihat contoh-contoh di atas kamu telah mengetahui cara penulisan variabel yang benar.
+<br/>
+<br/>
 
-## 2. Tipe Data  *([1_data_type.php](1_data_type.php))*
+## 2. Tipe Data
+
+Dalam pemrograman PHP tentang penulisan tipe data, PHP termasuk _static typing_ yang artinya tipe data tidak dituliskan secara eksplisit. Melainkan PHP sudah secara otomatis menentukan tipe datanya berdasarkan value yang telah ditentukan. Jadi kita tidak perlu menuliskan tipe datanya langsung. Tapi alangkah baiknya jika kita mengetahui berbagai jenis tipe data yang dapat dipahami oleh PHP.
 
 Pada contoh sebelumnya kita telah menuliskan berberapa tipe data, seperti *string* dan *integer*. Selanjutnya, kita akan membahas lengkap tentang tipe data pada PHP.
 
@@ -91,9 +90,15 @@ Berikut tipe data yang didukung PHP:
 | NULL     | Tipe data yang nilainya kosong                                                                                                                                                                                      |
 | Resource | Tipe data yang menyimpan referensi ke fungsi dan sumber daya di luar PHP.                                                                                                                                           |
 
+<a href='1_data_type.php' target='_blank'>
+    <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
+</a>
+<br/>
+<br/>
+
 ### String
 
-*String* adalah salaha satu tipe data pada PHP yang berupa karakter, teks atau kalimat.
+*String* adalah salah satu tipe data pada PHP yang berupa karakter, teks atau kalimat.
 
 Ada beberapa cara untuk menulis sebuah string, berikut adalah cara yang bisa dilakukan:
 
@@ -102,39 +107,83 @@ Ada beberapa cara untuk menulis sebuah string, berikut adalah cara yang bisa dil
 3. Sintaks *heredoc*
 4. Sintaks *nowdoc*
 
+<br/>
+<br/>
 #### 1. Petik Satu
 
 String yang diawali dan diakhiri dengan tanda petik satu (`'`)
+```php
+$text = 'Hello World';
+```
+<a href='1_data_type.php#L10-L21' target='_blank'>
+    <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
+</a>
 
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](1_data_type.php#L10-L21)
+<br/>
+<br/>
 
 #### 2. Petik Dua
 
 String yang diawali dan diakhriri dengan tanda petik dua (`"`)
+```php
+$text = "Hello World";
+```
+<a href='1_data_type.php#L24-L29' target='_blank'>
+    <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
+</a>
 
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](1_data_type.php#L24-L29)
+<br/>
+<br/>
 
 #### 3. Sintaks *Heredoc*
 
 String yang diawali dengan tanda `<<<LABEL` dan diakhiri dengan `LABEL`
+```php
+$buah = <<<NAMA_BUAH
+Apel
+Mangga
+Jeruk
+NAMA_BUAH;
+```
+<a href='1_data_type.php#L32-L76' target='_blank'>
+    <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
+</a>
 
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](1_data_type.php#L32-L76)
+<br/>
+<br/>
 
 #### 4. Sintaks *Nowdoc*
 
-String yang diawali dengan tanda `<<<'LABEL'` dan diakhiri dengan `LABEL`
-
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](1_data_type.php#L79-L93)
-
+String yang diawali dengan tanda `<<<'LABEL'` dan diakhiri dengan `LABEL`. Perbedaannya dengan heredoc adalah pada sintaks nowdoc, tidak ada parsing variabel didalamnya sehingg tidak dapat memberikan variabel didalam. (lihat: [3. Variabel dalam String](#3-variabel-dalam-string))
+```php
+$buah = <<<'NAMA_BUAH'
+Apel
+Mangga
+Jeruk
+$variabel
+NAMA_BUAH;
+```
+<a href='1_data_type.php#L79-L93' target='_blank'>
+    <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
+</a>
 > Penulisan string menggunakan sintaks *heredoc* dan *nowdoc* dapat digunakan untuk menulis string yang terdiri atas beberapa baris.
+
+<br/>
+<br/>
 
 ### Integer
 
 Sesuai dengan deskripsi yang ada pada tabel di atas, **integer adalah** tipe data yang merupakan bilangan bulat positif atau negatif.
+Tipe data ini sering digunakan untuk operasi matematika.
+```php
+$x = 1;
+```
+<a href='1_data_type.php#L97-L108' target='_blank'>
+    <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
+</a>
 
-Tipe data ini sering digunakan untuk perhitungan.
-
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](1_data_type.php#L97-L108)
+<br/>
+<br/>
 
 ### Float
 
@@ -142,21 +191,40 @@ Float adalah tipe data yang berupa bilangan dengan titik (desimal).
 
 > Dalam bahasa pemrograman, titik digunakan sebagai pengganti dari koma untuk bilangan desimal.
 
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](1_data_type.php#L112-L117)
+```php
+$x = 1.5;
+```
+<a href='1_data_type.php#L112-L117' target='_blank'>
+    <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
+</a>
+
+<br/>
+<br/>
 
 ### Boolean
 
 Boolean merupakan tipe data yang isinya ada dua pilihan yaitu `true` dan `false`, ini seperti **YA** dan **TIDAK** atau **BENAR** dan **SALAH**.
-
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](1_data_type.php#L127-L141)
+```php
+$x = true;
+$y = false;
+```
+<a href='1_data_type.php#L127-L141' target='_blank'>
+    <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
+</a>
 
 Boolean biasa digunakan pada suatu pengondisian, yang mana boolean digunakan untuk menyatakan apakah kondisi yang dimaksud telah terpenuhi/benar.
+
+<br/>
+<br/>
 
 ### Array
 
 Untuk penjelasan mengenai array, kamu bisa membacanya [di sini.](#4-array-3_arrayphp)
 
-### Object
+<br/>
+<br/>
+
+### Object (tingkat menengah)
 
 Tipe data yang memungkinkan penyimpanan data dan juga informasi tentang cara memproses data yang diinputkan atau yang ada di dalamnya. Tipe data yang satu ini digunakan pada Pemrograman Berorientasi Objek (OOP).
 
@@ -180,31 +248,49 @@ echo $mobil->nama; // Hasil: Honda
 > Karna ini masih dalam materi dasar, untuk tipe data *Object* kami hanya akan memberikan contoh sederhana untuk tipe data tersebut.
 > Tapi jangan khawatir, materi tentang Object akan berlajut pada materi Pemrograman Berorientasi Objek (OOP).
 
+<br/>
+<br/>
+
 ### NULL
 
-NULL adalah tipe data khusus yang hanya memiliki satu nilai yaitu: `NULL`
+NULL adalah tipe data khusus yang hanya memiliki satu nilai yaitu: `NULL`. Null dapat diartikan sebagai kosong, atau tak bernilai. Jika sebuah variabel tidak memiliki nilai (null), maka variabel tersebut termasuk variabel null.
+
+```php
+$kosong;   // Variabel kosong (null)
+$nama = null; // Variabel kosong (null) juga
+```
 
 Jika ada variabel yang dibuat tanpa nilai, maka otomatis akan di isi `NULL`
-
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](1_data_type.php#L145-L160)
+<a href='1_data_type.php#L145-L160' target='_blank'>
+    <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
+</a>
 
 Variabel yang sebelumnya telah memiliki nilai juga dapat dikososngkan dengan menggunakan NULL.
 
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](1_data_type.php#L163-L168)
+<a href='1_data_type.php#L163-L168' target='_blank'>
+    <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
+</a>
 
 > **CATATAN:**
 >
 > Tipe data null bersifat tidak sensitif terhadap huruf besar atau kecil (*Case Insensitive*).
 
+<br/>
+<br/>
+
 ### Resource
 
 Resouce (sumber daya) bukanlah tipe data yang sebenarnya. Ini adalah penyimpanan referensi ke fungsi dan sumber daya di luar PHP.
-
 Klik tombol berikut untuk melihat contoh sederhana penggunaan resource.
 
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](1_data_type.php#L172-L188)
+<a href='1_data_type.php#L172-L188' target='_blank'>
+    <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
+</a>
 
-## 3. Variabel dalam String *([2_variable_in_string.php](2_variable_in_string.php))*
+<br/>
+<br/>
+
+## 3. Variabel dalam String
 
 Nah, di PHP, sebuah variabel dapat digunakan kembali di dalam sebuah tipe data string, dengan betujuan untuk membuat string tersebut menjadi dinamis.
 
@@ -213,21 +299,53 @@ Berikut ini aturan untuk menulis variabel dalam string
 1. Variabel yang digunakan telah ada.
 2. String ditulis dengan petik satu/dua, sintak heredoc.
 
+<br/>
+<br/>
+
 ### Variabel Dalam String Petik Satu
 
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](2_variable_in_string.php#L5-L28)
+Pada string yang ditulis dengan petik satu, untuk merangkai string dengan variabel harus menggunakan `.` Tanda titik tersebut merupakan penghubung antar string / variabel.
 
-### Variabel Dalam Sting Petik Dua
+```php
+$name = 'Feri Irawan';
+$text = 'Halo ' . $name; // Output: Halo Feri Irawan
+```
+<a href='2_variable_in_string.php#L5-L28' target='_blank'>
+    <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
+</a>
+<br/>
+<br/>
+### Variabel Dalam String Petik Dua
+Berbeda dengan petik satu, jika menggunakan petik 2 kamu dapat menuliskan variabel didalam string langsung. 
+```php
+$name = 'Feri Irawan';
+$text = "Halo $name"; // Output: Halo Feri Irawan
+```
+<a href='2_variable_in_string.php#L31-L64' target='_blank'>
+    <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
+</a>
 
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](2_variable_in_string.php#L31-L64)
+<br/>
+<br/>
 
 ### Variabel Dalam String Sintaks *Heredoc*
+Di penulisan string heredoc, kamu dapat menuliskan langsung pada string sama seperti petik dua.
+```php
+$text = <<<TENTANG_SAYA
+Nama: $name
+Umur: $umur
+TENTANG_SAYA;
+```
+<a href='2_variable_in_string.php#L67-L98' target='_blank'>
+    <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
+</a>
 
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](2_variable_in_string.php#L67-L98)
+<br/>
+<br/>
 
-## 4. Array *([3_array.php](3_array.php))*
+## 4. Array
 
-Sesuai dengan penjelasan pada [bagian 2](#2-tipe-data--1_data_typephp) di atas, telah kamu ketahui bahwa, **array merupakan** salah satu tipe data yang dapat menampung beberapa data lain di dalamnya seperti string, integer, float, dan tipe data lainnya.
+Sesuai dengan penjelasan pada [bagian 2](#2-tipe-data--1_data_typephp) di atas, kita sudah ketahui kalau **array merupakan** salah satu tipe data yang dapat menampung beberapa data lain di dalamnya seperti string, integer, float, dan tipe data lainnya.
 
 ### Membuat Array
 
@@ -290,7 +408,7 @@ Dalam PHP, array terbagi menjadi 2 jenis, yaitu:
 
 [![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](3_array.php#L130-L161)
 
-## 5. Konstanta *([4_constant_variable.php](4_constant_variable.php))*
+## 5. Konstanta
 
 Konstanta (*constant*) merupakan variabel yang nilainya tetap seperti saat pertama kali dideklarasikan (tidak dapat diubah nilainya).
 
