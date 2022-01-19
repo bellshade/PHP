@@ -199,7 +199,8 @@ if (!is_dir(rewritePath($pageUrl))) {
                             'run.php',
                             'router.php',
                             'config.php',
-                            'tasks.md',
+                            'silabus.txt',
+                            '.prettierignore',
                         ];
 
                         // Penentuan state dan penulisan kategori pada floatingbar
