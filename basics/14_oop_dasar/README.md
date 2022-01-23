@@ -61,64 +61,33 @@ Perhatikan disini karena setiap _use case_ disendirikan pada tiap-tiap objek, de
     <img src="../../assets/content/basics/14_oop_dasar/2-oop.png" width="50%" />
 </p>
 
-Semua hal _use case_ diibaratkan sebagai sebuah objek yang terorganisir bertujuan membantu dalam menyelesaikan sesuai _use case_nya. Sehingga apapun dapat di gambarkan kedalam objek ini. Objek berisikan fungsi-fungsi dan atribute-atribute, dimana objek dapat di gandakan dengan nilai dari atribut berbeda-beda tetapi dapat menjalankan fungsi yang sama. Karena bersifat modular objek dapat digunakan kembali. Sehingga pengembangan dan perawatan sebuah aplikasi menjadi lebih mudah. Data dalam properti dan metode objek dapat diproteksi dengan encapsulasi dan memberikan batas hak akses modifikasi _(yang akan dibahas nanti)\_. Dengan demikian data dirasa "lebih aman" dari pada pemrograman prosedural.
-
 ## 2. Class dan Object
+
+<br/>
 
 ### Apa itu class dan object?
 
-`Class` adalah sebuah tempelate / blueprint yang menyimpak banyak object.
-`Object`adalah sebuah bagian didalam class
+`Class` adalah sebuah template / blueprint. Disinilah ditentukan aturan-aturan atau apa saja yang harus ada dari sebuah objek agar selalu dijaga konsistensinya. Sementara `Object` adalah sebuah penerapan dari _class_ itu sendiri, kita menyebutnya sebagai _instance_
 
-Sebagai contoh, kita akan menggunakan studi kasus seperti ini:
-Saya punya sebuah buku untuk membuat sebuah HandPhone,
-Buku tersebut akan digunakan untuk membuat semua HandPhone.
-Dari sini bisa dibilang bahwa `buku` adalah sebuah class dan `HandPhone` Adalah sebuah objectnya,
+Misalnya ada pengguna yang didalamnya harus ada nama, jenis kelamin, email, alamat dll. Kita bisa buat class `Pengguna` dan menentukan nama, email dll sebagai properti _(kita akan bahas di sub materi berikutnya)_. Lalu kita juga bisa buat penerapan dari class itu. misalnya ada `agus` yang merupakan penerapan dari class `Pengguna`, maka agus ini bisa kita sebut sebagai _object_. Karena `agus` merupakan objek dari class `Pengguna`, maka objek `agus` pasti mengikuti blueprint yang tertulis pada kelasnya, seperti mempunyai nama, email dsb. 
 
+<br/>
 ### Cara Membuat Class
 
-Cara membuat class adalah dengan menaruh keyword `class` didepan nya, Untuk penamaannya bebas
-
-#### Contoh
+Cara membuat class adalah dengan menaruh keyword `class` didepan nya diikuti dengan nama kelasnya. Nama kelas harus diawali dengan huruf kapital.
 
 ```php
-class namaClassNya {
+class NamaKelas {
 
 }
 ```
 
-```php
-class Kelas {
-
-}
-```
-
+<br/>
 ### Cara Membuat Object
 
-Cara membuat objectnya adalah dengan membuat sebuah variable dengan yang diisi dengan
+Objek dapat dibuat dengan cukup buat sebuah variable, lalu isi dengan instance dari sebuah kelas yaitu dengan `new NamaKelas()`
 
 ```php
-new namaClassNya();
+$agus = new Pengguna();
 ```
 
-#### Contoh
-
-```php
-$kelas1 = new Kelas();
-$kelas2 = new Kelas();
-```
-
----
-
-#### `Hasil`
-
-#### Variable kelas1
-
-<img src="../../assets/content/basics/14_oop_dasar/object1.png"  />
-
-#### Variable kelas2
-
-<img src="../../assets/content/basics/14_oop_dasar/object2.png"  />
-
-_Keterangan:_ 
-> Untuk membuat sebuah variable untuk object, maka nama variable-nya harus berbeda tidak boleh sama,dan ` Isi variable boleh sama`
