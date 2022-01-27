@@ -32,10 +32,8 @@ class Kelas
     }
 
 }
-echo "<br>";
 
 echo "<br>";
-
 $kelas1 = new Kelas();
 $kelas2 = new Kelas();
 echo "<br>";
