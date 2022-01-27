@@ -9,6 +9,13 @@ echo "class Kelas {
     //Deklarasi Properti 
     public namaProperti = 'Nilai Properti';
     public namaPropertiDua = 2;
+
+    //Deklarasi Method 
+    public function namaMethod()
+    {
+        //Perintah Apa saja
+        echo 'Method';
+    }
 }";
 
 class Kelas
@@ -16,36 +23,21 @@ class Kelas
     // Deklarasi Properti
     public $namaProperti = 'Nilai Properti';
     public $namaPropertiDua = 2;
-}
-echo "<br>";
 
-echo "Membuat Sebuah Method dari class",PHP_EOL;
-echo "<br>";
-
-echo "class Kelas {
-
-    //Deklarasi Method 
+    //Deklarasi Method
     public function namaMethod()
     {
-       //Perintah Apa saja
-       echo 'Method';
+        //Perintah Apa saja
+        echo 'Method';
     }
-}";
 
-class KelasBaru
-{
-    //Deklarasi Method 
-    public function namaMethod()
-    {
-       //Perintah Apa saja
-       echo 'Method';
-    }
 }
+echo "<br>";
 
 echo "<br>";
 
 $kelas1 = new Kelas();
-$kelas2 = new KelasBaru();
+$kelas2 = new Kelas();
 echo "<br>";
 echo "Hasil Salah satu Property Jika Di var_dump()",PHP_EOL;
 var_dump($kelas1->namaProperti);
