@@ -30,7 +30,6 @@ class Kelas
         //Perintah Apa saja
         echo 'Method';
     }
-
 }
 
 echo "<br>";
