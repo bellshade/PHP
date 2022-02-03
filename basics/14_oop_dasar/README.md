@@ -83,6 +83,7 @@ class NamaKelas {
 ```
 
 <br/>
+
 ### Cara Membuat Object
 
 Objek dapat dibuat dengan cukup buat sebuah variable, lalu isi dengan instance dari sebuah kelas yaitu dengan `new NamaKelas()`
@@ -90,4 +91,58 @@ Objek dapat dibuat dengan cukup buat sebuah variable, lalu isi dengan instance d
 ```php
 $agus = new Pengguna();
 ```
+</br>
+
+## 3. Properti dan Method
+
+</br>
+
+### Apa itu property dan method?
+
+`Property` adalah segala asset yang dimiliki oleh sebuah `Class` yang berupa variabel-variabel yang nilai atau valuenya bisa diatur sendiri. Berbeda halnya dengan `Method` yang merupakan aksi yang dimiliki oleh sebuah `Class`. Sebuah Method akan berjalan ketika namanya dipanggil.
+
+</br>
+
+### Cara Membuat Property
+
+</br>
+
+Untuk membuat `Property`, terlebih dahulu untuk menyiapkan sebuah `class`. Setelah itu baru didalam `class` tadi ditambahkan property-property yang diinginkan. Perlu diingat bahwa `property` bisa public, protected atau private
+
+</br>
+
+```php
+class NamaKelas {
+
+  // Deklarasi Properti
+  public $namaProperti = 'Nilai Properti';
+  public $namaPropertDua;
+
+}
+```
+
+</br>
+
+### Cara Membuat Method
+
+</br>
+
+Selanjutnya, untuk `method` kurang lebih seperti `property` harus membuat sebuah `class`, kemudian setelah itu sebuah method baru dapat dibuat
+
+</br>
+
+```php
+class NamaKelas {
+
+  // Deklarasi Method
+  public function namaFunction()
+  {
+    // Isi dengan perintah yang diinginkan
+  }
+
+}
+```
+
+</br>
+
 
