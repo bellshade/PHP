@@ -1,0 +1,1 @@
+Jadi ini adalah hasil yang akan di dapatkan setelah berhasil membaca sebuah file dalam PHP
