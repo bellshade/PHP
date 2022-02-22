@@ -37,4 +37,3 @@ $size = filesize($file);
 $filedata = fread($open, $size);
 
 print_r($filedata);
-?>
