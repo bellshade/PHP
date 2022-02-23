@@ -5,6 +5,7 @@ Tentu saja dalam melakukan development aplikasi akan diperlukan file baik itu be
 ## Daftar Isi
 
 - [Membaca File dan Folder](#1-membaca-file-dan-folder)
+- [Membuat File dan Folder](#2-membuat-file-dan-folder)
 
 ## 1. Membaca File dan Folder
 
@@ -22,4 +23,26 @@ $size = filesize($file);
 
 // Untuk membaca sebuah file maka gunakan lah fread
 $filedata = fread($open, $size);
+```
+
+<br>
+
+## 2. Membuat File dan Folder
+
+Selanjutnya adalah `membuat file dan folder`. Selain `membaca` file, dalam PHP juga mungkin untuk membuat file dan folder. Untuk membuat sebauh folder maka akan diperlukan function `mkdir` nantinya tinggal ditambahkan nama dari folder yang akan dibuat. Kemudian untuk membuat sebuah file bisa dengan menggunakan function `fwrite`. Jangan lupa untuk membuat file maka folder harus di buka dengan function `fopen`. Berikut contoh pembuatan folder dan juga file:
+
+```php
+$file = 'nama_folder';
+
+// Membuat Folder
+mkdir($file);
+
+// Membuat File
+$fopen = fopen($file . '/' . 'nama_file_baru.txt', 'w');
+
+// fwrite untuk membuat sebuah file dan kontennya
+fwrite($fopen, 'isi dari file baru');
+
+// Menutup File
+fclose($fopen);
 ```
