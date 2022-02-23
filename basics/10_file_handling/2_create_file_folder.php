@@ -40,9 +40,7 @@ $nama_file = 'test.txt';
 $konten_file = 'contoh content file';
 
 // Membuat Folder
-if ( is_dir($dir) === false ){
-    mkdir($dir);
-}
+if ( is_dir($dir) === false ){mkdir($dir);}
 
 // fopen sebelum membuat file
 $open = fopen($dir . '/' . $nama_file, 'w');
