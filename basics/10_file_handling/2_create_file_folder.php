@@ -32,7 +32,7 @@ fclose(open);
 ";
 
 // Menyimpan data untuk membuat Folder ke dalam Variabel
-$dir = 'storage/contoh_folder';
+$dir = 'storage';
 
 // Identitas File yang akan dibuat
 $nama_file = 'test.txt';
