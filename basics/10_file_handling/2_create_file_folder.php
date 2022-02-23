@@ -7,14 +7,17 @@ echo "<h1>Membuat Folder dan File dengan PHP</h1>";
 echo "Untuk membuat folder pada PHP gunakan mkdir()
 
 // Menyimpan data untuk membuat Folder ke dalam Variabel
-dir = 'storage/contoh_folder';
+dir = 'storage';
 
 // Identitas File yang akan dibuat
 nama_file = 'test.txt';
 konten_file = 'contoh content file';
 
-// Membuat Folder
-mkdir(dir);
+// Mengecek apakah folder storage belum ada
+if (!is_dir(dir)) {
+    // Membuat Folder jika belum ada
+    mkdir(dir);
+}
 
 
 // fopen sebelum membuat file
@@ -37,8 +40,11 @@ $dir = 'storage';
 $nama_file = 'test.txt';
 $konten_file = 'contoh content file';
 
-// Membuat Folder
-mkdir($dir);
+// Mengecek apakah folder storage belum ada
+if (!is_dir($dir)) {
+    // Membuat Folder jika belum ada
+    mkdir($dir);
+}
 
 // fopen sebelum membuat file
 $open = fopen($dir . '/' . $nama_file, 'w');
