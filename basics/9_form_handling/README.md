@@ -28,6 +28,7 @@ Selanjutnya mari kita masuk ke materinya.
 - [3. Input Select *(3_select.php)*](#3-input-select-3selectphp)
 - [4. Date Time](#4-date-time-4datetimephp)
 - [5. Check Box](#5-check-box-5checkboxphp)
+- [6. Radio Button](#6-radio-button-6radiophp)
 
 ## 1. Tombol Kirim *([1_submit_button.php](1_submit_button.php))*
 
@@ -273,6 +274,35 @@ if (isset($_POST['btn_contoh1'])) {
 }
 ```
 [![](https://img.shields.io/static/v1?&label=Demo&message=%3e&color)](5_checkbox.php#L21-L42)
+
+## 6. Radio Button *([6_radio.php](6_radio.php))*
+
+Lalu ada `radio` atau lebih sering dikenal dengan `Radio Button` biasanya input ini digunakan untuk pemilihan dan hanya boleh memilih satu saja. Berikut adalah contohnya:
+
+```html
+<form action="" method="post">
+    <label for="Hobby">Pilih Gender Anda:</label><br>
+
+    <input type="radio" name="gender" id="male_gender" value="Laki-Laki" />
+    <label for="male_gender">Laki-Laki</label>
+        
+    <input type="radio" name="gender" id="female_gender" value="Perempuan" />
+    <label for="female_gender">Perempuan</label><br>
+    <button type="submit" name="btn_contoh1">Kirim</button>
+    </form>
+```
+
+```php
+<?php
+if (isset($_POST['btn_contoh1'])) {
+    $gender = $_POST['gender'];
+
+    echo "Gender saya adalah $gender";
+}
+```
+
+[![](https://img.shields.io/static/v1?&label=Demo&message=%3e&color)](6_radio.php#L21-L38)
+
 
 <table>
   <tr>
