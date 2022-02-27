@@ -6,6 +6,7 @@ Tentu saja dalam melakukan development aplikasi akan diperlukan file baik itu be
 
 - [Membaca File dan Folder](#1-membaca-file-dan-folder)
 - [Membuat File dan Folder](#2-membuat-file-dan-folder)
+- [Menuliskan File](#3-menuliskan-file)
 
 ## 1. Membaca File dan Folder
 
@@ -42,6 +43,23 @@ $fopen = fopen($file . '/' . 'nama_file_baru.txt', 'w');
 
 // fwrite untuk membuat sebuah file dan kontennya
 fwrite($fopen, 'isi dari file baru');
+
+// Menutup File
+fclose($fopen);
+```
+
+## 3. Menuliskan File
+
+Kemudian, file yang tadi telah dibuat itu bisa di `write` atau `diubah` isinya. Untuk di PHP sendiri, mengubah file bisa dilakukan dengan menggunakan function `fwrite`. Jadi, selain untuk membuat sebuah file yang baru, `fwrite` juga bisa digunakan untuk mengubah isi dari file yang sudah ada. Kemabli lagi diingatkan, untuk menggunakan `fwirte` jangan lupa untuk membuka file dengan function `fopen`. Untuk lebih jelasnya, berikut contoh dari penggunaan write file:
+
+```php
+$file = 'nama_folder';
+
+// Open file
+$fopen = fopen($file . '/' . 'nama_file_target.txt', 'w');
+
+// fwrite untuk mengubah isi file target sesuai dengan yang diinginkan
+fwrite($fopen, 'Isi/konten baru dari file');
 
 // Menutup File
 fclose($fopen);
