@@ -188,5 +188,67 @@ new Anggota('Budi', 'laki-laki');
 ```
 > <i><small>Source code demo ada di basics/14_oop_dasar/4_constructor_destructor2.php</small></i>
 <a href='4_constructor_destructor2.php' target='_blank'>
+
+  
+## Property dan method static
+
+Properti dan method dapat juga berbentuk static, artinya tidak ada ketergantungan antara method / properti static dengan objek dari kelasnya. Bahkan faktanya, tidak perlu dibuat objek agar dapat digunakan. Method / properti static adalah salah satu fitur dalam paradigma OOP untuk membuat method atau properti dari sebuah class yang dapat dijalankan tanpa dibuat sebuah objek dari class tersebut.
+
+Untuk membuat properti static, cukup tambahkan keyword `static` sebelum nama variabel. Untuk membuat method static juga mirip, tambahkan keyword `static` sebelum `function`
+```php
+class Kelas 
+{
+  public static $propertyStatic;  #  <--  ini adalah properti static 
+  public static function methodStatic() {
+    # ini adalah method static
+  }
+}
+```
+untuk memanggil properti atau method static didalam kelas dapat menggunakan keyword `self::$propertinya` atau `self::methodStaticnya()`. Jika berada dalam parent class dan ingin memanggil dari class turunannya, dapat menggunakan keyword `parent::xx` _(kita akan bahas kelas turunan ini pada materi inheritance nanti)_
+```php
+class Kelas 
+{
+  public static $propertiStatic
+  public static function methodStatic() {
+  }
+  public function methodBiasa() {
+    $variabel = self::$propertiStatic;   #   <-- Mengakses properti static
+    self::methodStatic();   #    <-- menjalankan method static
+  }
+}
+```
+
+Properti dan method static ini pada penggunaannya seringkali digunakan untuk melakukan sesuatu yang tidak spesifik ke objek dari kelas tertentu melainkan ke sesuatu yang lebih umum namun tetap terkait dengan tujuan kelas. Misalnya pada kelas `Kasir` terdapat waktu shift yang tidak spesifik ke kasir melainkan ke seluruh kasir. Pada kasus tersebut kita bisa gunakan method dan properti static seperti berikut 
+
+```php
+<?php
+class Kasir
+{
+    public $nama;
+    public $alamat;
+    /**
+     * Variabel properti static untuk menyimpan waktu shift semua kasir
+     */
+    public static $waktuShift;
+    public function __construct($nama, $alamat)
+    {
+        $this->nama = $nama;
+        $this->alamat = $alamat;
+    }
+    /**
+     * Method static untuk melakukan operasi pada properti static
+     */
+    public static function setWaktuShift($shift)
+    {
+        self::$waktuShift = $shift;
+    }
+}
+// Set waktu shift menggunakan method static
+// Karena method static, jadi tidak perlu ada instantiasi objek
+Kasir::setWaktuShift(2);
+echo 'Waktu Shift: ' . Kasir::$waktuShift;
+```
+> <i><small>Source code demo ada di basics/14_oop_dasar/5_property_dan_method_static.php</small></i>
+<a href='5_property_dan_method_static.php' target='_blank'>
     <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
 </a>
