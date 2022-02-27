@@ -33,8 +33,8 @@
 
         echo "Saya memilih: <br>";
 
-        for ($i=0; $i < count($hobi) ; $i++){
-            echo $hobi[$i]."<br>";
+        for ($i = 0; $i < count($hobi); $i++) {
+            echo $hobi[$i] . "<br>";
         }
 
         echo "sebagai hari spesial saya";
