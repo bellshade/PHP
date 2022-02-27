@@ -146,3 +146,47 @@ class NamaKelas {
 </br>
 
 
+## 4. Constructor dan Destructor
+
+`Constructor dan destructor` adalah salah satu jenis method spesial yang disediakan PHP sebagai fitur paradigma pemrograman berorientasi objek dalam bahasa pemrograman PHP. _Constructor destructor_ ini tak hanya ditemukan dalam PHP namun juga bahasa pemrograman lainnya yang mendukung paradigma OOP. Singkatnya, `Constructor` adalah method yang akan dijalankan pertama kali saat sebuah kelas di instantiasi menjadi objek. Sementara `Destructor` adalah kebalikannya, yaitu method yang dijalankan di akhir penggunaan objeknya. 
+
+Cara membuat constructor adalah mirip dengan saat membuat method biasa. Namun constructor harus dalam berbentuk method yang bernama `__construct` dan harus ditulis dalam sebuah kelas.
+```php
+class SebuahKelas 
+{
+  public function __construct() {
+    # Ini akan dijalankan pertama kali
+  }
+}
+```
+Sementara destructor dapat dibuat dengan membuat method yang bernama `__destruct()`.
+```php
+class SebuahKelas
+{
+  public function __destruct() {
+    # Ini akan dijalankan terakhir saat objek sudah digunakan
+  }
+}
+```
+> <i><small>Source code demo ada di basics/14_oop_dasar/4_constructor_destructor.php</small></i>
+<a href='4_constructor_destructor.php' target='_blank'>
+    <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
+</a>
+
+Pada constructor, parameter yang ditetapkan di method `__construct($param)` akan menjadi parameter saat menginstantiasi objek `sebuahKelas($param)`. Ini sangat berguna jika ingin passing data dari parameter saat membuat objek ke kelas internal untuk ditetapkan menjadi nilai properti atau kegunaan yang lain.
+
+```php
+class Anggota {
+  public $nama
+  public $jenisKelamin;
+  public function __construct($nama, $jenisKelamin) {
+    $this->nama = $nama;
+    $this->jenisKelamin = $jenisKelamin;
+  }
+}
+new Anggota('Budi', 'laki-laki');
+```
+> <i><small>Source code demo ada di basics/14_oop_dasar/4_constructor_destructor2.php</small></i>
+<a href='4_constructor_destructor2.php' target='_blank'>
+    <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
+</a>
