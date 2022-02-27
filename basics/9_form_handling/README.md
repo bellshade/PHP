@@ -19,13 +19,14 @@ Selanjutnya mari kita masuk ke materinya.
 
 ## Daftar Isi
 
-- [1. Tombol Kirim *(1_submit_button.php)*](#1-tombol-kirim-1_submit_buttonphp)
-- [2. Input Berdasarkan Teks *(2_text_based_input.php)*](#2-input-berdasarkan-teks-2_text_based_inputphp)
-    - [Contoh 1 - Text dan Number](#contoh-1---text-dan-number)
-    - [Contoh 2 - Email dan Password](#contoh-2---email-dan-password)
-    - [Contoh 3 - Hidden](#contoh-3---hidden)
-    - [Contoh 4 - Date](#contoh-4---date)
-- [3. Input Select *(3_select.php)*](#3-input-select-3_selectphp)
+- [1. Tombol Kirim *(1_submit_button.php)*](#1-tombol-kirim-1submitbuttonphp)
+- [2. Input Berdasarkan Teks *(2_text_based_input.php)*](#2-input-berdasarkan-teks-2textbasedinputphp)
+    - [Contoh 1 - Text dan Number](#contoh-1-text-dan-number)
+    - [Contoh 2 - Email dan Password](#contoh-2-email-dan-password)
+    - [Contoh 3 - Hidden](#contoh-3-hidden)
+    - [Contoh 4 - Date](#contoh-4-date)
+- [3. Input Select *(3_select.php)*](#3-input-select-3selectphp)
+- [4. Date Time](#4-date-time-4datetimephp)
 
 ## 1. Tombol Kirim *([1_submit_button.php](1_submit_button.php))*
 
@@ -220,6 +221,27 @@ if (isset($_POST['btn_contoh2'])) {
 
 Dengan melihat kedua contoh di atas, kamu dapat mengetahui bahwa menggunakan tag `option` tanpa atribut `value` pada input `select` juga dapat dikirim.
 
+## 4. Date Time *([4_datetime.php](4_datetime.php))*
+
+Kemudian ada juga input data yang bisa berupa datetime `(date & time)` jadi nanti `date (tanggal)` dan juga `time(waktu)` bisa diinputkan secara bersamaan. Berikut merupakan contohnya:
+
+```html
+<form action="" method="post">
+    <label for="specialTime"> Pilih hari Spesial (tanggal and waktu):</label>
+    <input type="datetime-local" id="specialTime" name="specialTime">
+    <button type="submit" name="btn_contoh1">Kirim</button>
+</form>
+```
+
+```php
+<?php
+
+if (isset($_POST['btn_contoh1'])) {
+    $specialTime = $_POST['specialTime'];
+    echo "Saya memilih: $specialTime sebagai hari spesial saya";
+}
+```
+[![](https://img.shields.io/static/v1?&label=Demo&message=%3e&color)](4_datetime.php#L21-L34)
 
 <table>
   <tr>
