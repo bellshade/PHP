@@ -27,6 +27,7 @@ Selanjutnya mari kita masuk ke materinya.
     - [Contoh 4 - Date](#contoh-4-date)
 - [3. Input Select *(3_select.php)*](#3-input-select-3selectphp)
 - [4. Date Time](#4-date-time-4datetimephp)
+- [5. Check Box](#5-check-box-5checkboxphp)
 
 ## 1. Tombol Kirim *([1_submit_button.php](1_submit_button.php))*
 
@@ -242,6 +243,36 @@ if (isset($_POST['btn_contoh1'])) {
 }
 ```
 [![](https://img.shields.io/static/v1?&label=Demo&message=%3e&color)](4_datetime.php#L21-L34)
+
+## 5. Check Box *([5_checkbox.php](5_checkbox.php))*
+
+Selanjutnya untuk input ada juga yang menggunakan `checkbox` jadi input ini user dapat melakukan input beberapa secara bersamaan dan data yang dipilih itu nanti akan ditandai atau `dicentang`. Untuk lebih jelasnya perhatikan contoh berikut ini:
+
+```html
+<form action="" method="post">
+    <label for="Hobby">Pilih Hobby Anda:</label><br>
+    <input type="checkbox" name="hobi[]" value="Membaca"> Membaca<br>
+    <input type="checkbox" name="hobi[]" value="Sepak Bola"> Sepak Bola<br>
+    <input type="checkbox" name="hobi[]" value="Programming"> Programming<br> 
+    <button type="submit" name="btn_contoh1">Kirim</button>
+</form>
+```
+
+```php
+<?php
+if (isset($_POST['btn_contoh1'])) {
+    $hobi = $_POST['hobi'];
+
+    echo "Saya memilih: <br>";
+
+    for ($i=0; $i < count($hobi) ; $i++){
+        echo $hobi[$i]."<br>";
+    }
+
+    echo "sebagai hari spesial saya";
+}
+```
+[![](https://img.shields.io/static/v1?&label=Demo&message=%3e&color)](5_checkbox.php#L21-L42)
 
 <table>
   <tr>
