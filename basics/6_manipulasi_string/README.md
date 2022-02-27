@@ -24,6 +24,13 @@ PHP menyediakan berbagai fungsi dan fitur untuk memanipulasi _string_ agar suatu
   - [join()](#join)
 - [5. Escape & Formatting](#5-escape-and-formatting)
   - [addslashes](#addslashes)
+- [6. Manipulasi String](#6-manipulasi-string)
+  - [str_pad](#strpad)
+  - [wordwrap](#wordwrap)
+  - [str_shuffle](#strshuffle)
+  - [str_repeat](#strrepeat)
+  - [str_replace](#strreplace)
+  - [strtr](#strtr)
 
 ## 1. Mengambil Properti String
 
@@ -455,6 +462,125 @@ echo $text1;
 ### Output
 
 <img  src="../../assets/content/basics/5_string_manipulation/stripslashes0.png" >
+
+<br>
+
+## 6. Manipulasi String
+
+_String_ dalam PHP bisa di lakukan perubahan atau di manipulasi. Pada materi-materi yang diatas tadi juga sudah ditunjukkan beragam manipulasi dari _string_. Berikut ada beberapa tambahan function lagi yang ada pada PHP untuk memanipulasi string
+
+### str_pad()
+
+Jadi dengan menggunakan function `str_pad` maka sebuah string jumlah karakternya akan ditambahkan sesuai dengan jumlah karakter yang diinginkan. Jika jumlah karakter sudah terpenuhi (string yang dibuat jumlah karakternya melebihi panjang karakter yang diberikan) maka tidak akan ada penambahan karakter. Contoh penggunaannya adalah sebagai berikut:
+
+```php
+// Sebelum Menggunakan str_pad
+$text = 'Text Target';
+echo $text;
+
+// -------------------------------------------
+
+// Sesudah Menggunakan str_pad
+$text1 = str_pad('Text Target', 20, ".");
+echo $text1;
+```
+
+<a href='6_manipulasi_string.php' target='_blank'>
+    <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
+</a>
+
+### wordwrap()
+
+Dengan menggunakan function `wordwrap` maka sebuah string akan dibuatkan baris baru ketika sudah mencapai panjang (_length_) tertentu, secara default karakter yang digunakan untuk membuat line baru adalah `\n` dan dapat diganti sesuai dengan kebutuhan. Berikut adalah contoh dari penggunaan wordwrap:
+
+```php
+// Sebelum Menggunakan wordwrap
+$text = 'Text Target';
+echo $text;
+// -------------------------------------------
+
+// Sebelum Menggunakan wordwrap
+$text1 = wordwrap('Text Target', 5);
+echo $text1;
+```
+<a href='6_manipulasi_string.php' target='_blank'>
+    <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
+</a>
+
+### str_shuffle()
+
+Selanjutnya adalah `str_shuffle`, dengan menggunakan function ini maka karakter string akan dibuat menjadi tidak berarturan (acak-acakan). Untuk lebih jelasnya, perhatikan contoh berikut ini:
+
+```php
+// Sebelum Menggunakan str_shuffle
+$text = 'Text Target';
+echo $text;
+// -------------------------------------------
+
+// Sebelum Menggunakan str_shuffle
+$text1 = str_shuffle('Text Target');
+echo $text1;
+```
+<a href='6_manipulasi_string.php' target='_blank'>
+    <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
+</a>
+
+### str_repeat()
+
+Kemudian ada juga function yang namanya `str_repeat`, dengan menggunakan function ini string dapat diulang sesuai dengan jumlah yang diinginkan. Parameter yang dibutuhkan cukup `text` dan juga berapa kali `pengulangan` yang ingin dilakukan. Berikut adalah salah satu contohnya:
+
+```php
+// Sebelum Menggunakan str_repeat
+$text = 'Text Target';
+echo $text;
+// -------------------------------------------
+
+// Sebelum Menggunakan str_repeat
+$text1 = str_repeat('Text Target', 5);
+echo $text1;
+```
+
+<a href='6_manipulasi_string.php' target='_blank'>
+    <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
+</a>
+
+### str_replace()
+
+Ada juga function dalam PHP yang dapat digunakan untuk mengganti string yang lainnya. Function tersebut adalah function `str_replace`. Parameter yang diperlukan adalah string yang ingin di `ganti`, string `pengganti`, dan String `Lengkap`. Untuk lebih jelasnya perhatikan contoh berikut ini:
+
+```php
+// Sebelum Menggunakan str_replace
+$text = 'Text Target';
+echo $text;
+// -------------------------------------------
+
+// Sebelum Menggunakan str_replace
+$text1 = str_replace('Target', 'Mencoba', 'Text Target');
+echo $text1;
+```
+
+<a href='6_manipulasi_string.php' target='_blank'>
+    <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
+</a>
+
+### strtr()
+
+Function `str_replace` digunakan untuk mengganti niali dari string, untuk mengganti karakter secara spesifik maka function yang digunakan adalah `strtr`. Dengan menggunakan function ini maka karakter tertentu dapat diganti dengan karakter lain sesuai dengan yang diinginkan. Berikut merupakan salah satu contohnya:
+
+```php
+// Sebelum Menggunakan strtr
+$text = 'Text Target';
+echo $text;
+// -------------------------------------------
+
+// Sebelum Menggunakan strtr
+$text1 = strtr('Text Target', 'ea', 'io');
+echo $text1;
+```
+
+<a href='6_manipulasi_string.php' target='_blank'>
+    <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
+</a>
 
 ---
 
