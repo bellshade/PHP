@@ -37,23 +37,21 @@ if (!is_dir($dir)) {
 
     <!-- Jika formulir dikirim -->
     <?php
-
     if (isset($_POST['btn_contoh1'])) {
-
         // Folder yang akan menjadi target penyimpana File
         $target_dir = "storage/";
         $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
         $uploadOk = 1;
-        $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+        $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 
         // Cek Gambar apakah benar-benar gambar
         $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
         if ($check !== false) {
-          echo "File adalah sebuah gambar - " . $check["mime"] . ".<br>";
-          $uploadOk = 1;
+            echo "File adalah sebuah gambar - " . $check["mime"] . ".<br>";
+            $uploadOk = 1;
         } else {
-          echo "File Bukan Gambar";
-          $uploadOk = 0;
+            echo "File Bukan Gambar";
+            $uploadOk = 0;
         }
         // Cek Apakah Upload Ok 0 atau bukan
         if ($uploadOk == 0) {
@@ -62,7 +60,7 @@ if (!is_dir($dir)) {
         } else {
             // Memindahkan file yang diupload ke folder storage
             if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-                echo "File ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " sudah di upload";
+                echo "File " . htmlspecialchars(basename( $_FILES["fileToUpload"]["name"])) . " sudah di upload";
             } else {
                 echo "Upload Error";
             }
