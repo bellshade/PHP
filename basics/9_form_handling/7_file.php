@@ -60,7 +60,7 @@ if (!is_dir($dir)) {
         } else {
             // Memindahkan file yang diupload ke folder storage
             if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-                echo "File " . htmlspecialchars(basename( $_FILES["fileToUpload"]["name"])) . " sudah di upload";
+                echo "File " . htmlspecialchars(basename($_FILES["fileToUpload"]["name"])) . " sudah di upload";
             } else {
                 echo "Upload Error";
             }
