@@ -29,6 +29,7 @@ Selanjutnya mari kita masuk ke materinya.
 - [4. Date Time](#4-date-time-4datetimephp)
 - [5. Check Box](#5-check-box-5checkboxphp)
 - [6. Radio Button](#6-radio-button-6radiophp)
+- [7. File](#7-file-7filephp)
 
 ## 1. Tombol Kirim *([1_submit_button.php](1_submit_button.php))*
 
@@ -302,6 +303,50 @@ if (isset($_POST['btn_contoh1'])) {
 ```
 
 [![](https://img.shields.io/static/v1?&label=Demo&message=%3e&color)](6_radio.php#L21-L38)
+
+## 7. File *([7_file.php](7_file.php))*
+
+Kemudian ada `file`, biasnaya input ini digunakan untuk mengupload gambar. Untuk mengupload gambar maka dalam form perlu ditambahkan `enctype`. Berikut sdalah satu contoh untuk upload file dalam PHP:
+
+```html
+<form action="" method="post" enctype="multipart/form-data">
+    <label for="fileToUpload">Pilih Gambar Anda:</label><br><br>
+    <input type="file" name="fileToUpload" id="fileToUpload">
+    <button type="submit" name="btn_contoh1">Kirim</button>
+</form>
+```
+
+```php
+<?php
+if (isset($_POST['btn_contoh1'])) {
+
+    $target_dir = "storage/";
+    $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+    $uploadOk = 1;
+    $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+
+    $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+    if ($check !== false) {
+        echo "File adalah sebuah gambar - " . $check["mime"] . ".<br>";
+        $uploadOk = 1;
+    } else {
+        echo "File Bukan Gambar";
+        $uploadOk = 0;
+    }
+
+    if ($uploadOk == 0) {
+        echo "Maaf, file anda gagal di upload";
+    } else {
+        if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+            echo "File ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " sudah di upload";
+        } else {
+            echo "Upload Error";
+        }
+    }
+}
+```
+
+[![](https://img.shields.io/static/v1?&label=Demo&message=%3e&color)](7_file.php#L32-L72)
 
 
 <table>
