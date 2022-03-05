@@ -30,6 +30,7 @@ Selanjutnya mari kita masuk ke materinya.
 - [5. Check Box](#5-check-box-5checkboxphp)
 - [6. Radio Button](#6-radio-button-6radiophp)
 - [7. File](#7-file-7filephp)
+- [8. Multiple File](#8-multiple-file-8multiplefilephp)
 
 ## 1. Tombol Kirim *([1_submit_button.php](1_submit_button.php))*
 
@@ -306,7 +307,7 @@ if (isset($_POST['btn_contoh1'])) {
 
 ## 7. File *([7_file.php](7_file.php))*
 
-Kemudian ada `file`, biasnaya input ini digunakan untuk mengupload gambar. Untuk mengupload gambar maka dalam form perlu ditambahkan `enctype`. Berikut sdalah satu contoh untuk upload file dalam PHP:
+Kemudian ada `file`, biasnaya input ini digunakan untuk mengupload gambar. Untuk mengupload gambar maka dalam form perlu ditambahkan `enctype`. Berikut adalah satu contoh untuk upload file dalam PHP:
 
 ```html
 <form action="" method="post" enctype="multipart/form-data">
@@ -347,6 +348,47 @@ if (isset($_POST['btn_contoh1'])) {
 ```
 
 [![](https://img.shields.io/static/v1?&label=Demo&message=%3e&color)](7_file.php#L32-L72)
+
+## 8. Multiple File *([8_multiple_file.php](8_multiple_file.php))*
+
+Selnjutnya ada `multiple file`, biasnaya input ini digunakan untuk mengupload gambar yang jumlahnya lebih dari satu gambar. Untuk mengupload beberapa gambar maka dalam form perlu ditambahkan `multiple` dan jangan lupa untuk menampung datanya ke dalam sebuah array. Berikut salah satu contoh untuk upload beberapa file dalam PHP:
+
+```html
+<form action="" method="post" enctype="multipart/form-data">
+    <label for="fileToUpload">Pilih Gambar Anda:</label><br><br>
+    <input type="file" name="fileToUpload[]" id="fileToUpload" accept="image/*" multiple>
+    <button type="submit" name="btn_contoh1">Kirim</button>
+</form>
+```
+
+```php
+<?php
+if (isset($_POST['btn_contoh1'])) {
+    // Folder yang akan menjadi target penyimpana File
+    $target_dir = "storage/";
+    $files = $_FILES;
+    $jumlahFile = count($files['fileToUpload']['name']);
+        
+    // Looping untuk mendapat isi dari array yang berisi gambar
+    for ($i = 0; $i < $jumlahFile; $i++) {
+        $namaFile = $files['fileToUpload']['name'][$i];
+        $lokasiTmp = $files['fileToUpload']['tmp_name'][$i];
+        
+        $namaBaru = uniqid() . '-' . $namaFile;
+        $lokasiBaru = "{$target_dir}/{$namaBaru}";
+        $prosesUpload = move_uploaded_file($lokasiTmp, $lokasiBaru);
+        
+        // jika proses berhasil
+        if ($prosesUpload) {
+            echo "Upload file <a href='{$lokasiBaru}' target='_blank'>{$namaBaru}</a> berhasil. <br>";
+        } else {
+            echo "<span style='color: red'>Upload file {$namaFile} gagal</span> <br>";
+        }
+    }
+}
+```
+
+[![](https://img.shields.io/static/v1?&label=Demo&message=%3e&color)](8_multiple_file.php#L32-L62)
 
 
 <table>
