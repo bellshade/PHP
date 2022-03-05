@@ -42,16 +42,13 @@ if (!is_dir($dir)) {
         $target_dir = "storage/";
         $files = $_FILES;
         $jumlahFile = count($files['fileToUpload']['name']);
-        
         // Looping untuk mendapat isi dari array yang berisi gambar
         for ($i = 0; $i < $jumlahFile; $i++) {
             $namaFile = $files['fileToUpload']['name'][$i];
             $lokasiTmp = $files['fileToUpload']['tmp_name'][$i];
-        
             $namaBaru = uniqid() . '-' . $namaFile;
             $lokasiBaru = "{$target_dir}/{$namaBaru}";
             $prosesUpload = move_uploaded_file($lokasiTmp, $lokasiBaru);
-        
             // jika proses berhasil
             if ($prosesUpload) {
                 echo "Upload file <a href='{$lokasiBaru}' target='_blank'>{$namaBaru}</a> berhasil. <br>";
