@@ -31,9 +31,8 @@ $dir = 'storage';
 $nama_file = 'test.txt';
 
 // Menggunakan unlink() untuk menghapus File 
-    if (!unlink($dir . '/' . $nama_file)) { 
-        echo ("$nama_file tidak bisa di hapus"); 
-    } 
-    else { 
-        echo ("$nama_file telah dihapus"); 
-    } 
+if (!unlink($dir . '/' . $nama_file)) { 
+    echo ("$nama_file tidak bisa di hapus"); 
+} else { 
+    echo ("$nama_file telah dihapus"); 
+} 
