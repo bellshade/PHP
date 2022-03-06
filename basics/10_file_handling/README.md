@@ -7,6 +7,7 @@ Tentu saja dalam melakukan development aplikasi akan diperlukan file baik itu be
 - [Membaca File dan Folder](#1-membaca-file-dan-folder)
 - [Membuat File dan Folder](#2-membuat-file-dan-folder)
 - [Menuliskan File](#3-menuliskan-file)
+- [Menghapus File](#4-menghapus-file)
 
 ## 1. Membaca File dan Folder
 
@@ -64,3 +65,19 @@ fwrite($fopen, 'Isi/konten baru dari file');
 // Menutup File
 fclose($fopen);
 ```
+
+## 4. Menghapus File
+
+Selanjutnya adalah `delete` atau menghapus file. Dalam PHP untuk menghapus sebuah file maka ada sebuah function yang bisa di gunakan, namanya adalah `unlink`. Untuk menggunakannya jangan lupa untuk memastikan direktori file yang akan dituju itu sudah tepat agar penghapusan filenya bisa berjalan dengan sukses. Untuk lebih jelasnya, berikut merupakan salah stu contoh dari `delete` file dalam PHP:
+
+```php
+// Nama Folder
+$file = 'nama_folder';
+
+// Nama File
+$nama_file = 'nama.txt';
+
+// Menghapus File
+unlink($dir. '/' . $nama_file)
+```
+
