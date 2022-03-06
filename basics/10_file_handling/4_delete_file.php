@@ -26,12 +26,10 @@ else {
 
 // Folder dari file
 $dir = 'storage';
-
 // Identitas File yang akan diubah
 $nama_file = 'test.txt';
-
 // Menggunakan unlink() untuk menghapus File 
-if (!unlink($dir. '/' . $nama_file)) { 
+if (!unlink($dir . '/' . $nama_file)) { 
     echo ("$nama_file tidak bisa di hapus"); 
 } 
 else { 

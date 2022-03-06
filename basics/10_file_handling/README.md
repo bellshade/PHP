@@ -78,6 +78,5 @@ $file = 'nama_folder';
 $nama_file = 'nama.txt';
 
 // Menghapus File
-unlink($dir. '/' . $nama_file)
+unlink($dir . '/' . $nama_file)
 ```
-
