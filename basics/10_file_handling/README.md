@@ -8,6 +8,7 @@ Tentu saja dalam melakukan development aplikasi akan diperlukan file baik itu be
 - [Membuat File dan Folder](#2-membuat-file-dan-folder)
 - [Menuliskan File](#3-menuliskan-file)
 - [Menghapus File](#4-menghapus-file)
+- [Mengupload File](#5-mengupload-file)
 
 ## 1. Membaca File dan Folder
 
@@ -80,3 +81,7 @@ $nama_file = 'nama.txt';
 // Menghapus File
 unlink($dir . '/' . $nama_file)
 ```
+
+## 5. Mengupload File
+
+Kemudian upload file juga ada dalam PHP. Untuk mengupload sebuah file maka dibutuhkan sebuah `form` yang nantinya akan mengirim file yang akan di upload. Untuk upload sendiri, lebih jelasnya bisa membaca materi mengenai form handling yang sudah ada pada [Penanganan Formulir](../9_form_handling)
