@@ -26,42 +26,42 @@ echo '</br>
 <b>filectime()</b> </br>';
 
 // Filectime (Mengembalikan Tanggal Terakhir File Mengalami perubahan)
-print_r(date("F d Y H:i:s.", filectime($dir.'/'.$nama_file)));
+print_r(date("F d Y H:i:s.", filectime($dir . '/' . $nama_file)));
 
 // Adding Space
 echo '</br> 
 <b>filemtime()</b> </br>';
 
 // Filectime (Mengembalikan Tanggal Terakhir File Mengalami perubahan)
-print_r(date("F d Y H:i:s.", filemtime($dir.'/'.$nama_file)));
+print_r(date("F d Y H:i:s.", filemtime($dir . '/' . $nama_file)));
 
 // Adding Space
 echo '</br> 
 <b>filesize()</b> </br>';
 
 // Filesize (Mengembalikan Ukuran dari file)
-print_r(filesize($dir.'/'.$nama_file));
+print_r(filesize($dir . '/' . $nama_file));
 
 // Adding Space
 echo '</br> 
 <b>filetype()</b> </br>';
 
 // Filetype (Mengembalikan Tipe dari File)
-print_r(filetype($dir.'/'.$nama_file));
+print_r(filetype($dir . '/' . $nama_file));
 
 // Adding Space
 echo '</br> 
 <b>fileperms()</b> </br>';
 
 // Fileperms (Mengembalikan Tipe dari File)
-print_r(fileperms($dir.'/'.$nama_file));
+print_r(fileperms($dir . '/' . $nama_file));
 
 // Adding Space
 echo '</br> 
 <b>fileowner()</b> </br>';
 
 // Fileowner (Mengembalikan Owner dari File)
-print_r(fileowner($dir.'/'.$nama_file));
+print_r(fileowner($dir . '/' . $nama_file));
 
 // Adding Space
 echo '</br> 
@@ -75,11 +75,11 @@ echo '</br>
 <b>file_exists()</b> </br>';
 
 // File_exists (Mengembalikan Apakah File ada atau tidak)
-print_r(file_exists($dir.'/'.$nama_file));
+print_r(file_exists($dir . '/' . $nama_file));
 
 // Adding Space
 echo '</br> 
 <b>is_file()</b> </br>';
 
 // Is_file (Mengembalikan Apakah File ada atau tidak)
-print_r(is_file($dir.'/'.$nama_file));
+print_r(is_file($dir . '/' . $nama_file));
