@@ -18,8 +18,14 @@
     - ini yang sudah saya simpan di file key.json
     ```
     {
-        "see-client-side-integration": {"site-key": "6LdmOH0fAAAAAMQcAFgh7Zw7-H0gQfMN_N0RH2HG"},
-        "see-server-side-integration": {"secret-key": "6LdmOH0fAAAAAMQWyrJFHdC1KDLcl5dyI2ltTS4o"} 
+        "see-client-side-integration": 
+        {
+            "site-key": "6LdmOH0fAAAAAMQcAFgh7Zw7-H0gQfMN_N0RH2HG"
+        },
+        "see-server-side-integration": 
+        {
+            "secret-key": "6LdmOH0fAAAAAMQWyrJFHdC1KDLcl5dyI2ltTS4o"
+        } 
     }
     ```
 - step 4
