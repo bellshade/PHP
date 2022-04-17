@@ -20,11 +20,11 @@
     {
         "see-client-side-integration": 
         {
-            "site-key": "6LdmOH0fAAAAAMQcAFgh7Zw7-H0gQfMN_N0RH2HG"
+            "site-key": "isi_dengan_site_key"
         },
         "see-server-side-integration": 
         {
-            "secret-key": "6LdmOH0fAAAAAMQWyrJFHdC1KDLcl5dyI2ltTS4o"
+            "secret-key": "isi_dengan_client_key""
         } 
     }
     ```
@@ -34,7 +34,7 @@
     ```
         <?php 
             //server-side-integration
-            $secret_key = "6LdmOH0fAAAAAMQWyrJFHdC1KDLcl5dyI2ltTS4o";
+            $secret_key = "isi_dengan_secret_key"";
         ?>
         <!DOCTYPE html>
         <html lang="en">
@@ -47,7 +47,7 @@
             <body>
                 
                 <!-- client-side-integration -->
-                <div class="g-recaptcha" data-sitekey="6LdmOH0fAAAAAMQcAFgh7Zw7-H0gQfMN_N0RH2HG"></div>
+                <div class="g-recaptcha" data-sitekey="isi_dengan_site_key""></div>
 
                 <!-- Load Library Google reCaptcha -->
                 <script src='https://www.google.com/recaptcha/api.js'></script>
