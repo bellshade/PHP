@@ -9,24 +9,11 @@
     - Sekarang Anda sudah mendapatkan 2 buah key yakni Site Key dan Secret Key. 2 key ini nanti akan kita gunakan sebagai kode/token agar kita bisa menggunakan reCAPTCHA.
     - Site Key:
     ```
-        6LdmOH0fAAAAAMQcAFgh7Zw7-H0gQfMN_N0RH2HG
+        isi_dengan_site_key
     ```
     - Secret Key:
     ```
-        6LdmOH0fAAAAAMQWyrJFHdC1KDLcl5dyI2ltTS4o
-    ```
-    - ini yang sudah saya simpan di file key.json
-    ```
-    {
-        "see-client-side-integration": 
-        {
-            "site-key": "6LdmOH0fAAAAAMQcAFgh7Zw7-H0gQfMN_N0RH2HG"
-        },
-        "see-server-side-integration": 
-        {
-            "secret-key": "6LdmOH0fAAAAAMQWyrJFHdC1KDLcl5dyI2ltTS4o"
-        } 
-    }
+        isi_dengan_secret_key
     ```
 - step 4
     - Implementsi dengan PHP
@@ -34,7 +21,7 @@
     ```
         <?php 
             //server-side-integration
-            $secret_key = "6LdmOH0fAAAAAMQWyrJFHdC1KDLcl5dyI2ltTS4o";
+            $secret_key = "isi_dengan_secret_key";
         ?>
         <!DOCTYPE html>
         <html lang="en">
@@ -47,7 +34,7 @@
             <body>
                 
                 <!-- client-side-integration -->
-                <div class="g-recaptcha" data-sitekey="6LdmOH0fAAAAAMQcAFgh7Zw7-H0gQfMN_N0RH2HG"></div>
+                <div class="g-recaptcha" data-sitekey="isi_dengan_site_key"></div>
 
                 <!-- Load Library Google reCaptcha -->
                 <script src='https://www.google.com/recaptcha/api.js'></script>
