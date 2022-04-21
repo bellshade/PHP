@@ -1,7 +1,7 @@
-<?php 
+<?php
+
     //server-side-integration
     $secret_key = "isi_dengan_secret_key";
-    
 ?>
 <!DOCTYPE html>
 <html lang="en">
