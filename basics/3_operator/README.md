@@ -2,34 +2,33 @@
 
 Dalam bahasa pemrograman, operator digunakan untuk melakukan operasi terhadap variabel dan nilai. Dalam PHP, operator dibagi menjadi beberapa bagian yakni:
 
-- [Operator](#operator)
-  - [Operator Aritmatika](#operator-aritmatika)
-    - [Penambahan](#penambahan)
-    - [Pengurangan](#pengurangan)
-    - [Perkalian](#perkalian)
-    - [Pembagian](#pembagian)
-    - [Modulus](#modulus)
-    - [Exponensial](#exponensial)
-  - [Operator Penugasan](#operator-penugasan)
-    - [Pembagian operator penugasan](#pembagian-operator-penugasan)
-    - [Operator Penugasan Aritmatik](#operator-penugasan-aritmatik)
-    - [Operator Penugasan Bitwise](#operator-penugasan-bitwise)
-    - [Operator Penugasan Lainnya](#operator-penugasan-lainnya)
-  - [Operator Pembanding](#operator-pembanding)
-  - [Operator Logika](#operator-logika)
-  - [Operator Bitwise](#operator-bitwise)
-    - [Bitwise And](#bitwise-and)
-    - [Bitwise OR](#bitwise-or)
-    - [Bitwise XOR](#bitwise-xor)
-    - [Bitwise Not](#bitwise-not)
-    - [Bitwise Shift](#bitwise-shift)
-  - [Operator Increment/Decrement](#operator-incrementdecrement)
-  - [Operator String](#operator-string)
-  - [Operator Array](#operator-array)
-    - [Operator Lainnya](#operator-lainnya)
-    - [Tenary Operator](#tenary-operator)
-    - [Null Coalesce Operator](#null-coalesce-operator)
-    - [Referensi](#referensi)
+- [Operator Aritmatika](#operator-aritmatika)
+  - [Penambahan](#penambahan)
+  - [Pengurangan](#pengurangan)
+  - [Perkalian](#perkalian)
+  - [Pembagian](#pembagian)
+  - [Modulus](#modulus)
+  - [Exponensial](#exponensial)
+- [Operator Penugasan](#operator-penugasan)
+  - [Pembagian operator penugasan](#pembagian-operator-penugasan)
+  - [Operator Penugasan Aritmatik](#operator-penugasan-aritmatik)
+  - [Operator Penugasan Bitwise](#operator-penugasan-bitwise)
+  - [Operator Penugasan Lainnya](#operator-penugasan-lainnya)
+- [Operator Pembanding](#operator-pembanding)
+- [Operator Logika](#operator-logika)
+- [Operator Bitwise](#operator-bitwise)
+  - [Bitwise And](#bitwise-and)
+  - [Bitwise OR](#bitwise-or)
+  - [Bitwise XOR](#bitwise-xor)
+  - [Bitwise Not](#bitwise-not)
+  - [Bitwise Shift](#bitwise-shift)
+- [Operator Increment/Decrement](#operator-incrementdecrement)
+- [Operator String](#operator-string)
+- [Operator Array](#operator-array)
+  - [Operator Lainnya](#operator-lainnya)
+  - [Tenary Operator](#tenary-operator)
+  - [Null Coalesce Operator](#null-coalesce-operator)
+  - [Referensi](#referensi)
 
 ## Operator Aritmatika
 
@@ -74,6 +73,7 @@ $b = 15;
 echo ($a + $b);     // Hasil 25
 echo (12 + 15);     // Hasil 27
 ```
+<br/>
 
 ### Pengurangan
 
@@ -101,6 +101,8 @@ echo (15-9);        // Hasil 6
 >
 > Berlaku sebagaimana dalam aritmatika bahwa (+) x (+) = (+), (+) x (-) = (-), (-) x (+) = (-), (-) x (-) = (+) atau lebih jelasnya +(-5) = (-5) dan -(-5) = (+5)
 
+<br/>
+
 ### Perkalian
 
 Perkalian dalam PHP menggunakan simbol/syntax (`*`)
@@ -116,6 +118,8 @@ $b = (int) 2;
 echo ($a*$b);   // Hasil 8
 echo (4*2);     // Hasil 8
 ```
+
+<br/>
 
 ### Pembagian
 
@@ -134,6 +138,8 @@ $b = (int) 2;
 echo ($a/$b);   // Hasil 2
 echo (4/2);     // Hasil 2
 ```
+
+<br/>
 
 ### Modulus
 
@@ -160,6 +166,9 @@ echo (-5 % 2)."/n";  // Hasil -1
 echo (-5 % -2)."/n"; // Hasil -1
 ```
 
+<br/>
+
+
 ### Exponensial
 
 Exponensial lebih dikenal secara umum sebagai bilangan pangkat atau dalam penulisan fungsi Matematika ditulis ~ <em>x <sup>y</sup></em>
@@ -180,6 +189,8 @@ echo (2 ** 3);      // Hasil 8
 
 Demo kode dapat dilihat [disini](./1_operator_aritmatika.php)
 
+<br/>
+
 ## Operator Penugasan
 
 Operator penugasan dasarnya adalah "`=`", mungkin pemikiran awal kita meng-anggap bahwa ini  sama dengan (sebanding), nyatanya bukan itu maksudnya tetapi nilai variabel pada sisi sebelah kiri operator ditentukan/ditetapkan sebagaimana ekspresi yang terdapat pada bagian sebelah kanan dari operator.
@@ -192,9 +203,13 @@ Contoh:
 $a = ($b = 4) + 3 // $a ditetapkan dengan nilai 7 dan $b ditetapkan dengan nilai 4 dimana $a = 4 + 3
 ```
 
+<br/>
+
 ### Pembagian operator penugasan
 
-### Operator Penugasan Aritmatik
+<br/>
+
+#### Operator Penugasan Aritmatik
 
 |  Contoh  | Persamaan/Bentuk Lain | Keterangan                                              |
 | :------: | :-------------------: | ------------------------------------------------------- |
@@ -206,7 +221,9 @@ $a = ($b = 4) + 3 // $a ditetapkan dengan nilai 7 dan $b ditetapkan dengan nilai
 
 Operator Aritmatika dapat dipelajari lebih lanjut [disini](#operator-aritmatika)
 
-### Operator Penugasan Bitwise
+<br/>
+
+#### Operator Penugasan Bitwise
 
 | Contoh    | Persamaan/Bentuk Lain | Keterangan    |
 | :-------- | :-------------------: | ------------- |
@@ -218,7 +235,9 @@ Operator Aritmatika dapat dipelajari lebih lanjut [disini](#operator-aritmatika)
 
 Operator *Bitwise* dapat dipelajari lebih lanjut [disini](#operator-bitwise)
 
-### Operator Penugasan Lainnya
+<br/>
+
+#### Operator Penugasan Lainnya
 
 |  Contoh   | Persamaan/Bentuk Lain | Keterangan          |
 | :-------: | :-------------------: | :------------------ |
@@ -227,25 +246,28 @@ Operator *Bitwise* dapat dipelajari lebih lanjut [disini](#operator-bitwise)
 
 Untuk *Null Coalesce* dapat dipelajari lebih lanjut [disini](#null_coalesce_operator)
 
+<br/>
+
 ## Operator Pembanding
 
 Operator pembanding ini digunakan untuk membandingkan dua variabel yang nilainya sama atau berbeda.
 
 | Operator | Nama             |  Contoh   | Keterangan                                                                                          |
 | :------: | ---------------- | :-------: | --------------------------------------------------------------------------------------------------- |
-|    ==    | Sama/Setara      | $a == $b  | Akan bernilai `true` apabila nilai `$a` sama dengan `$b`                                            |
-|   ===    | Identik          | $a === $b | Akan bernilai `true` apabila `$a` dan `$b` nilai dan tipe datanya itu sama                          |
-|    !=    | Tidak sama       | $a != $b  | Akan bernilai `true` apabila nilai `$a` tidak sama dengan `$b`                                      |
-|   \<>    | Tidak sama       | $a <> $b  | Sama seperti di atas                                                                                |
-|   !==    | Tidak identik    | $a !== $b | Akan bernilai `true` apabila `$a` dan `$b` nilai **atau** tipe datanya itu tidak sama               |
-|    \>    | Lebih besar dari |  $a > $b  | Akan bernilai `true` apabila nilai `$a` lebih besar dari `$b`                                       |
-|    \<    | Lebih kecil dari |  $a < $b  | Akan bernilai `true` apabila nilai `$a` lebih kecil dari `$b`                                       |
-|   \>=    | Lebih besar dari |  $a > $b  | Akan bernilai `true` apabila nilai `$a` lebih besar dari atau sama dengan `$b`                      |
-|   \<=    | Lebih kecil dari |  $a < $b  | Akan bernilai `true` apabila nilai `$a` lebih kecil dari atau sama dengan `$b`                      |
-|   \<=>   | Spaceship        | $a <=> $b | Akan bernilai -1 apabila `$a < $b`, bernilai `0` apabila `$a == $b`, bernilai `1` apabila `$a > $b` |
+|    `==`    | Sama/Setara      | $a == $b  | Akan bernilai `true` apabila nilai `$a` sama dengan `$b`                                            |
+|   `===`    | Identik          | $a === $b | Akan bernilai `true` apabila `$a` dan `$b` nilai dan tipe datanya itu sama                          |
+|    `!=`    | Tidak sama       | $a != $b  | Akan bernilai `true` apabila nilai `$a` tidak sama dengan `$b`                                      |
+|   `<>`    | Tidak sama       | $a <> $b  | Sama seperti di atas                                                                                |
+|   `!==`    | Tidak identik    | $a !== $b | Akan bernilai `true` apabila `$a` dan `$b` nilai **atau** tipe datanya itu tidak sama               |
+|    `>`    | Lebih besar dari |  $a > $b  | Akan bernilai `true` apabila nilai `$a` lebih besar dari `$b`                                       |
+|    `<`    | Lebih kecil dari |  $a < $b  | Akan bernilai `true` apabila nilai `$a` lebih kecil dari `$b`                                       |
+|   `>=`    | Lebih besar dari |  $a > $b  | Akan bernilai `true` apabila nilai `$a` lebih besar dari atau sama dengan `$b`                      |
+|   `<=`    | Lebih kecil dari |  $a < $b  | Akan bernilai `true` apabila nilai `$a` lebih kecil dari atau sama dengan `$b`                      |
+|   `<=>`   | Spaceship        | $a <=> $b | Akan bernilai -1 apabila `$a < $b`, bernilai `0` apabila `$a == $b`, bernilai `1` apabila `$a > $b` |
 
 Contoh kodenya dapat dilihat [di sini](./3_comparison_operator.php).
 
+<br/>
 ## Operator Logika
 
 Operator logika ini digunakan untuk menggabungkan pernyataan yang bersifat kondisional.
@@ -259,6 +281,7 @@ Operator logika ini digunakan untuk menggabungkan pernyataan yang bersifat kondi
 
 Contoh kodenya dapat dilihat [di sini](./4_logical_operator.php).
 
+<br/>
 ## Operator Bitwise
 
 *Bitwise* operator adalah operator yang disediakan oleh PHP untuk pengolahan, evaluasi dan manipulasi logika dari bilangan biner (*Binary*).
@@ -283,6 +306,8 @@ Pembagian operator *bitwise* sebagai berikut :
 
 Berdasarkan table di atas dapat dijabarkan sebagai berikut :
 
+<br/>
+
 ### Bitwise And
 
 *Bitwise and* merupakan operator penggabungan bilangan biner dimana nilai bit yang diambil adalah `1 & 1 = 1`, `1 & 0 = 0` dan `0 & 0 = 0`, untuk lebih jelasnya kita perhatikan perhitungan di bawah ini :
@@ -303,6 +328,8 @@ $c = $a & $b
 ```
 
 Pada contoh perhitungan di atas dapat kita simpulkan bahwa operator `bitwise AND` menggabungkan 2 bilangan biner dengan cara mengambil bit yang identik, selain bits yang identik diisi oeh nilai `0`.
+
+<br/>
 
 ### Bitwise OR
 
@@ -325,6 +352,8 @@ $c = $a | $b       // Operator OR bitwise
 ```
 
 Dari contoh di atas dapat kita lihat bahwa barisan yang mengandung nilai 1 akan diisi oleh nilai satu, sedangkan yang lainnya akan diisi oleh nilai 0.
+
+<br/>
 
 ### Bitwise XOR
 
@@ -351,6 +380,8 @@ $c = $a ^ $b        // XOR bitwise
 
 Dari perhitungan di atas dapat kita simpulkan bahwa operator *Bitwise Xor* akan mencocokan nilai dalam barisan dimana barisan yang identik akan mendapat nilai 0 dan barisan yang tidak identik mendapatkan nilai 1.
 
+<br/>
+
 ### Bitwise Not
 
 *Operator Not* akan membalikan nilai bit sebuah variabel dari 0 menjadi 1, dan 1 menjadi 0
@@ -367,6 +398,8 @@ $a = ~ 8;       // Bitwise Not
 
 // $a dalam bentuk desimal = -9
 ```
+
+<br/>
 
 ### Bitwise Shift
 
@@ -394,6 +427,8 @@ $c = $a >>= 1;  // Shift Right
 Dari perhitungan di atas kita lihat bahwa operator *shift* ini menggeser bilangan biner ke kiri maupun ke kanan sesuai arah yang ditentukan sebanyak nilai operand bagian kanan operator dengan aturan setiap pergeseran ke kiri nilai paling kanan akan diisi oleh 0, dan setiap pergeseran kanan nilai paling kanan akan dihapus.
 
 Demo code dapat dilihat [disini](./5_bitwise_operator.php)
+
+<br/>
 
 ## Operator Increment/Decrement
 
@@ -450,6 +485,8 @@ Sebagaimana dalam ekspresi `$a = 'Z' ; $a++;` pada PHP dan Perl's akan menghasil
 
 Untuk contoh dapat dilihat [disini](./7_increment_decrement_operator.php)
 
+<br/>
+
 ## Operator String
 
 Ada dua jenis operator *string*, yang pertama adalah operator penggabungan *string* atau dikenal sebagai concatenation operator (`'.'`), dimana menghasilkan gabungan *string* dari *argument* bagian kiri dan kanan operator. Kedua adalah operator penggabungan penugasan atau dikenal dengan concatenation assignment operator (`'.='`), dimana menghasilkan penambahan *argument* dari bagian kanan operator kedalam *argument* yang terdapat di bagian kiri operator.
@@ -473,6 +510,8 @@ echo $a .= ' saya';         // Hasil 'nama saya'
 Demo kode terdapat [disini](./8_string_operator.php)
 
 Untuk selengkapnya dapat dipelajari di materi [String Manipulation](../6_manipulasi_string/)
+
+<br/>
 
 ## Operator Array
 
@@ -567,9 +606,13 @@ var_dump($a === $b);        // Identity menghasilkan nilai bool(false)
 
 Selengkapnya mengenai tipe data Array dapat dipelajari [disini](../2_variabel_datatype/#array)
 
+<br/>
+
 ### Operator Lainnya
 
 Salah satu operator khusus dalam PHP yaitu Operator *Tenary* (*Conditional*) dan Operator *Null Coalesce*.
+
+<br/>
 
 ### Tenary Operator
 
@@ -605,6 +648,8 @@ Demo kode dapat dilihat [disini](./tenary_operator.php)
 > - Untuk *Conditional Statement* yang rumit, lebih baik menggunakan *Conditional Statement* biasa seperti `if...elseif...else`, `switch`, atau lainnya.
 
 Pembasahan lebih lanjut mengenai *Conditional Statements* terdapat [disini](../4_conditional_statements)
+
+<br/>
 
 ### Null Coalesce Operator
 
@@ -657,3 +702,17 @@ Contoh di atas `(var) = (expr1) ?? (expr2)` menghasilkan `(var) = (expr2)` jika 
 
 - [W3School - PHP Operator](https://www.w3schools.com/php/php_operators.asp)
 - [php.net - Manual](https://www.php.net/manual/en/)
+
+
+
+
+<table>
+  <tr>
+    <th align='center'>Sebelumnya</th>
+    <th align='center'>Berikutnya</th>
+  </tr>
+  <tr>
+    <td align='center'><a href='../2_variable_datatype/'>Variabel dan Tipe Data</a></td>
+    <td align='center'><a href='../4_conditional_statements/'>Conditional Statements</a></td>
+  </tr>
+</table>

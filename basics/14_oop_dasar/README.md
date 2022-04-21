@@ -61,64 +61,194 @@ Perhatikan disini karena setiap _use case_ disendirikan pada tiap-tiap objek, de
     <img src="../../assets/content/basics/14_oop_dasar/2-oop.png" width="50%" />
 </p>
 
-Semua hal _use case_ diibaratkan sebagai sebuah objek yang terorganisir bertujuan membantu dalam menyelesaikan sesuai _use case_nya. Sehingga apapun dapat di gambarkan kedalam objek ini. Objek berisikan fungsi-fungsi dan atribute-atribute, dimana objek dapat di gandakan dengan nilai dari atribut berbeda-beda tetapi dapat menjalankan fungsi yang sama. Karena bersifat modular objek dapat digunakan kembali. Sehingga pengembangan dan perawatan sebuah aplikasi menjadi lebih mudah. Data dalam properti dan metode objek dapat diproteksi dengan encapsulasi dan memberikan batas hak akses modifikasi _(yang akan dibahas nanti)\_. Dengan demikian data dirasa "lebih aman" dari pada pemrograman prosedural.
-
 ## 2. Class dan Object
+
+<br/>
 
 ### Apa itu class dan object?
 
-`Class` adalah sebuah tempelate / blueprint yang menyimpak banyak object.
-`Object`adalah sebuah bagian didalam class
+`Class` adalah sebuah template / blueprint. Disinilah ditentukan aturan-aturan atau apa saja yang harus ada dari sebuah objek agar selalu dijaga konsistensinya. Sementara `Object` adalah sebuah penerapan dari _class_ itu sendiri, kita menyebutnya sebagai _instance_
 
-Sebagai contoh, kita akan menggunakan studi kasus seperti ini:
-Saya punya sebuah buku untuk membuat sebuah HandPhone,
-Buku tersebut akan digunakan untuk membuat semua HandPhone.
-Dari sini bisa dibilang bahwa `buku` adalah sebuah class dan `HandPhone` Adalah sebuah objectnya,
+Misalnya ada pengguna yang didalamnya harus ada nama, jenis kelamin, email, alamat dll. Kita bisa buat class `Pengguna` dan menentukan nama, email dll sebagai properti _(kita akan bahas di sub materi berikutnya)_. Lalu kita juga bisa buat penerapan dari class itu. misalnya ada `agus` yang merupakan penerapan dari class `Pengguna`, maka agus ini bisa kita sebut sebagai _object_. Karena `agus` merupakan objek dari class `Pengguna`, maka objek `agus` pasti mengikuti blueprint yang tertulis pada kelasnya, seperti mempunyai nama, email dsb. 
 
+<br/>
 ### Cara Membuat Class
 
-Cara membuat class adalah dengan menaruh keyword `class` didepan nya, Untuk penamaannya bebas
-
-#### Contoh
+Cara membuat class adalah dengan menaruh keyword `class` didepan nya diikuti dengan nama kelasnya. Nama kelas harus diawali dengan huruf kapital.
 
 ```php
-class namaClassNya {
+class NamaKelas {
 
 }
 ```
 
-```php
-class Kelas {
-
-}
-```
+<br/>
 
 ### Cara Membuat Object
 
-Cara membuat objectnya adalah dengan membuat sebuah variable dengan yang diisi dengan
+Objek dapat dibuat dengan cukup buat sebuah variable, lalu isi dengan instance dari sebuah kelas yaitu dengan `new NamaKelas()`
 
 ```php
-new namaClassNya();
+$agus = new Pengguna();
 ```
+</br>
 
-#### Contoh
+## 3. Properti dan Method
+
+</br>
+
+### Apa itu property dan method?
+
+`Property` adalah segala asset yang dimiliki oleh sebuah `Class` yang berupa variabel-variabel yang nilai atau valuenya bisa diatur sendiri. Berbeda halnya dengan `Method` yang merupakan aksi yang dimiliki oleh sebuah `Class`. Sebuah Method akan berjalan ketika namanya dipanggil.
+
+</br>
+
+### Cara Membuat Property
+
+</br>
+
+Untuk membuat `Property`, terlebih dahulu untuk menyiapkan sebuah `class`. Setelah itu baru didalam `class` tadi ditambahkan property-property yang diinginkan. Perlu diingat bahwa `property` bisa public, protected atau private
+
+</br>
 
 ```php
-$kelas1 = new Kelas();
-$kelas2 = new Kelas();
+class NamaKelas {
+
+  // Deklarasi Properti
+  public $namaProperti = 'Nilai Properti';
+  public $namaPropertDua;
+
+}
 ```
 
----
+</br>
 
-#### `Hasil`
+### Cara Membuat Method
 
-#### Variable kelas1
+</br>
 
-<img src="../../assets/content/basics/14_oop_dasar/object1.png"  />
+Selanjutnya, untuk `method` kurang lebih seperti `property` harus membuat sebuah `class`, kemudian setelah itu sebuah method baru dapat dibuat
 
-#### Variable kelas2
+</br>
 
-<img src="../../assets/content/basics/14_oop_dasar/object2.png"  />
+```php
+class NamaKelas {
 
-_Keterangan:_ 
-> Untuk membuat sebuah variable untuk object, maka nama variable-nya harus berbeda tidak boleh sama,dan ` Isi variable boleh sama`
+  // Deklarasi Method
+  public function namaFunction()
+  {
+    // Isi dengan perintah yang diinginkan
+  }
+
+}
+```
+
+</br>
+
+
+## 4. Constructor dan Destructor
+
+`Constructor dan destructor` adalah salah satu jenis method spesial yang disediakan PHP sebagai fitur paradigma pemrograman berorientasi objek dalam bahasa pemrograman PHP. _Constructor destructor_ ini tak hanya ditemukan dalam PHP namun juga bahasa pemrograman lainnya yang mendukung paradigma OOP. Singkatnya, `Constructor` adalah method yang akan dijalankan pertama kali saat sebuah kelas di instantiasi menjadi objek. Sementara `Destructor` adalah kebalikannya, yaitu method yang dijalankan di akhir penggunaan objeknya. 
+
+Cara membuat constructor adalah mirip dengan saat membuat method biasa. Namun constructor harus dalam berbentuk method yang bernama `__construct` dan harus ditulis dalam sebuah kelas.
+```php
+class SebuahKelas 
+{
+  public function __construct() {
+    # Ini akan dijalankan pertama kali
+  }
+}
+```
+Sementara destructor dapat dibuat dengan membuat method yang bernama `__destruct()`.
+```php
+class SebuahKelas
+{
+  public function __destruct() {
+    # Ini akan dijalankan terakhir saat objek sudah digunakan
+  }
+}
+```
+> <i><small>Source code demo ada di basics/14_oop_dasar/4_constructor_destructor.php</small></i>
+<a href='4_constructor_destructor.php' target='_blank'>
+    <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
+</a>
+
+Pada constructor, parameter yang ditetapkan di method `__construct($param)` akan menjadi parameter saat menginstantiasi objek `sebuahKelas($param)`. Ini sangat berguna jika ingin passing data dari parameter saat membuat objek ke kelas internal untuk ditetapkan menjadi nilai properti atau kegunaan yang lain.
+
+```php
+class Anggota {
+  public $nama
+  public $jenisKelamin;
+  public function __construct($nama, $jenisKelamin) {
+    $this->nama = $nama;
+    $this->jenisKelamin = $jenisKelamin;
+  }
+}
+new Anggota('Budi', 'laki-laki');
+```
+> <i><small>Source code demo ada di basics/14_oop_dasar/4_constructor_destructor2.php</small></i>
+<a href='4_constructor_destructor2.php' target='_blank'>
+
+  
+## Property dan method static
+
+Properti dan method dapat juga berbentuk static, artinya tidak ada ketergantungan antara method / properti static dengan objek dari kelasnya. Bahkan faktanya, tidak perlu dibuat objek agar dapat digunakan. Method / properti static adalah salah satu fitur dalam paradigma OOP untuk membuat method atau properti dari sebuah class yang dapat dijalankan tanpa dibuat sebuah objek dari class tersebut.
+
+Untuk membuat properti static, cukup tambahkan keyword `static` sebelum nama variabel. Untuk membuat method static juga mirip, tambahkan keyword `static` sebelum `function`
+```php
+class Kelas 
+{
+  public static $propertyStatic;  #  <--  ini adalah properti static 
+  public static function methodStatic() {
+    # ini adalah method static
+  }
+}
+```
+untuk memanggil properti atau method static didalam kelas dapat menggunakan keyword `self::$propertinya` atau `self::methodStaticnya()`. Jika berada dalam parent class dan ingin memanggil dari class turunannya, dapat menggunakan keyword `parent::xx` _(kita akan bahas kelas turunan ini pada materi inheritance nanti)_
+```php
+class Kelas 
+{
+  public static $propertiStatic
+  public static function methodStatic() {
+  }
+  public function methodBiasa() {
+    $variabel = self::$propertiStatic;   #   <-- Mengakses properti static
+    self::methodStatic();   #    <-- menjalankan method static
+  }
+}
+```
+
+Properti dan method static ini pada penggunaannya seringkali digunakan untuk melakukan sesuatu yang tidak spesifik ke objek dari kelas tertentu melainkan ke sesuatu yang lebih umum namun tetap terkait dengan tujuan kelas. Misalnya pada kelas `Kasir` terdapat waktu shift yang tidak spesifik ke kasir melainkan ke seluruh kasir. Pada kasus tersebut kita bisa gunakan method dan properti static seperti berikut 
+
+```php
+<?php
+class Kasir
+{
+    public $nama;
+    public $alamat;
+    /**
+     * Variabel properti static untuk menyimpan waktu shift semua kasir
+     */
+    public static $waktuShift;
+    public function __construct($nama, $alamat)
+    {
+        $this->nama = $nama;
+        $this->alamat = $alamat;
+    }
+    /**
+     * Method static untuk melakukan operasi pada properti static
+     */
+    public static function setWaktuShift($shift)
+    {
+        self::$waktuShift = $shift;
+    }
+}
+// Set waktu shift menggunakan method static
+// Karena method static, jadi tidak perlu ada instantiasi objek
+Kasir::setWaktuShift(2);
+echo 'Waktu Shift: ' . Kasir::$waktuShift;
+```
+> <i><small>Source code demo ada di basics/14_oop_dasar/5_property_dan_method_static.php</small></i>
+<a href='5_property_dan_method_static.php' target='_blank'>
+    <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
+</a>

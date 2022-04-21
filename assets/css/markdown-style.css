@@ -1,41 +1,43 @@
 body {
     background: #ddd;
-    background-image: url('../images/background-pattern.jpg')
+    background-image: url("../images/background-pattern.jpg");
 }
 
 /* -- Markdown -- */
-a {
+.readme-content a {
     text-decoration: none;
-    color: rgb(7, 88, 97)
+    color: rgb(7, 88, 97);
 }
-blockquote {
+.readme-content blockquote {
     padding: 12px 24px;
     border-left: 4px solid #ddd;
     color: #6a6a6a;
     margin: 24px 0;
 }
-blockquote p {
+.readme-content blockquote p {
     margin: 0;
 }
-h2 {
+.readme-content h2 {
     padding-bottom: 12px;
     margin-top: 24px;
     margin-bottom: 24px;
     font-size: 28px;
-    border-bottom: 1px solid #ddd
+    border-bottom: 1px solid #ddd;
 }
-h3 {
-    font-size: 20px
+.readme-content h3 {
+    font-size: 20px;
 }
-h4 {
-    font-size: 18px
+.readme-content h4 {
+    font-size: 16px;
+    padding: 8px 16px;
+    border-left: 4px solid #ddd;
 }
-
 
 /* -- Page -- */
 
 .logo-wrapper {
-    height: 64px; mix-blend-mode: darken
+    height: 64px;
+    mix-blend-mode: darken;
 }
 
 .w-square-64 {
@@ -77,7 +79,7 @@ h4 {
 }
 
 code {
-    font-size: .875em;
+    font-size: 0.875em;
     color: #d63384;
     word-wrap: break-word;
     background: #f1f1f1;

@@ -365,3 +365,14 @@ Kamu dapat memanfaatkan ini untuk menampilkan semua baris data kedalam tabel, se
 <a href='4_mysqli_fetch.php#table' target='_blank'>
     <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
 </a>
+
+<table>
+  <tr>
+    <td align='center'><strong>Sebelumnya</strong></td>
+    <td align='center'><strong>Berikutnya</strong></td>
+  </tr>
+  <tr>
+    <td align='center'><a href='../11_cookie_dan_session/'>11. Cookie dan Session</a></td>
+    <td align='center'><a href='../13_database_relasional_prosedural/'>13. Database relasional prosedural</a></td>
+  </tr>
+</table>

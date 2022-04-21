@@ -4,16 +4,14 @@
 
 ## Daftar Isi
 
-- [Perulangan](#perulangan)
-  - [Daftar Isi](#daftar-isi)
-  - [Jenis-Jenis Perulangan](#jenis-jenis-perulangan)
+- [Jenis-Jenis Perulangan](#jenis-jenis-perulangan)
     - [1. Perulangan For](#1-perulangan-for)
     - [2. Perulangan Foreach](#2-perulangan-foreach)
     - [2.1 Nested Foreach](#21-nested-foreach)
-    - [List sebagai Pengganti Nested Foreach](#list-sebagai-pengganti-nested-foreach)
-  - [3. Perulangan While](#3-perulangan-while)
-  - [4. Perulangan Do While](#4-perulangan-do-while)  
-  - [5. Perulangan Tak Terbatas](#5-perulangan-tak-terbatas)
+- [List sebagai Pengganti Nested Foreach](#list-sebagai-pengganti-nested-foreach)
+    - [3. Perulangan While](#3-perulangan-while)
+    - [4. Perulangan Do While](#4-perulangan-do-while)  
+    - [5. Perulangan Tak Terbatas](#5-perulangan-tak-terbatas)
 
 ## Jenis-Jenis Perulangan
 
@@ -459,3 +457,15 @@ Baris kode diatas tidak akan melakukan perulangan tetapi akan memunculkan pesan 
 
 - [W3School - PHP Loops](https://www.w3schools.com/php/php_looping.asp)
 - [php.net - Manual](https://www.php.net/manual/en/)
+
+
+<table>
+  <tr>
+    <td align='center'><strong>Sebelumnya</strong></td>
+    <td align='center'><strong>Berikutnya</strong></td>
+  </tr>
+  <tr>
+    <td align='center'><a href='../4_conditional_statements/'>4. Conditional Statements</a></td>
+    <td align='center'><a href='../6_manipulasi_string/'>6. Manipulasi String</a></td>
+  </tr>
+</table>

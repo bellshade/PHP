@@ -2,44 +2,66 @@
 
 Dalam materi ini kita bahas mengenai Array lebih lanjut.
 
-- [Array Mendalam](#array-mendalam)
-  - [1. Array](#1-array)
-    - [Apa itu Array](#apa-itu-array)
-    - [Bagaimana Membuat Array](#bagaimana-membuat-array)
-    - [Mengakses Elemen Array](#mengakses-elemen-array)
-  - [2. Jenis Array](#2-jenis-array)
-    - [1. Array Index](#1-array-index)
-    - [2. Array Asosiatif](#2-array-asosiatif)
-  - [3. Array Multi Dimensi](#3-array-multi-dimensi)
-  - [4. Manipulasi Array](#4-manipulasi-array)
-    - [Menghitung ukuran array](#menghitung-ukuran-array)
-      - [a. sizeof](#a-sizeof)
-      - [b. count](#b-count)
-    - [Mendapatkan nilai dari array](#mendapatkan-nilai-dari-array)
-      - [a. array_keys](#a-array_keys)
-      - [b. array_values](#b-array_values)
-    - [Mengubah elemen pada array](#mengubah-elemen-pada-array)
-      - [a. array_push](#a-array_push)
-      - [b. array_pop](#b-array_pop)
-      - [c. array_shift](#c-array_shift)
-      - [d. array_unshift](#d-array_unshift)
-    - [Membandingkan array](#membandingkan-array)
-      - [a. array_diff](#a-array_diff)
-      - [b. array_splice](#b-array_splice)
-    - [Menggabungkan array](#menggabungkan-array)
-      - [a. array_merge](#a-array_merge)
-    - [Pengacakan pada array](#pengacakan-pada-array)
-      - [a. array_flip](#a-array_flip)
-      - [b. array_reverse](#b-array_reverse)
-      - [c. array_rand](#c-array_rand)
-      - [d. array_slice](#d-array_slice)
-    - [Pengurutan pada array](#pengurutan-pada-array)
-      - [a. sort](#a-sort)
-      - [b. rsort](#b-rsort)
-      - [c. asort](#c-asort)
-      - [d. arsort](#d-arsort)
-      - [e. ksort](#e-ksort)
-      - [f. krsort](#f-krsort)
+<ul>
+<li><a href="#1-array">1. Array</a><ul>
+<li><a href="#apa-itu-array">Apa itu Array</a></li>
+<li><a href="#bagaimana-membuat-array">Bagaimana Membuat Array</a></li>
+<li><a href="#mengakses-elemen-array">Mengakses Elemen Array</a></li>
+</ul>
+</li>
+<li><a href="#2-jenis-array">2. Jenis Array</a><ul>
+<li><a href="#1-array-index">1. Array Index</a></li>
+<li><a href="#2-array-asosiatif">2. Array Asosiatif</a></li>
+</ul>
+</li>
+<li><a href="#3-array-multi-dimensi">3. Array Multi Dimensi</a></li>
+<li><a href="#4-manipulasi-array">4. Manipulasi Array</a><ul>
+<li><a href="#menghitung-ukuran-array">Menghitung ukuran array</a><ul>
+<li><a href="#a-sizeof">a. sizeof</a></li>
+<li><a href="#b-count">b. count</a></li>
+</ul>
+</li>
+<li><a href="#mendapatkan-nilai-dari-array">Mendapatkan nilai dari array</a><ul>
+<li><a href="#a-array_keys">a. array_keys</a></li>
+<li><a href="#b-array_values">b. array_values</a></li>
+</ul>
+</li>
+<li><a href="#mengubah-elemen-pada-array">Mengubah elemen pada array</a><ul>
+<li><a href="#a-array_push">a. array_push</a></li>
+<li><a href="#b-array_pop">b. array_pop</a></li>
+<li><a href="#c-array_shift">c. array_shift</a></li>
+<li><a href="#d-array_unshift">d. array_unshift</a></li>
+</ul>
+</li>
+<li><a href="#membandingkan-array">Membandingkan array</a><ul>
+<li><a href="#a-array_diff">a. array_diff</a></li>
+<li><a href="#b-array_splice">b. array_splice</a></li>
+</ul>
+</li>
+<li><a href="#menggabungkan-array">Menggabungkan array</a><ul>
+<li><a href="#a-array_merge">a. array_merge</a></li>
+</ul>
+</li>
+<li><a href="#pengacakan-pada-array">Pengacakan pada array</a><ul>
+<li><a href="#a-array_flip">a. array_flip</a></li>
+<li><a href="#b-array_reverse">b. array_reverse</a></li>
+<li><a href="#c-array_rand">c. array_rand</a></li>
+<li><a href="#d-array_slice">d. array_slice</a></li>
+</ul>
+</li>
+<li><a href="#pengurutan-pada-array">Pengurutan pada array</a><ul>
+<li><a href="#a-sort">a. sort</a></li>
+<li><a href="#b-rsort">b. rsort</a></li>
+<li><a href="#c-asort">c. asort</a></li>
+<li><a href="#d-arsort">d. arsort</a></li>
+<li><a href="#e-ksort">e. ksort</a></li>
+<li><a href="#f-krsort">f. krsort</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
 
 ## 1. Array
 
@@ -1265,3 +1287,15 @@ krsort($fruits);
 ```
 
 [![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_krsort.php)
+
+
+<table>
+  <tr>
+    <td align='center'><strong>Sebelumnya</strong></td>
+    <td align='center'><strong>Berikutnya</strong></td>
+  </tr>
+  <tr>
+    <td align='center'><a href='../6_manipulasi_string/'>6. Manipulasi String</a></td>
+    <td align='center'><a href='../8_fungsi_dasar/'>8. Fungsi Dasar</a></td>
+  </tr>
+</table>

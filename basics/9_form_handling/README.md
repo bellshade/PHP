@@ -19,15 +19,18 @@ Selanjutnya mari kita masuk ke materinya.
 
 ## Daftar Isi
 
-- [Penanganan Formulir (*Form Handling*)](#penanganan-formulir-form-handling)
-  - [Daftar Isi](#daftar-isi)
-  - [1. Tombol Kirim *(1_submit_button.php)*](#1-tombol-kirim-1_submit_buttonphp)
-  - [2. Input Berdasarkan Teks *(2_text_based_input.php)*](#2-input-berdasarkan-teks-2_text_based_inputphp)
-    - [Contoh 1 - Text dan Number](#contoh-1---text-dan-number)
-    - [Contoh 2 - Email dan Password](#contoh-2---email-dan-password)
-    - [Contoh 3 - Hidden](#contoh-3---hidden)
-    - [Contoh 4 - Date](#contoh-4---date)
-  - [3. Input Select *(3_select.php)*](#3-input-select-3_selectphp)
+- [1. Tombol Kirim *(1_submit_button.php)*](#1-tombol-kirim-1submitbuttonphp)
+- [2. Input Berdasarkan Teks *(2_text_based_input.php)*](#2-input-berdasarkan-teks-2textbasedinputphp)
+    - [Contoh 1 - Text dan Number](#contoh-1-text-dan-number)
+    - [Contoh 2 - Email dan Password](#contoh-2-email-dan-password)
+    - [Contoh 3 - Hidden](#contoh-3-hidden)
+    - [Contoh 4 - Date](#contoh-4-date)
+- [3. Input Select *(3_select.php)*](#3-input-select-3selectphp)
+- [4. Date Time](#4-date-time-4datetimephp)
+- [5. Check Box](#5-check-box-5checkboxphp)
+- [6. Radio Button](#6-radio-button-6radiophp)
+- [7. File](#7-file-7filephp)
+- [8. Multiple File](#8-multiple-file-8multiplefilephp)
 
 ## 1. Tombol Kirim *([1_submit_button.php](1_submit_button.php))*
 
@@ -221,3 +224,180 @@ if (isset($_POST['btn_contoh2'])) {
 [![](https://img.shields.io/static/v1?&label=Demo&message=%3e&color)](3_select.php#L40-L61)
 
 Dengan melihat kedua contoh di atas, kamu dapat mengetahui bahwa menggunakan tag `option` tanpa atribut `value` pada input `select` juga dapat dikirim.
+
+## 4. Date Time *([4_datetime.php](4_datetime.php))*
+
+Kemudian ada juga input data yang bisa berupa datetime `(date & time)` jadi nanti `date (tanggal)` dan juga `time(waktu)` bisa diinputkan secara bersamaan. Berikut merupakan contohnya:
+
+```html
+<form action="" method="post">
+    <label for="specialTime"> Pilih hari Spesial (tanggal and waktu):</label>
+    <input type="datetime-local" id="specialTime" name="specialTime">
+    <button type="submit" name="btn_contoh1">Kirim</button>
+</form>
+```
+
+```php
+<?php
+
+if (isset($_POST['btn_contoh1'])) {
+    $specialTime = $_POST['specialTime'];
+    echo "Saya memilih: $specialTime sebagai hari spesial saya";
+}
+```
+[![](https://img.shields.io/static/v1?&label=Demo&message=%3e&color)](4_datetime.php#L21-L34)
+
+## 5. Check Box *([5_checkbox.php](5_checkbox.php))*
+
+Selanjutnya untuk input ada juga yang menggunakan `checkbox` jadi input ini user dapat melakukan input beberapa secara bersamaan dan data yang dipilih itu nanti akan ditandai atau `dicentang`. Untuk lebih jelasnya perhatikan contoh berikut ini:
+
+```html
+<form action="" method="post">
+    <label for="Hobby">Pilih Hobby Anda:</label><br>
+    <input type="checkbox" name="hobi[]" value="Membaca"> Membaca<br>
+    <input type="checkbox" name="hobi[]" value="Sepak Bola"> Sepak Bola<br>
+    <input type="checkbox" name="hobi[]" value="Programming"> Programming<br> 
+    <button type="submit" name="btn_contoh1">Kirim</button>
+</form>
+```
+
+```php
+<?php
+if (isset($_POST['btn_contoh1'])) {
+    $hobi = $_POST['hobi'];
+
+    echo "Saya memilih: <br>";
+
+    for ($i=0; $i < count($hobi) ; $i++){
+        echo $hobi[$i]."<br>";
+    }
+
+    echo "sebagai hari spesial saya";
+}
+```
+[![](https://img.shields.io/static/v1?&label=Demo&message=%3e&color)](5_checkbox.php#L21-L42)
+
+## 6. Radio Button *([6_radio.php](6_radio.php))*
+
+Lalu ada `radio` atau lebih sering dikenal dengan `Radio Button` biasanya input ini digunakan untuk pemilihan dan hanya boleh memilih satu saja. Berikut adalah contohnya:
+
+```html
+<form action="" method="post">
+    <label for="Hobby">Pilih Gender Anda:</label><br>
+
+    <input type="radio" name="gender" id="male_gender" value="Laki-Laki" />
+    <label for="male_gender">Laki-Laki</label>
+        
+    <input type="radio" name="gender" id="female_gender" value="Perempuan" />
+    <label for="female_gender">Perempuan</label><br>
+    <button type="submit" name="btn_contoh1">Kirim</button>
+    </form>
+```
+
+```php
+<?php
+if (isset($_POST['btn_contoh1'])) {
+    $gender = $_POST['gender'];
+
+    echo "Gender saya adalah $gender";
+}
+```
+
+[![](https://img.shields.io/static/v1?&label=Demo&message=%3e&color)](6_radio.php#L21-L38)
+
+## 7. File *([7_file.php](7_file.php))*
+
+Kemudian ada `file`, biasnaya input ini digunakan untuk mengupload gambar. Untuk mengupload gambar maka dalam form perlu ditambahkan `enctype`. Berikut adalah satu contoh untuk upload file dalam PHP:
+
+```html
+<form action="" method="post" enctype="multipart/form-data">
+    <label for="fileToUpload">Pilih Gambar Anda:</label><br><br>
+    <input type="file" name="fileToUpload" id="fileToUpload">
+    <button type="submit" name="btn_contoh1">Kirim</button>
+</form>
+```
+
+```php
+<?php
+if (isset($_POST['btn_contoh1'])) {
+
+    $target_dir = "storage/";
+    $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+    $uploadOk = 1;
+    $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+
+    $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+    if ($check !== false) {
+        echo "File adalah sebuah gambar - " . $check["mime"] . ".<br>";
+        $uploadOk = 1;
+    } else {
+        echo "File Bukan Gambar";
+        $uploadOk = 0;
+    }
+
+    if ($uploadOk == 0) {
+        echo "Maaf, file anda gagal di upload";
+    } else {
+        if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+            echo "File ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " sudah di upload";
+        } else {
+            echo "Upload Error";
+        }
+    }
+}
+```
+
+[![](https://img.shields.io/static/v1?&label=Demo&message=%3e&color)](7_file.php#L32-L72)
+
+## 8. Multiple File *([8_multiple_file.php](8_multiple_file.php))*
+
+Selnjutnya ada `multiple file`, biasnaya input ini digunakan untuk mengupload gambar yang jumlahnya lebih dari satu gambar. Untuk mengupload beberapa gambar maka dalam form perlu ditambahkan `multiple` dan jangan lupa untuk menampung datanya ke dalam sebuah array. Berikut salah satu contoh untuk upload beberapa file dalam PHP:
+
+```html
+<form action="" method="post" enctype="multipart/form-data">
+    <label for="fileToUpload">Pilih Gambar Anda:</label><br><br>
+    <input type="file" name="fileToUpload[]" id="fileToUpload" accept="image/*" multiple>
+    <button type="submit" name="btn_contoh1">Kirim</button>
+</form>
+```
+
+```php
+<?php
+if (isset($_POST['btn_contoh1'])) {
+    // Folder yang akan menjadi target penyimpana File
+    $target_dir = "storage/";
+    $files = $_FILES;
+    $jumlahFile = count($files['fileToUpload']['name']);
+        
+    // Looping untuk mendapat isi dari array yang berisi gambar
+    for ($i = 0; $i < $jumlahFile; $i++) {
+        $namaFile = $files['fileToUpload']['name'][$i];
+        $lokasiTmp = $files['fileToUpload']['tmp_name'][$i];
+        
+        $namaBaru = uniqid() . '-' . $namaFile;
+        $lokasiBaru = "{$target_dir}/{$namaBaru}";
+        $prosesUpload = move_uploaded_file($lokasiTmp, $lokasiBaru);
+        
+        // jika proses berhasil
+        if ($prosesUpload) {
+            echo "Upload file <a href='{$lokasiBaru}' target='_blank'>{$namaBaru}</a> berhasil. <br>";
+        } else {
+            echo "<span style='color: red'>Upload file {$namaFile} gagal</span> <br>";
+        }
+    }
+}
+```
+
+[![](https://img.shields.io/static/v1?&label=Demo&message=%3e&color)](8_multiple_file.php#L32-L62)
+
+
+<table>
+  <tr>
+    <td align='center'><strong>Sebelumnya</strong></td>
+    <td align='center'><strong>Berikutnya</strong></td>
+  </tr>
+  <tr>
+    <td align='center'><a href='../8_fungsi_dasar/'>8. Fungsi dasar</a></td>
+    <td align='center'><a href='../10_file_handling/'>10. File Handling</a></td>
+  </tr>
+</table>
