@@ -16,39 +16,39 @@ abstract class Person
         $this->address = $address;
     }
 
-    public function set_name($name)
+    public function setName($name)
     {
         $this->name = $name;
     }
 
-    public function get_name()
+    public function getName()
     {
         return $this->name;
     }
 
-    public function set_age($age)
+    public function setAge($age)
     {
         $this->age = $age;
     }
 
-    public function get_age()
+    public function getAge()
     {
         return $this->age;
     }
 
-    public function set_address($address)
+    public function setAddress($address)
     {
         $this->address = $address;
     }
 
-    public function get_address()
+    public function getAddress()
     {
         return $this->address;
     }
 
-    abstract public function get_data_person();
+    abstract public function getDataPerson();
 
-    public function get_person()
+    public function getPerson()
     {
         $str = "{$this->name} {$this->age} {$this->address}";
         return $str;
@@ -71,9 +71,9 @@ class Programmer extends Person
         $this->country = $country;
     }
 
-    public function get_data_person()
+    public function getDataPerson()
     {
-        $str = "Person: " . $this->get_person() . ' ' . $this->country;
+        $str = "Person: " . $this->getPerson() . ' ' . $this->country;
         return $str;
     }
 }
@@ -82,23 +82,23 @@ class CetakData
 {
     public $list_data = array();
 
-    public function add_data(Person $data)
+    public function addData(Person $data)
     {
         $this->list_data[] = $data;
     }
 
-    public function cetak_data()
+    public function cetakData()
     {
         foreach ($this->list_data as $d) {
-            $str = "{$d->get_data_person()}";
+            $str = "{$d->getDataPerson()}";
         }
         return $str;
     }
 }
 
-$person = new Programmer("\nprayogaea", "\n". 21, "\nMalang", "\nIndonesia");
+$person = new Programmer("\nBellshade", "\n". 21, "\nMalang", "\nIndonesia");
 
 $cetakData = new CetakData();
-$cetakData->add_data($person);
-echo $cetakData->cetak_data();
+$cetakData->addData($person);
+echo $cetakData->cetakData();
 ?>
