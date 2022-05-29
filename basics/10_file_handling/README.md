@@ -9,6 +9,7 @@ Tentu saja dalam melakukan development aplikasi akan diperlukan file baik itu be
 - [Menuliskan File](#3-menuliskan-file)
 - [Menghapus File](#4-menghapus-file)
 - [Mengupload File](#5-mengupload-file)
+- [Validasi File](#6-validasi-file)
 
 ## 1. Membaca File dan Folder
 
@@ -85,3 +86,7 @@ unlink($dir . '/' . $nama_file)
 ## 5. Mengupload File
 
 Kemudian upload file juga ada dalam PHP. Untuk mengupload sebuah file maka dibutuhkan sebuah `form` yang nantinya akan mengirim file yang akan di upload. Untuk upload sendiri, lebih jelasnya bisa membaca materi mengenai form handling yang sudah ada pada [Penanganan Formulir](../9_form_handling)
+
+## 6. Validasi File
+
+Selanjutnya, ada juga yang disebut dengan `validasi` file. Agar lebih aman, satu file perlu untuk divalidasi demi memastikan apakah file tersebut benar-benr file dan benar-benar aman. Untuk `validasi` file dalam PHP ada banyak fungsi-fungsi yang bisa digunakan untuk melakukan validasi file, mulai dari `filemtime`, `filesize`, `is_dir`, `is_file`, dan masih banyak lagi.
