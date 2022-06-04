@@ -53,3 +53,12 @@ Berikut mekanisme sederhana dari counting sort:
 ```
 
 > _untuk melakukan penempatan, acuan penempatan sudah di tentukan dan tinggal di tempatkan pada array `sortedArray` setelah ditempatkan, array acuan itu dikurangi satu agar jika ada nilai duplikat (contohnya ada nilai 2 yang muncul dua kali) dapat di letakkan pada index sebelumnya_
+
+<p align="center">
+    <img src="../../../assets/content/algorithms/Sorting/CountingSort/counting-sort.png" width=70%>
+</p>
+
+**Demo / Contoh kode:**<br/>
+<a href='CountingSort.php' target='_blank'>
+    <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
+</a>
