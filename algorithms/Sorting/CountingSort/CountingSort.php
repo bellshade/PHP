@@ -71,3 +71,9 @@ class CountingSort
         return $sortedArray;
     }
 }
+
+echo '<pre>';
+$input = [2, 5, 1, 2, 9, 6, 4, 7];
+$expected = [1, 2, 2, 4, 5, 6, 7, 9];
+$actual = (new CountingSort($input))->setMaxValue(9)->sort();
+echo '</pre>';
