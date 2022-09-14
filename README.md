@@ -65,7 +65,7 @@ Jika diperhatikan, tiap direktori selalu memiliki `index.php` yang berfungsi unt
 composer install
 ```
 
-- Copy file `env` lalu ubah file duplikat itu menjadi `.env`, buka file tersebut lalu rubah `BASE_URL` menjadi url tempat kamu menempatkan project ini
+- Copy file `.env.example` lalu ubah file duplikat itu menjadi `.env`, buka file tersebut lalu rubah `BASE_URL` menjadi url tempat kamu menempatkan project ini
 
 Contoh:
 
