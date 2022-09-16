@@ -1,4 +1,5 @@
-<?php 
+<?php
+
 use PHPUnit\Framework\TestCase;
 
 require_once 'WordCount.php';
@@ -16,4 +17,3 @@ class SimpleTest extends TestCase
         $this->assertEquals(1, $WordCount);
     }
 }
-?>

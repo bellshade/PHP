@@ -1,4 +1,5 @@
-<?php 
+<?php
+
 class WordCount
 {
     public function countWords($sentence)
@@ -6,4 +7,3 @@ class WordCount
         return count(explode(" ", $sentence));
     }
 }
-?>
