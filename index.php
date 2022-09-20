@@ -192,7 +192,7 @@ if (!is_dir(rewritePath($pageUrl))) {
                             'composer.lock',
                             'phpcs.xml',
                             '.env',
-                            'env',
+                            '.env.example',
                             '.gitignore',
                             '.htaccess',
                             'autoload.php',
