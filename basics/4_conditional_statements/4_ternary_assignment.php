@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Filename: 4_ternary_assignment.php
  *
