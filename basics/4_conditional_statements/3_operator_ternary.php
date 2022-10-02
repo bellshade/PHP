@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Filename: 3_operator_ternary.php
  *
