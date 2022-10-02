@@ -11,7 +11,7 @@
  * Silahkan gunakan browser favorit kamu untuk melihat file ini.
  * Jangan lupa juga untuk menghidupkan web server yang kamu gunakan ya.
  */
- 
+
 $nilai_ujian = 80;
 
 // Mengisi variable $isLulus dengan nilai true apabila value $nilai_ujian lebih dari 75
