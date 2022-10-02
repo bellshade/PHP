@@ -14,6 +14,8 @@ Seperti halnya bahasa pemrograman lainnya, materi pengkondisian bisa dibilang "w
     - [4. If Else - Shorthand](#4-if-else---shorthand)
 - [2. Switch](#2-switch)
   - [Cara penggunaan Switch](#cara-penggunaan-switch)
+- [3. Operator Ternary](#3-operator-ternary)
+  - [Cara penggunaan operator ternary](#cara-penggunaan-ternary-operator)
 
 ## 1. If, Else If dan Else
 
@@ -135,6 +137,46 @@ switch (ekspresi) {
 ```
 
 [![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](2_switch.php#L16-L86)
+
+## 3. Operator Ternary
+Operator ternary adalah operator yang mengurangi panjang kode saat membuat conditional statement. Metode ini merupakan alternatif dari pernyataan if-else dan nested if-else. Urutan eksekusi untuk operator ini adalah dari kiri ke kanan (statement 1 ke statement 2).
+
+Syntax :
+
+```php
+(kondisi) ? (statement1) : (statement2);
+```
+[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](3_operator_ternary.php#L16-L86)
+
+- kondisi : ekpresi yang menghasilkan nilai boolean true / false
+- statement1 : statement yang akan dieksekusi jika kondisi bernilai true
+- statement2 : statement yang akan dieksekusi jika kondisi bernilai false
+
+### Assigning Value
+
+Operator ternary juga dapat digunakan untuk menyederhanakan pernyataan if-else dalam menetapkan nilai ke suatu variabel.
+
+Syntax :
+
+```php
+<?php
+  $data = (kondisi) ? (statement1) : (statement2);
+?>
+```
+[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_ternary_assignment.php#L16-L86)
+
+### Ternary Shorthand
+
+Ternary dapat digunakan dengan mengabaikan bagian tengah operatornya. Shorthand ini dapat disebut sebagai __Operator Elvis__.
+
+Operator Elvis dapat digunakan untuk mengurangi *redundancy* pada conditional statement. Operator ini akan mengembalikan *operand* pertama jika *operan* itu bernilai ```true```. Jika tidak, *operand* kedua yang akan dikembalikan.
+
+Syntax :
+
+```php
+  ekspresi1 ?: ekspresi2
+```
+[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](5_ternary_shorthand.php#L16-L86)
 
 > *__Catatan__:*
 
