@@ -5,7 +5,7 @@
 - [Kategori yang tersedia](#kategori-yang-tersedia)
   - [Basic](#pembelajaran-dasar-basic-learning)
   - [Algoritma](#algoritma-algorithm)
-  - [Utility](#komponen-fungsi-kegunaan-utilities)
+  - [Utility](#komponen--fungsi-kegunaan-utilities)
 - [Standar Penulisan](#standar-penulisan)
   - [Tentang gaya PSR-12](#gaya-penulisan-psr12)
   - [Pedoman penulisan untuk basic](#pedoman-penulisan-lainnya-untuk-pembelajaran-dasar-basic-learning)
