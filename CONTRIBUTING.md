@@ -11,7 +11,7 @@
   - [Pedoman penulisan untuk basic](#pedoman-penulisan-lainnya-untuk-pembelajaran-dasar-basic-learning)
   - [Pedoman penulisan untuk utility](#pedoman-penulisan-lainnya-untuk-fungsi-kegunaan-utilities)
   - [Pedoman penulisan untuk algorithm](#pedoman-penulisan-lainnya-untuk-algoritma-algorithm)
-- [Unit Testing](#testing)
+- [Unit Testing](#percobaan-testing)
 - [Pull Request](#pull-request)
 
 ## Contributor
