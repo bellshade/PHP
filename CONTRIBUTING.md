@@ -5,13 +5,13 @@
 - [Kategori yang tersedia](#kategori-yang-tersedia)
   - [Basic](#pembelajaran-dasar-basic-learning)
   - [Algoritma](#algoritma-algorithm)
-  - [Utility](#komponen-fungsi-kegunaan-utilities)
+  - [Utility](#komponen--fungsi-kegunaan-utilities)
 - [Standar Penulisan](#standar-penulisan)
-  - [Tentang gaya PSR-12](#gaya-penulisan-psr12)
+  - [Tentang gaya PSR-12](#gaya-penulisan-psr-12)
   - [Pedoman penulisan untuk basic](#pedoman-penulisan-lainnya-untuk-pembelajaran-dasar-basic-learning)
   - [Pedoman penulisan untuk utility](#pedoman-penulisan-lainnya-untuk-fungsi-kegunaan-utilities)
   - [Pedoman penulisan untuk algorithm](#pedoman-penulisan-lainnya-untuk-algoritma-algorithm)
-- [Unit Testing](#testing)
+- [Unit Testing](#percobaan-testing)
 - [Pull Request](#pull-request)
 
 ## Contributor
