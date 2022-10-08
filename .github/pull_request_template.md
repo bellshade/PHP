@@ -33,7 +33,7 @@ saya menggunakan (I am using):
 - [ ] Unit testing PHPUnit
 
 ## Maintainer
-<!-- request maintainer untuk mereiview kode kamu
+<!-- request maintainer untuk mereview kode kamu
 usahakan kamu memilih sesuai apa yang telah kamu ubah
 **maintainer PHP**
 @bellshade/php-team
