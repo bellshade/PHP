@@ -11,6 +11,8 @@ echo "class Hewan
     // Deklarasi Properti
     public namaProperti = 'Properti Hewan';
     public informasiProperti = 25;
+    protected jenis = 'Hewan';
+    private privacy = 'Private';
 
     //Deklarasi Method
     public function perkenalan()
@@ -31,6 +33,8 @@ class Hewan
     // Deklarasi Properti
     public $namaProperti = 'Properti Hewan';
     public $informasiProperti = 25;
+    protected $jenis = 'Hewan';
+    private $privacy = 'Private';
 
     //Deklarasi Method
     public function perkenalan()
@@ -42,7 +46,8 @@ class Hewan
     public function salam()
     {
         //Perintah Apa saja
-        echo 'Ini merupakan method salam';
+        echo 'Ini merupakan method salam<br>';
+        echo $this->privacy;
     }
 }
 

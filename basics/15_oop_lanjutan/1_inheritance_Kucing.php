@@ -1,5 +1,7 @@
 <?php
 
+namespace Basic\OOP_Lanjutan;
+
 require '1_inheritance_Hewan.php';
 
 use Basic\OOP_Lanjutan\Hewan;
