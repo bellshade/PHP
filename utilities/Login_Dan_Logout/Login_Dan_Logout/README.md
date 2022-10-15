@@ -1,6 +1,6 @@
 Menggunakan PHP Versi 5
 
-```
+```PHP
 login_form_index.php
 
 <html>
@@ -33,7 +33,9 @@ login_form_index.php
 ```
 
 Setelah Memasukkan Username dan Password, akan dicek benar tidaknya Username & Password yang kita masukkan seperti dibawah ini :
-```
+
+
+```PHP
 login_cek.php
 
 <?
@@ -59,3 +61,17 @@ login_cek.php
 	}
 ?>
 ```
+
+Selanjutnya buat file logout.php sebagai berikut:
+
+```PHP
+logout.php
+
+<?
+    session_start();
+    session_destroy();
+    echo "<p align='center'>Anda telah logout!</p>";
+    echo "<meta http-equiv='refresh' content='2; url=login_form_index.php'>";
+?>
+```
+Inti dari file ini adalah skrip session_destroy() yang akan menghapus data session **username** dan **password** yang dibuat pada file login_cek.php.
