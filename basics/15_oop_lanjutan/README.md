@@ -10,6 +10,7 @@ Materi kali ini merupakan materi lanjutan dari _Object Oriented Programming_ (OO
 - [Inheritance](#1-inheritance)
 - [Object Type](#2-object-type)
 - [Access Modifier](#3-access-modifier)
+- [Overriding And Final](#4-overriding-and-final)
 
 ## 1. Inheritance
 
@@ -47,5 +48,14 @@ Selanjutnya, gambar berikut ini menunjukkan apa akibat yang bisa didapatkan keti
 </p>
 
 [![](https://img.shields.io/static/v1?&label=Demo&message=%3e&color)](3_access_modifier.php#L13-L23)
+<br/>
+<br/>
+
+## 4. Overriding And Final
+
+Class yang merupakan turunan dari satu class yang lain bisa melakukan overriding, maksudnya disini adalah mengubah method yang berasal dari class induknya sesuai dengan kebutuhan dari class itu sendiri. Akan tetapi apabila satu method dijadikan final maka method tersebut tidak akan bisa di override oleh class turunannya. Jadi ketika satu method dibuat jadi final method tersebut tidak akan bisa di override.
+
+
+[![](https://img.shields.io/static/v1?&label=Demo&message=%3e&color)](4_overriding_and_final.php#L13-L23)
 <br/>
 <br/>

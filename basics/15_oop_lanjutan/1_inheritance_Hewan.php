@@ -18,13 +18,20 @@ echo "class Hewan
     public function perkenalan()
     {
         //Perintah Apa saja
-        echo 'Ini merupakan method perkenalan';
+        echo 'Ini merupakan method perkenalan'
     }
 
     public function salam()
     {
         //Perintah Apa saja
-        echo 'Ini merupakan method salam';
+        echo 'Ini merupakan method salam<br>'
+        echo this->privacy;
+    }
+
+    final public function sapa()
+    {
+        //Perintah Apa saja
+        echo 'Ini merupakan method salam<br>'
     }
 }";
 
@@ -48,6 +55,12 @@ class Hewan
         //Perintah Apa saja
         echo 'Ini merupakan method salam<br>';
         echo $this->privacy;
+    }
+
+    final public function sapa()
+    {
+        //Perintah Apa saja
+        echo 'Ini merupakan method salam<br>';
     }
 }
 
