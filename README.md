@@ -53,7 +53,7 @@ Kamu dapat langsung menjelajahi direktori-direktori yang ada di repositori ini, 
 
 ### Dengan clone di web server kamu di _local_
 
-Jika diperhatikan, tiap direktori selalu memiliki `index.php` yang berfungsi untuk menampilkan penjelasan berupa markdown `README.md` ke dalam browser. Kamu juga dapat menjelajahi setiap folder langsung dari browser dan dapat menjalankan demo file PHP-nya juga. akan tetapi, karena kami menggunakan _dependency_ (bergantung pada) pihak ketiga, ikuti langkah dibawah ini:
+Jika diperhatikan, tiap direktori selalu memiliki `index.php` yang berfungsi untuk menampilkan penjelasan berupa markdown `README.md` ke dalam browser. Kamu juga dapat menjelajahi setiap folder langsung dari browser dan dapat menjalankan demo file PHP-nya juga. Akan tetapi, karena kami menggunakan _dependency_ (bergantung pada) pihak ketiga, ikuti langkah dibawah ini:
 
 - Download & Install composer di [situs resminya](https://getcomposer.org/download/)
 - Clone repositori dengan perintah `git clone https://github.com/bellshade/PHP`.
