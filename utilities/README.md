@@ -7,12 +7,13 @@
 
 ### D
 
-[datetime](https://github.com/bellshade/PHP/tree/main/utilities/datetime)
+- [datetime](https://github.com/bellshade/PHP/tree/main/utilities/datetime)
 
 ### K
 
-[kalkulator sederhana](https://github.com/bellshade/PHP/tree/main/utilities/Kalkulator_sederhana)
+- [kalkulator sederhana](https://github.com/bellshade/PHP/tree/main/utilities/Kalkulator_sederhana)
 
 ### L
 
-[login static](https://github.com/bellshade/PHP/tree/main/utilities/Login_static)
+- [login static](https://github.com/bellshade/PHP/tree/main/utilities/Login_static)
+
