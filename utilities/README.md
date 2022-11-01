@@ -7,6 +7,10 @@
 
 ### D
 
+### F
+
+- [fpdf](https://github.com/bellshade/PHP/tree/main/utilities/fpdf)
+
 - [datetime](https://github.com/bellshade/PHP/tree/main/utilities/datetime)
 
 ### K
