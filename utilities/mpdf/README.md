@@ -6,7 +6,7 @@
     ```sh
     composer require mpdf/mpdf --ignore-platform-reqs
     ```
-    
+
 - examples 
     > mpdf.php
 
@@ -19,3 +19,7 @@
     $mpdf->WriteHTML('<h1>Hello World!</h1>');
     $mpdf->Output();
     ```
+
+- output
+
+    ![preview](../../assets/images/mpdf.png)
