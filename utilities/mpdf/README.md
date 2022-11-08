@@ -2,7 +2,7 @@
 
 > mpdf website [https://mpdf.github.io/](https://mpdf.github.io/)
 
-- Install
+- Install v7+
     ```sh
     composer require mpdf/mpdf --ignore-platform-reqs
     ```
