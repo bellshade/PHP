@@ -22,4 +22,4 @@
 
 - output
 
-    ![preview](../../assets/images/mpdf.png)
+    <img src="../../assets/images/mpdf.png" width="950px" height="400px">
