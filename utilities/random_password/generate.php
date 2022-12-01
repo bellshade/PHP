@@ -12,7 +12,7 @@ function generate_password(int $length = 8)
     // Karakter untuk dibuat acak/random
     $chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 !@#$%^&*()_-=+;:,.?{}[]/|\\-";
 
-    /* 
+    /*
     1. Acak karakter menggunakan fungsi str_shuffle()
     2. Kemudian ambil dari karakter yang sudah diacak sebanyak jumlah yang dimasukkan di parameternya, menggunakan fungsi substr()
     */
