@@ -188,7 +188,8 @@ new Anggota('Budi', 'laki-laki');
 ```
 > <i><small>Source code demo ada di basics/14_oop_dasar/4_constructor_destructor2.php</small></i>
 <a href='4_constructor_destructor2.php' target='_blank'>
-
+    <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
+</a>
   
 ## Property dan method static
 
