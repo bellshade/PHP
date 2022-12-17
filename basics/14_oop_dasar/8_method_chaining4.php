@@ -2,8 +2,19 @@
 
 class Teko
 {
-    private $jumlahIsiTeko = 0; //Mililiter
+    /**
+     * Menyimpan jumlah air pada teko dalam milimeter
+     *
+     * @var int
+     */
+    private $jumlahIsiTeko = 0;
 
+    /**
+     * Mengisi teko
+     *
+     * @param int $jumlahAirMasuk
+     * @return Teko
+     **/
     public function isiTeko($jumlahAirMasuk)
     {
         $this->jumlahIsiTeko += $jumlahAirMasuk;
@@ -11,6 +22,12 @@ class Teko
         return $this; // Untuk Method Chaining
     }
 
+    /**
+     * Menuang teko. Mengurangi isi teko.
+     *
+     * @param int $jumlahAirKeluar
+     * @return Teko
+     **/
     public function tuangAir($jumlahAirKeluar)
     {
         $this->jumlahIsiTeko -= $jumlahAirKeluar;
@@ -18,6 +35,10 @@ class Teko
         return $this; // Untuk Method Chaining
     }
 
+    /**
+     * Memeriksa isi teko.
+     *
+     **/
     public function periksaIsi()
     {
         echo "Jumlah air saat ini: {$this->jumlahIsiTeko} ml\n";
