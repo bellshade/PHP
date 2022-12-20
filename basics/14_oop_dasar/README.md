@@ -11,6 +11,7 @@ Object Oriented Programing atau pemrograman berorientasi terhadap objek lebih se
   - [Apa itu?](#apa-itu)
   - [Perbedaannya OOP dengan metode prosedural biasa](#perbedaannya-oop-dengan-metode-prosedural-biasa)
 - [Class dan Object](#2-class-dan-object)
+- [Method Chaining](#8-method-chaining)
 
 ## 1. Pengenalan Pemrograman Berorientasi Objek (OOP)
 
@@ -188,7 +189,8 @@ new Anggota('Budi', 'laki-laki');
 ```
 > <i><small>Source code demo ada di basics/14_oop_dasar/4_constructor_destructor2.php</small></i>
 <a href='4_constructor_destructor2.php' target='_blank'>
-
+    <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
+</a>
   
 ## Property dan method static
 
@@ -252,3 +254,167 @@ echo 'Waktu Shift: ' . Kasir::$waktuShift;
 <a href='5_property_dan_method_static.php' target='_blank'>
     <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
 </a>
+
+## 8. Method Chaining
+
+Apakah kalian pernah menemukan kode seperti di bawah ini:
+
+```php
+// ....
+$total_gaji = $karyawan->hitungJamKerja(30)->hitungLembur(5)->aturPotongan(100000)->hitungTotalGaji();
+// ....
+```
+
+> _<small>Kode lengkap terdapat pada file <a href='8_method_chaining.php' target='_blank'>basics/14_oop_dasar/8_method_chaining.php</a></small>_
+
+Kode di atas merupakan contoh penggunaan teknik Method Chaining dalam bahasa pemrograman PHP. Method Chaining merupakan sebuah teknik dalam OOP yang memungkinkan kita untuk memanggil [Method](#3-properti-dan-method) yang terdapat pada _object_ secara berantai tanpa harus menampungnya terlebih dahulu ke dalam sebuah variabel, seperti yang dicontohkan pada kode di atas. Salah satu kegunaan Method Chaining adalah untuk merampingkan baris-baris kode sehingga dapat meningkatkan produktivitas _programmer_[[1]](https://quanticdev.com/articles/method-chaining/). Sebagai pembanding, jika kode di atas diterjemahkan menjadi kode tanpa Method Chaining, kurang-lebihnya akan menjadi seperti berikut:
+
+```php
+// ....
+$karyawan = new Karyawan();
+
+$karyawan->hitungJamKerja(30);
+$karyawan->hitungLembur(5);
+$karyawan->aturPotongan(100000);
+
+$total_gaji = $karyawan->hitungTotalGaji();
+// ....
+```
+
+> _<small>Kode lengkap terdapat pada file <a href='8_method_chaining.php2' target='_blank'>basics/14_oop_dasar/8_method_chaining2.php</a></small>_
+
+Karena PHP sudah mendukung OOP, Method Chaining juga dapat diterapkan dalam pengkodean program PHP dengan cara mengembalikan variabel `$this` sebagai _return_ dari Method yang ingin dirantai. Untuk memperdalam pemahaman kita terhadap Method Chaining, mari kita membuat sebuah objek dalam PHP yang dapat kita interaksikan seperti benda yang ada di dunia nyata, misalnya teko air—penampung air minum. Mari kita analisa interaksi apa saja yang dapat kita lakukan terhadap teko kita di rumah.
+
+<img src="../../assets/images/8.1pouring tea realistic.jpg">
+
+> _<small><a href="https://www.freepik.com/free-vector/pouring-tea-realistic-composition-with-isolated-illustration_13693663.htm#query=kettle&from_query=ketle&position=11&from_view=search&track=sph" target="_BLANK">Gambar oleh macrovector</a> di Freepik</small>_
+
+Hal pertama yang kita lakukan pada teko kosong adalah mengisinya dengan air minum. Teko dengan kapasitas 1 liter (1000 mililiter) kita isi sampai penuh. setelah itu, teko siap digunakan untuk membagikan air minum kepada anggota keluarga yang lain. Ketika membagikan air dalam teko, kita bisa mengisi lima gelas sekaligus secara berurutan tanpa berhenti untuk ayah, ibu, adik, kakak, dan kita sendiri dengan ukuran gelas yang berbeda-beda. kemudian semua orang meminum air dalam gelas masing-masing dengan kecepatan yang berbeda-beda. sebagai penanggung jawab teko, kita memeriksa isi teko untuk memastikan air dalam teko belum habis. Ayah setelah seharian bekerja tentu saja beliau yang paling merasa dahaga, sehingga dalam hitungan detik gelas ayah sudah kembali kosong dan kita kembali menuang air dalam teko untuk ayah.
+
+Berdasarkan ilustrasi pada paragraf sebelumnya, sekarang kita dapat memodelkan teko yang asli menjadi objek teko dalam _kodingan_ kita. Kira-kira _kodingan_-nya akan menjadi seperti berikut:
+
+```php
+// ....
+class Teko
+{
+    private $jumlahIsiTeko = 0;     //mililiter
+
+    public function isiTeko($jumlahAirMasuk)
+    {
+        $this->jumlahIsiTeko += $jumlahAirMasuk;
+    }
+
+    public function tuangAir($jumlahAirKeluar)
+    {
+        $this->jumlahIsiTeko -= $jumlahAirKeluar;
+    }
+
+    public function periksaIsi()
+    {
+        echo "Jumlah air saat ini: {$this->jumlahIsiTeko} ml\n";
+    }
+}
+// ....
+```
+
+> _<small>Kode lengkap terdapat pada file <a href='8_method_chaining3.php' target='_blank'>basics/14_oop_dasar/8_method_chaining3.php</a></small>_
+
+Kemudian, untuk reka ulang kejadian atau simulasi peristiwa yang telah diilustrasikan di atas kita dapat menggunakan kode seperti di bawah ini:
+
+```php
+// ....
+$teko = new Teko();
+
+// mengisi teko kosong
+$teko->isiTeko(1000);
+
+// menuang air untuk seluruh anggota keluarga
+$teko->tuangAir(250);
+$teko->tuangAir(150);
+$teko->tuangAir(100);
+$teko->tuangAir(200);
+$teko->tuangAir(200);
+
+// memeriksa isi teko
+$teko->periksaIsi();
+// output:
+// Jumlah air saat ini: 100 ml
+
+// menuang lagi untuk ayah
+$teko->tuangAir(100);
+
+$teko->periksaIsi();
+// output:
+// Jumlah air saat ini: 0 ml
+
+$teko->isiTeko(1000);
+
+$teko->periksaIsi();
+// output:
+// Jumlah air saat ini: 1000 ml
+
+```
+
+> _<small>Kode lengkap terdapat pada file <a href='8_method_chaining3.php' target='_blank'>basics/14_oop_dasar/8_method_chaining3.php</a></small>_
+
+Saat ini, kita telah berhasil melakukan reka ulang kejadian pada ilustrasi dalam bentuk kode. namun kode yang kita tulis tersebut belum menerapkan teknik Method Chaining. Untuk dapat menerapkannya, kita perlu menambahkan `return $this` pada method yang ingin kita buat berantai. Pada kasus ini, untuk penerapan Method Chaining, kita akan menambahkan `return $this` pada _method_ `tuangAir()` dan `periksaIsi()`, kemudian kita juga akan melakukan perubahan pada kode reka ulangnya. adapun kode lengkapnya akan menjadi seperti berikut:
+
+```php
+<?php
+
+class Teko
+{
+    private $jumlahIsiTeko = 0; //Mililiter
+
+    public function isiTeko($jumlahAirMasuk)
+    {
+        $this->jumlahIsiTeko += $jumlahAirMasuk;
+
+        return $this; // Untuk Method Chaining
+    }
+
+    public function tuangAir($jumlahAirKeluar)
+    {
+        $this->jumlahIsiTeko -= $jumlahAirKeluar;
+
+        return $this; // Untuk Method Chaining
+    }
+
+    public function periksaIsi()
+    {
+        echo "Jumlah air saat ini: {$this->jumlahIsiTeko} ml\n";
+    }
+}
+
+$teko = new Teko();
+
+// Mengisi teko kosong dan memeriksa isi teko
+$teko->isiTeko(1000)->periksaIsi();
+// Output:
+// Jumlah air saat ini: 1000 ml
+
+// Menuang air untuk seluruh anggota keluarga dan memeriksa isi teko
+$teko->tuangAir(250)
+    ->tuangAir(150)
+    ->tuangAir(100)
+    ->tuangAir(200)
+    ->tuangAir(200)
+    ->periksaIsi();
+// Output:
+// Jumlah air saat ini: 100 ml
+
+// Menuang lagi untuk ayah dan memeriksa kembali isi teko
+$teko->tuangAir(100)->periksaIsi();
+// Output:
+// Jumlah air saat ini: 0 ml
+
+// Mengisi ulang teko yang kosong dan memeriksa isi teko
+$teko->isiTeko(1000)->periksaIsi();
+// Output:
+// Jumlah air saat ini: 1000 ml
+
+```
+
+> _<small>Kode lengkap terdapat pada file <a href='8_method_chaining4.php' target='_blank'>basics/14_oop_dasar/8_method_chaining4.php</a></small>_
+
+Penggunaan Method Chaining tidaklah wajib dalam PHP. Namun dengan Method Chaining kita dapat merampingkan baris-baris kode kita seperti yang sudah kita buat pada sub-bab ini dengan studi kasus yang sederhana. Perampingan yang signifikan akan dirasakan pada studi kasus yang lebih kompleks. Namun perlu dilakukan perancangan Method berantai secara matang agar kode tetap mudah dipahami oleh _programmer_ yang lain.
