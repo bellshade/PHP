@@ -11,6 +11,15 @@ Object Oriented Programing atau pemrograman berorientasi terhadap objek lebih se
   - [Apa itu?](#apa-itu)
   - [Perbedaannya OOP dengan metode prosedural biasa](#perbedaannya-oop-dengan-metode-prosedural-biasa)
 - [Class dan Object](#2-class-dan-object)
+  - [Apa itu class dan object?](#apa-itu-class-dan-object)
+  - [Cara Membuat Class](#cara-membuat-class)
+  - [Cara Membuat Object](#cara-membuat-method)
+- [Properti dan Method](#3-properti-dan-method)
+  - [Apa itu property dan method?](#apa-itu-property-dan-method)
+  - [Cara Membuat Property](#cara-membuat-property)
+  - [Cara Membuat Method](#cara-membuat-method)
+- [Constructor dan Destructor](#4-constructor-dan-destructor)
+- [Property dan method static](#5-property-dan-method-static)
 - [Method Chaining](#8-method-chaining)
 
 ## 1. Pengenalan Pemrograman Berorientasi Objek (OOP)
@@ -73,6 +82,7 @@ Perhatikan disini karena setiap _use case_ disendirikan pada tiap-tiap objek, de
 Misalnya ada pengguna yang didalamnya harus ada nama, jenis kelamin, email, alamat dll. Kita bisa buat class `Pengguna` dan menentukan nama, email dll sebagai properti _(kita akan bahas di sub materi berikutnya)_. Lalu kita juga bisa buat penerapan dari class itu. misalnya ada `agus` yang merupakan penerapan dari class `Pengguna`, maka agus ini bisa kita sebut sebagai _object_. Karena `agus` merupakan objek dari class `Pengguna`, maka objek `agus` pasti mengikuti blueprint yang tertulis pada kelasnya, seperti mempunyai nama, email dsb. 
 
 <br/>
+
 ### Cara Membuat Class
 
 Cara membuat class adalah dengan menaruh keyword `class` didepan nya diikuti dengan nama kelasnya. Nama kelas harus diawali dengan huruf kapital.
@@ -192,7 +202,7 @@ new Anggota('Budi', 'laki-laki');
     <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
 </a>
   
-## Property dan method static
+## 5. Property dan method static
 
 Properti dan method dapat juga berbentuk static, artinya tidak ada ketergantungan antara method / properti static dengan objek dari kelasnya. Bahkan faktanya, tidak perlu dibuat objek agar dapat digunakan. Method / properti static adalah salah satu fitur dalam paradigma OOP untuk membuat method atau properti dari sebuah class yang dapat dijalankan tanpa dibuat sebuah objek dari class tersebut.
 
