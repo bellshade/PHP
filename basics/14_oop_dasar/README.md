@@ -19,7 +19,10 @@ Object Oriented Programing atau pemrograman berorientasi terhadap objek lebih se
   - [Cara Membuat Property](#cara-membuat-property)
   - [Cara Membuat Method](#cara-membuat-method)
 - [Constructor dan Destructor](#4-constructor-dan-destructor)
-- [Property dan method static](#5-property-dan-method-static)
+- [Property dan Method Static](#5-property-dan-method-static)
+- [Constant dan Magic Constant](#6-constant-dan-magic-constants)
+  - [Constant Biasa vs Constant Class](#constant-biasa-vs-constant-class)
+  - [Magic Constants](#magic-constants)
 - [Method Chaining](#8-method-chaining)
 
 ## 1. Pengenalan Pemrograman Berorientasi Objek (OOP)
@@ -265,6 +268,162 @@ echo 'Waktu Shift: ' . Kasir::$waktuShift;
     <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
 </a>
 
+## 6. Constant dan Magic Constants
+
+_Constant_ merupakan sebuah alias untuk sebuah nilai yang dapat kita tetapkan[^1]. sedangkan, _magic constants_ adalah kumpulan _constant_ yang nilainya sudah ditetapkan oleh PHP pada saat program di-_compile_[^2]. Pada subbab ini kita akan mencoba memahami _constant_ dan _magic constants_ pada PHP.
+
+### Constant Biasa vs Constant Class
+
+_Constant_ merupakan sebuah "fitur" pada PHP yang memungkinkan kita untuk menyimpan sebuah nilai yang sama sekali tidak bisa diubah sejak nilai tersebut dideklarasikan. _Constant_ terdeklarasi secara global sehingga dapat dipanggil dari mana saja[^1]. Namun, untuk _constant_ pada _class_, nilai tersebut hanya dapat dipanggil/dikenali dalam sebuah _class_ saja, bahkan tidak bisa dilakukan _overriding_ pada PHP versi 8.1 ke atas[^3]. Untuk memahami penggunaan _constant_, mari kita membuat sebuah _constant_ biasa bernama `KONSTANTA_BIASA` dan _constant class_ bernama `KONSTANTA_KELAS`.
+
+```php
+// Deklarasi KONSTANTA_BIASA
+define('KONSTANTA_BIASA', 'nilai konstan biasa');
+
+/**
+ * undocumented class
+ */
+class Kelasku
+{
+    // Dekalarasi KONSTANTA_KELAS
+    public const KONSTANTA_KELAS = 'nilai konstan kelas';
+
+    /**
+     * Menampilkan nilai dua konstanta dari dalam kelas
+     **/
+    public function tampilkanKonstanta()
+    {
+        echo KONSTANTA_BIASA . "\n";
+        echo self::KONSTANTA_KELAS . "\n";
+    }
+}
+
+// Menampilkan nilai dua konstanta dari luar kelas.
+echo KONSTANTA_BIASA . "\n";
+echo Kelasku::KONSTANTA_KELAS . "\n";
+
+// Menampilkan nilai KONSTANTA_KELAS dari object Kelasku.
+$objectKelasku = new Kelasku();
+echo $objectKelasku::KONSTANTA_KELAS . "\n";
+
+// Menampilkan nilai dua konstanta melalui method class.
+$objectKelasku->tampilkanKonstanta();
+```
+
+> _<small>Kode lengkap terdapat pada file <a href='6_constant_magic_constants.php' target='_blank'>basics/14_oop_dasar/6_constant_magic_constants.php</a></small>._
+
+_Constant class_ dapat dipanggil dari dalam _class_ maupun dari luar _class_ melalui _object_ maupun _class_. Penggunaan _constant_ dapat memudahkan kita untuk mengelola nilai-nilai yang tidak akan pernah berubah pada aplikasi kita, seperti nilai pi pada kalkulator lingkaran, atau teks pesan untuk pengguna ketika login/logout. Adapun penggunaan _constant class_ untuk studi kasus tersebut adalah sebagai berikut:
+
+```php
+/**
+ * Class Pengguna
+ */
+class Pengguna
+{
+    // Deklarasi konstanta
+    public const PESAN_LOGIN = "Selamat datang‼️";
+    public const PESAN_LOGOUT = "Sampai jumpa lagi 👋🏻";
+
+    // Method login dan logout
+    public function login()
+    {
+        echo self::PESAN_LOGIN . "\n";
+    }
+
+    public function logout()
+    {
+        echo self::PESAN_LOGOUT . "\n";
+    }
+}
+
+/**
+ * Class Lingkaran
+ */
+class Lingkaran
+{
+    // Deklarasi konstanta
+    public const PI = 3.14;
+
+    // Property jari-jari
+    public $jariJari;
+
+    // Method konstruktor
+    public function __construct(float $jariJari)
+    {
+        $this->jariJari = $jariJari;
+    }
+
+    // Method hitung luas
+    public function hitungLuas()
+    {
+        return self::PI * $this->jariJari * $this->jariJari;
+    }
+}
+
+// Instansiasi Pengguna
+$pengguna = new Pengguna();
+
+// Menampilkan pesan login
+$pengguna->login();
+
+// Instansiasi Lingkaran
+$lingkaran = new Lingkaran(10);
+
+// Menampilkan luas lingkaran
+echo "Luas lingkaran: " . $lingkaran->hitungLuas() . " cm \n";
+
+// Menampilkan pesan logout
+$pengguna->logout();
+```
+
+> _<small>Kode lengkap terdapat pada file <a href='6_constant_magic_constants2.php' target='_blank'>basics/14_oop_dasar/6_constant_magic_constants2.php</a></small>._
+
+### Magic Constants
+
+Pada PHP, terdapat sembilan konstanta (_magic constants_) yang secara "ajaib" dapat dipanggil secara global dari dalam _object_ maupun secara prosedural. Namun, konstanta-konstanta ini akan memiliki nilai yang berbeda-beda, bergantung di mana _constant_ tersebut dipanggil[[2]]. Salah satu kegunaan konstanta-konstanta ini adalah memberikan informasi yang dibutuhkan untuk kegiatan _debugging_. Adapun daftar konstanta beserta nilai-nilainya dapat dilihat pada daftar di bawah ini:
+
+1. `__LINE__`.
+2. `__FILE__`.
+3. `__DIR__`.
+4. `__FUNCTION__`.
+5. `__CLASS__`.
+6. `__TRAIT__`.
+7. `__METHOD__`.
+8. `__NAMESPACE__`.
+9. `ClassName::class`.
+
+Seperti yang terlihat pada daftar di atas, konstanta ke-9 (`class`) merupakan konstanta spesial yang hanya dapat dipanggil melalui _class_ atau _object_ saja. Demonstrasi pemanggilan semua konstanta dapat dilihat pada kode di bawah ini:
+
+```php
+namespace App\Basics\OOP;
+
+class DemoKonstantaAjaib
+{
+    public function lihatBaris()
+    {
+        echo "Baris saat ini: " . __LINE__ . "\n";
+    }
+    
+    // ....
+}
+
+// Instansiasi DemoKonstantaAjaib
+$demo = new DemoKonstantaAjaib();
+
+// Menampilkan nilai konstanta ajaib
+$demo->lihatBaris();
+$demo->lihatFile();
+$demo->lihatDirektori();
+$demo->lihatNamespace();
+$demo->lihatFungsi();
+$demo->lihatKelas();
+$demo->lihatMetode();
+$demo->lihatTrait();
+$demo->lihatClass2();
+```
+
+> _<small>Kode lengkap terdapat pada file <a href='6_constant_magic_constants3.php' target='_blank'>basics/14_oop_dasar/6_constant_magic_constants3.php</a></small>._
+
 ## 8. Method Chaining
 
 Apakah kalian pernah menemukan kode seperti di bawah ini:
@@ -277,7 +436,7 @@ $total_gaji = $karyawan->hitungJamKerja(30)->hitungLembur(5)->aturPotongan(10000
 
 > _<small>Kode lengkap terdapat pada file <a href='8_method_chaining.php' target='_blank'>basics/14_oop_dasar/8_method_chaining.php</a></small>_
 
-Kode di atas merupakan contoh penggunaan teknik Method Chaining dalam bahasa pemrograman PHP. Method Chaining merupakan sebuah teknik dalam OOP yang memungkinkan kita untuk memanggil [Method](#3-properti-dan-method) yang terdapat pada _object_ secara berantai tanpa harus menampungnya terlebih dahulu ke dalam sebuah variabel, seperti yang dicontohkan pada kode di atas. Salah satu kegunaan Method Chaining adalah untuk merampingkan baris-baris kode sehingga dapat meningkatkan produktivitas _programmer_[[1]](https://quanticdev.com/articles/method-chaining/). Sebagai pembanding, jika kode di atas diterjemahkan menjadi kode tanpa Method Chaining, kurang-lebihnya akan menjadi seperti berikut:
+Kode di atas merupakan contoh penggunaan teknik Method Chaining dalam bahasa pemrograman PHP. Method Chaining merupakan sebuah teknik dalam OOP yang memungkinkan kita untuk memanggil [Method](#3-properti-dan-method) yang terdapat pada _object_ secara berantai tanpa harus menampungnya terlebih dahulu ke dalam sebuah variabel, seperti yang dicontohkan pada kode di atas. Salah satu kegunaan Method Chaining adalah untuk merampingkan baris-baris kode sehingga dapat meningkatkan produktivitas _programmer_[^4]. Sebagai pembanding, jika kode di atas diterjemahkan menjadi kode tanpa Method Chaining, kurang-lebihnya akan menjadi seperti berikut:
 
 ```php
 // ....
@@ -428,3 +587,8 @@ $teko->isiTeko(1000)->periksaIsi();
 > _<small>Kode lengkap terdapat pada file <a href='8_method_chaining4.php' target='_blank'>basics/14_oop_dasar/8_method_chaining4.php</a></small>_
 
 Penggunaan Method Chaining tidaklah wajib dalam PHP. Namun dengan Method Chaining kita dapat merampingkan baris-baris kode kita seperti yang sudah kita buat pada sub-bab ini dengan studi kasus yang sederhana. Perampingan yang signifikan akan dirasakan pada studi kasus yang lebih kompleks. Namun perlu dilakukan perancangan Method berantai secara matang agar kode tetap mudah dipahami oleh _programmer_ yang lain.
+
+[^1]: [https://www.php.net/manual/en/language.constants.php](https://www.php.net/manual/en/language.constants.php) (diakses 1 Januari 2023).
+[^2]: [https://www.php.net/manual/en/language.constants.magic.php](https://www.php.net/manual/en/language.constants.magic.php) (diakses 1 Januari 2023).
+[^3]: [https://www.php.net/manual/en/language.oop5.constants.php](https://www.php.net/manual/en/language.constants.php) (diakses 1 Januari 2023).
+[^4]: [https://quanticdev.com/articles/method-chaining/](https://quanticdev.com/articles/method-chaining/) (diakses 1 Januari 2023).
