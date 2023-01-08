@@ -376,7 +376,7 @@ echo "Luas lingkaran: " . $lingkaran->hitungLuas() . " cm \n";
 $pengguna->logout();
 ```
 
-> _<small>Kode lengkap terdapat pada file <a href='6_constant_magic_constants2.php' target='_blank'>basics/14_oop_dasar/6_constant_magic_constants2.php</a></small>._
+> _<small>Kode lengkap terdapat pada file <a href='6_constant_magic_constants2a.php' target='_blank'>basics/14_oop_dasar/6_constant_magic_constants2a.php</a></small> dan <a href='6_constant_magic_constants2b.php' target='_blank'>basics/14_oop_dasar/6_constant_magic_constants2b.php</a></small>._
 
 ### Magic Constants
 
