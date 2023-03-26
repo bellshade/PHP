@@ -16,7 +16,7 @@ class Pengguna
         // Mengakses nilai properti tanggalLahir untuk menghitung usia
         $dateTimeTanggalLahir = new DateTime($this->tanggalLahir);
         $dateTimeHariIni = new DateTime();
-        $hasilHitungUsia = $dateTimeTanggalHariIni->diff($dateTimeTanggalLahir)->y;
+        $hasilHitungUsia = $dateTimeHariIni->diff($dateTimeTanggalLahir)->y;
 
         // Mengeset properti usia dengan nilai dari variabel $hasilHitungUsia
         $this->usia = $hasilHitungUsia;

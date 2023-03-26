@@ -16,7 +16,7 @@ $pengguna->tanggalLahir = '2000-01-01';
 // Mengakses nilai properti tanggalLahir untuk menghitung usia
 $dateTimeTanggalLahir = new DateTime($pengguna->tanggalLahir);
 $dateTimeHariIni = new DateTime();
-$hasilHitungUsia = $dateTimeTanggalHariIni->diff($dateTimeTanggalLahir)->y;
+$hasilHitungUsia = $dateTimeHariIni->diff($dateTimeTanggalLahir)->y;
 
 // Mengeset properti usia dengan nilai dari variabel $hasilHitungUsia
 $pengguna->usia = $hasilHitungUsia;
