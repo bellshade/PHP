@@ -4,12 +4,12 @@ class Pengguna
 {
     private $tanggalLahir;
 
-    static private function apakahFormatTanggalLahirSalah($tanggalLahir)
+    private static function apakahFormatTanggalLahirSalah($tanggalLahir)
     {
         if (preg_match('/^\d{4}-\d{2}-\d{2}$/', $tanggalLahir)) {
             return false;
         }
-        
+
         return true;
     }
 
