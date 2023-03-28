@@ -23,6 +23,9 @@ Object Oriented Programing atau pemrograman berorientasi terhadap objek lebih se
 - [Constant dan Magic Constant](#6-constant-dan-magic-constants)
   - [Constant Biasa vs Constant Class](#constant-biasa-vs-constant-class)
   - [Magic Constants](#magic-constants)
+- [_Setter_ dan _Getter_](#7-setter-dan-getter)
+  - [Enkapsulasi](#enkapsulasi)
+  - [_Setter_ dan _Getter_ Ajaib](#setter-dan-getter-ajaib)
 - [Method Chaining](#8-method-chaining)
 
 ## 1. Pengenalan Pemrograman Berorientasi Objek (OOP)
@@ -423,6 +426,254 @@ $demo->lihatClass2();
 ```
 
 > _<small>Kode lengkap terdapat pada file <a href='6_constant_magic_constants3.php' target='_blank'>basics/14_oop_dasar/6_constant_magic_constants3.php</a></small>._
+
+## 7. _Setter_ dan _Getter_
+
+_Setter_ dan _getter_ merupakan sebuah mekanisme dalam OOP untuk mengeset (_assign_) dan mengakses (_retrieve_) nilai untuk properti milik objek melalui sebuah _method_. Berbeda dengan _assign_ dan _retrieve_ properti secara langsung, pada _setter_ dan _getter_ kita dapat menambahkan beberapa perintah untuk keperluan tertentu misalnya praproses, melakukan format, atau validasi terhadap nilai properti yang diinginkan. Agar lebih mudah memahaminya, mari kita lihat contoh kode di bawah ini:
+
+```php
+// Mendefinisikan kelas Pengguna
+class Pengguna
+{
+  public $tanggalLahir;
+  public $usia;
+}
+
+// Instansiasi objek
+$pengguna = new Pengguna();
+
+// Mengeset properti tanggalLahir
+$pengguna->tanggalLahir = '2000-01-01';
+
+// Mengakses nilai properti tanggalLahir untuk menghitung usia
+$dateTimeTanggalLahir = new DateTime($pengguna->tanggalLahir);
+$dateTimeHariIni = new DateTime();
+$hasilHitungUsia = $dateTimeHariIni->diff($dateTimeTanggalLahir)->y;
+
+// Mengeset properti usia dengan nilai dari variabel $hasilHitungUsia
+$pengguna->usia = $hasilHitungUsia;
+
+// Mengakses nilai properti tanggalLahir untuk ditampilkan
+// dalam format penulisan tanggal Indonesia
+$dateTimeTanggalLahir = new DateTime($pengguna->tanggalLahir);
+$formatterTanggal = new IntlDateFormatter('id_ID', IntlDateFormatter::LONG, IntlDateFormatter::NONE);
+echo $formatterTanggal->format($dateTimeTanggalLahir); // 1 Januari 2000
+
+// Menampilkan baris baru
+echo PHP_EOL;
+
+// Mengakses nilai properti usia untuk ditampilkan
+echo "{$pengguna->usia} tahun"; // 23 tahun (2023)
+```
+
+> <small>_Kode lengkap terdapat pada file <a href='7_setter_dan_getter.php' target='_blank'>basics/14_oop_dasar/7_setter_dan_getter.php</a>_.</small>
+
+Kode program di atas merupakan contoh pengesetan dan pengaksesan properti secara langsung tanpa _setter_ dan _getter_. Pada kode program di atas kita telah mendefinisikan sebuah kelas `Pengguna` yang memiliki properti `tanggalLahir` dan `usia`, kemudian kita mengeset dan mengakses nilai untuk properti-properti tersebut. Jika kita menerapkan pendekatan _setter_ dan _getter_ pada contoh kasus di atas, maka kode programnya akan menjadi seperti berikut:
+
+```php
+// Mendefinisikan kelas Pengguna
+class Pengguna
+{
+  public $tanggalLahir;
+  public $usia;
+
+  // Setter untuk properti tanggalLahir
+  // sekaligus menghitung dan mengeset properti usia
+  public function setTanggalLahir($tanggalLahir)
+  {
+    // Mengeset properti tanggalLahir
+    $this->tanggalLahir = $tanggalLahir;
+
+    // Mengakses nilai properti tanggalLahir untuk menghitung usia
+    $dateTimeTanggalLahir = new DateTime($this->tanggalLahir);
+    $dateTimeHariIni = new DateTime();
+    $hasilHitungUsia = $dateTimeHariIni->diff($dateTimeTanggalLahir)->y;
+
+    // Mengeset properti usia dengan nilai dari variabel $hasilHitungUsia
+    $this->usia = $hasilHitungUsia;
+  }
+
+  // Getter untuk properti tanggalLahir
+  public function getTanggalLahir()
+  {
+    // Mengakses nilai properti tanggalLahir untuk DIKEMBALIKAN
+    // dalam format penulisan tanggal Indonesia
+    $dateTimeTanggalLahir = new DateTime($this->tanggalLahir);
+    $formatterTanggal = new IntlDateFormatter('id_ID', IntlDateFormatter::LONG, IntlDateFormatter::NONE);
+    return $formatterTanggal->format($dateTimeTanggalLahir);
+  }
+
+  // Getter untuk properti usia
+  public function getUsia()
+  {
+    // Mengakses nilai properti usia untuk diformat dan DIKEMBALIKAN
+    return "{$this->usia} tahun";
+  }
+}
+
+// Instansiasi objek
+$pengguna = new Pengguna();
+
+// Mengeset nilai properti tanggalLahir melalui setter
+$pengguna->setTanggalLahir('2000-01-01');
+
+// Mengakses nilai properti tanggalLahir
+// yang telah diformat melalui getter-nya untuk ditampilkan
+echo $pengguna->getTanggalLahir(); // 1 Januari 2000
+
+// Menampilkan baris baru
+echo PHP_EOL;
+
+// Mengakses nilai properti usia
+// yang telah diformat melalui getter-nya untuk ditampilkan
+echo $pengguna->getUsia(); // 23 tahun (2023)
+```
+
+> <small>_Kode lengkap terdapat pada file <a href='7_setter_dan_getter2.php' target='_blank'>basics/14_oop_dasar/7_setter_dan_getter2.php</a>_.</small>
+
+Pada kode di atas, kita telah mendefinisikan sebuah metode _setter_  bernama `setTanggalLahir` yang mengeset nilai untuk properti `tanggal_lahir` sekaligus `usia`. Selain itu kita juga telah mendefinisikan dua metode _getter_ bernama `getTanggalLahir` dan `getUsia` yang akan memformat nilai properti untuk ditampilkan.
+
+Dengan penerapan _setter_ dan _getter_ seperti contoh di atas, kita telah "mengotomatisasi" proses pengolahan nilai ketika dimasukkan maupun ditampilkan.
+
+Secara sederhana, _setter_ dan _getter_ merupakan metode milik objek yang kita tulis untuk mengeset dan mengakses nilai properti milik objek. Konvensi penulisan nama metode untuk _setter_ dan _getter_ adalah menggunakan format penulisan _camel case_ dengan awalan `set` atau `get` kemudian diteruskan dengan nama properti yang ingin diolah, seperti `setTanggalLahir` dan `getTanggalLahir` yang terlihat pada contoh kode program di atas.
+
+## Enkapsulasi
+
+Dalam OOP, Enkapsulasi merupakan konsep pembatasan akses untuk properti (dan juga metode) milik objek dari luar objek. Hal ini bertujuan untuk mengamankan properti dari perubahan/pengaksesan semena-mena dari luar objek. Misalnya memasukkan nilai `1234-1234-1234` untuk properti `tanggal_lahir` yang akan menyebabkan eror pada pemanggilan metode _getter_ yang sudah kita buat sebelumnya:
+
+```php
+// Instansiasi objek
+$pengguna = new Pengguna();
+
+// Mengeset nilai properti tanggalLahir secara langsung
+// dengan format yang salah
+$pengguna->tanggalLahir = '1234-1234-1234'; // Fatal error: Uncaught Exception: Failed to parse time string (1234-1234-1234)
+```
+
+> <small>_Kode lengkap terdapat pada file <a href='7_setter_dan_getter3.php' target='_blank'>basics/14_oop_dasar/7_setter_dan_getter3.php</a>_.</small>
+
+Hal seperti di atas dapat ditangangi dengan menerapkan enkapsulasi di mana properti `tanggalLahir` dan `usia` tidak dapat diubah secara langsung sehingga **harus** selalu melalui metode _setter_-nya yang memiliki proses validasi data yang tidak dapat dilewatkan:
+
+```php
+// Mendefinisikan kelas Pengguna
+class Pengguna
+{
+  private $tanggalLahir;
+  private $usia;
+
+  // Setter untuk properti tanggalLahir
+  // sekaligus menghitung dan mengeset properti usia
+  public function setTanggalLahir($tanggalLahir)
+  {
+    // Validasi nilai untuk tanggalLahir
+    if (!preg_match('/^\d{4}-\d{2}-\d{2}$/', $tanggalLahir)) {
+      echo '### Format tanggal salah ###';
+      return;
+    }
+
+    // ....
+  }
+
+  // ....
+}
+
+// Instansiasi objek
+$pengguna = new Pengguna();
+
+// Mengeset nilai properti tanggalLahir secara langsung
+// $pengguna->tanggalLahir = '1234-1234-1234'; // Fatal error: Uncaught Error: Cannot access private property Pengguna::$tanggalLahir
+
+// Mengeset nilai yang tidak sesuai format properti tanggalLahir melalui setter
+$pengguna->setTanggalLahir('1234-1234-1234'); // Eror Tertangani: Format tanggal salah
+
+// Menampilkan baris baru
+echo PHP_EOL;
+
+// Mengeset nilai yang sesuai format properti tanggalLahir melalui setter
+$pengguna->setTanggalLahir('2000-01-01');
+
+// Mengakses nilai properti tanggalLahir melalui getter untuk ditampilkan
+echo $pengguna->getTanggalLahir(); // 1 Januari 2000
+```
+
+> <small>_Kode lengkap terdapat pada file <a href='7_setter_dan_getter4.php' target='_blank'>basics/14_oop_dasar/7_setter_dan_getter4.php</a>_.</small>
+
+Dengan mengganti _access modifier_ dari `public` menjadi `private`, maka kita telah membatasi akses langsung terhadap properti `tanggalLahir` dan `usia` sehingga pengesetan nilai hanya dapat dilakukan melalui _setter_-nya dan kita dapat menambahkan validasi sederhana untuk memastikan bahwa nilai untuk `tanggalLahir` telah memiliki format yang sesuai. Silakan mencoba membuka baris kode yang dikomentari untuk menyimulasikan kesalahan format.
+
+<p align="center">
+<img width="27.3%" src="../../assets/images/14-7-1-360px-Opened_light_switch.jpg" />
+<img width="40%" src="../../assets/images/14-7-2-527px-Light_switch_inside_explained.jpg" />
+</p>
+
+> <small>_Gambar oleh <a href="https://commons.wikimedia.org/wiki/User:Oleg_Alexandrov" target="_BLANK">Oleg Alexandrov</a> dan <a href="https://commons.wikimedia.org/wiki/User:SCEhardt" target="_BLANK">Scott Ehardt</a> di <a href="https://en.wikipedia.org/wiki/Light_switch">Wikipedia</a>_</small>
+
+Enkapsulasi dapat dibayangkan seperti lampu dan saklarnya, di mana kita hanya dapat mengakses tombol _on-off_-nya saja untuk alasan keamanan dan kemudahan penggunaan. Kita tidak perlu memahami cara kerja setiap komponen di dalamnya untuk menggunakannya. Tanpa alat tertentu, kita juga tidak dapat mengakses kabel-kabel didalamnya untuk mencegah hal-hal yang tidak dinginkan.
+
+## _Setter_ dan _Getter_ Ajaib
+
+Pada PHP, kita dapat mendefinisikan metode _setter_ dan _getter_ yang akan diterapkan secara _default_ ketika kita mengeset atau mengakses sebuah nilai properti milik objek secara langsung. Sebagai contoh, mari kita terapkan _setter_ dan _getter_ ajaib untuk properti `tanggal_lahir` sebagai pengembangan dari contoh kode program sebelumnya:
+
+```php
+// Mendefinisikan kelas Pengguna
+class Pengguna
+{
+  // ....
+
+  // Setter ajaib
+  public function __set($name, $value)
+  {
+    if ($name == 'tanggalLahir') {
+      // Mengeset nilai properti tanggalLahir melalui setter private
+      $this->setTanggalLahir($value);
+
+      return;
+    }
+
+    echo '### Properti tidak ditemukan ###';
+  }
+
+  // Getter ajaib
+  public function __get($name)
+  {
+    if ($name == 'tanggalLahir') {
+      // Mengakses nilai properti tanggalLahir yang telah diformat
+      // melalui getter yang private untuk DIKEMBALIKAN
+      return $this->getTanggalLahir();
+    }
+
+    if ($name == 'usia') {
+      // Mengakses nilai properti usia yang telah diformat
+      // melalui getter yang private untuk DIKEMBALIKAN
+      return $this->getUsia();
+    }
+
+    echo '### Properti tidak ditemukan ###';
+  }
+}
+
+// Instansiasi objek
+$pengguna = new Pengguna();
+
+// Mengeset properti tanggalLahir melalui setter ajaib
+$pengguna->tanggalLahir = '2000-01-01';
+
+// Mengakses nilai properti tanggalLahir
+// yang telah diformat melalui getter ajaib untuk ditampilkan
+echo $pengguna->tanggalLahir; // 1 Januari 2000
+
+// Mencetak baris baru
+echo PHP_EOL;
+
+// Mengakses nilai properti usia
+// yang telah diformat melalui getter ajaib untuk ditampilkan
+echo $pengguna->usia; // 23 tahun (2023)
+```
+
+> <small>_Kode lengkap terdapat pada file <a href='7_setter_dan_getter5.php' target='_blank'>basics/14_oop_dasar/7_setter_dan_getter5.php</a>_.</small>
+
+Dengan mendefinisikan metode `__set` dan `__get` kita dapat melakukan pengesetan dan pengaksesan dari luar kelas yang seolah-olah seperti pengesetan dan pengaksesan langsung terhadap objek, walau sebenarnya kita tetap memanggil _setter_ dan _getter_ yang memiliki pengolahannya masing-masing.
+
+Setelah memahami _setter_-_getter_, enkapsulasi, dan _setter-getter_ ajaib, Cobalah analisa dan bereksperiman dengan kode pada _file_ <a href='7_setter_dan_getter6.php' target='_blank'>basics/14_oop_dasar/7_setter_dan_getter6.php</a>.
 
 ## 8. Method Chaining
 
