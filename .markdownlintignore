@@ -1,0 +1,7 @@
+/vendor
+**/storage/*
+tasks.md
+.env
+silabus.txt
+
+node_modules
