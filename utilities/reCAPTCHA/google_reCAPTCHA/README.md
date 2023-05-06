@@ -1,14 +1,15 @@
 ## Cara Membuat Captcha dengan Menggunakan Google reCAPTCHA
 
-- step 1 
-    - setting google rechptcha
-    - Buka link ini : [https://www.google.com/recaptcha](https://www.google.com/recaptcha)
+- step 1
+  - setting google rechptcha
+  - Buka link ini : [https://www.google.com/recaptcha](https://www.google.com/recaptcha)
 - step 2
-    - Untuk Label bisa Anda isikan bebas sesuai nama aplikasi yang Anda buat. Untuk kali ini kita   beri label `Bellshade`. Kemudian untuk tipe reCAPTCHA nya kita pilih yang reCAPTCHA v2.
+  - Untuk Label bisa Anda isikan bebas sesuai nama aplikasi yang Anda buat. Untuk kali ini kita   beri label `Bellshade`. Kemudian untuk tipe reCAPTCHA nya kita pilih yang reCAPTCHA v2.
 - step 3
-    - Implementsi dengan PHP
-    - Buat file chaptcha.php
-    ```
+  - Implementsi dengan PHP
+  - Buat file chaptcha.php
+
+    ```php
         <?php 
             //server-side-integration
             $secret_key = "isi_dengan_secret_key";

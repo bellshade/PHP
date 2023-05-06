@@ -1,6 +1,6 @@
 ## Kode kalkulator sederhana PHP
 
-```
+```php
 <html>
 <head>
     <?php

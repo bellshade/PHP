@@ -7,19 +7,24 @@ Konsep utama dari counting sort adalah sesuai dengan namanya yaitu menghitung ju
 Berikut mekanisme sederhana dari counting sort:
 
 - Sebuah array yang tidak berurutan didefinisikan, nilai maksimum yang diasumsikan diawal adalah `9`
+
 ```php
 [2, 5, 1, 2, 9, 6, 4, 7]
 ```
+
 - Dari deretan itu dilakukan satu _loop_ untuk menghitung tiap nilai dan menyimpan nilai itu dalam sebuah array tersendiri, array tersebut dapat berbentuk seperti ini
+
 ```php
 //  1  2  3  4  5  6  7  8  9
 // ---------------------------
 [0, 1, 2, 0, 1, 1, 1, 1, 0, 1]
 ```
+
 > _Perhatikan array akumulasi penghitungan diatas, pada index ke 2 bernilai `2` karena pada array yang akan diurutkan, nilai 2 muncul dua kali._ <br/>
 > _Dan begitu pula dengan nilai deretan array yang lain._
 
 - Untuk dilakukan penempatan tiap nilai agar tersusun secara urut, array akumulasi perhitungan diatas dimodifikasi dengan sum secara bertahap. Jadi tiap nilai pada array akumulasi itu dijumlahkan dengan nilai sebelumnya.
+
 ```php
 //  1  2  3  4  5  6  7  8  9
 // ---------------------------
@@ -27,9 +32,11 @@ Berikut mekanisme sederhana dari counting sort:
 // ^  ^  ^  ^  ^  ^  ^  ^  ^
 //+1 +2 +0 +1 +1 +1 +1 +0 +1
 ```
+
 > _Tiap nilai dalam elemen array, dijumlahkan dengan nilai yang sebelumnya, hal ini dilakukan agar tiap nilai berkorelasi dan terbentuk offset dengan nilai yang lebih kecil sehingga nilai-nilai itu dapat digunakan sebagai acuan index penempatan count array._
 
 - Lakukan pengurutan dengan menempatkan nilai array berdasarkan acuan index diatas.
+
 ```php
 # array yang akan diurutkan (arr)
 [2, 5, 1, 2, 9, 6, 4, 7]

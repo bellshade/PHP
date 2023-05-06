@@ -69,11 +69,12 @@ composer install
 
 Contoh:
 
-```
+```dotenv
 BASE_URL = 'http://localhost/PHP'
 ```
 
 - Kemudian kamu dapat mengaksesnya di browser dengan membuka `localhost/php` atau `127.0.0.1/php`.
+
 <p align="center">
     <img width="90%" src="./assets/images/getting-started.png"><br/><br/>
 </p>
@@ -82,7 +83,7 @@ BASE_URL = 'http://localhost/PHP'
 
 Jika kamu menggunakan Nginx sebagai Web Server, kamu memerlukan konfigurasi tambahan karena nginx tidak mendukung konfigurasi `.htaccess`. Dan karena project ini menggunakan _rewriting dan parsing url_, kamu harus menerapkan konfigurasi web server nginx berikut ini agar dapat rewrite path url menjadi sebuah parameter get yang merujuk ke `index.php`
 
-```
+```apacheconf
 location / {
   try_files $uri $uri/ /index.php?page=$uri;
   index index.php;
@@ -93,7 +94,7 @@ location / {
 
 Jika kamu menggunakan _web server_ bawaan PHP. Kami telah menyediakan `router.php` untuk menangani request URL. Untuk menjalankan server, kamu dapat menggunakan command ini:
 
-```
+```bash
 php -S localhost:8080 router.php
 ```
 

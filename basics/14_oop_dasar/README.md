@@ -85,7 +85,7 @@ Perhatikan disini karena setiap _use case_ disendirikan pada tiap-tiap objek, de
 
 `Class` adalah sebuah template / blueprint. Disinilah ditentukan aturan-aturan atau apa saja yang harus ada dari sebuah objek agar selalu dijaga konsistensinya. Sementara `Object` adalah sebuah penerapan dari _class_ itu sendiri, kita menyebutnya sebagai _instance_
 
-Misalnya ada pengguna yang didalamnya harus ada nama, jenis kelamin, email, alamat dll. Kita bisa buat class `Pengguna` dan menentukan nama, email dll sebagai properti _(kita akan bahas di sub materi berikutnya)_. Lalu kita juga bisa buat penerapan dari class itu. misalnya ada `agus` yang merupakan penerapan dari class `Pengguna`, maka agus ini bisa kita sebut sebagai _object_. Karena `agus` merupakan objek dari class `Pengguna`, maka objek `agus` pasti mengikuti blueprint yang tertulis pada kelasnya, seperti mempunyai nama, email dsb. 
+Misalnya ada pengguna yang didalamnya harus ada nama, jenis kelamin, email, alamat dll. Kita bisa buat class `Pengguna` dan menentukan nama, email dll sebagai properti _(kita akan bahas di sub materi berikutnya)_. Lalu kita juga bisa buat penerapan dari class itu. misalnya ada `agus` yang merupakan penerapan dari class `Pengguna`, maka agus ini bisa kita sebut sebagai _object_. Karena `agus` merupakan objek dari class `Pengguna`, maka objek `agus` pasti mengikuti blueprint yang tertulis pada kelasnya, seperti mempunyai nama, email dsb.
 
 <br/>
 
@@ -108,6 +108,7 @@ Objek dapat dibuat dengan cukup buat sebuah variable, lalu isi dengan instance d
 ```php
 $agus = new Pengguna();
 ```
+
 </br>
 
 ## 3. Properti dan Method
@@ -162,12 +163,12 @@ class NamaKelas {
 
 </br>
 
-
 ## 4. Constructor dan Destructor
 
-`Constructor dan destructor` adalah salah satu jenis method spesial yang disediakan PHP sebagai fitur paradigma pemrograman berorientasi objek dalam bahasa pemrograman PHP. _Constructor destructor_ ini tak hanya ditemukan dalam PHP namun juga bahasa pemrograman lainnya yang mendukung paradigma OOP. Singkatnya, `Constructor` adalah method yang akan dijalankan pertama kali saat sebuah kelas di instantiasi menjadi objek. Sementara `Destructor` adalah kebalikannya, yaitu method yang dijalankan di akhir penggunaan objeknya. 
+`Constructor dan destructor` adalah salah satu jenis method spesial yang disediakan PHP sebagai fitur paradigma pemrograman berorientasi objek dalam bahasa pemrograman PHP. _Constructor destructor_ ini tak hanya ditemukan dalam PHP namun juga bahasa pemrograman lainnya yang mendukung paradigma OOP. Singkatnya, `Constructor` adalah method yang akan dijalankan pertama kali saat sebuah kelas di instantiasi menjadi objek. Sementara `Destructor` adalah kebalikannya, yaitu method yang dijalankan di akhir penggunaan objeknya.
 
 Cara membuat constructor adalah mirip dengan saat membuat method biasa. Namun constructor harus dalam berbentuk method yang bernama `__construct` dan harus ditulis dalam sebuah kelas.
+
 ```php
 class SebuahKelas 
 {
@@ -176,7 +177,9 @@ class SebuahKelas
   }
 }
 ```
+
 Sementara destructor dapat dibuat dengan membuat method yang bernama `__destruct()`.
+
 ```php
 class SebuahKelas
 {
@@ -185,6 +188,7 @@ class SebuahKelas
   }
 }
 ```
+
 > <i><small>Source code demo ada di basics/14_oop_dasar/4_constructor_destructor.php</small></i>
 <a href='4_constructor_destructor.php' target='_blank'>
     <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
@@ -203,6 +207,7 @@ class Anggota {
 }
 new Anggota('Budi', 'laki-laki');
 ```
+
 > <i><small>Source code demo ada di basics/14_oop_dasar/4_constructor_destructor2.php</small></i>
 <a href='4_constructor_destructor2.php' target='_blank'>
     <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
@@ -212,7 +217,8 @@ new Anggota('Budi', 'laki-laki');
 
 Properti dan method dapat juga berbentuk static, artinya tidak ada ketergantungan antara method / properti static dengan objek dari kelasnya. Bahkan faktanya, tidak perlu dibuat objek agar dapat digunakan. Method / properti static adalah salah satu fitur dalam paradigma OOP untuk membuat method atau properti dari sebuah class yang dapat dijalankan tanpa dibuat sebuah objek dari class tersebut.
 
-Untuk membuat properti static, cukup tambahkan keyword `static` sebelum nama variabel. Untuk membuat method static juga mirip, tambahkan keyword `static` sebelum `function`
+Untuk membuat properti static, cukup tambahkan keyword `static` sebelum nama variabel. Untuk membuat method static juga mirip, tambahkan keyword `static` sebelum `function`.
+
 ```php
 class Kelas 
 {
@@ -222,7 +228,9 @@ class Kelas
   }
 }
 ```
+
 untuk memanggil properti atau method static didalam kelas dapat menggunakan keyword `self::$propertinya` atau `self::methodStaticnya()`. Jika berada dalam parent class dan ingin memanggil dari class turunannya, dapat menggunakan keyword `parent::xx` _(kita akan bahas kelas turunan ini pada materi inheritance nanti)_
+
 ```php
 class Kelas 
 {
@@ -236,7 +244,7 @@ class Kelas
 }
 ```
 
-Properti dan method static ini pada penggunaannya seringkali digunakan untuk melakukan sesuatu yang tidak spesifik ke objek dari kelas tertentu melainkan ke sesuatu yang lebih umum namun tetap terkait dengan tujuan kelas. Misalnya pada kelas `Kasir` terdapat waktu shift yang tidak spesifik ke kasir melainkan ke seluruh kasir. Pada kasus tersebut kita bisa gunakan method dan properti static seperti berikut 
+Properti dan method static ini pada penggunaannya seringkali digunakan untuk melakukan sesuatu yang tidak spesifik ke objek dari kelas tertentu melainkan ke sesuatu yang lebih umum namun tetap terkait dengan tujuan kelas. Misalnya pada kelas `Kasir` terdapat waktu shift yang tidak spesifik ke kasir melainkan ke seluruh kasir. Pada kasus tersebut kita bisa gunakan method dan properti static seperti berikut:
 
 ```php
 <?php
@@ -266,6 +274,7 @@ class Kasir
 Kasir::setWaktuShift(2);
 echo 'Waktu Shift: ' . Kasir::$waktuShift;
 ```
+
 > <i><small>Source code demo ada di basics/14_oop_dasar/5_property_dan_method_static.php</small></i>
 <a href='5_property_dan_method_static.php' target='_blank'>
     <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">

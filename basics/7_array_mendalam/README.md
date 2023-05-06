@@ -62,7 +62,6 @@ Dalam materi ini kita bahas mengenai Array lebih lanjut.
 </li>
 </ul>
 
-
 ## 1. Array
 
 ### Apa itu Array
@@ -150,7 +149,7 @@ Kode di atas juga bisa diganti dengan syntax yang lebih pendek dengan mendeklara
 $variable = ['Padang', 'Batu Sangkar', 'Payahkumbuh'];
 ```
 
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](1_array.php#L10-L28)
+[![Tautan contoh kode program array 1](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](1_array.php#L10-L28)
 
 ### Mengakses Elemen Array
 
@@ -172,7 +171,7 @@ echo $kota[1];
 
 Dengan demikian kita telah bisa membuat dan mengakses sebuah Array.
 
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](1_array.php#L29-L34)
+[![Tautan contoh kode program array 2](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](1_array.php#L29-L34)
 
 ## 2. Jenis Array
 
@@ -239,7 +238,7 @@ Wah.. cukup dinamis bukan!!!
 
 Untuk memahami lebih lanjut kita dapat pelajari contoh kode.
 
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](2_jenis_array.php#L11-L22)
+[![Tautan contoh kode program jenis array 1](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](2_jenis_array.php#L11-L22)
 
 ### 2. Array Asosiatif
 
@@ -275,11 +274,10 @@ Untuk mengakses data tersebut sama caranya dengan Array index hanya key yang tad
 echo $kota['ibukota'];  // Tampilkan elemen array dengan key ibukota
 ```
 
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](1_jenis_array.php#L24-L29)
+[![Tautan contoh kode program jenis array 2](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](2_jenis_array.php#L24-L29)
 
-**TAMBAHAN**
-
-Array Index dan Array Asosiatif dapat digabungkan menjadi satu, dengan aturan sama yang terdapat dalam *Array Index* bagi elemen yang key nya tidak terdefinisikan.
+> **TAMBAHAN:**
+> Array Index dan Array Asosiatif dapat digabungkan menjadi satu, dengan aturan sama yang terdapat dalam *Array Index* bagi elemen yang key nya tidak terdefinisikan.
 contoh :
 
 ```php
@@ -304,7 +302,7 @@ Array
 )
 ```
 
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](1_array.php#L31-L45)
+[![Tautan contoh kode program array](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](1_array.php#L31-L45)
 
 Akhirnya kita sudah mengenal apa itu **array index** dan **array asosiasif**.
 
@@ -341,7 +339,7 @@ Untuk mengakses nilai array tersebut kita memakai sintaks `$data[baris][kolom]` 
 echo $data[1][0];   // Hasil BA
 ```
 
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](3_1_array_multidimensi.php)
+[![Tautan contoh kode program array multi dimensi](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](3_1_array_multidimensi.php)
 
 Untuk lebih memahami coba kita implementasikan sebuah tabel ke dalam array.
 
@@ -371,11 +369,11 @@ $tabelcontoh = [
 
 Kode di atas telah menyimpan data [tabel 1. Contoh](#tabel-1-contoh) ke dalam Multi Dimensi Array (tepatnya tiga dimensi array), saat kita melakukan perintah `print_r` terhadap array tersebut akan menghasilkan tampilan seperti ini.
 
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](3_2_implementasi_table_array.php)
+[![Tautan contoh kode program implementasi tabel array](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](3_2_implementasi_table_array.php)
 
 Untuk mengakses data tabel tersebut ke dalam tabel kita dapat menggunakan beberapa metode perulangan.
 
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](3_3_array_kedalam_table.php)
+[![Tautan contoh kode program mengakses tabel array](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](3_3_array_kedalam_table.php)
 
 > **Dimensi Array**
 >
@@ -399,18 +397,18 @@ Untuk menghitung elemen yang terdapat di dalam sebuah Array dapat menggunakan du
 sizeof(array $arr, int $mode = 0) : int
 ```
 
-**Parameter**
+<b>Parameter</b>
 
-- `$arr` Diisi dengan variable array yang akan dicari jumlah elementnya _(wajib diisi)_
-- `$mode` Diisi dengan nilai `0` atau `1` _(opsional)_
-  - `0` atau `COUNT_NORMAL` - Default, tidak akan menghitung elemen dari array multidimensi di dalamnya _(linear)_.
-  - `1` atau `COUNT_RECURSIVE` - Akan menghitung jumlah elemen dari array multidimensi di dalamnya _(recursive)_.
+- `$arr` Diisi dengan variable array yang akan dicari jumlah elementnya *(wajib diisi)*
+- `$mode` Diisi dengan nilai `0` atau `1` *(opsional)*
+  - `0` atau `COUNT_NORMAL` - Default, tidak akan menghitung elemen dari array multidimensi di dalamnya *(linear)*.
+  - `1` atau `COUNT_RECURSIVE` - Akan menghitung jumlah elemen dari array multidimensi di dalamnya *(recursive)*.
 
-**Hasil**
+<b>Hasil</b>
 
 - Jumlah elemen pada array
 
-**Contoh penggunaan**
+<b>Contoh penggunaan</b>
 
 ```php
 <?php
@@ -420,7 +418,7 @@ $creators = ['taylor otwell', 'caleb porzio', 'evan you'];
 echo sizeof($creators);  // 3
 ```
 
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_sizeof_1.php)
+[![Tautan contoh kode program fungsi sizeof 1](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_sizeof_1.php)
 
 Atau
 
@@ -445,7 +443,7 @@ echo sizeof($tools, true);  // 11
 echo sizeof($tools, 1);     // 11
 ```
 
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_sizeof_2.php)
+[![Tautan contoh kode program fungsi sizeof 2](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_sizeof_2.php)
 
 #### b. count
 
@@ -453,18 +451,18 @@ echo sizeof($tools, 1);     // 11
 count(array $arr, int $mode = 0) : int
 ```
 
-**Parameter**
+<b>Parameter</b>
 
-- `$arr` Diisi dengan variable array yang akan dicari jumlah elementnya _(wajib diisi)_
-- `$mode` Diisi dengan nilai `0` atau `1` _(opsional)_
-  - `0` atau `COUNT_NORMAL` - Default, tidak akan menghitung elemen dari array multidimensi di dalamnya _(linear)_.
-  - `1` atau `COUNT_RECURSIVE` - Akan menghitung jumlah elemen dari array multidimensi di dalamnya _(recursive)_.
+- `$arr` Diisi dengan variable array yang akan dicari jumlah elementnya *(wajib diisi)*
+- `$mode` Diisi dengan nilai `0` atau `1` *(opsional)*
+  - `0` atau `COUNT_NORMAL` - Default, tidak akan menghitung elemen dari array multidimensi di dalamnya *(linear)*.
+  - `1` atau `COUNT_RECURSIVE` - Akan menghitung jumlah elemen dari array multidimensi di dalamnya *(recursive)*.
 
-**Hasil**
+<b>Hasil</b>
 
 - Jumlah elemen pada array
 
-**Contoh Penggunaan**
+<b>Contoh Penggunaan</b>
 
 ```php
 <?php
@@ -478,7 +476,7 @@ echo count($array);                     //COUNT_NORMAL Mode menghasilkan nilai :
 echo count($array, COUNT_RECURSIVE);    //COUNT_RECURSIVE Mode menghasilkan nilai : 8
 ```
 
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_count.php)
+[![Tautan contoh kode program fungsi count](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_count.php)
 
 ### Mendapatkan nilai dari array
 
@@ -490,17 +488,17 @@ Untuk mendapatkan key dari suatu array.
 array_keys(array $arr, ?string $value = null, ?bool $strict) : array
 ```
 
-**Parameter**
+<b>Parameter</b>
 
-- `$arr` array yang akan digunakan _(wajib diisi)_
-- `$value` nilai dari key yang akan kita ambil _(opsional)_
-- `$strict` apakah spesifik dengan tipe datanya atau tidak? _(opsional)_
+- `$arr` array yang akan digunakan *(wajib diisi)*
+- `$value` nilai dari key yang akan kita ambil *(opsional)*
+- `$strict` apakah spesifik dengan tipe datanya atau tidak? *(opsional)*
 
-**Hasil**
+<b>Hasil</b>
 
 - `Array`
 
-**Contoh Penggunaan**
+<b>Contoh Penggunaan</b>
 
 ```php
 <?php
@@ -515,7 +513,7 @@ print_r(array_keys($cars, 'bmw'));          // ['germany']
 print_r(array_keys($cars, 'bmw', true));    // ['germany']
 ```
 
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_array_keys.php)
+[![Tautan contoh kode program fungsi array_keys](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_array_keys.php)
 
 #### b. array_values
 
@@ -525,15 +523,15 @@ Untuk mendapatkan nilai dari suatu array.
 array_values(array $arr) : array
 ```
 
-**Parameter**
+<b>Parameter</b>
 
-- `$arr` array yang akan digunakan _(wajib diisi)_
+- `$arr` array yang akan digunakan *(wajib diisi)*
 
-**Hasil**
+<b>Hasil</b>
 
 - `Array`
 
-**Contoh Penggunaan**
+<b>Contoh Penggunaan</b>
 
 ```php
 <?php
@@ -546,7 +544,7 @@ $cars = [
 print_r(array_values($cars));   // ['toyota', 'bmw']
 ```
 
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_array_values.php)
+[![Tautan contoh kode program fungsi array_values](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_array_values.php)
 
 ### Mengubah elemen pada array
 
@@ -580,16 +578,16 @@ array_push(array &$arr, mixed ...$values) : int
 > array_push($letters, 'a', 'b')
 > ```
 
-**Parameter**
+<b>Parameter</b>
 
 - `$arr` array tujuan
 - `$values` nilai elemen baru, yang akan ditambahkan
 
-**Hasil**
+<b>Hasil</b>
 
 - Jumlah elemen setelah ditambahkan
 
-**Contoh Penggunaan**
+<b>Contoh Penggunaan</b>
 
 ```php
 <?php
@@ -602,7 +600,7 @@ array_push($cars, 'mitsubisi', 'audi'); // 5
 // $cars = ['bmw', 'toyota', 'daihatsu', 'mitsubisi', 'audi']
 ```
 
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_array_push.php)
+[![Tautan contoh kode program fungsi array_push](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_array_push.php)
 
 #### b. array_pop
 
@@ -624,15 +622,15 @@ Untuk mengeluarkan elemen bagian **akhir** pada array.
 array_pop(array &$arr) : mixed
 ```
 
-**Parameter**
+<b>Parameter</b>
 
 - `$arr` array yang akan dikeluarkan elemen terakhirnya.
 
-**Hasil**
+<b>Hasil</b>
 
 - Element yang dikeluarkan.
 
-**Contoh Pengunaan**
+<b>Contoh Pengunaan</b>
 
 ```php
 <?php
@@ -644,7 +642,7 @@ array_pop($cars);   // 'toyota'
 // $cars = ['bmw']
 ```
 
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_array_pop.php)
+[![Tautan contoh kode program fungsi array_pop](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_array_pop.php)
 
 #### c. array_shift
 
@@ -670,15 +668,15 @@ array_shift(array &$arr) : mixed
 >
 > Tanda `&` pada `$arr` berarti akan mengubah nilai dari `$arr`
 
-**Parameter**
+<b>Parameter</b>
 
 - `$arr` array yang akan dikeluarkan elemen pertamanya.
 
-**Hasil**
+<b>Hasil</b>
 
 - Element yang dikeluarkan.
 
-**Contoh Penggunaan**
+<b>Contoh Penggunaan</b>
 
 ```php
 <?php
@@ -690,7 +688,7 @@ array_shift($cars);   // 'bmw'
 // $cars = ['toyota']
 ```
 
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_array_shift.php)
+[![Tautan contoh kode program fungsi array_shift](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_array_shift.php)
 
 #### d. array_unshift
 
@@ -717,16 +715,16 @@ array_unshift(array &$arr, mixed ...$values) : int
 > Tanda `&` pada `$arr` berarti akan mengubah nilai dari `$arr`. <br>
 > **...$values** berarti dapat diisi nilai `1,2,3`, contoh: `array_push($letters, 'a', 'b')`
 
-**Parameter**
+<b>Parameter</b>
 
 - `$arr` array yang akan ditambahkan elemen pertamanya.
 - `$values` nilai elemen baru, yang akan ditambahkan.
 
-**Hasil**
+<b>Hasil</b>
 
 - Jumlah elemen setelah ditambahkan
 
-**Contoh Penggunaan**
+<b>Contoh Penggunaan</b>
 
 ```php
 <?php
@@ -739,7 +737,7 @@ array_push($cars, 'mitsubisi', 'audi'); // 5
 // $cars = ['mitsubisi', 'audi', 'daihatsu', 'bmw', 'toyota']
 ```
 
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_array_unshift.php)
+[![Tautan contoh kode program fungsi array_unshift](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_array_unshift.php)
 
 ### Membandingkan array
 
@@ -771,16 +769,16 @@ array_diff(array $arr, array ...$arrs) : array
 > array_diff($arr1, $arr2, $arr3)
 > ```
 
-**Parameter**
+<b>Parameter</b>
 
 - `$arr` array pertama yang akan dibandingkan.
 - `$arrs` array lain sebagai pembanding.
 
-**Hasil**
+<b>Hasil</b>
 
 - Elemen-elemen yang tidak terdapat di array pembanding.
 
-**Contoh Penggunaan**
+<b>Contoh Penggunaan</b>
 
 ```php
 <?php
@@ -791,7 +789,7 @@ $your_hobbies = ['reading', 'gaming'];
 echo array_diff($my_hobbies, $your_hobbies); // ['coding']
 ```
 
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_array_diff.php)
+[![Tautan contoh kode program fungsi array_diff](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_array_diff.php)
 
 #### b. array_splice
 
@@ -807,23 +805,23 @@ array_splice(array &$arr, int $offset, ?int $length = null, mixed $replacement =
 >
 > Tanda `?` pada `int $length` berarti boleh kosong / *null*.
 
-**Parameter**
+<b>Parameter</b>
 
 - `$arr` array yang akan dihapus elementnya
 - `$offset` urutan awal elemen yang akan dihapus
-  - Jika _positive_ maka `offset` akan dihitung dari **awal** array
-  - Jika _negative_ maka `offset` akan dihitung dari **akhir** array
+  - Jika *positive* maka `offset` akan dihitung dari **awal** array
+  - Jika *negative* maka `offset` akan dihitung dari **akhir** array
 - `$length` banyaknya elemen yang akan dihapus
-  - Jika _null_ maka dimulai dari `offset` hingga akhir array
-  - Jika _positive_ maka dihapus sesuai `$length`
-  - Jika _negative_ maka akhir dari bagian yang dihapus akan menjadi elemen dari array
+  - Jika *null* maka dimulai dari `offset` hingga akhir array
+  - Jika *positive* maka dihapus sesuai `$length`
+  - Jika *negative* maka akhir dari bagian yang dihapus akan menjadi elemen dari array
 - `$replacement` array yang akan menggantikan array yang dihapus
 
-**Hasil**
+<b>Hasil</b>
 
 - Array yang tersisa
 
-**Contoh Penggunaan**
+<b>Contoh Penggunaan</b>
 
 ```php
 <?php
@@ -841,7 +839,7 @@ array_splice($arr3, 2, 1, ['e']);   // ['c']
 // $arr1 = ['a', 'b', 'e', 'd']
 ```
 
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_array_splice.php)
+[![Tautan contoh kode program fungsi array_splice](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_array_splice.php)
 
 ### Menggabungkan array
 
@@ -861,15 +859,15 @@ array_merge(array ...$arrs) : array
 > array_merge($arr1, $arr2, $arr3)
 > ```
 
-**Parameter**
+<b>Parameter</b>
 
 - `$arrs` array yang akan digabungkan.
 
-**Hasil**
+<b>Hasil</b>
 
 - Array yang telah digabungkan
 
-**Contoh Penggunaan**
+<b>Contoh Penggunaan</b>
 
 ```php
 <?php
@@ -880,7 +878,7 @@ $arr2 = ['c', 'd'];
 $merged = array_merge($arr1, $arr2);    // ['a', 'b', 'c', 'd'];
 ```
 
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_array_merge.php)
+[![Tautan contoh kode program fungsi array_merge](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_array_merge.php)
 
 ### Pengacakan pada array
 
@@ -892,15 +890,15 @@ Berfungsi untuk membalikan nilai array menjadi keys, dan sebaliknya.
 array_flip(array $arr) : array
 ```
 
-**Parameter**
+<b>Parameter</b>
 
 - `$arr` array yang akan diubah
 
-**Hasil**
+<b>Hasil</b>
 
 - Array setelah diubah
 
-**Contoh Penggunaan**
+<b>Contoh Penggunaan</b>
 
 ```php
 <?php
@@ -919,7 +917,7 @@ $fliped = array_flip($arr);
 // ]
 ```
 
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_array_flip.php)
+[![Tautan contoh kode program fungsi array_flip](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_array_flip.php)
 
 #### b. array_reverse
 
@@ -929,16 +927,16 @@ Berfungsi untuk membalikan urutan elemen pada array.
 array_reverse(array $arr, bool $preverse_keys = false) : array
 ```
 
-**Parameter**
+<b>Parameter</b>
 
 - `$arr` array yang akan dibalikan
-- `$preverse_keys` jika _true_ maka key tidak akan diubah
+- `$preverse_keys` jika `true` maka key tidak akan diubah
 
-**Hasil**
+<b>Hasil</b>
 
 - Array yang telah dibalikan urutannya
 
-**Contoh Penggunaan**
+<b>Contoh Penggunaan</b>
 
 ```php
 <?php
@@ -948,11 +946,11 @@ $arr = ['a', 'b', 'c'];
 array_reverse($arr);    // ['c', 'b', 'a']
 ```
 
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_array_reverse.php)
+[![Tautan contoh kode program fungsi array_reverse](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_array_reverse.php)
 
 #### c. array_rand
 
-Berfungsi untuk mengambil satu atau lebih elemen array secara acak _(random)_.
+Berfungsi untuk mengambil satu atau lebih elemen array secara acak (*random*).
 
 ```php
 array_rand(array $arr, int $num = 1) : int|string|array
@@ -960,16 +958,16 @@ array_rand(array $arr, int $num = 1) : int|string|array
 
 > Tanda `|` berarti "atau"
 
-**Parameter**
+<b>Parameter</b>
 
 - `$arr` array yang akan diambil elementnya
 - `$num` jumlah elemen yang akan diambil
 
-**Hasil**
+<b>Hasil</b>
 
 - Key dari elemen yang diambil secara acak
 
-**Contoh Penggunaan**
+<b>Contoh Penggunaan</b>
 
 ```php
 <?php
@@ -980,7 +978,7 @@ array_rand($games);
 array_rand($games, 2);
 ```
 
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_array_rand.php)
+[![Tautan contoh kode program fungsi array_rand](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_array_rand.php)
 
 #### d. array_slice
 
@@ -992,23 +990,23 @@ array_slice(array $arr, int $offset, ?int $length = null, bool $preserve_keys = 
 
 > Tanda `?` pada `int $length` berarti boleh kosong / *null*.
 
-**Parameter**
+<b>Parameter</b>
 
 - `$arr` array yang akan diambil elementnya
 - `$offset` urutan awal elemen yang akan diambil
-  - Jika _positive_ maka urutan akan dihitung dari **awal** `offset` tersebut
-  - Jika _negative_ maka urutan akan dari **akhir** array hingga `offset` tersebut
+  - Jika *positive* maka urutan akan dihitung dari **awal** `offset` tersebut
+  - Jika *negative* maka urutan akan dari **akhir** array hingga `offset` tersebut
 - `$length` banyaknya elemen yang akan dihapus
-  - Jika _null_ maka diambil dari `offset` hingga akhir array
-  - Jika _positive_ maka diambil sesuai `length`
-  - Jika _negative_ maka akan berhenti sesuai `length` dari akhir array
-- `$preserve_keys` jika _true_ akan mempertahankan key / tidak mengubah key pada elemen
+  - Jika *null* maka diambil dari `offset` hingga akhir array
+  - Jika *positive* maka diambil sesuai `length`
+  - Jika *negative* maka akan berhenti sesuai `length` dari akhir array
+- `$preserve_keys` jika *true* akan mempertahankan key / tidak mengubah key pada elemen
 
-**Hasil**
+<b>Hasil</b>
 
 - Array yang diambil
 
-**Contoh Penggunaan**
+<b>Contoh Penggunaan</b>
 
 ```php
 <?php
@@ -1020,15 +1018,15 @@ array_slice($fruits, 2, 2);         // ['grape', 'banana']
 array_slice($fruits, 2, 2, true);   // ['1' => 'grape', '2' => 'banana']
 ```
 
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_array_slice.php)
+[![Tautan contoh kode program fungsi array_slice](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_array_slice.php)
 
 ### Pengurutan pada array
 
-Ketika menggunakan array seringkali elemen pada array tersebut memiliki urutan yang acak, maka untuk merapihkannya kita memerlukan fungsi untuk pengurutan _(order)_, seperti berikut :
+Ketika menggunakan array seringkali elemen pada array tersebut memiliki urutan yang acak, maka untuk merapihkannya kita memerlukan fungsi untuk pengurutan *(order)*, seperti berikut :
 
 #### a. sort
 
-Berfungsi untuk mengurutkan array secara _ascending_ atau **A-Z**.
+Berfungsi untuk mengurutkan array secara *ascending* atau **A-Z**.
 
 ```php
 sort(array &$arr, int $flags = SORT_REGULAR) : bool
@@ -1036,7 +1034,7 @@ sort(array &$arr, int $flags = SORT_REGULAR) : bool
 
 > Tanda `&` pada `$arr` berarti akan mengubah nilai dari `$arr`
 
-**Parameter**
+<b>Parameter</b>
 
 - `$arr` array yang akan diurutkan
 - `$flags` ketentuan dari pengurutan yang akan dilakukan
@@ -1047,11 +1045,11 @@ sort(array &$arr, int $flags = SORT_REGULAR) : bool
   - `SORT_NATURAL` melakukan pengurutan secara huruf menggunakan pengurutan natural
   - `SORT_FLAG_CASE` dapat menggabungkan `SORT_STRING` atau `SORT_NATURAL`
 
-**Hasil**
+<b>Hasil</b>
 
-- Nilai _true_
+- Nilai `true`
 
-**Contoh Penggunaan**
+<b>Contoh Penggunaan</b>
 
 ```php
 <?php
@@ -1063,11 +1061,11 @@ sort($fruits, SORT_NUMERIC);    // ["avocado","banana","grape","orange","32",32,
 sort($fruits, SORT_STRING);     // [1213,2213,"32",32,"avocado","banana","grape","orange"]
 ```
 
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_sort.php)
+[![Tautan contoh kode program fungsi array_sort](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_sort.php)
 
 #### b. rsort
 
-Berfungsi untuk mengurutkan array secara _descending_ atau **Z-A**.
+Berfungsi untuk mengurutkan array secara *descending* atau **Z-A**.
 
 ```php
 rsort(array &$arr, int $flags = SORT_REGULAR) : bool
@@ -1075,7 +1073,7 @@ rsort(array &$arr, int $flags = SORT_REGULAR) : bool
 
 > tanda **&** pada `$arr` berarti akan mengubah nilai dari `$arr`
 
-**Parameter**
+<b>Parameter</b>
 
 - `$arr` array yang akan diurutkan
 - `$flags` ketentuan dari pengurutan yang akan dilakukan
@@ -1086,11 +1084,11 @@ rsort(array &$arr, int $flags = SORT_REGULAR) : bool
   - `SORT_NATURAL` melakukan pengurutan secara huruf menggunakan pengurutan natural
   - `SORT_FLAG_CASE` dapat menggabungkan `SORT_STRING` atau `SORT_NATURAL`
 
-**Hasil**
+<b>Hasil</b>
 
-- Nilai _true_
+- Nilai `true`
 
-**Contoh Penggunaan**
+<b>Contoh Penggunaan</b>
 
 ```php
 <?php
@@ -1102,11 +1100,11 @@ rsort($fruits, SORT_NUMERIC);    // [2213,1213,"32",32,"orange","grape","banana"
 rsort($fruits, SORT_STRING);     // ["orange","grape","banana","avocado","32",32,2213,1213]
 ```
 
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_rsort.php)
+[![Tautan contoh kode program fungsi array_rsort](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_rsort.php)
 
 #### c. asort
 
-Sama seperti [sort](#a-sort) berfungsi untuk mengurutkan array secara _ascending_ atau **A-Z** tetapi dengan **mempertahankan nilai dari key tiap elemen**.
+Sama seperti [sort](#a-sort) berfungsi untuk mengurutkan array secara *ascending* atau **A-Z** tetapi dengan **mempertahankan nilai dari key tiap elemen**.
 
 ```php
 asort(array &$arr, int $flags = SORT_REGULAR) : bool
@@ -1114,7 +1112,7 @@ asort(array &$arr, int $flags = SORT_REGULAR) : bool
 
 > Tanda `&` pada `$arr` berarti akan mengubah nilai dari `$arr`
 
-**Parameter**
+<b>Parameter</b>
 
 - `$arr` array yang akan diurutkan
 - `$flags` ketentuan dari pengurutan yang akan dilakukan
@@ -1125,11 +1123,11 @@ asort(array &$arr, int $flags = SORT_REGULAR) : bool
   - `SORT_NATURAL` melakukan pengurutan secara huruf menggunakan pengurutan natural
   - `SORT_FLAG_CASE` dapat menggabungkan `SORT_STRING` atau `SORT_NATURAL`
 
-**Hasil**
+<b>Hasil</b>
 
-- Nilai _true_
+- Nilai `true`
 
-**Contoh Penggunaan**
+<b>Contoh Penggunaan</b>
 
 ```php
 <?php
@@ -1148,11 +1146,11 @@ asort($fruits);
 // ];
 ```
 
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_asort.php)
+[![Tautan contoh kode program fungsi asort](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_asort.php)
 
 #### d. arsort
 
-Sama seperti [rsort](#b-rsort) berfungsi untuk mengurutkan array secara _descending_ atau **Z-A** tetapi dengan **mempertahankan nilai dari key tiap elemen**.
+Sama seperti [rsort](#b-rsort) berfungsi untuk mengurutkan array secara *descending* atau **Z-A** tetapi dengan **mempertahankan nilai dari key tiap elemen**.
 
 ```php
 arsort(array &$arr, int $flags = SORT_REGULAR) : bool
@@ -1160,7 +1158,7 @@ arsort(array &$arr, int $flags = SORT_REGULAR) : bool
 
 > Tanda `&` pada `$arr` berarti akan mengubah nilai dari `$arr`
 
-**Parameter**
+<b>Parameter</b>
 
 - `$arr` array yang akan diurutkan
 - `$flags` ketentuan dari pengurutan yang akan dilakukan
@@ -1171,11 +1169,11 @@ arsort(array &$arr, int $flags = SORT_REGULAR) : bool
   - `SORT_NATURAL` melakukan pengurutan secara huruf menggunakan pengurutan natural
   - `SORT_FLAG_CASE` dapat menggabungkan `SORT_STRING` atau `SORT_NATURAL`
 
-**Hasil**
+<b>Hasil</b>
 
-- Nilai _true_
+- Nilai `true`
 
-**Contoh Penggunaan**
+<b>Contoh Penggunaan</b>
 
 ```php
 <?php
@@ -1194,11 +1192,11 @@ arsort($fruits);
 // ];
 ```
 
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_arsort.php)
+[![Tautan contoh kode program fungsi arsort](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_arsort.php)
 
 #### e. ksort
 
-Sama seperti [sort](#a-sort) berfungsi untuk mengurutkan array secara _ascending_ atau **A-Z** tetapi berdasarkan key dari elemen.
+Sama seperti [sort](#a-sort) berfungsi untuk mengurutkan array secara *ascending* atau **A-Z** tetapi berdasarkan key dari elemen.
 
 ```php
 ksort(array &$arr, int $flags = SORT_REGULAR) : bool
@@ -1206,7 +1204,7 @@ ksort(array &$arr, int $flags = SORT_REGULAR) : bool
 
 > Tanda `&` pada `$arr` berarti akan mengubah nilai dari `$arr`
 
-**Parameter**
+<b>Parameter</b>
 
 - `$arr` array yang akan diurutkan
 - `$flags` ketentuan dari pengurutan yang akan dilakukan
@@ -1217,11 +1215,11 @@ ksort(array &$arr, int $flags = SORT_REGULAR) : bool
   - `SORT_NATURAL` melakukan pengurutan secara huruf menggunakan pengurutan natural
   - `SORT_FLAG_CASE` dapat menggabungkan `SORT_STRING` atau `SORT_NATURAL`
 
-**Hasil**
+<b>Hasil</b>
 
-- Nilai _true_
+- Nilai `true`
 
-**Contoh Penggunaan**
+<b>Contoh Penggunaan</b>
 
 ```php
 <?php
@@ -1240,11 +1238,11 @@ ksort($fruits);
 // ];
 ```
 
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_ksort.php)
+[![Tautan contoh kode program fungsi ksort](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_ksort.php)
 
 #### f. krsort
 
-Sama seperti [rsort](#b-rsort) berfungsi untuk mengurutkan array secara _descending_ atau **Z-A** tetapi berdasarkan key dari elemen.
+Sama seperti [rsort](#b-rsort) berfungsi untuk mengurutkan array secara *descending* atau **Z-A** tetapi berdasarkan key dari elemen.
 
 ```php
 krsort(array &$arr, int $flags = SORT_REGULAR) : bool
@@ -1252,7 +1250,7 @@ krsort(array &$arr, int $flags = SORT_REGULAR) : bool
 
 > Tanda `&` pada `$arr` berarti akan mengubah nilai dari `$arr`
 
-**Parameter**
+<b>Parameter</b>
 
 - `$arr` array yang akan diurutkan
 - `$flags` ketentuan dari pengurutan yang akan dilakukan
@@ -1263,11 +1261,11 @@ krsort(array &$arr, int $flags = SORT_REGULAR) : bool
   - `SORT_NATURAL` melakukan pengurutan secara huruf menggunakan pengurutan natural
   - `SORT_FLAG_CASE` dapat menggabungkan `SORT_STRING` atau `SORT_NATURAL`
 
-**Hasil**
+<b>Hasil</b>
 
-- Nilai _true_
+- Nilai `true`
 
-**Contoh Penggunaan**
+<b>Contoh Penggunaan</b>
 
 ```php
 <?php
@@ -1286,8 +1284,7 @@ krsort($fruits);
 // ];
 ```
 
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_krsort.php)
-
+[![Tautan contoh kode program fungsi krsort](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_manipulasi_array_krsort.php)
 
 <table>
   <tr>

@@ -3,6 +3,7 @@
 Bubble Sort adalah metode pengurutan algoritma dengan cara melakukan penukaran data secara terus menerus sampai bisa dipastikan dalam suatu iterasi tertentu tidak ada lagi perubahan/penukaran.
 
 Urutan Kerja Bubble Sorting sebagai berikut :
+
 1. Ambil dua data yang saling berdekatan. Bila susunan menaik (Ascending) dimulai dari data paling bawah (index terkecil). Sebaliknya, untuk susunan menurun mulai dari data paling atas (index terbesar).
 2. Bila susunan data tidak benar maka akan dilakukan pertukaran. Untuk susunan naik nilai terkecil berada di bawah dan sebaliknya untuk susunan menurun.
 3. Untuk susunan menaik ambil nilai terbesar dari kedua data tersebut dan bandingkan dengan nilai data yang berada di posisi berdekatan selanjutnya. Sebaliknya, untuk susunan menurun ambil data terkecil.
@@ -21,6 +22,7 @@ Kemudian pada langkah 2 masih pada tahap 1 nilai elemen array terbesar dari taha
 Kemudian langkah ini kita ulangi kembali sampai tidak ada lagi elemen array dengan nomor index selanjutnya yang bisa di bandingkan.
 
 Dari alur di atas dapat kita susun sebuah Pengkondisian yaitu bila nilai elemen array pada index 1 lebih besar daripada nilai elemen array pada index 2 maka lakukan pertukaran nilai. Dimana nomor array index ke 2 adalah nomor index pertama + 1, sehingga bisa ditulis dalam pengkondisian sebagai berikut :
+
 ```php
 <?php
     if ($array[$index] > $array[$index + 1])
@@ -31,12 +33,15 @@ Dari alur di atas dapat kita susun sebuah Pengkondisian yaitu bila nilai elemen 
 ```
 
 Sekarang bagaimana melakukan pertukaran nilai antara elemen, kita bisa menggunakan sebuah variabel untuk menampung salah satu data terlebih dahulu dengan cara:
+
 ```php
     $temp = $array[$index];                 //tampung nilai dari elemen array[index] terlebih dahulu
     $array[$index] = $array[$index + 1];    //pindahkan nilai dari elemen $array[index + 1] kedalam elemen $array[index]
     $array[$index + 1] = $temp              //Kembalikan nilai yang kita tampung dari elemen $array[index] kedalam elemen $array[index + 1]
 ```
+
 dengan demikian kita dapat peroleh baris kode secara utuh seperti ini:
+
 ```php
 <?php
     if ($array[$index] > $array[$index + 1])
@@ -47,9 +52,11 @@ dengan demikian kita dapat peroleh baris kode secara utuh seperti ini:
     }
 ?>
 ```
+
 Dari sini kita sudah bisa melakukan pertukaran susunan pada langkah 1, lalu bagaimana dengan langkah 2 dan selanjunya? dari yang kita perhatikan pada diagram diatas, langkah 2 dan selanjutnya merupakan perulangan dari langkah 1, dimana elemen array yang digunakan adalah elemen array yang memiliki nilai terbesar dari langkah sebelumnya, karena kita telah melakukan pertukaran nilai elemen array dimana nilai terbesar terletak pada elemen array dengan index lebih tinggi maka dapat kita pastikan elemen array yang kita pakai selanjutnya adalah elemen array dengan index + 1.
 
 Karena bisa kita pastikan acuan kita adalah nomor index dari array, dimana perulangan selanjutnya menggunakan index lebih besar satu langkah dan perulangan dilakukan sebanyak 3 kali dengan index awal 0. Maka kita dapat menggunakan metode Perulangan For untuk ini, dengan baris kode sebagai berikut;
+
 ```php
 <?php
 
@@ -69,7 +76,9 @@ Karena bisa kita pastikan acuan kita adalah nomor index dari array, dimana perul
     echo '<br>';
 ?>
 ```
+
 Sekarang kita sudah selesaikan tahap 1, bagaimana dengan tahap 2 dan selanjutnya. Dari gambar hasil kerja dapat kita lihat bahwa ada 3 Tahap, dan setiap langkah dikerjakan dalam setiap tahap, berdasarkan hal ini kita bisa buatkan sebuah perulangan bersarang dengan metode perulangan for, dan perulangan for untuk langkah berada dalam perulangan for untuk tahap, dengan aturan for melakukan perulangan untuk tahap sebanyak 3 kali. sehingga bisa kita tulis baris kode sebagai berikut:
+
 ```php
 <?php
     $array = [3,2,4,1];
@@ -92,7 +101,9 @@ Sekarang kita sudah selesaikan tahap 1, bagaimana dengan tahap 2 dan selanjutnya
     }
 ?>
 ```
+
 Baris kode diatas akan menghasilkan :
+
 ```html
 [2,3,4,1]       //Tahap 1
 [2,3,4,1]
@@ -104,7 +115,9 @@ Baris kode diatas akan menghasilkan :
 [1,2,3,4]
 [1,2,3,4]
 ```
+
 Sampai di sini, baris kode yang kita buat sudah berhasil melakukan sorting terhadap array. Akan tetapi, ini hanya berlaku untuk array yang terdiri dari 4 elemen. Bagaimana jika array yang di-sorting kurang atau lebih dari 4 elemen? Tentunya kita harus mengubah kembali baris kode ini untuk menyesuaikan kebutuhan kita. Coba kita uji dengan array yang memiliki 6 elemen, sebagai contoh $array2 = [3,5,2,4,1,6]. Jika kita buat dalam bentuk ilustrasi di atas maka kita akan membuat langkah sebagai berikut:
+
 ```html
 [3,5,2,4,1,6]   [2,3,4,1,5,6]   [2,3,1,4,5,6]   [1,2,3,4,5,6]   [1,2,3,4,5,6]
 [3,2,5,4,1,6]   [2,3,4,1,5,6]   [2,1,3,4,5,6]   [1,2,3,4,5,6]
@@ -113,7 +126,9 @@ Sampai di sini, baris kode yang kita buat sudah berhasil melakukan sorting terha
 [3,2,4,1,5,6]                   
 Tahap : 1       Tahap: 2        Tahap: 3        Tahap: 4        Tahap: 5
 ```
-Dengan langkah hasil kerja seperti di atas dan di bandingkan dengan langkah hasil kerja array dengan 4 elemen diatas, kita bisa temukan sebuah pola yaitu: 
+
+Dengan langkah hasil kerja seperti di atas dan di bandingkan dengan langkah hasil kerja array dengan 4 elemen diatas, kita bisa temukan sebuah pola yaitu:
+
 1. Tahap :
     - Perulangan Tahap terjadi sebanyak elemen array kurang satu,
     - Setiap Tahap mengurangi satu elemen array akan di disusun.
@@ -122,13 +137,15 @@ Dengan langkah hasil kerja seperti di atas dan di bandingkan dengan langkah hasi
     - Setiap tahap mengurangi banyaknya langkah penyusunan yang disebabkan oleh berkurangnya elemen array yang disusun.
     - Langkah dimulai dari index `0` atau index terkecil.
 
-**Solusi**
- - Nomor Tahap ditambah banyaknya langkah sama dengan banyaknya elemen array, dapat ditulis | $tahap + $langka = count($array).
- - Tahap dimulai dari nilai 1 dan berakhir dengan banyak elemen array - 1. | 0 < $tahap <= count($array) - 1 | 0 < $tahap < count($array).
- - Langkah pertama dimulai dari `0` sesuai dengan index elemen. | $langkah = `0`.
- - Banyaknya langkah tiap tahap tidak akan melebihi dari jumlah elemen array dikurangi tahap, | $langkah <= count($array) - $tahap.
+Solusi:
 
- dari solusi diatas bisa kita tuliskan kedalam kode sebagai berikut
+- Nomor Tahap ditambah banyaknya langkah sama dengan banyaknya elemen array, dapat ditulis | $tahap + $langka = count($array).
+- Tahap dimulai dari nilai 1 dan berakhir dengan banyak elemen array - 1. | 0 < $tahap <= count($array) - 1 | 0 < $tahap < count($array).
+- Langkah pertama dimulai dari `0` sesuai dengan index elemen. | $langkah = `0`.
+- Banyaknya langkah tiap tahap tidak akan melebihi dari jumlah elemen array dikurangi tahap, | $langkah <= count($array) - $tahap.
+
+dari solusi diatas bisa kita tuliskan kedalam kode sebagai berikut
+
 ```php
 <?php
     $array = [3,5,2,4,1,6];
@@ -162,13 +179,15 @@ Dengan langkah hasil kerja seperti di atas dan di bandingkan dengan langkah hasi
 
 Sampai disini akhirnya Algoritma BubbleSort Pengurutan Naik (Ascending) kita selesai. Untuk Pengurutan secara menurun kita cukup membalik pola kerja langkah, dimana dimulai dari index elemen array terbesar ke terkecil, dengan pertukaran perbandingan dari yang besar berada dibagian depan.
 
-Untuk membuat pengurutan secara menurun (descending), lebih baik kita jadikan baris kode di atas menjadi sebuah fungsi dengan menambah sebuah paramater bertipe boolean untuk menentukan apakah pengurutan secara menaik atau secara menurun. Rincin alur atau flow nya sebagai berikut :
+Untuk membuat pengurutan secara menurun (descending), lebih baik kita jadikan baris kode di atas menjadi sebuah fungsi dengan menambah sebuah paramater bertipe boolean untuk menentukan apakah pengurutan secara menaik atau secara menurun. Rincin alur atau flow nya sebagai berikut:
+
 1. Langkah dimulai dari index elemen array tertinggi. | $langkah = count($array) - 1.
 2. index elemen yang akan dibandingkan adalah langkah dan langkah - 1 | $array[$langkah] > $array[$langkah - 1].
-4. setiap tahap mengurangi index elemen yang akan diurutkan, yaitu elemen dengan index terendah | indexTerendah = $tahap - 1. 
-3. Langkah berada pada index elemen tertinggi ke yang index elemen terendah setiap tahap | $tahap - 1 < $langkah < count($array) | $tahap <= $langkah < count(array).
+3. setiap tahap mengurangi index elemen yang akan diurutkan, yaitu elemen dengan index terendah | indexTerendah = $tahap - 1.
+4. Langkah berada pada index elemen tertinggi ke yang index elemen terendah setiap tahap | $tahap - 1 < $langkah < count($array) | $tahap <= $langkah < count(array).
 
-Baris kode :
+Baris kode:
+
 ```php
 <?php
 
@@ -220,10 +239,13 @@ echo '</pre>';
 ```
 
 Akhirnya algoritma kita selesai dan dapat kita panggil dengan syntax:
+
 ```php
 BubbleSort(array $array[, bool $desc = false]);
 ```
+
 dengan parameter $desc bersifat opsional jika menginginkan pengurutan secara menurun. Hasil dari baris kode diatas adalah:
+
 ```html
 Sebelum Pengurutan :
 Array
@@ -270,5 +292,4 @@ Untuk algoritma parameter dan nilai parameter tidaklah baku, baris kode diatas d
 Baris kode kita diatas bila kita susun diagram alur nya akan terbentuk seperti ini :
 ![bubble chart](../../../assets/content/algorithms/Sorting/Bubble/BubbleSort.svg)
 
-
-<p align="center">*** Terima Kasih ***</p>
+<p align="center">### Terima Kasih ###</p>

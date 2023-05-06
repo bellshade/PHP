@@ -5,6 +5,7 @@
 ```bash
 https://api.github.com/users/{username}
 ```
+
 * api github prayogaea
 
 ```bash

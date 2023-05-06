@@ -15,7 +15,6 @@ Seperti halnya bahasa pemrograman lainnya, materi pengkondisian bisa dibilang "w
 - [2. Switch](#2-switch)
   - [Cara penggunaan Switch](#cara-penggunaan-switch)
 - [3. Operator Ternary](#3-operator-ternary)
-  - [Cara penggunaan operator ternary](#cara-penggunaan-ternary-operator)
 
 ## 1. If, Else If dan Else
 
@@ -38,7 +37,6 @@ Ada beberapa hal yang harus diperhatikan dalam penggunaan *If*, *Else If*, dan *
 
 ### Cara penggunaan If, Else If, dan Else
 
-<br/>
 #### 1. If
 
 ```php
@@ -49,9 +47,8 @@ if (kondisi) {
 }
 ```
 
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](1_if_elseif_else.php#L17-L44)
+[![Tautan file kode contoh program pernyataan if 1](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](1_if_elseif_else.php#L17-L44)
 
-<br/>
 #### 2. Else
 
 ```php
@@ -64,9 +61,8 @@ if (kondisi) {
 }
 ```
 
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](1_if_elseif_else.php#L49-L82)
+[![Tautan file kode contoh program pernyataan if 2](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](1_if_elseif_else.php#L49-L82)
 
-<br/>
 #### 3. Else If
 
 ```php
@@ -81,9 +77,8 @@ if (kondisi_1) {
 }
 ```
 
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](1_if_elseif_else.php#L87-L113)
+[![Tautan file kode contoh program pernyataan if 3](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](1_if_elseif_else.php#L87-L113)
 
-<br/>
 #### 4. If Else - Shorthand
 
 ```php
@@ -92,9 +87,8 @@ if (kondisi_1) {
 (ekspresi ? /* Lakukan sesuatu di sini bila kondisi terpenuhi */ : /* Lakukan sesuatu di sini bila kondisi tidak terpenuhi */)
 ```
 
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](1_if_elseif_else.php#L118-L140)
+[![Tautan file kode contoh program pernyataan if 4](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](1_if_elseif_else.php#L118-L140)
 
-<br/>
 ## 2. Switch
 
 Switch juga merupakan salah satu cara pengkondisian yang bisa digunakan untuk banyak kondisi. Cara kerjanya adalah dengan membandingkan ekspresi PHP (operasi aritmatika, perbandingan, dll.) yang diberikan dengan kondisi-kondisinya.
@@ -136,9 +130,10 @@ switch (ekspresi) {
 }
 ```
 
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](2_switch.php#L16-L86)
+[![Tautan file kode contoh program pernyataan switch](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](2_switch.php#L16-L86)
 
 ## 3. Operator Ternary
+
 Operator ternary adalah operator yang mengurangi panjang kode saat membuat conditional statement. Metode ini merupakan alternatif dari pernyataan if-else dan nested if-else. Urutan eksekusi untuk operator ini adalah dari kiri ke kanan (statement 1 ke statement 2).
 
 Syntax :
@@ -146,7 +141,8 @@ Syntax :
 ```php
 (kondisi) ? (statement1) : (statement2);
 ```
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](3_operator_ternary.php#L16-L86)
+
+[![Tautan file kode contoh program penggunalan operator ternary](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](3_operator_ternary.php#L16-L86)
 
 - kondisi : ekpresi yang menghasilkan nilai boolean true / false
 - statement1 : statement yang akan dieksekusi jika kondisi bernilai true
@@ -163,7 +159,8 @@ Syntax :
   $data = (kondisi) ? (statement1) : (statement2);
 ?>
 ```
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_ternary_assignment.php#L16-L86)
+
+[![Tautan file kode contoh program penugasan nilai dengan ternary](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](4_ternary_assignment.php#L16-L86)
 
 ### Ternary Shorthand
 
@@ -176,7 +173,8 @@ Syntax :
 ```php
   ekspresi1 ?: ekspresi2
 ```
-[![](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](5_ternary_shorthand.php#L16-L86)
+
+[![Tautan file kode contoh program pintasan ternary](https://img.shields.io/static/v1?&label=Lihat%20Contoh&message=%3e&color)](5_ternary_shorthand.php#L16-L86)
 
 > *__Catatan__:*
 

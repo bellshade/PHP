@@ -16,7 +16,7 @@ Materi kali ini merupakan materi lanjutan dari _Object Oriented Programming_ (OO
 
 _Inheritance_ merupakan sebuah kata dalam bahasa inggris yang memiliki arti warisan. Dalam OOP _Inheritance_ bisa diartikan sebagai pewarisan sifat. Maksudnya disini adalah sebuah _Class_ yang dibuat memiliki keturunan (anak) yang mewarisi semua yang ada dalam _Class_ tadi ditambah dengan tambahan properti dan method milik _Class_ Turunan itu sendiri.
 
-[![](https://img.shields.io/static/v1?&label=Demo&message=%3e&color)](1_inheritance_Kucing.php#L13-L23)
+[![Tautan contoh kode program implementasi turunan](https://img.shields.io/static/v1?&label=Demo&message=%3e&color)](1_inheritance_Kucing.php#L13-L23)
 <br/>
 <br/>
 
@@ -24,7 +24,7 @@ _Inheritance_ merupakan sebuah kata dalam bahasa inggris yang memiliki arti wari
 
 Perlu diingat, ketika membuat sebuah class maka di dalam class tersebut tentu saja terdapat beberapa method yang bisa diberikan parameter apa saja. Selain dari stirng, integer, atau bahkan boolean ternyata object bisa digunakan juga sebagai sebuah parameter dalam satu method. Dengan begitu method yang ada dalam objek tersebut bisa juga digunakan di dalam method yang parameternya adalah sebuah objek.
 
-[![](https://img.shields.io/static/v1?&label=Demo&message=%3e&color)](2_object_type.php#L13-L23)
+[![Tautan contoh kode program tipe objek](https://img.shields.io/static/v1?&label=Demo&message=%3e&color)](2_object_type.php#L13-L23)
 <br/>
 <br/>
 
@@ -47,7 +47,7 @@ Selanjutnya, gambar berikut ini menunjukkan apa akibat yang bisa didapatkan keti
     <img src="../../assets/content/basics/15_oop_lanjutan/3_private.gif" width="100%" />
 </p>
 
-[![](https://img.shields.io/static/v1?&label=Demo&message=%3e&color)](3_access_modifier.php#L13-L23)
+[![Tautan contoh kode program access modifier](https://img.shields.io/static/v1?&label=Demo&message=%3e&color)](3_access_modifier.php#L13-L23)
 <br/>
 <br/>
 
@@ -55,7 +55,4 @@ Selanjutnya, gambar berikut ini menunjukkan apa akibat yang bisa didapatkan keti
 
 Class yang merupakan turunan dari satu class yang lain bisa melakukan overriding, maksudnya disini adalah mengubah method yang berasal dari class induknya sesuai dengan kebutuhan dari class itu sendiri. Akan tetapi apabila satu method dijadikan final maka method tersebut tidak akan bisa di override oleh class turunannya. Jadi ketika satu method dibuat jadi final method tersebut tidak akan bisa di override.
 
-
-[![](https://img.shields.io/static/v1?&label=Demo&message=%3e&color)](4_overriding_and_final.php#L13-L23)
-<br/>
-<br/>
+[![Tautan contoh kode program overiding dan finel](https://img.shields.io/static/v1?&label=Demo&message=%3e&color)](4_overriding_and_final.php#L13-L23)

@@ -456,8 +456,8 @@ public function testNumericArray()
 
 Setelah unit test kita susun, test dapat kita lakukan melalui terminal dengan perintah seperti di bawah ini.
 
-```text
-$ phpunit
+```bash
+phpunit
 ```
 
 jika test berhasil akan menghasilkan info seperti di bawah ini.

@@ -40,7 +40,7 @@ Operator aritmatika digunakan untuk memanipulasi bilangan-bilangan numerik seder
 
 Secara umum operator aritmatika disusun sebagai berikut :
 
-**Table Operator Aritmatika**
+### Table Operator Aritmatika
 
 | Symbol | Nama        | Contoh   | Keterangan                                                         |
 | ------ | ----------- | -------- | ------------------------------------------------------------------ |
@@ -73,6 +73,7 @@ $b = 15;
 echo ($a + $b);     // Hasil 25
 echo (12 + 15);     // Hasil 27
 ```
+
 <br/>
 
 ### Pengurangan
@@ -168,7 +169,6 @@ echo (-5 % -2)."/n"; // Hasil -1
 
 <br/>
 
-
 ### Exponensial
 
 Exponensial lebih dikenal secara umum sebagai bilangan pangkat atau dalam penulisan fungsi Matematika ditulis ~ <em>x <sup>y</sup></em>
@@ -244,7 +244,7 @@ Operator *Bitwise* dapat dipelajari lebih lanjut [disini](#operator-bitwise)
 | $a .= $b  |     $a = $a . $b      | Penggabungan string |
 | $a ??= $b |     $a = $a ?? $b     | Null Coalesce       |
 
-Untuk *Null Coalesce* dapat dipelajari lebih lanjut [disini](#null_coalesce_operator)
+Untuk *Null Coalesce* dapat dipelajari lebih lanjut [disini](#null-coalesce-operator)
 
 <br/>
 
@@ -268,6 +268,7 @@ Operator pembanding ini digunakan untuk membandingkan dua variabel yang nilainya
 Contoh kodenya dapat dilihat [di sini](./3_comparison_operator.php).
 
 <br/>
+
 ## Operator Logika
 
 Operator logika ini digunakan untuk menggabungkan pernyataan yang bersifat kondisional.
@@ -282,6 +283,7 @@ Operator logika ini digunakan untuk menggabungkan pernyataan yang bersifat kondi
 Contoh kodenya dapat dilihat [di sini](./4_logical_operator.php).
 
 <br/>
+
 ## Operator Bitwise
 
 *Bitwise* operator adalah operator yang disediakan oleh PHP untuk pengolahan, evaluasi dan manipulasi logika dari bilangan biner (*Binary*).
@@ -702,9 +704,6 @@ Contoh di atas `(var) = (expr1) ?? (expr2)` menghasilkan `(var) = (expr2)` jika 
 
 - [W3School - PHP Operator](https://www.w3schools.com/php/php_operators.asp)
 - [php.net - Manual](https://www.php.net/manual/en/)
-
-
-
 
 <table>
   <tr>
