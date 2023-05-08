@@ -12,7 +12,8 @@
         "phpcs": "phpcs . -s --colors --standard=phpcs.xml",
         "phpcbf": "phpcbf . --standard=phpcs.xml",
         "phpunit": "phpunit tests/",
-        "phplint": "phplint . --exclude=vendor --no-cache"
+        "phplint": "phplint . --exclude=vendor --no-cache",
+        "serve": "php -S localhost:8080 router.php"
     },
     "require": {
         "erusev/parsedown": "^1.7",
