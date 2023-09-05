@@ -11,6 +11,7 @@ Materi kali ini merupakan materi lanjutan dari _Object Oriented Programming_ (OO
 - [Object Type](#2-object-type)
 - [Access Modifier](#3-access-modifier)
 - [Overriding And Final](#4-overriding-and-final)
+- [Abstract Class](#5-abstract-class)
 
 ## 1. Inheritance
 
@@ -57,5 +58,12 @@ Class yang merupakan turunan dari satu class yang lain bisa melakukan overriding
 
 
 [![](https://img.shields.io/static/v1?&label=Demo&message=%3e&color)](4_overriding_and_final.php#L13-L23)
+<br/>
+<br/>
+
+## 5. Abstract Class
+Abstract class (kelas abstrak) adalah salah satu konsep penting dalam pemrograman berorientasi objek (OOP) yang digunakan untuk menciptakan kerangka kerja (template) bagi kelas-kelas turunannya. Abstract class sendiri tidak dapat diinstansiasi, artinya Anda tidak dapat membuat objek langsung dari sebuah abstract class. Sebaliknya, abstract class digunakan sebagai landasan untuk kelas-kelas turunannya yang akan mengimplementasikan metode-metode abstrak yang dideklarasikan di dalamnya. Metode-metode abstrak ini hanya memiliki definisi (nama dan parameter) tetapi tidak memiliki implementasi konkret. Oleh karena itu, setiap kelas turunan dari sebuah abstract class harus memberikan implementasi konkret untuk semua metode abstrak yang ada di abstract class tersebut. Abstract class berguna untuk mengatur struktur dan kontrak dasar yang harus dipatuhi oleh kelas-kelas turunannya, sehingga memungkinkan untuk menciptakan hierarki kelas yang kohesif dan konsisten dalam sebuah program OOP.
+
+[![](https://img.shields.io/static/v1?&label=Demo&message=%3e&color)](5_abstract_class.php#L13-L23)
 <br/>
 <br/>
