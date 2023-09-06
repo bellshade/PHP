@@ -14,7 +14,7 @@ Materi kali ini merupakan materi lanjutan dari _Object Oriented Programming_ (OO
 - [Abstract Class](#5-abstract-class)
   - [Pentingnya Abstract Class](#pentingnya-abstract-class)
   - [Struktur Program](#struktur-program)
-  - [Penggunaan Program](#penggunaan-program)
+  - [Contoh Program](#contoh-program)
   - [Contoh Output](#contoh-output)
 
 ## 1. Inheritance
