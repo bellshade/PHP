@@ -88,7 +88,7 @@ Berikut adalah penjelasan singkat untuk setiap elemen dalam struktur program:
 
 - **Class `BackendDeveloper`**: Ini adalah kelas turunan lainnya yang juga mengimplementasikan metode abstrak `printPerkenalan()`. Kelas ini memiliki metode khusus `apaPekerjaanBackendDeveloper()` yang menjelaskan pekerjaan seorang Backend Developer.
 
-### Penggunaan Program
+### Contoh Program
 
 Program ini memperlihatkan cara membuat objek dari kelas turunan, yaitu `FrontendDeveloper` dan `BackendDeveloper`, serta memanggil metode-metodenya. Meskipun kelas abstrak `Pengguna` tidak dapat diinstansiasi secara langsung, kelas turunannya dapat digunakan untuk membuat objek dan memanggil metodenya. Berikut adalah contoh kode untuk masing-masing kelas yang digunakan dalam program ini:
 
