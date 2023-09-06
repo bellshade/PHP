@@ -12,6 +12,10 @@ Materi kali ini merupakan materi lanjutan dari _Object Oriented Programming_ (OO
 - [Access Modifier](#3-access-modifier)
 - [Overriding And Final](#4-overriding-and-final)
 - [Abstract Class](#5-abstract-class)
+  - [Pentingnya Abstract Class](#pentingnya-abstract-class)
+  - [Struktur Program](#struktur-program)
+  - [Penggunaan Program](#penggunaan-program)
+  - [Contoh Output](#contoh-output)
 
 ## 1. Inheritance
 
@@ -62,7 +66,106 @@ Class yang merupakan turunan dari satu class yang lain bisa melakukan overriding
 <br/>
 
 ## 5. Abstract Class
-Abstract class (kelas abstrak) adalah salah satu konsep penting dalam pemrograman berorientasi objek (OOP) yang digunakan untuk menciptakan kerangka kerja (template) bagi kelas-kelas turunannya. Abstract class sendiri tidak dapat diinstansiasi, artinya Anda tidak dapat membuat objek langsung dari sebuah abstract class. Sebaliknya, abstract class digunakan sebagai landasan untuk kelas-kelas turunannya yang akan mengimplementasikan metode-metode abstrak yang dideklarasikan di dalamnya. Metode-metode abstrak ini hanya memiliki definisi (nama dan parameter) tetapi tidak memiliki implementasi konkret. Oleh karena itu, setiap kelas turunan dari sebuah abstract class harus memberikan implementasi konkret untuk semua metode abstrak yang ada di abstract class tersebut. Abstract class berguna untuk mengatur struktur dan kontrak dasar yang harus dipatuhi oleh kelas-kelas turunannya, sehingga memungkinkan untuk menciptakan hierarki kelas yang kohesif dan konsisten dalam sebuah program OOP.
+Abstract Class adalah salah satu konsep penting dalam pemrograman berorientasi objek (OOP) yang digunakan untuk menciptakan kerangka kerja (template) bagi kelas-kelas turunannya. Abstract Class sendiri tidak dapat diinstansiasi, artinya Anda tidak dapat membuat objek langsung dari sebuah abstract class. Sebaliknya, Abstract Class digunakan sebagai landasan untuk kelas-kelas turunannya yang akan mengimplementasikan metode-metode abstrak yang dideklarasikan di dalamnya. Metode-metode abstrak ini hanya memiliki definisi (nama dan parameter) tetapi tidak memiliki implementasi konkret. Oleh karena itu, setiap kelas turunan dari sebuah Abstract Class harus memberikan implementasi konkret untuk semua metode abstrak yang ada di Abstract Class tersebut.
+
+### Pentingnya Abstract Class
+
+Abstract Class sangat berguna untuk mengatur struktur dan kontrak dasar yang harus dipatuhi oleh kelas-kelas turunannya. Hal ini memungkinkan untuk menciptakan hierarki kelas yang kohesif dan konsisten dalam sebuah program OOP. Dengan Abstract Class, Anda dapat memastikan bahwa setiap kelas turunan memiliki metode-metode yang diperlukan dan dapat diandalkan untuk berperilaku sesuai dengan yang diharapkan.
+
+### Struktur Program
+
+- **Abstract Class `Pengguna`**: Ini adalah kelas abstrak yang memiliki satu properti, yaitu `$nama`, dan dua metode: `__construct()` untuk mengatur nama pengguna saat objek dibuat dan `getNama()` untuk mengambil nilai nama. Selain itu, ada metode abstrak `printPerkenalan()` yang harus diimplementasikan oleh kelas turunannya.
+
+- **Class `FrontendDeveloper`**: Ini adalah salah satu kelas turunan yang mengimplementasikan metode abstrak `printPerkenalan()`. Selain itu, kelas ini memiliki metode khusus `apaPekerjaanFrontendDeveloper()` yang menjelaskan pekerjaan seorang Frontend Developer.
+
+- **Class `BackendDeveloper`**: Ini adalah kelas turunan lainnya yang juga mengimplementasikan metode abstrak `printPerkenalan()`. Kelas ini memiliki metode khusus `apaPekerjaanBackendDeveloper()` yang menjelaskan pekerjaan seorang Backend Developer.
+
+### Penggunaan Program
+
+Program ini memperlihatkan cara membuat objek dari kelas turunan, yaitu `FrontendDeveloper` dan `BackendDeveloper`, serta memanggil metode-metodenya. Meskipun kelas abstrak `Pengguna` tidak dapat diinstansiasi secara langsung, kelas turunannya dapat digunakan untuk membuat objek dan memanggil metodenya.
+- **Abstract Class `Pengguna`**
+```php
+abstract class Pengguna
+{
+    protected $nama;
+
+    public function __construct($nama)
+    {
+        $this->nama = $nama;
+    }
+
+    abstract public function printPerkenalan();
+
+    public function getNama()
+    {
+        return $this->nama;
+    }
+}
+```
+- **Class `FrontendDeveloper`**
+```php
+class FrontendDeveloper extends Pengguna
+{
+    public function printPerkenalan()
+    {
+        echo 'Saya adalah seorang Frontend Developer dengan nama ' . $this->getNama() . '.' . PHP_EOL;
+    }
+
+    public function apaPekerjaanFrontendDeveloper()
+    {
+        echo 'Saya bekerja untuk mengembangkan antarmuka pengguna.' . PHP_EOL;
+    }
+}
+```
+- **Class `BackendDeveloper`**
+```php
+class BackendDeveloper extends Pengguna
+{
+    public function printPerkenalan()
+    {
+        echo 'Saya adalah seorang Backend Developer dengan nama ' . $this->getNama() . '.' . PHP_EOL;
+    }
+
+    public function apaPekerjaanBackendDeveloper()
+    {
+        echo 'Saya bekerja untuk mengatur logika dan server.' . PHP_EOL;
+    }
+}
+```
+
+### Contoh Output
+```php
+$frontendDeveloper = new FrontendDeveloper('Upin');
+$frontendDeveloper->printPerkenalan();
+$frontendDeveloper->apaPekerjaanFrontendDeveloper();
+
+echo "<br>";
+
+$backendDeveloper = new BackendDeveloper('Ipin');
+$backendDeveloper->printPerkenalan();
+$backendDeveloper->apaPekerjaanBackendDeveloper();
+```
+
+```
+Saya adalah seorang Frontend Developer dengan nama Upin.
+Saya bekerja untuk mengembangkan antarmuka pengguna.
+
+Saya adalah seorang Backend Developer dengan nama Ipin.
+Saya bekerja untuk mengatur logika dan server.
+```
+
+Program ini akan menghasilkan output seperti di atas ketika dijalankan.
+
+Ini adalah contoh sederhana tentang bagaimana Abstract Class dapat digunakan untuk membuat kerangka kerja yang konsisten untuk kelas-kelas turunan dalam pemrograman berorientasi objek. Perlu diingat bahwa Abstract Class sendiri tidak dapat diinstansiasi, artinya Anda tidak dapat membuat objek langsung dari sebuah abstract class. Jika Anda mencoba melakukannya, Anda akan mendapatkan pesan error seperti yang ditunjukkan di bawah ini:
+```php
+$pengguna = new Pengguna("Mail");
+```
+
+```
+cat /var/log/apache2/error.log
+
+[Wed Sep 06 17:20:14.809723 2023] [php:error] [pid 1135] [client ::1:52564] PHP Fatal error:  Uncaught Error: Cannot instantiate abstract class Basic\\OOP_Lanjutan\\Pengguna in /home/rey/Documents/Project/PHP/Bellshade-PHP/basics/15_oop_lanjutan/5_abstract_class.php:138\nStack trace:\n#0 {main}\n  thrown in /home/rey/Documents/Project/PHP/Bellshade-PHP/basics/15_oop_lanjutan/5_abstract_class.php on line 138
+```
 
 [![](https://img.shields.io/static/v1?&label=Demo&message=%3e&color)](5_abstract_class.php#L13-L23)
 <br/>
