@@ -66,7 +66,7 @@ Class yang merupakan turunan dari satu class yang lain bisa melakukan overriding
 <br/>
 
 ## 5. Abstract Class
-Abstract Class adalah salah satu konsep penting dalam pemrograman berorientasi objek (OOP) yang digunakan untuk mengorganisir struktur (_template_) bagi kelas-kelas turunannya. Abstract Class sendiri tidak dapat diinstansiasi, artinya Anda tidak dapat membuat objek langsung dari sebuah _abstract class_. Jika Anda mencoba melakukannya, Anda akan mendapatkan pesan error seperti yang ditunjukkan di bawah ini:
+Abstract Class adalah salah satu konsep penting dalam pemrograman berorientasi objek (OOP) yang digunakan sebagai kerangka kerja bagi kelas turunannya. Sederhananya, Abstract Class adalah panduan dan aturan dalam pendefinisian kelas yang sesungguhnya. Abstract Class sendiri tidak dapat diinstansiasi, artinya Anda tidak dapat membuat objek langsung dari sebuah _abstract class_. Jika Anda mencoba melakukannya, Anda akan mendapatkan pesan kesalahan seperti yang ditunjukkan di bawah ini:
 ```php
 $pengguna = new Pengguna("Mail");
 ```
@@ -80,6 +80,8 @@ cat /var/log/apache2/error.log
 Abstract Class sangat berguna untuk mengatur struktur dan kontrak dasar yang harus dipatuhi oleh kelas-kelas turunannya. Hal ini memungkinkan untuk membangun hierarki kelas yang kohesif dan konsisten dalam sebuah program OOP. Dengan Abstract Class, Anda dapat memastikan bahwa setiap kelas turunan memiliki metode-metode yang diperlukan dan dapat diandalkan untuk berperilaku sesuai dengan yang diharapkan.
 ### Struktur Program
 
+Berikut adalah penjelasan singkat untuk setiap elemen dalam struktur program:
+
 - **Abstract Class `Pengguna`**: Ini adalah kelas abstrak yang memiliki satu properti, yaitu `$nama`, dan dua metode: `__construct()` untuk mengatur nama pengguna saat objek dibuat dan `getNama()` untuk mengambil nilai nama. Selain itu, ada metode abstrak `printPerkenalan()` yang harus diimplementasikan oleh kelas turunannya.
 
 - **Class `FrontendDeveloper`**: Ini adalah salah satu kelas turunan yang mengimplementasikan metode abstrak `printPerkenalan()`. Selain itu, kelas ini memiliki metode khusus `apaPekerjaanFrontendDeveloper()` yang menjelaskan pekerjaan seorang Frontend Developer.
@@ -88,56 +90,57 @@ Abstract Class sangat berguna untuk mengatur struktur dan kontrak dasar yang har
 
 ### Penggunaan Program
 
-Program ini memperlihatkan cara membuat objek dari kelas turunan, yaitu `FrontendDeveloper` dan `BackendDeveloper`, serta memanggil metode-metodenya. Meskipun kelas abstrak `Pengguna` tidak dapat diinstansiasi secara langsung, kelas turunannya dapat digunakan untuk membuat objek dan memanggil metodenya.
+Program ini memperlihatkan cara membuat objek dari kelas turunan, yaitu `FrontendDeveloper` dan `BackendDeveloper`, serta memanggil metode-metodenya. Meskipun kelas abstrak `Pengguna` tidak dapat diinstansiasi secara langsung, kelas turunannya dapat digunakan untuk membuat objek dan memanggil metodenya. Berikut adalah contoh kode untuk masing-masing kelas yang digunakan dalam program ini:
+
 - **Abstract Class `Pengguna`**
-```php
-abstract class Pengguna
-{
-    protected $nama;
-
-    public function __construct($nama)
+    ```php
+    abstract class Pengguna
     {
-        $this->nama = $nama;
-    }
+        protected $nama;
 
-    abstract public function printPerkenalan();
+        public function __construct($nama)
+        {
+            $this->nama = $nama;
+        }
 
-    public function getNama()
-    {
-        return $this->nama;
+        abstract public function printPerkenalan();
+
+        public function getNama()
+        {
+            return $this->nama;
+        }
     }
-}
-```
+    ```
 - **Class `FrontendDeveloper`**
-```php
-class FrontendDeveloper extends Pengguna
-{
-    public function printPerkenalan()
+    ```php
+    class FrontendDeveloper extends Pengguna
     {
-        echo 'Saya adalah seorang Frontend Developer dengan nama ' . $this->getNama() . '.' . PHP_EOL;
-    }
+        public function printPerkenalan()
+        {
+            echo 'Saya adalah seorang Frontend Developer dengan nama ' . $this->getNama() . '.' . PHP_EOL;
+        }
 
-    public function apaPekerjaanFrontendDeveloper()
-    {
-        echo 'Saya bekerja untuk mengembangkan antarmuka pengguna.' . PHP_EOL;
+        public function apaPekerjaanFrontendDeveloper()
+        {
+            echo 'Saya bekerja untuk mengembangkan antarmuka pengguna.' . PHP_EOL;
+        }
     }
-}
-```
+    ```
 - **Class `BackendDeveloper`**
-```php
-class BackendDeveloper extends Pengguna
-{
-    public function printPerkenalan()
+    ```php
+    class BackendDeveloper extends Pengguna
     {
-        echo 'Saya adalah seorang Backend Developer dengan nama ' . $this->getNama() . '.' . PHP_EOL;
-    }
+        public function printPerkenalan()
+        {
+            echo 'Saya adalah seorang Backend Developer dengan nama ' . $this->getNama() . '.' . PHP_EOL;
+        }
 
-    public function apaPekerjaanBackendDeveloper()
-    {
-        echo 'Saya bekerja untuk mengatur logika dan server.' . PHP_EOL;
+        public function apaPekerjaanBackendDeveloper()
+        {
+            echo 'Saya bekerja untuk mengatur logika dan server.' . PHP_EOL;
+        }
     }
-}
-```
+    ```
 
 ### Contoh Output
 ```php
@@ -151,6 +154,7 @@ $backendDeveloper = new BackendDeveloper('Ipin');
 $backendDeveloper->printPerkenalan();
 $backendDeveloper->apaPekerjaanBackendDeveloper();
 ```
+Kode program di atas akan menghasilkan _output_ seperti berikut:
 
 ```
 Saya adalah seorang Frontend Developer dengan nama Upin.
@@ -159,8 +163,6 @@ Saya bekerja untuk mengembangkan antarmuka pengguna.
 Saya adalah seorang Backend Developer dengan nama Ipin.
 Saya bekerja untuk mengatur logika dan server.
 ```
-
-Program ini akan menghasilkan output seperti di atas ketika dijalankan.
 
 Ini adalah contoh sederhana tentang bagaimana Abstract Class dapat digunakan untuk membuat kerangka kerja yang konsisten untuk kelas-kelas turunan dalam pemrograman berorientasi objek. Perlu diingat bahwa Abstract Class sendiri tidak dapat diinstansiasi, artinya Anda tidak dapat membuat objek langsung dari sebuah abstract class.
 
