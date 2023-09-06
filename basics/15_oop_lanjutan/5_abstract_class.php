@@ -1,4 +1,5 @@
 <?php
+
 // Mendefinisikan namespace untuk mengorganisasi kelas-kelas dalam proyek.
 namespace Basic\OOP_Lanjutan;
 
@@ -60,7 +61,7 @@ class BackendDeveloper extends Pengguna
 }
 
 // Tidak bisa menginstansiasi object pada abstrack class, jika di lakukan maka akan menghasilkan error
-// $pengguna = new Pengguna("Mail"); 
+// $pengguna = new Pengguna("Mail");
 
 // Menginstansiasi objek FrontendDeveloper
 $frontendDeveloper = new FrontendDeveloper('Upin');
