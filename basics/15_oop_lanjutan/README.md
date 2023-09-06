@@ -80,7 +80,7 @@ cat /var/log/apache2/error.log
 Abstract Class sangat berguna untuk mengatur struktur dan kontrak dasar yang harus dipatuhi oleh kelas-kelas turunannya. Hal ini memungkinkan untuk membangun hierarki kelas yang kohesif dan konsisten dalam sebuah program OOP. Dengan Abstract Class, Anda dapat memastikan bahwa setiap kelas turunan memiliki metode-metode yang diperlukan dan dapat diandalkan untuk berperilaku sesuai dengan yang diharapkan.
 ### Struktur Program
 
-Berikut adalah penjelasan singkat untuk setiap elemen dalam struktur program:
+Berikut adalah penjelasan singkat untuk setiap elemen dalam struktur program, sebagai contoh kita menggunakan nama class `Pengguna`, `FrontendDeveloper`, dan `BackendDeveloper` sebagai bagian dari program ini:
 
 - **Abstract Class `Pengguna`**: Ini adalah kelas abstrak yang memiliki satu properti, yaitu `$nama`, dan dua metode: `__construct()` untuk mengatur nama pengguna saat objek dibuat dan `getNama()` untuk mengambil nilai nama. Selain itu, ada metode abstrak `printPerkenalan()` yang harus diimplementasikan oleh kelas turunannya.
 
