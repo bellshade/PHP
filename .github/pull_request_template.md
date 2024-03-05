@@ -42,6 +42,5 @@ usahakan kamu memilih sesuai apa yang telah kamu ubah
 @bellshade/docs-team
 -->
 
-
 <!-- jika ada gagal pada salah satu test kami akan mengeceknya kembali -->
 <!-- if there is a failure in one of the tests we will check it again -->

@@ -19,18 +19,18 @@ Selanjutnya mari kita masuk ke materinya.
 
 ## Daftar Isi
 
-- [1. Tombol Kirim *(1_submit_button.php)*](#1-tombol-kirim-1submitbuttonphp)
-- [2. Input Berdasarkan Teks *(2_text_based_input.php)*](#2-input-berdasarkan-teks-2textbasedinputphp)
-    - [Contoh 1 - Text dan Number](#contoh-1-text-dan-number)
-    - [Contoh 2 - Email dan Password](#contoh-2-email-dan-password)
-    - [Contoh 3 - Hidden](#contoh-3-hidden)
-    - [Contoh 4 - Date](#contoh-4-date)
-- [3. Input Select *(3_select.php)*](#3-input-select-3selectphp)
-- [4. Date Time](#4-date-time-4datetimephp)
-- [5. Check Box](#5-check-box-5checkboxphp)
-- [6. Radio Button](#6-radio-button-6radiophp)
-- [7. File](#7-file-7filephp)
-- [8. Multiple File](#8-multiple-file-8multiplefilephp)
+- [1. Tombol Kirim *(1_submit_button.php)*](#1-tombol-kirim-1_submit_buttonphp)
+- [2. Input Berdasarkan Teks *(2_text_based_input.php)*](#2-input-berdasarkan-teks-2_text_based_inputphp)
+  - [Contoh 1 - Text dan Number](#contoh-1---text-dan-number)
+  - [Contoh 2 - Email dan Password](#contoh-2---email-dan-password)
+  - [Contoh 3 - Hidden](#contoh-3---hidden)
+  - [Contoh 4 - Date](#contoh-4---date)
+- [3. Input Select *(3_select.php)*](#3-input-select-3_selectphp)
+- [4. Date Time](#4-date-time-4_datetimephp)
+- [5. Check Box](#5-check-box-5_checkboxphp)
+- [6. Radio Button](#6-radio-button-6_radiophp)
+- [7. File](#7-file-7_filephp)
+- [8. Multiple File](#8-multiple-file-8_multiple_filephp)
 
 ## 1. Tombol Kirim *([1_submit_button.php](1_submit_button.php))*
 
@@ -56,7 +56,7 @@ if (isset($_POST['kirim'])) {
 }
 ```
 
-[![](https://img.shields.io/static/v1?&label=Demo&message=%3e&color)](1_submit_button.php#L13-L23)
+[![Tautan contoh kode program penanganan tombol kirim pada form](https://img.shields.io/static/v1?&label=Demo&message=%3e&color)](1_submit_button.php#L13-L23)
 
 > Data yang dikirim dari formulir akan disusun sebagai array asosiatif, dan dikumpulkan oleh variabel *superglobal* yaitu `$_GET` jika metode pengirimannya `GET` dan `$_POST` jika metode pengirimannya adalah `POST`
 
@@ -94,7 +94,7 @@ if (isset($_POST['kirim'])) {
 }
 ```
 
-[![](https://img.shields.io/static/v1?&label=Demo&message=%3e&color)](2_input_based_text.php#L20-L36)
+[![Tautan contoh kode program penanganan input 1 pada form](https://img.shields.io/static/v1?&label=Demo&message=%3e&color)](2_input_based_text.php#L20-L36)
 
 ### Contoh 2 - Email dan Password
 
@@ -120,7 +120,7 @@ if (isset($_POST['kirim'])) {
 }
 ```
 
-[![](https://img.shields.io/static/v1?&label=Demo&message=%3e&color)](2_input_based_text.php#L39-L56)
+[![Tautan contoh kode program penanganan input 2 pada form](https://img.shields.io/static/v1?&label=Demo&message=%3e&color)](2_input_based_text.php#L39-L56)
 
 ### Contoh 3 - Hidden
 
@@ -142,7 +142,7 @@ if (isset($_POST['kirim'])) {
 }
 ```
 
-[![](https://img.shields.io/static/v1?&label=Demo&message=%3e&color)](2_input_based_text.php#L59-L72)
+[![Tautan contoh kode program penanganan input 3 pada form](https://img.shields.io/static/v1?&label=Demo&message=%3e&color)](2_input_based_text.php#L59-L72)
 
 ### Contoh 4 - Date
 
@@ -164,7 +164,7 @@ if (isset($_POST['kirim'])) {
 }
 ```
 
-[![](https://img.shields.io/static/v1?&label=Demo&message=%3e&color)](2_input_based_text.php#L75-L88)
+[![Tautan contoh kode program penanganan input 4 pada form](https://img.shields.io/static/v1?&label=Demo&message=%3e&color)](2_input_based_text.php#L75-L88)
 
 ## 3. Input Select *([3_select.php](3_select.php))*
 
@@ -194,7 +194,7 @@ if (isset($_POST['btn_contoh1'])) {
 }
 ```
 
-[![](https://img.shields.io/static/v1?&label=Demo&message=%3e&color)](3_select.php#L19-L37)
+[![Tautan contoh kode program penanganan select 1 pada form](https://img.shields.io/static/v1?&label=Demo&message=%3e&color)](3_select.php#L19-L37)
 
 **Contoh 2:**
 Tanpa menggunakan atribut `value`
@@ -221,7 +221,7 @@ if (isset($_POST['btn_contoh2'])) {
 }
 ```
 
-[![](https://img.shields.io/static/v1?&label=Demo&message=%3e&color)](3_select.php#L40-L61)
+[![Tautan contoh kode program penanganan select 2 pada form](https://img.shields.io/static/v1?&label=Demo&message=%3e&color)](3_select.php#L40-L61)
 
 Dengan melihat kedua contoh di atas, kamu dapat mengetahui bahwa menggunakan tag `option` tanpa atribut `value` pada input `select` juga dapat dikirim.
 
@@ -245,7 +245,8 @@ if (isset($_POST['btn_contoh1'])) {
     echo "Saya memilih: $specialTime sebagai hari spesial saya";
 }
 ```
-[![](https://img.shields.io/static/v1?&label=Demo&message=%3e&color)](4_datetime.php#L21-L34)
+
+[![Tautan contoh kode program penanganan input datetime pada form](https://img.shields.io/static/v1?&label=Demo&message=%3e&color)](4_datetime.php#L21-L34)
 
 ## 5. Check Box *([5_checkbox.php](5_checkbox.php))*
 
@@ -275,7 +276,8 @@ if (isset($_POST['btn_contoh1'])) {
     echo "sebagai hari spesial saya";
 }
 ```
-[![](https://img.shields.io/static/v1?&label=Demo&message=%3e&color)](5_checkbox.php#L21-L42)
+
+[![Tautan contoh kode program penanganan input checkbox pada form](https://img.shields.io/static/v1?&label=Demo&message=%3e&color)](5_checkbox.php#L21-L42)
 
 ## 6. Radio Button *([6_radio.php](6_radio.php))*
 
@@ -303,7 +305,7 @@ if (isset($_POST['btn_contoh1'])) {
 }
 ```
 
-[![](https://img.shields.io/static/v1?&label=Demo&message=%3e&color)](6_radio.php#L21-L38)
+[![Tautan contoh kode program penanganan input radio pada form](https://img.shields.io/static/v1?&label=Demo&message=%3e&color)](6_radio.php#L21-L38)
 
 ## 7. File *([7_file.php](7_file.php))*
 
@@ -347,7 +349,7 @@ if (isset($_POST['btn_contoh1'])) {
 }
 ```
 
-[![](https://img.shields.io/static/v1?&label=Demo&message=%3e&color)](7_file.php#L32-L72)
+[![Tautan contoh kode program penanganan input file pada form](https://img.shields.io/static/v1?&label=Demo&message=%3e&color)](7_file.php#L32-L72)
 
 ## 8. Multiple File *([8_multiple_file.php](8_multiple_file.php))*
 
@@ -388,8 +390,7 @@ if (isset($_POST['btn_contoh1'])) {
 }
 ```
 
-[![](https://img.shields.io/static/v1?&label=Demo&message=%3e&color)](8_multiple_file.php#L32-L62)
-
+[![Tautan contoh kode program penanganan input file berganda pada form](https://img.shields.io/static/v1?&label=Demo&message=%3e&color)](8_multiple_file.php#L32-L62)
 
 <table>
   <tr>

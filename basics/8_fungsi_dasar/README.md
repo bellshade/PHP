@@ -389,7 +389,13 @@ Contoh mendeklarasikan variabel statis:
 
 [![Contoh Static Variable](../../assets/content/cekhere.svg)](4_Static_Variable.php)
 
+## 5. Fungsi Tanpa Nama
 
+> *akan hadir*
+
+## 6. Fungsi Rekursif
+
+> *akan hadir*
 
 <table>
   <tr>

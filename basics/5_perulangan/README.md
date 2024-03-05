@@ -5,13 +5,13 @@
 ## Daftar Isi
 
 - [Jenis-Jenis Perulangan](#jenis-jenis-perulangan)
-    - [1. Perulangan For](#1-perulangan-for)
-    - [2. Perulangan Foreach](#2-perulangan-foreach)
+  - [1. Perulangan For](#1-perulangan-for)
+  - [2. Perulangan Foreach](#2-perulangan-foreach)
     - [2.1 Nested Foreach](#21-nested-foreach)
 - [List sebagai Pengganti Nested Foreach](#list-sebagai-pengganti-nested-foreach)
-    - [3. Perulangan While](#3-perulangan-while)
-    - [4. Perulangan Do While](#4-perulangan-do-while)  
-    - [5. Perulangan Tak Terbatas](#5-perulangan-tak-terbatas)
+  - [3. Perulangan While](#3-perulangan-while)
+  - [4. Perulangan Do While](#4-perulangan-do-while)  
+  - [5. Perulangan Tak Terbatas](#5-perulangan-tak-terbatas)
 
 ## Jenis-Jenis Perulangan
 
@@ -273,7 +273,7 @@ Demikian untuk pembahasan perulangan *Foreach*.
 
 Contoh penggunaan foreach dalam php dapat dilihat [disini](./2_foreach.php)
 
-[![](https://img.shields.io/static/v1?&label=Contoh%20Foreach&message=%3e&color)](./2_foreach.php)
+[![Tautan contoh kode program dengan perulangan foreach](https://img.shields.io/static/v1?&label=Contoh%20Foreach&message=%3e&color)](./2_foreach.php)
 
 ## 3. Perulangan While
 
@@ -311,7 +311,7 @@ Baris kode di atas akan menghasilkan nilai `01234`, jadi selama `$i` lebih kecil
 
 Contoh penggunaan *while* dalam PHP dapat dilihat [disini](./3_while.php)
 
-[![](https://img.shields.io/static/v1?&label=Contoh%20While&message=%3e&color)](./3_while.php)
+[![Tautan contoh kode program perulangan while](https://img.shields.io/static/v1?&label=Contoh%20While&message=%3e&color)](./3_while.php)
 
 ## 4. Perulangan Do While
 
@@ -347,7 +347,7 @@ Baris kode di atas menghasilkan nilai 6, walaupun dari awal nilai `$i` sudah leb
 
 Contoh penggunaan *Do While* dalam PHP dapat dilihat [disini](./4_do_while.php)
 
-[![](https://img.shields.io/static/v1?&label=Contoh%20Do%20While&message=%3e&color)](./4_do_while.php)
+[![Tautan contoh kode program perulangan do-while](https://img.shields.io/static/v1?&label=Contoh%20Do%20While&message=%3e&color)](./4_do_while.php)
 
 Itulah 4 perulangan yang terdapat dalam PHP.
 
@@ -457,7 +457,6 @@ Baris kode diatas tidak akan melakukan perulangan tetapi akan memunculkan pesan 
 
 - [W3School - PHP Loops](https://www.w3schools.com/php/php_looping.asp)
 - [php.net - Manual](https://www.php.net/manual/en/)
-
 
 <table>
   <tr>

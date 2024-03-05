@@ -156,11 +156,11 @@ Algoritma ini memiliki kelebihan dan kekurangan, sebagai gambaran
 
 **Kelebihan** :
 
--   Data Array yang diterima diawal tidak harus terurut, sehingga langsung bisa dapat melakukan pencarian.
+- Data Array yang diterima diawal tidak harus terurut, sehingga langsung bisa dapat melakukan pencarian.
 
 **Kelemahan** :
 
--   Jika Array yang diterima memiliki elemen yang banyak maka akan memberatkan kinerja dari perangkat kita.
+- Jika Array yang diterima memiliki elemen yang banyak maka akan memberatkan kinerja dari perangkat kita.
 
 dalam hal demikian algoritma ini baik digunakan untuk pencarian dalam data kecil dengan data array berupa linear ( array satu dimensi ), walaupun dapat digunakan untuk pencarian di dalam array multi dimensi dengan metode recursive, tetapi hal tersebut <b>dapat membebani memory perangkat</b>.
 
@@ -185,10 +185,10 @@ class .......
 ?>
 ```
 
-[![](https://img.shields.io/static/v1?&label=Contoh%20Kode&message=%3e&color)](LinearSearch.php)
+[![Tautan file untuk contoh kode Linear Search](https://img.shields.io/static/v1?&label=Contoh%20Kode&message=%3e&color)](LinearSearch.php)
 
 ### Referensi
 
--   Programiz. _"Linear Search C, C++, Java, Python"_. [Pranala Luar](https://www.programiz.com/dsa/linear-search).
--   Edy Budiman. _"Belajar Dasar: Algoritma dan Pemograman"_. Repository Unmul.
--   Udy Manber. _Using Mathematical Induction to Design Computer Algorithms_, Computer Science Technical Report#660. 1986
+- Programiz. _"Linear Search C, C++, Java, Python"_. [Pranala Luar](https://www.programiz.com/dsa/linear-search).
+- Edy Budiman. _"Belajar Dasar: Algoritma dan Pemograman"_. Repository Unmul.
+- Udy Manber. _Using Mathematical Induction to Design Computer Algorithms_, Computer Science Technical Report#660. 1986

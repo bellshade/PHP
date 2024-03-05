@@ -23,16 +23,16 @@
 
 [9. Form Handling](https://github.com/bellshade/PHP/tree/main/basics/9_form_handling)
 
-10. File Handling - On Progress
+`10. File Handling - On Progress`
 
-11. Cookie & Session - On Progress
+`11. Cookie & Session - On Progress`
 
 [12. Database Dasar Prosedural](https://github.com/bellshade/PHP/tree/main/basics/12_database_dasar_prosedural)
 
-13. Database Relasional Prosedural - On Progress
+`13. Database Relasional Prosedural - On Progress`
 
-14. OOP Dasar - On Progress
+`14. OOP Dasar - On Progress`
 
-15. OOP Lanjutan - On Progress
+`15. OOP Lanjutan - On Progress`
 
-16. Database Dasar (PDO) - On Progress
+`16. Database Dasar (PDO) - On Progress`

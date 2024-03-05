@@ -24,11 +24,13 @@ Semisalnya saya mempunyai 3 array seperti di bawah ini:
 ![popsort](../../../assets/content/algorithms/Sorting/PopSort/popsort1.png)
 
 Ingat poin-poin di bawah ini:
+
 - Array A merupakan input dari nilai-nilai yang akan disusun
 - Array B merupakan output dari nilai-nilai yang telah disusun
 - Array C merupakan tempat penyimpanan sementara
 
 Kira-kira semisal kita buatkan array bentuknya seperti ini:
+
 ```php
 $a = [83, 10, 54, 92, 62, 47, 15, 72];
 $b = [];
@@ -48,12 +50,13 @@ Semisalnya, data sudah seperti ini:
 ![popsort](../../../assets/content/algorithms/Sorting/PopSort/popsort3.png)
 
 Logikanya, angka `62` pasti lebih besar daripada `47` dan `15`, berarti:
-1. Kita harus menyimpan `15` dan `47` ke Array C
-2. Bawa angka `62` dari Array A ke Array B agar dapat masuk ke Array B
+
+- Kita harus menyimpan `15` dan `47` ke Array C
+- Bawa angka `62` dari Array A ke Array B agar dapat masuk ke Array B
 
 ![popsort](../../../assets/content/algorithms/Sorting/PopSort/popsort4.png)
 
-3. Kita susun balik dari array C ke Array B yang kira-kira bentuknya seperti ini:
+- Kita susun balik dari array C ke Array B yang kira-kira bentuknya seperti ini:
 
 ![popsort](../../../assets/content/algorithms/Sorting/PopSort/popsort5.png)
 
@@ -112,6 +115,7 @@ public function start(): array
 ```
 
 ### Referensi
+
 - GeeksForGeeks. *Python Program for Tower of Hanoi*. [Pranala Luar](https://www.geeksforgeeks.org/python-program-for-tower-of-hanoi/).
 - Salman, Nur. Rev. 2020. *Struktur Data: Pengurutan Data di Python*. Makassar: Universitas Dipa Makassar.
 - Sedegewick, Robert. dkk. 2015. *Stacks and Queues*. Princeton: Princeton University. [Pranala Luar](https://introcs.cs.princeton.edu/python/43stack/).

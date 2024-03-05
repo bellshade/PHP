@@ -3,6 +3,7 @@
 Selection Sort adalah salah satu algoritma untuk melakukan penyortiran nilai di dalam array yang acak dengan cara mencari nilai terkecil di dalam array dan menukarnya ke index awal dari array tersebut.
 
 ## Cara Kerja
+
 Ketika kita ingin menggunakan Selection Sort, kita harus mengikuti beberapa langkah berikut ini:
 
 - Pertama, Set variable `min` dengan nilai index pertama dari array yang akan di sort.
@@ -46,6 +47,7 @@ Kita akan terus mengulang proses proses diatas hingga array yang kita miliki sud
 ![9](../../../assets/content/algorithms/Sorting/SelectionSort/9.png)
 
 ## Flowchart
+
 Proses Selection Sort dapat digambarkan menggunakan flowchart untuk menggambarkan bagaimana cara kita mengimplementasikan algoritma tersebut.
 
 Berikut ini adalah flowchart dari algoritma Selection Sort:
@@ -213,6 +215,7 @@ Data setelah disort: [11,14,20,57,63,72]
 ```
 
 ## Referensi
+
 Tutorialspoint
 
 - [Data Structures and Algorithms Selection Sort](https://www.tutorialspoint.com/data_structures_algorithms/selection_sort_algorithm.htm)

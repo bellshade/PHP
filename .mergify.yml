@@ -53,16 +53,23 @@ pull_request_rules:
           - markdown files
           - request docs team untuk review
 
-    # me mention maintainer yang ketika file markdown
-    # tedapat pada pull request
-  - name: review docs team untuk file markdown
-    conditions:
-      - label=markdown files
-    actions:
-      request_reviews:
-        users:
-          - ikr4mm
-          - azqilana
+  # catatan oleh @sensasi-delight 2023-05-08
+  # menonaktifkan konfigurasi mergify untuk notifikasi tim dokumentasi
+  # karena konfigurasi tersebut memunculkan eror:
+  # GitHub error: [422] Reviews may only be requested from collaborators.
+  # One or more of the users or teams you specified is not a collaborator of the bellshade/PHP repository.
+  # dan belum ada tim `@bellshade/docs-team`
+
+  # me mention maintainer yang ketika file markdown
+  # tedapat pada pull request
+  # - name: review docs team untuk file markdown
+  #   conditions:
+  #     - label=markdown files
+  #   actions:
+  #     request_reviews:
+  #       users:
+  #         - ikr4mm
+  #         - azqilana
 
     # me mention maintainer yang ketika file php
     # terdapat pada pull request

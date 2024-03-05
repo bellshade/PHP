@@ -1,6 +1,7 @@
 # Contributing
 
 ## Daftar Isi
+
 - [Contributor](#contributor)
 - [Kategori yang tersedia](#kategori-yang-tersedia)
   - [Basic](#pembelajaran-dasar-basic-learning)
@@ -29,12 +30,12 @@ Kami sangat senang Kamu dapat ikut berkontribusi dalam implementasi algoritma, s
 
 Basic learning adalah kumpulan demonstrasi kode materi pemrograman PHP beserta artikel penjelasan yang lengkap, mudah di mengerti dan menarik secara visual. Dirangkai dengan alur yang runtut mulai dasar sehingga bisa dijadikan referensi untuk kalian yang belajar pemrograman PHP.
 
-Untuk berkontribusi di repositori bellshade PHP bagian Basic ini kamu harus mengikuti urutan materi yang telah ditentukan. Daftar materi yang tersedia bisa kamu jelajahi di [Issues tag materi](https://github.com/bellshade/PHP/issues?q=is%3Aopen+is%3Aissue+label%3Abasic). Didalam issue itu kami juga menuliskan rekomendasi tentang konten yang ada dalam materi tersebut, namun kamu masih dapat menambah materi konten jika dirasa perlu. 
+Untuk berkontribusi di repositori bellshade PHP bagian Basic ini kamu harus mengikuti urutan materi yang telah ditentukan. Daftar materi yang tersedia bisa kamu jelajahi di [Issues tag materi](https://github.com/bellshade/PHP/issues?q=is%3Aopen+is%3Aissue+label%3Abasic). Didalam issue itu kami juga menuliskan rekomendasi tentang konten yang ada dalam materi tersebut, namun kamu masih dapat menambah materi konten jika dirasa perlu.
 
 Semua implementasi kode untuk Basic Learning bisa ditemukan di `/basics`  <br/>
 dengan struktur direktori sebagai berikut <br/>
 
-```
+```text
 📦 /
  ┣📦basics
  ┃ ┣ 📂x_nama_materi
@@ -46,7 +47,6 @@ dengan struktur direktori sebagai berikut <br/>
 ```
 
 > Artikel materi ditulis pada `README.md` <br/>
-
 
 ### Algoritma (_Algorithm_)
 
@@ -60,7 +60,7 @@ Algoritma harus dikemas sedemikian rupa sehingga memudahkan pembaca untuk memasu
 
 Semua implementasi kode untuk Algorithm bisa ditemukan di `/algorithms` dengan bentuk struktur seperti berikut
 
-```
+```text
 📦/
  ┣📦algorithms
  ┃ ┣ 📂NamaKategoriAlgoritma
@@ -69,17 +69,19 @@ Semua implementasi kode untuk Algorithm bisa ditemukan di `/algorithms` dengan b
  ┃ ┃ ┃ ┗ 📜README.md
  ┃ ┃ ┗ 📜README.md
 ```
+
 > Artikel penjelasan algoritma ditulis pada `README.md` <br/>
 
 ### Komponen / Fungsi kegunaan _(Utilities)_
+
 Kategori utilities adalah kumpulan referensi dan contoh penggunaan komponen-komponen / fitur-fitur umum yang mungkin diperlukan oleh para web developer untuk diterapkan pada project aplikasi webnya. Didalam kategori ini, kalian dapat menjelajahi berbagai macam kebutuhan umum untuk pengembangan web umum dan mempelajari bagaimana cara mengimplementasikannya.
 
-Utility ini adalah sesuatu yang bukan esensial dalam pengembangan web namun terkadang dibutuhkan. Bisa juga dibilang Utility ini adalah peralatan / komponen yang bisa melengkapi sebuah fitur dalam aplikasi berbasis web. Contohnya adalah seperti: Manipulasi Gambar, DateTime, Mencetak ke printer dot matrix dan sebagainya. 
+Utility ini adalah sesuatu yang bukan esensial dalam pengembangan web namun terkadang dibutuhkan. Bisa juga dibilang Utility ini adalah peralatan / komponen yang bisa melengkapi sebuah fitur dalam aplikasi berbasis web. Contohnya adalah seperti: Manipulasi Gambar, DateTime, Mencetak ke printer dot matrix dan sebagainya.
 
 Semua tentang Utility dapat ditemukan pada direktori `/utilities`<br/>
 dengan bentuk struktur yang mirip dengan `algorithm`
 
-```
+```text
 📦/
  ┣📦utilities
  ┃ ┣ 📂NamaKategoriUtility
@@ -90,6 +92,7 @@ dengan bentuk struktur yang mirip dengan `algorithm`
  ┃ ┃ ┃ ┗ 📜README.md
  ┃ ┃ ┗ 📜README.md
  ```
+
 > Artikel penjelasan utility ditulis pada `README.md` <br/>
 
 ## Standar Penulisan
@@ -121,7 +124,7 @@ composer phpcbf
 
 Jika menggunakan `phpcbf` masih belum memperbaiki seluruh kesalahan yang ada, Kamu harus memperbaikinya secara manual. <br/>Kami sangat sarankan untuk Kamu jika menggunakan software text editor Visual Studio Code, Kamu dapat menggunakan ekstensi bernama [PHPCS](https://marketplace.visualstudio.com/items?itemName=ikappas.phpcs). Dengan ekstensi itu, Visual Studio Code akan menunjukkan letak kesalahannya jika Kamu melakukan kesalahan penulisan.
 
-Pastikan Kamu sudah melakukan pengecekan ini sebelum mengajukan _*Pull Request*_ karena ini termasuk salah satu workflow yang dijalankan secara otomatis oleh kami saat Kamu mengajukan _*Pull Request*_
+Pastikan Kamu sudah melakukan pengecekan ini sebelum mengajukan _Pull Request_ karena ini termasuk salah satu workflow yang dijalankan secara otomatis oleh kami saat Kamu mengajukan _Pull Request_
 
 ### Pedoman Penulisan Lainnya untuk Pembelajaran Dasar (_Basic Learning_)
 
@@ -155,14 +158,18 @@ Penggunaan layanan database seringkali dibutuhkan untuk kebanyakan kegunaan. Unt
 
 - Hanya ada satu database untuk melayani keseluruhan project repositori ini.
 - Seluruh informasi koneksi database diatur dalam satu file konfigurasi `.env`
+
 > **_Pengecualian:_** Untuk materi basic pengenalan database, tidak perlu memuat konfigurasi .env agar mudah dipahami. Nama database menggunakan "bellshade_php"
+
 - Default nama databasenya adalah `bellshade_php` _(yang dapat diganti di `.env`)_
-- Nama tabel mengikuti format `[nomor]_[nama materi]_[nama tabel]`, spasi bisa menggunakan `_` _(underscore)_. 
-> **Contoh nama tabel:** `11_database_prosedural_buku` 
+- Nama tabel mengikuti format `[nomor]_[nama materi]_[nama tabel]`, spasi bisa menggunakan `_` _(underscore)_.
+
+> **Contoh nama tabel:** `11_database_prosedural_buku`
 
 Untuk membuat koneksi database, kamu perlu membuat file koneksi sendiri terlebih dahulu di folder yang sedang kamu kerjakan. Kami sudah menyediakan `config.php` pada direktori root `/` untuk memuat seluruh konfigurasi yang tertulis di `.env` _(termasuk informasi database)_. Oleh karena itu, file koneksi kamu harus `require()` ke file `config.php` ini di root `/`.
 
 Untuk lebih mudahnya, kami menyediakan contoh file koneksi database yang dapat kamu gunakan sebagai file koneksi `connect.php`.
+
 ```php
 <?php
 
@@ -235,7 +242,7 @@ Untuk menjalankan seluruh tests, gunakan command:
 composer phpunit
 ```
 
-Untuk memaksimalkan kelancaran workflow, pastikan Kamu melakukan testing setiap kali Kamu membuat algoritma sebelum mengajukan _*Pull Request*_.
+Untuk memaksimalkan kelancaran workflow, pastikan Kamu melakukan testing setiap kali Kamu membuat algoritma sebelum mengajukan _Pull Request_.
 
 ## Pull Request
 
@@ -250,7 +257,7 @@ git add .
 git commit -m "add: menambahkan algoritma baru"
 ```
 
-- Lakukan push ke branch Kamu dan kemudian *open *pull request\*\*
+- Lakukan push ke branch Kamu dan kemudian _open pull request_\*\*
 
 **Saran Pesan Commit:**
 

@@ -3,7 +3,7 @@
   <h1 align="center">Utilities</h1>
 </p>
 
-## Index:
+## Index
 
 ### D
 

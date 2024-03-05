@@ -20,16 +20,16 @@ PHP menyediakan berbagai fungsi dan fitur untuk memanipulasi _string_ agar suatu
 - [4. String Array](4-string-array)
   - [implode()](#implode)
   - [explode()](#explode)
-  - [str_split()](#str-split)
+  - [str_split()](#str_split)
   - [join()](#join)
-- [5. Escape & Formatting](#5-escape-and-formatting)
+- [5. Escape & Formatting](#5-escape--formatting)
   - [addslashes](#addslashes)
 - [6. Manipulasi String](#6-manipulasi-string)
-  - [str_pad](#strpad)
+  - [str_pad](#str_pad)
   - [wordwrap](#wordwrap)
-  - [str_shuffle](#strshuffle)
-  - [str_repeat](#strrepeat)
-  - [str_replace](#strreplace)
+  - [str_shuffle](#str_shuffle)
+  - [str_repeat](#str_repeat)
+  - [str_replace](#str_replace)
   - [strtr](#strtr)
 
 ## 1. Mengambil Properti String
@@ -426,7 +426,7 @@ _output:_
     <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
 </a>
 
-> _Referensi:_ https://www.w3schools.com/php/func_string_addslashes.asp
+> _Referensi:_ [https://www.w3schools.com/php/func_string_addslashes.asp](https://www.w3schools.com/php/func_string_addslashes.asp)
 
 ---
 
@@ -447,7 +447,7 @@ $text = "Ayo belajar \ di bellshade";
 echo "$text";
 ```
 
-#### Output
+Output:
 
 <img  src="../../assets/content/basics/5_string_manipulation/stripslashes.png" >
 
@@ -459,11 +459,9 @@ $text1 = stripslashes($text);
 echo $text1;
 ```
 
-### Output
+Output:
 
 <img  src="../../assets/content/basics/5_string_manipulation/stripslashes0.png" >
-
-<br>
 
 ## 6. Manipulasi String
 
@@ -503,6 +501,7 @@ echo $text;
 $text1 = wordwrap('Text Target', 5);
 echo $text1;
 ```
+
 <a href='6_manipulasi_string.php' target='_blank'>
     <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
 </a>
@@ -521,6 +520,7 @@ echo $text;
 $text1 = str_shuffle('Text Target');
 echo $text1;
 ```
+
 <a href='6_manipulasi_string.php' target='_blank'>
     <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
 </a>
@@ -585,8 +585,7 @@ echo $text1;
 ---
 
 > Referensi
-> https://www.w3schools.com/php/func_string_stripslashes.asp
-
+> [https://www.w3schools.com/php/func_string_stripslashes.asp](https://www.w3schools.com/php/func_string_stripslashes.asp)
 
 <table>
   <tr>

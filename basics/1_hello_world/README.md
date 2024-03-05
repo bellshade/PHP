@@ -18,7 +18,7 @@ Selain itu materi ini dibuat dengan secara runtut dan _beginner friendly_ sehing
   - [Gambaran Singkat](#gambaran-singkat)
   - [1. Persiapan](#1-persiapan)
   - [2. Hello World](#2-hello-world-2_hello_worldphp)
-  - [3. PHP dalam HTML](#3-php-dalam-html-3_php_htmlphp)
+  - [3. PHP dalam HTML](#3-php-dalam-html)
 
 ## Gambaran Singkat
 
@@ -140,7 +140,8 @@ Kode PHP dieksekusi di server dan dikirimkan kembali ke Browser _client_ dalam b
 Untuk menambahkan tag HTML cukup tuliskan kode HTML pada file PHP, kode HTML ini harus di luar tag `<?php...?>`
 > **Perhatikan:** Kode HTML yang dimasukkan di dalam file `.php` bukan sebaliknya
 
-Contoh kode: 
+Contoh kode:
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -168,10 +169,10 @@ Contoh kode:
 </body>
 </html>
 ```
+
 <a href='3_php_html.php' target='_blank'>
     <img src="https://img.shields.io/static/v1?&label=Demo&message=%3E&color">
 </a>
-
 
 <table>
   <tr>

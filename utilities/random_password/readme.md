@@ -1,6 +1,8 @@
 # Fungsi Untuk Membuat Password Acak
+
 Kode untuk membuat password acak/random dengan panjang yang bisa kita tentukan sendiri:
-```
+
+```php
 function generate_password($length = 8)
 {
     $chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 !@#$%^&*()_-=+;:,.?{}[]/|\\-";

@@ -1,6 +1,5 @@
 ## Pathfinding menggunakan Backtracking
 
-
 Pathfinding adalah salah satu implementasi algoritma backtracking
 yang tujuannya adalah menemukan jalan dari posisi awal sampai ke tujuan.
 
@@ -10,6 +9,7 @@ kotak atau cell yang tidak dapat dilalui oleh pathfinding. Oleh karena itu,
 untuk mencapai tujuan, pathfinding harus mencari jalan dengan menggunakan algoritma backtracking
 
 Skenario:
+
 - parameter variabel x dan y digunakan untuk menentukan tempat berpijak sekarang
 - indeks baris dan kolom terakhir ditetapkan sebagai tujuan. [n(xArray)-1, n(yArray)-1]
 
@@ -18,7 +18,6 @@ Algoritma ini dalam kalimat bahasa indonesia adalah sebagai berikut:
 1. cek posisi [x, y] sekarang apakah sudah sampai tujuan yang diinginkan?
    > Jika ya: Tandai posisi ini sebagai langkah yang benar. hentikan langkah selanjutnya
    > Jika tidak: lakukan langkah berikutnya
-
 
 2. cek posisi [x, y] sekarang apakah boleh dipijaki atau tidak?
    > jika ya:
