@@ -304,7 +304,7 @@ print_r($teks_array);
 
 ### str_split()
 
-Fungsi `str_split()` sama seperti fungsi `implode()`, akan tetapi dalam menentukan elemen `array` menggunakan panjang dari `string` yang akan diubah.
+Fungsi `str_split()` sama seperti fungsi `explode()`, akan tetapi dalam menentukan elemen `array` menggunakan panjang dari `string` yang akan diubah.
 
 **Cara Penggunaan :**
 
